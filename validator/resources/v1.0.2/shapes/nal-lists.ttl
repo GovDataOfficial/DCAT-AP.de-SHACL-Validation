@@ -1,0 +1,46 @@
+# (C) CC BY 4.0 ']init[ AG fuer GovData'
+
+@prefix : <http://dcat-ap.de/def/dcatde/1.0.2/#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+:frequency_List 
+    a rdf:List ;
+    dct:isVersionOf <http://publications.europa.eu/resource/authority/frequency/> ;
+    owl:versionIRI <http://publications.europa.eu/resource/authority/frequency/20190619-0> ;
+    rdf:first rdf:nil ;
+    rdf:rest (
+        <http://publications.europa.eu/resource/authority/frequency/OTHER> 
+        <http://publications.europa.eu/resource/authority/frequency/WEEKLY> 
+        <http://publications.europa.eu/resource/authority/frequency/ANNUAL> 
+        <http://publications.europa.eu/resource/authority/frequency/ANNUAL_2> 
+        <http://publications.europa.eu/resource/authority/frequency/ANNUAL_3> 
+        <http://publications.europa.eu/resource/authority/frequency/BIENNIAL> 
+        <http://publications.europa.eu/resource/authority/frequency/BIMONTHLY> 
+        <http://publications.europa.eu/resource/authority/frequency/BIWEEKLY> 
+        <http://publications.europa.eu/resource/authority/frequency/CONT> 
+        <http://publications.europa.eu/resource/authority/frequency/DAILY> 
+        <http://publications.europa.eu/resource/authority/frequency/DAILY_2> 
+        <http://publications.europa.eu/resource/authority/frequency/IRREG> 
+        <http://publications.europa.eu/resource/authority/frequency/MONTHLY> 
+        <http://publications.europa.eu/resource/authority/frequency/MONTHLY_2> 
+        <http://publications.europa.eu/resource/authority/frequency/MONTHLY_3> 
+        <http://publications.europa.eu/resource/authority/frequency/NEVER> 
+        <http://publications.europa.eu/resource/authority/frequency/OP_DATPRO> 
+        <http://publications.europa.eu/resource/authority/frequency/QUARTERLY> 
+        <http://publications.europa.eu/resource/authority/frequency/TRIENNIAL> 
+        <http://publications.europa.eu/resource/authority/frequency/UNKNOWN> 
+        <http://publications.europa.eu/resource/authority/frequency/UPDATE_CONT> 
+        <http://publications.europa.eu/resource/authority/frequency/WEEKLY_2> 
+        <http://publications.europa.eu/resource/authority/frequency/WEEKLY_3> 
+        <http://publications.europa.eu/resource/authority/frequency/QUINQUENNIAL> 
+        <http://publications.europa.eu/resource/authority/frequency/DECENNIAL> 
+        <http://publications.europa.eu/resource/authority/frequency/HOURLY> 
+        <http://publications.europa.eu/resource/authority/frequency/QUADRENNIAL> 
+        <http://publications.europa.eu/resource/authority/frequency/BIHOURLY> 
+        <http://publications.europa.eu/resource/authority/frequency/TRIHOURLY> 
+        <http://publications.europa.eu/resource/authority/frequency/BIDECENNIAL> 
+        <http://publications.europa.eu/resource/authority/frequency/TRIDECENNIAL> 
+    ) .
+
