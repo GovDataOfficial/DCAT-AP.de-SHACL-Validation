@@ -30,7 +30,7 @@
     sh:path dcatde:contributorID ;
     sh:minCount 1 ;
     sh:severity sh:Info ;
-    sh:message "Es wird empfohlen, den Datenbereitsteller mittels dcatde:contributerID anzugeben. Eine Liste existierender Datenbereitsteller finden Sie unter: https://www.dcat-ap.de/def/contributors/"@de .
+    sh:message "Optional: Es wird empfohlen, den Datenbereitsteller mittels dcatde:contributerID anzugeben. Eine Liste existierender Datenbereitsteller finden Sie unter: https://www.dcat-ap.de/def/contributors/"@de .
 
 :Dataset_Spec_contributorID_2
     sh:name "Shape contributorID - IRI"@de ;
@@ -38,7 +38,7 @@
     sh:path dcatde:contributorID ;
     sh:nodeKind sh:IRI ;
     sh:severity sh:Violation ;
-    sh:message "dcatde:contributerID ist keine IRI! Der Datenbereitsteller muss mittels dcatde:contributerID als IRI angegeben werden!"@de .
+    sh:message "Pflicht: dcatde:contributerID ist keine IRI! Der Datenbereitsteller muss mittels dcatde:contributerID als IRI angegeben werden!"@de .
 
 :Dataset_Konv_contributorID_1
     sh:name "Shape contributorID - Gelistet"@de ;
@@ -46,7 +46,7 @@
     sh:path dcatde:contributorID ;
     sh:in :contributors_List ;
     sh:severity sh:Warning ;
-    sh:message "dcatde:contributerID ist unbekannt! Die Eigenschaft contributorID sollte auf einen unter https://www.dcat-ap.de/def/contributors/ gelisteten Datenbereitsteller verweisen. Neue Datenbereitsteller können Sie hinzufügen lassen (siehe Konventionenhandbuch)."@de .
+    sh:message "Empfohlen: dcatde:contributerID ist unbekannt! Die Eigenschaft contributorID sollte auf einen unter https://www.dcat-ap.de/def/contributors/ gelisteten Datenbereitsteller verweisen. Neue Datenbereitsteller können Sie hinzufügen lassen (siehe Konventionenhandbuch)."@de .
 
 :Dataset_Spec_qualityProcessURI_1
     sh:name "Shape qualityProcessURI - Existenz"@de ;
@@ -54,7 +54,7 @@
     sh:path dcatde:qualityProcessURI ;
     sh:minCount 1 ;
     sh:severity sh:Info ;
-    sh:message "Es wird empfohlen, auf eine Webseite, die den Prozess zur Qualitätssicherung des Datasets beschreibt, zu verweisen."@de .
+    sh:message "Optional: Es wird empfohlen, auf eine Webseite, die den Prozess zur Qualitätssicherung des Datasets beschreibt, zu verweisen."@de .
 
 :Dataset_Spec_qualityProcessURI_2
     sh:name "Shape qualityProcessURI - Maximalzahl"@de ;
@@ -62,7 +62,7 @@
     sh:path dcatde:qualityProcessURI ;
     sh:maxCount 1 ;
     sh:severity sh:Violation ;
-    sh:message "Gemäß DCAT-AP.de Spezifikation 1.0.2 darf ein Dataset nicht über mehrere qualityProcessURIs verfügen."@de .
+    sh:message "Pflicht: Gemäß DCAT-AP.de Spezifikation 1.0.2 darf ein Dataset nicht über mehrere qualityProcessURIs verfügen."@de .
 
 :Dataset_Spec_qualityProcessURI_3
     sh:name "Shape qualityProcessURI - IRI"@de ;
@@ -70,7 +70,7 @@
     sh:path dcatde:qualityProcessURI ;
     sh:nodeKind sh:IRI ;
     sh:severity sh:Violation ;
-    sh:message "dcatde:qualityProcessURI ist keine IRI! Es wird empfohlen, auf eine Webseite, die den Prozess zur Qualitätssicherung des Datasets beschreibt, zu verweisen."@de .
+    sh:message "Pflicht: dcatde:qualityProcessURI ist keine IRI! Es wird empfohlen, auf eine Webseite, die den Prozess zur Qualitätssicherung des Datasets beschreibt, zu verweisen."@de .
 
 :Dataset_Spec_originator_1
     sh:name "Shape originator - Existenz"@de ;
@@ -78,7 +78,7 @@
     sh:path dcatde:originator ;
     sh:minCount 1 ;
     sh:severity sh:Info ;
-    sh:message "Es wird empfohlen, auf die Personen als foaf:Agent zu verweisen, die Urheberrechte am Dataset haben."@de .
+    sh:message "Optional: Es wird empfohlen, auf die Personen als foaf:Agent zu verweisen, die Urheberrechte am Dataset haben."@de .
 
 :Dataset_Spec_originator_2
     sh:name "Shape originator - foaf:Agent"@de ;
@@ -86,7 +86,7 @@
     sh:path dcatde:originator ;
     sh:class foaf:Agent ;
     sh:severity sh:Violation ;
-    sh:message "dcatde:originator ist kein foaf:Agent! Sollten Sie z.B. foaf:Person nutzen, deklarieren Sie den Knoten bitte noch explizit als foaf:Agent, da Shacl keine Klassenvererbungen beherrscht."@de .
+    sh:message "Pflicht: dcatde:originator ist kein foaf:Agent! Sollten Sie z.B. foaf:Person nutzen, deklarieren Sie den Knoten bitte noch explizit als foaf:Agent, da Shacl keine Klassenvererbungen beherrscht."@de .
 
 :Dataset_Spec_maintainer_1
     sh:name "Shape maintainer - Existenz"@de ;
@@ -94,7 +94,7 @@
     sh:path dcatde:maintainer ;
     sh:minCount 1 ;
     sh:severity sh:Info ;
-    sh:message "Es wird empfohlen, auf die Stellen oder Personen als foaf:Agent zu verweisen, die Verantwortung und Rechenschaftspflicht für die Daten und ihre angemessene Pflege übernehmen."@de .
+    sh:message "Optional: Es wird empfohlen, auf die Stellen oder Personen als foaf:Agent zu verweisen, die Verantwortung und Rechenschaftspflicht für die Daten und ihre angemessene Pflege übernehmen."@de .
 
 :Dataset_Spec_maintainer_2
     sh:name "Shape maintainer - foaf:Agent"@de ;
@@ -102,7 +102,7 @@
     sh:path dcatde:maintainer ;
     sh:class foaf:Agent ;
     sh:severity sh:Violation ;
-    sh:message "dcatde:maintainer ist kein foaf:Agent! Sollten Sie z.B. foaf:Person nutzen, deklarieren Sie den Knoten bitte noch explizit als foaf:Agent, da Shacl keine Klassenvererbungen beherrscht."@de .
+    sh:message "Pflicht: dcatde:maintainer ist kein foaf:Agent! Sollten Sie z.B. foaf:Person nutzen, deklarieren Sie den Knoten bitte noch explizit als foaf:Agent, da Shacl keine Klassenvererbungen beherrscht."@de .
 
 :Dataset_Spec_contributor_1
     sh:name "Shape contributor - Existenz"@de ;
@@ -110,7 +110,7 @@
     sh:path dct:contributor ;
     sh:minCount 1 ;
     sh:severity sh:Info ;
-    sh:message "Es wird empfohlen, auf die Stellen oder Personen als foaf:Agent zu verweisen, die die Daten bearbeitet haben (z.B. durch Formatierung derselben)."@de .
+    sh:message "Optional: Es wird empfohlen, auf die Stellen oder Personen als foaf:Agent zu verweisen, die die Daten bearbeitet haben (z.B. durch Formatierung derselben)."@de .
 
 :Dataset_Spec_contributor_2
     sh:name "Shape contributor - foaf:Agent"@de ;
@@ -118,7 +118,7 @@
     sh:path dct:contributor ;
     sh:class foaf:Agent ;
     sh:severity sh:Violation ;
-    sh:message "dct:contributor ist kein foaf:Agent! Sollten Sie z.B. foaf:Person nutzen, deklarieren Sie den Knoten bitte noch explizit als foaf:Agent, da Shacl keine Klassenvererbungen beherrscht."@de .
+    sh:message "Pflicht: dct:contributor ist kein foaf:Agent! Sollten Sie z.B. foaf:Person nutzen, deklarieren Sie den Knoten bitte noch explizit als foaf:Agent, da Shacl keine Klassenvererbungen beherrscht."@de .
 
 :Dataset_Spec_creator_1
     sh:name "Shape creator - Existenz"@de ;
@@ -126,7 +126,7 @@
     sh:path dct:creator ;
     sh:minCount 1 ;
     sh:severity sh:Info ;
-    sh:message "Es wird empfohlen, auf die Stellen oder Personen als foaf:Agent zu verweisen, die die Daten erstellt haben."@de .
+    sh:message "Optional: Es wird empfohlen, auf die Stellen oder Personen als foaf:Agent zu verweisen, die die Daten erstellt haben."@de .
 
 :Dataset_Spec_creator_2
     sh:name "Shape creator - foaf:Agent"@de ;
@@ -134,7 +134,7 @@
     sh:path dct:creator ;
     sh:class foaf:Agent ;
     sh:severity sh:Violation ;
-    sh:message "dct:creator ist kein foaf:Agent! Sollten Sie z.B. foaf:Person nutzen, deklarieren Sie den Knoten bitte noch explizit als foaf:Agent, da Shacl keine Klassenvererbungen beherrscht."@de .
+    sh:message "Pflicht: dct:creator ist kein foaf:Agent! Sollten Sie z.B. foaf:Person nutzen, deklarieren Sie den Knoten bitte noch explizit als foaf:Agent, da Shacl keine Klassenvererbungen beherrscht."@de .
 
 :Dataset_Spec_granularity_1
     sh:name "Shape granularity - Existenz"@de ;
@@ -142,7 +142,7 @@
     sh:path dcat:granularity ;
     sh:minCount 1 ;
     sh:severity sh:Info ;
-    sh:message "Es wird empfohlen, die zeitliche Granularität mittels dcat:granularity mit Verweis auf einen Eintrag in http://publications.europa.eu/resource/authority/frequency anzugeben."@de .
+    sh:message "Optional: Es wird empfohlen, die zeitliche Granularität mittels dcat:granularity mit Verweis auf einen Eintrag in http://publications.europa.eu/resource/authority/frequency anzugeben."@de .
 
 :Dataset_Spec_granularity_2
     sh:name "Shape granularity - Maximalzahl"@de ;
@@ -150,7 +150,7 @@
     sh:path dcat:granularity ;
     sh:maxCount 1 ;
     sh:severity sh:Violation ;
-    sh:message "Gemäß DCAT-AP.de Spezifikation 1.0.2 darf ein Dataset nicht über mehrere dcat:granularity-Eigenschaften verfügen."@de .
+    sh:message "Pflicht: Gemäß DCAT-AP.de Spezifikation 1.0.2 darf ein Dataset nicht über mehrere dcat:granularity-Eigenschaften verfügen."@de .
 
 :Dataset_Spec_granularity_3
     sh:name "Shape granularity - IRI auf NAL"@de ;
@@ -158,9 +158,7 @@
     sh:path dcat:granularity ;
     sh:in :frequency_List ;
     sh:severity sh:Violation ;
-    sh:message "dcat:granularity muss eine IRI sein, die in der Liste http://publications.europa.eu/resource/authority/frequency eingetragen ist."@de .
-
-
+    sh:message "Pflicht: dcat:granularity muss eine IRI sein, die in der Liste http://publications.europa.eu/resource/authority/frequency eingetragen ist."@de .
 
 :Dataset_Spec_politicalGeocodingLevelURI_1
     a sh:PropertyShape ;
@@ -169,7 +167,7 @@
     sh:path dcatde:politicalGeocodingLevelURI ;
     sh:minCount 1 ;
     sh:severity sh:Warning ;
-    sh:message "Es wird empfohlen, die prinzipielle Verwaltungsebene, von der das Dataset erhoben und eingestellt wurde, anzugeben. Es wird empfohlen, folgende Liste zu verwenden: https://www.dcat-ap.de/def/politicalGeocoding/Level/"@de .
+    sh:message "Empfohlen: Es wird empfohlen, die prinzipielle Verwaltungsebene, von der das Dataset erhoben und eingestellt wurde, anzugeben. Es wird empfohlen, folgende Liste zu verwenden: https://www.dcat-ap.de/def/politicalGeocoding/Level/"@de .
 
 :Dataset_Spec_politicalGeocodingLevelURI_2
     sh:name "Shape politicalGeocodingLevelURI - IRI"@de ;
@@ -177,7 +175,7 @@
     sh:path dcatde:politicalGeocodingLevelURI ;
     sh:nodeKind sh:IRI ;
     sh:severity sh:Violation ;
-    sh:message "dcatde:politicalGeocodingLevelURI ist keine IRI!"@de .
+    sh:message "Pflicht: dcatde:politicalGeocodingLevelURI ist keine IRI!"@de .
 
 :Dataset_Spec_politicalGeocodingLevelURI_3
     sh:name "Shape politicalGeocodingLevelURI - Gelistet"@de ;
@@ -185,7 +183,7 @@
     sh:path dcatde:politicalGeocodingLevelURI ;
     sh:in :politicalGeocoding_Levels_List ;
     sh:severity sh:Warning ;
-    sh:message "dcatde:politicalGeocodingLevelURI ist unbekannt! Die prinzipielle Verwaltungsebene, von der das Dataset erhoben und eingestellt wurde, sollte auf https://www.dcat-ap.de/def/politicalGeocoding/Level/ gelistetet sein."@de .
+    sh:message "Empfohlen: dcatde:politicalGeocodingLevelURI ist unbekannt! Die prinzipielle Verwaltungsebene, von der das Dataset erhoben und eingestellt wurde, sollte auf https://www.dcat-ap.de/def/politicalGeocoding/Level/ gelistetet sein."@de .
 
 :Dataset_Spec_politicalGeocodingURI_1
     a sh:PropertyShape ;
@@ -194,7 +192,7 @@
     sh:path dcatde:politicalGeocodingURI ;
     sh:minCount 1 ;
     sh:severity sh:Warning ;
-    sh:message "Es wird empfohlen, das Dataset mit dem von ihr abgedeckten administrativen Gebiet der Bundesrepublik Deutschland, zu verknüpfen. Es wird empfohlen, folgend Listen zu verwenden: https://www.dcat-ap.de/def/politicalGeocoding/stateKey/, https://www.dcat-ap.de/def/politicalGeocoding/regionalKey/, https://www.dcat-ap.de/def/politicalGeocoding/districtKey/."@de .
+    sh:message "Empfohlen: Es wird empfohlen, das Dataset mit dem von ihr abgedeckten administrativen Gebiet der Bundesrepublik Deutschland, zu verknüpfen. Es wird empfohlen, folgend Listen zu verwenden: https://www.dcat-ap.de/def/politicalGeocoding/stateKey/, https://www.dcat-ap.de/def/politicalGeocoding/regionalKey/, https://www.dcat-ap.de/def/politicalGeocoding/districtKey/."@de .
 
 :Dataset_Spec_politicalGeocodingURI_2
     sh:name "Shape politicalGeocodingURI - IRI"@de ;
@@ -202,7 +200,7 @@
     sh:path dcatde:politicalGeocodingURI ;
     sh:nodeKind sh:IRI ;
     sh:severity sh:Violation ;
-    sh:message "dcatde:politicalGeocodingURI ist keine IRI!"@de .
+    sh:message "Pflicht: dcatde:politicalGeocodingURI ist keine IRI!"@de .
 
 :Dataset_Spec_politicalGeocodingURI_3
     sh:name "Shape politicalGeocodingURI - Gelistet"@de ;
@@ -214,7 +212,7 @@
         [ sh:in :politicalGeocoding_stateKeys_List ;    ]
     ) ;
     sh:severity sh:Warning ;
-    sh:message "dcatde:politicalGeocodingURI ist unbekannt! Es wird empfohlen, folgend Listen zu verwenden: https://www.dcat-ap.de/def/politicalGeocoding/stateKey/, https://www.dcat-ap.de/def/politicalGeocoding/regionalKey/, https://www.dcat-ap.de/def/politicalGeocoding/districtKey/."@de .
+    sh:message "Empfohlen: dcatde:politicalGeocodingURI ist unbekannt! Es wird empfohlen, folgend Listen zu verwenden: https://www.dcat-ap.de/def/politicalGeocoding/stateKey/, https://www.dcat-ap.de/def/politicalGeocoding/regionalKey/, https://www.dcat-ap.de/def/politicalGeocoding/districtKey/."@de .
 
 :Dataset_Spec_geocodingDescription_1
     sh:name "Shape geocodingDescription - Existenz"@de ;
@@ -230,7 +228,7 @@
     sh:path dcatde:geocodingDescription ;
     sh:nodeKind sh:Literal ;
     sh:severity sh:Violation ;
-    sh:message "dcatde:geocodingDescription ist keine Literal! Geben Sie die geografische Abdeckung des Datasets als Freitext an."@de .
+    sh:message "Pflicht: dcatde:geocodingDescription ist keine Literal! Geben Sie die geografische Abdeckung des Datasets als Freitext an."@de .
 
 :Dataset_Spec_legalBasis_1
     sh:name "Shape legalBasis - Existenz"@de ;
@@ -246,8 +244,7 @@
     sh:path dcatde:legalBasis ;
     sh:nodeKind sh:Literal ;
     sh:severity sh:Violation ;
-    sh:message "dcatde:legalBasis ist keine Literal! Geben Sie die Rechtsgrundlage für den Zugang zu den Informationen des Datasets als Freitext an."@de .
-
+    sh:message "Pflicht: dcatde:legalBasis ist keine Literal! Geben Sie die Rechtsgrundlage für den Zugang zu den Informationen des Datasets als Freitext an."@de .
 
 # java -Xss4m jar validator.jar -reportSyntax "text/turtle" -externalShapes dcat-ap-de-lists.ttl -externalShapes nal-lists.ttl -externalShapes dcat-ap-de-shapes.ttl
 :Dataset_Spec_Shape 
@@ -301,7 +298,6 @@
     # -contentToValidate tests/testcases-dataset-legalBasis.ttl
     sh:property :Dataset_Spec_legalBasis_1 ; # Existenz
     sh:property :Dataset_Spec_legalBasis_2 ; # Form - Literal
-    
     .
 
 ### DISTRIBUTION ###
@@ -320,7 +316,7 @@
     sh:path dcatde:licenseAttributionByText ;
     sh:nodeKind sh:Literal ;
     sh:severity sh:Violation ;
-    sh:message "dcatde:licenseAttributionByText ist keine Literal! Geben Sie zur Lizenz gehörende pflicht-Namensnennungen als Freitext an."@de .
+    sh:message "Pflicht: dcatde:licenseAttributionByText ist keine Literal! Geben Sie zur Lizenz gehörende pflicht-Namensnennungen als Freitext an."@de .
 
 :Distribution_Spec_plannedAvailability_1
     sh:name "Shape plannedAvailability - Existenz"@de ;
@@ -328,7 +324,7 @@
     sh:path dcatde:plannedAvailability ;
     sh:minCount 1 ;
     sh:severity sh:Warning ;
-    sh:message "Empfehlung: Es wird empfohlen, die Verfügbarkeit der Distribution über einer IRI aus der Liste https://www.dcat-ap.de/def/plannedAvailability/ anzugeben."@de .
+    sh:message "Empfohlen: Es wird empfohlen, die Verfügbarkeit der Distribution über einer IRI aus der Liste https://www.dcat-ap.de/def/plannedAvailability/ anzugeben."@de .
 
 :Distribution_Spec_plannedAvailability_2
     sh:name "Shape plannedAvailability - Maximalzahl"@de ;
@@ -336,7 +332,7 @@
     sh:path dcatde:plannedAvailability ;
     sh:maxCount 1 ;
     sh:severity sh:Violation ;
-    sh:message "Gemäß DCAT-AP.de Spezifikation 1.0.2 darf eine Distribution nicht über mehrere plannedAvailabilities verfügen."@de .
+    sh:message "Pflicht: Gemäß DCAT-AP.de Spezifikation 1.0.2 darf eine Distribution nicht über mehrere plannedAvailabilities verfügen."@de .
 
 :Distribution_Spec_plannedAvailability_3
     sh:name "Shape plannedAvailability - IRI"@de ;
@@ -344,7 +340,7 @@
     sh:path dcatde:plannedAvailability ;
     sh:nodeKind sh:IRI ;
     sh:severity sh:Violation ;
-    sh:message "dcatde:plannedAvailability ist keine IRI! Es wird empfohlen, die Verfügbarkeit der Distribution über einer IRI aus der Liste https://www.dcat-ap.de/def/plannedAvailability/ anzugeben."@de .
+    sh:message "Pflicht: dcatde:plannedAvailability ist keine IRI! Es wird empfohlen, die Verfügbarkeit der Distribution über einer IRI aus der Liste https://www.dcat-ap.de/def/plannedAvailability/ anzugeben."@de .
 
 :Distribution_Spec_plannedAvailability_4
     sh:name "Shape plannedAvailability - Gelistet"@de ;
@@ -352,7 +348,7 @@
     sh:path dcatde:plannedAvailability ;
     sh:in :plannedAvailabilities_List ;
     sh:severity sh:Info ;
-    sh:message "Hinweis: dcatde:plannedAvailability ist unbekannt! Die Eigenschaft plannedAvailability sollte auf eine einer IRI aus der Liste https://www.dcat-ap.de/def/plannedAvailability/ verweisen."@de .
+    sh:message "Optional: dcatde:plannedAvailability ist unbekannt! Die Eigenschaft plannedAvailability sollte auf eine einer IRI aus der Liste https://www.dcat-ap.de/def/plannedAvailability/ verweisen."@de .
 
 :Distribution_Spec_dct_description_1
     sh:name "Shape dct:description - Existenz"@de ;
