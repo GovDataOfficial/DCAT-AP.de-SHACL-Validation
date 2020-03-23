@@ -40,13 +40,13 @@
     sh:severity sh:Violation ;
     sh:message "Pflicht: dcatde:contributerID ist keine IRI! Der Datenbereitsteller muss mittels dcatde:contributerID als IRI angegeben werden!"@de .
 
-:Dataset_Konv_contributorID_1
+:Dataset_Spec_contributorID_3
     sh:name "Shape contributorID - Gelistet"@de ;
     sh:description "Prüfe, ob die contributorID in der Liste ist."@de ;
     sh:path dcatde:contributorID ;
     sh:in :contributors_List ;
-    sh:severity sh:Warning ;
-    sh:message "Empfohlen: dcatde:contributerID ist unbekannt! Die Eigenschaft contributorID sollte auf einen unter https://www.dcat-ap.de/def/contributors/ gelisteten Datenbereitsteller verweisen. Neue Datenbereitsteller können Sie hinzufügen lassen (siehe Konventionenhandbuch)."@de .
+    sh:severity sh:Info ;
+    sh:message "Optional: Angegebene IRI ist unbekannt! dcatde:contributerID sollte auf die IRI eines unter https://www.dcat-ap.de/def/contributors/ gelisteten Datenbereitsteller verweisen. Neue Datenbereitsteller können Sie hinzufügen lassen (siehe Konventionenhandbuch)."@de .
 
 :Dataset_Spec_qualityProcessURI_1
     sh:name "Shape qualityProcessURI - Existenz"@de ;
@@ -257,6 +257,7 @@
     # -contentToValidate tests/testcases-dataset-contributorID.ttl
     sh:property :Dataset_Spec_contributorID_1 ; # Existenz
     sh:property :Dataset_Spec_contributorID_2 ; # Form - IRI
+    sh:property :Dataset_Spec_contributorID_3 ; # in Liste
 
     # -contentToValidate tests/testcases-dataset-qualityProcessURI.ttl
     sh:property :Dataset_Spec_qualityProcessURI_1 ; # Existenz
@@ -284,12 +285,12 @@
     # -contentToValidate tests/testcases-dataset-politicalGeocodingLevelURI.ttl
     sh:property :Dataset_Spec_politicalGeocodingLevelURI_1 ; # Existenz
     sh:property :Dataset_Spec_politicalGeocodingLevelURI_2 ; # Form - IRI
-    sh:property :Dataset_Spec_politicalGeocodingLevelURI_3 ; # In Liste
+    sh:property :Dataset_Spec_politicalGeocodingLevelURI_3 ; # in Liste
     
     # -contentToValidate tests/testcases-dataset-politicalGeocodingURI.ttl
     sh:property :Dataset_Spec_politicalGeocodingURI_1 ; # Existenz
     sh:property :Dataset_Spec_politicalGeocodingURI_2 ; # Form - IRI
-    sh:property :Dataset_Spec_politicalGeocodingURI_3 ; # In Listen
+    sh:property :Dataset_Spec_politicalGeocodingURI_3 ; # in Listen
     
     # -contentToValidate tests/testcases-dataset-geocodingDescription.ttl
     sh:property :Dataset_Spec_geocodingDescription_1 ; # Existenz
