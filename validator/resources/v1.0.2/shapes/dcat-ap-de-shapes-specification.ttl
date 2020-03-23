@@ -54,7 +54,7 @@
     sh:path dcatde:qualityProcessURI ;
     sh:minCount 1 ;
     sh:severity sh:Info ;
-    sh:message "Optional: Es wird empfohlen, auf eine Webseite, die den Prozess zur Qualitätssicherung des Datasets beschreibt, zu verweisen."@de .
+    sh:message "Optional: Sie könnten mittels dcatde:qualityProcessURI die Rechtsgrundlage für den Zugang zu den Informationen als Freitext angeben."@de .
 
 :Dataset_Spec_qualityProcessURI_2
     sh:name "Shape qualityProcessURI - Maximalzahl"@de ;
@@ -78,7 +78,7 @@
     sh:path dcatde:originator ;
     sh:minCount 1 ;
     sh:severity sh:Info ;
-    sh:message "Optional: Es wird empfohlen, auf die Personen als foaf:Agent zu verweisen, die Urheberrechte am Dataset haben."@de .
+    sh:message "Optional: Mittels dcatde:originator können Sie auf die Personen als foaf:Agent zu verweisen, die Urheberrechte am Dataset haben."@de .
 
 :Dataset_Spec_originator_2
     sh:name "Shape originator - foaf:Agent"@de ;
@@ -94,7 +94,7 @@
     sh:path dcatde:maintainer ;
     sh:minCount 1 ;
     sh:severity sh:Info ;
-    sh:message "Optional: Es wird empfohlen, auf die Stellen oder Personen als foaf:Agent zu verweisen, die Verantwortung und Rechenschaftspflicht für die Daten und ihre angemessene Pflege übernehmen."@de .
+    sh:message "Optional: Mittels dcatde:maintainer können sie als foaf:Agent auf Stellen oder Personen verweisen, die Verantwortung und Rechenschaftspflicht für die Daten und ihre angemessene Pflege übernehmen."@de .
 
 :Dataset_Spec_maintainer_2
     sh:name "Shape maintainer - foaf:Agent"@de ;
@@ -110,7 +110,7 @@
     sh:path dct:contributor ;
     sh:minCount 1 ;
     sh:severity sh:Info ;
-    sh:message "Optional: Es wird empfohlen, auf die Stellen oder Personen als foaf:Agent zu verweisen, die die Daten bearbeitet haben (z.B. durch Formatierung derselben)."@de .
+    sh:message "Optional: Mittels dct:contributor  können Sie als foaf:Agent auf die Stellen oder Personen verweisen, die die Daten bearbeitet haben (z.B. durch Formatierung derselben)."@de .
 
 :Dataset_Spec_contributor_2
     sh:name "Shape contributor - foaf:Agent"@de ;
@@ -126,7 +126,7 @@
     sh:path dct:creator ;
     sh:minCount 1 ;
     sh:severity sh:Info ;
-    sh:message "Optional: Es wird empfohlen, auf die Stellen oder Personen als foaf:Agent zu verweisen, die die Daten erstellt haben."@de .
+    sh:message "Optional: Mittels dct:creator können Sie auf die Stellen oder Personen als foaf:Agent zu verweisen, die die Daten erstellt haben."@de .
 
 :Dataset_Spec_creator_2
     sh:name "Shape creator - foaf:Agent"@de ;
@@ -142,7 +142,7 @@
     sh:path dcat:granularity ;
     sh:minCount 1 ;
     sh:severity sh:Info ;
-    sh:message "Optional: Es wird empfohlen, die zeitliche Granularität mittels dcat:granularity mit Verweis auf einen Eintrag in http://publications.europa.eu/resource/authority/frequency anzugeben."@de .
+    sh:message "Optional: Sie könnten die zeitliche Granularität mittels dcat:granularity mit Verweis auf einen Eintrag in http://publications.europa.eu/resource/authority/frequency angeben."@de .
 
 :Dataset_Spec_granularity_2
     sh:name "Shape granularity - Maximalzahl"@de ;
@@ -167,7 +167,7 @@
     sh:path dcatde:politicalGeocodingLevelURI ;
     sh:minCount 1 ;
     sh:severity sh:Warning ;
-    sh:message "Empfohlen: Es wird empfohlen, die prinzipielle Verwaltungsebene, von der das Dataset erhoben und eingestellt wurde, anzugeben. Es wird empfohlen, folgende Liste zu verwenden: https://www.dcat-ap.de/def/politicalGeocoding/Level/"@de .
+    sh:message "Empfohlen: Es wird empfohlen, mittels dcatde:politicalGeocodingLevelURI die prinzipielle Verwaltungsebene, von der das Dataset erhoben und eingestellt wurde, anzugeben. Es wird empfohlen, folgende Liste zu verwenden: https://www.dcat-ap.de/def/politicalGeocoding/Level/"@de .
 
 :Dataset_Spec_politicalGeocodingLevelURI_2
     sh:name "Shape politicalGeocodingLevelURI - IRI"@de ;
@@ -175,7 +175,7 @@
     sh:path dcatde:politicalGeocodingLevelURI ;
     sh:nodeKind sh:IRI ;
     sh:severity sh:Violation ;
-    sh:message "Pflicht: dcatde:politicalGeocodingLevelURI ist keine IRI!"@de .
+    sh:message "Pflicht: dcatde:politicalGeocodingLevelURI ist keine IRI! Es wird empfohlen, eine IRI aus der folgendne Liste zu verwenden: https://www.dcat-ap.de/def/politicalGeocoding/Level/"@de .
 
 :Dataset_Spec_politicalGeocodingLevelURI_3
     sh:name "Shape politicalGeocodingLevelURI - Gelistet"@de ;
@@ -192,7 +192,7 @@
     sh:path dcatde:politicalGeocodingURI ;
     sh:minCount 1 ;
     sh:severity sh:Warning ;
-    sh:message "Empfohlen: Es wird empfohlen, das Dataset mit dem von ihr abgedeckten administrativen Gebiet der Bundesrepublik Deutschland, zu verknüpfen. Es wird empfohlen, folgend Listen zu verwenden: https://www.dcat-ap.de/def/politicalGeocoding/stateKey/, https://www.dcat-ap.de/def/politicalGeocoding/regionalKey/, https://www.dcat-ap.de/def/politicalGeocoding/districtKey/."@de .
+    sh:message "Empfohlen: Es wird empfohlen, mittels dcatde:politicalGeocodingURI das Dataset mit dem von ihr abgedeckten administrativen Gebiet der Bundesrepublik Deutschland, zu verknüpfen. Es wird empfohlen, folgend Listen zu verwenden: https://www.dcat-ap.de/def/politicalGeocoding/stateKey/, https://www.dcat-ap.de/def/politicalGeocoding/regionalKey/, https://www.dcat-ap.de/def/politicalGeocoding/districtKey/"@de .
 
 :Dataset_Spec_politicalGeocodingURI_2
     sh:name "Shape politicalGeocodingURI - IRI"@de ;
@@ -200,7 +200,7 @@
     sh:path dcatde:politicalGeocodingURI ;
     sh:nodeKind sh:IRI ;
     sh:severity sh:Violation ;
-    sh:message "Pflicht: dcatde:politicalGeocodingURI ist keine IRI!"@de .
+    sh:message "Pflicht: dcatde:politicalGeocodingURI ist keine IRI! Es wird empfohlen, mittels dcatde:politicalGeocodingURI das Dataset mit dem von ihr abgedeckten administrativen Gebiet der Bundesrepublik Deutschland, zu verknüpfen. Es wird empfohlen, folgend Listen zu verwenden: https://www.dcat-ap.de/def/politicalGeocoding/stateKey/, https://www.dcat-ap.de/def/politicalGeocoding/regionalKey/, https://www.dcat-ap.de/def/politicalGeocoding/districtKey/"@de .
 
 :Dataset_Spec_politicalGeocodingURI_3
     sh:name "Shape politicalGeocodingURI - Gelistet"@de ;
@@ -236,7 +236,7 @@
     sh:path dcatde:legalBasis ;
     sh:minCount 1 ;
     sh:severity sh:Info ;
-    sh:message "Optional: Sie könnten die Rechtsgrundlage für den Zugang zu den Informationen als Freitext angeben."@de .
+    sh:message "Optional: Mittels dcatde:legalbasis könnten sie die Rechtsgrundlage für den Zugang zu den Informationen als Freitext angeben."@de .
 
 :Dataset_Spec_legalBasis_2
     sh:name "Shape legalBasis - Literal"@de ;
@@ -308,7 +308,7 @@
     sh:path dcatde:licenseAttributionByText ;
     sh:minCount 1 ;
     sh:severity sh:Info ;
-    sh:message "Optional: Sie könnten zur Lizenz gehörende pflicht-Namensnennungen als Freitext angeben."@de .
+    sh:message "Optional: Sie könnten mittels dcatde:licenseAttributionByText zur Lizenz gehörende pflicht-Namensnennungen als Freitext angeben."@de .
 
 :Distribution_Spec_licenseAttributionByText_2
     sh:name "Shape licenseAttributionByText - Literal"@de ;
@@ -324,7 +324,7 @@
     sh:path dcatde:plannedAvailability ;
     sh:minCount 1 ;
     sh:severity sh:Warning ;
-    sh:message "Empfohlen: Es wird empfohlen, die Verfügbarkeit der Distribution über einer IRI aus der Liste https://www.dcat-ap.de/def/plannedAvailability/ anzugeben."@de .
+    sh:message "Empfohlen: Es wird empfohlen, mittels dcatde:plannedAvailability die Verfügbarkeit der Distribution über einer IRI aus der Liste https://www.dcat-ap.de/def/plannedAvailability/ anzugeben."@de .
 
 :Distribution_Spec_plannedAvailability_2
     sh:name "Shape plannedAvailability - Maximalzahl"@de ;
@@ -356,7 +356,7 @@
     sh:path dct:description ;
     sh:minCount 1 ;
     sh:severity sh:Info ;
-    sh:message "Optional: Sie könnten die Beschreibung der Distribution als Freitext angeben. DCAT-AP.de hat im Vergleich zu DCAT-AP die Verbindlichkeit dieser Eigenschaft auf 'optional' gesenkt."@de .
+    sh:message "Optional: Sie könnten mittels dct:description die Beschreibung der Distribution als Freitext angeben. DCAT-AP.de hat im Vergleich zu DCAT-AP die Verbindlichkeit dieser Eigenschaft auf 'optional' gesenkt."@de .
 
 :Distribution_Spec_dct_title_1
     sh:name "Shape dct:title - Existenz"@de ;
@@ -364,7 +364,7 @@
     sh:path dct:title ;
     sh:minCount 1 ;
     sh:severity sh:Warning ;
-    sh:message "Empfohlen: Sie sollten den Titel der Distribution als Freitext angeben. DCAT-AP.de hat im Vergleich zu DCAT-AP die Verbindlichkeit dieser Eigenschaft auf 'empfohlen' erhöht."@de .
+    sh:message "Empfohlen: Sie sollten mittels dct:title den Titel der Distribution als Freitext angeben. DCAT-AP.de hat im Vergleich zu DCAT-AP die Verbindlichkeit dieser Eigenschaft auf 'empfohlen' erhöht."@de .
 
 :Distribution_Spec_dct_modified_1
     sh:name "Shape dct:modified - Existenz"@de ;
@@ -372,7 +372,7 @@
     sh:path dct:modified ;
     sh:minCount 1 ;
     sh:severity sh:Warning ;
-    sh:message "Empfohlen: Sie sollten den Zeitpunkt der letzten Änderung der Distribution als xsd:date oder xsd:dateTime angeben. DCAT-AP.de hat im Vergleich zu DCAT-AP die Verbindlichkeit dieser Eigenschaft auf 'empfohlen' erhöht."@de .
+    sh:message "Empfohlen: Sie sollten mittels dct:modified den Zeitpunkt der letzten Änderung der Distribution als xsd:date oder xsd:dateTime angeben. DCAT-AP.de hat im Vergleich zu DCAT-AP die Verbindlichkeit dieser Eigenschaft auf 'empfohlen' erhöht."@de .
 
 :Distribution_Spec_Shape
     a sh:NodeShape ;
