@@ -309,7 +309,7 @@
     sh:path dcatde:licenseAttributionByText ;
     sh:minCount 1 ;
     sh:severity sh:Info ;
-    sh:message "Optional: Sie könnten mittels dcatde:licenseAttributionByText zur Lizenz gehörende pflicht-Namensnennungen als Freitext angeben."@de .
+    sh:message "Optional: Sie könnten mittels dcatde:licenseAttributionByText zur Lizenz gehörende Namensnennungen als Freitext angeben."@de .
 
 :Distribution_Spec_licenseAttributionByText_2
     sh:name "Shape licenseAttributionByText - Literal"@de ;
@@ -317,7 +317,7 @@
     sh:path dcatde:licenseAttributionByText ;
     sh:nodeKind sh:Literal ;
     sh:severity sh:Violation ;
-    sh:message "Pflicht: dcatde:licenseAttributionByText ist keine Literal! Geben Sie zur Lizenz gehörende pflicht-Namensnennungen als Freitext an."@de .
+    sh:message "Pflicht: dcatde:licenseAttributionByText ist keine Literal! Geben Sie zur Lizenz gehörende Namensnennungen als Freitext an."@de .
 
 :Distribution_Spec_plannedAvailability_1
     sh:name "Shape plannedAvailability - Existenz"@de ;
