@@ -1,4 +1,16 @@
 # (C) CC BY 4.0 ']init[ AG fuer GovData'
+#
+# Der folgende Befehl geht davon aus, dass man sich im Ordner 'tools' befindet und dort die Offline-Java-Version des Blanko-SHACL-Validators unter dem Dateinamen 'any.jar' abgelegt hat.
+# Der Blanko-SHACL-Validator kann unter https://www.itb.ec.europa.eu/shacl-offline/any/validator.jar bezogen werden.
+# java -Xss4m -jar any.jar -reportSyntax "text/turtle" -externalShapes ../validator/resources/v1.0.2/shapes/dcat-ap-de-lists.ttl -externalShapes ../validator/resources/v1.0.2/shapes/nal-lists.ttl -externalShapes ../validator/resources/v1.0.2/shapes/dcat-ap-de-shapes-specification.ttl 
+#
+# Die Offline-Java-Version des dezeitigen DCAT-AP.de-SHACL-Validators kann unter https://www.itb.ec.europa.eu/shacl-offline/dcat-ap.de/validator.jar bezogen werden.
+# Für den folgenden Befehl wird davon ausgegangen, dass man ihn unter dem Dateinamen 'dcat-ap-de.jar' abgelegt hat.
+# java -Xss4m -jar dcat-ap-de.jar -reportSyntax "text/turtle" 
+#
+# Im jeweiligen NodeShape wird angegeben, wie der Befehl erweitert werden muss, um die zu den Shapes gehörenden Tests zu validieren.
+# Alternativ kann folgendes angehängt werden, um die (überarbeitete) Beispieldatei zu validieren:
+# -contentToValidate ../testcases/rewritten-example-advanced.ttl
 
 @prefix : <http://dcat-ap.de/def/dcatde/1.0.2/#>
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -246,7 +258,6 @@
     sh:severity sh:Violation ;
     sh:message "Pflicht: dcatde:legalBasis ist keine Literal! Geben Sie die Rechtsgrundlage für den Zugang zu den Informationen des Datasets als Freitext an."@de .
 
-# java -Xss4m jar validator.jar -reportSyntax "text/turtle" -externalShapes dcat-ap-de-lists.ttl -externalShapes nal-lists.ttl -externalShapes dcat-ap-de-shapes.ttl
 :Dataset_Spec_Shape 
     a sh:NodeShape ;
     sh:targetClass dcat:Dataset ;
@@ -254,17 +265,17 @@
     sh:description "Enthält Shapes, um ein dcat-ap.de-Dateset auf seine Konformität mit der Spezifikation 1.0.2 zu überprüfen. "@de ;
     sh:deactivated false ;
 
-    # -contentToValidate tests/testcases-dataset-contributorID.ttl
+    # -contentToValidate ../testcases/dataset-contributorID.ttl
     sh:property :Dataset_Spec_contributorID_1 ; # Existenz
     sh:property :Dataset_Spec_contributorID_2 ; # Form - IRI
     sh:property :Dataset_Spec_contributorID_3 ; # in Liste
 
-    # -contentToValidate tests/testcases-dataset-qualityProcessURI.ttl
+    # -contentToValidate ../testcases/dataset-qualityProcessURI.ttl
     sh:property :Dataset_Spec_qualityProcessURI_1 ; # Existenz
     sh:property :Dataset_Spec_qualityProcessURI_2 ; # Maximalzahl
     sh:property :Dataset_Spec_qualityProcessURI_3 ; # Form - IRI
 
-    # -contentToValidate tests/testcases-dataset-originator-maintainer-contributor-creator.ttl
+    # -contentToValidate ../testcases/dataset-originator-maintainer-contributor-creator.ttl
     sh:property :Dataset_Spec_originator_1 ; # Existenz
     sh:property :Dataset_Spec_originator_2 ; # Form - Agent
 
@@ -277,26 +288,26 @@
     sh:property :Dataset_Spec_creator_1 ; # Existenz
     sh:property :Dataset_Spec_creator_2 ; # Form - Agent
 
-    # -contentToValidate tests/testcases-dataset-granularity.ttl
+    # -contentToValidate ../testcases/dataset-granularity.ttl
     sh:property :Dataset_Spec_granularity_1 ; # Existenz
     sh:property :Dataset_Spec_granularity_2 ; # Maximalzahl
     sh:property :Dataset_Spec_granularity_3 ; # Form - IRI auf NAL
 
-    # -contentToValidate tests/testcases-dataset-politicalGeocodingLevelURI.ttl
+    # -contentToValidate ../testcases/dataset-politicalGeocodingLevelURI.ttl
     sh:property :Dataset_Spec_politicalGeocodingLevelURI_1 ; # Existenz
     sh:property :Dataset_Spec_politicalGeocodingLevelURI_2 ; # Form - IRI
     sh:property :Dataset_Spec_politicalGeocodingLevelURI_3 ; # in Liste
     
-    # -contentToValidate tests/testcases-dataset-politicalGeocodingURI.ttl
+    # -contentToValidate ../testcases/dataset-politicalGeocodingURI.ttl
     sh:property :Dataset_Spec_politicalGeocodingURI_1 ; # Existenz
     sh:property :Dataset_Spec_politicalGeocodingURI_2 ; # Form - IRI
     sh:property :Dataset_Spec_politicalGeocodingURI_3 ; # in Listen
     
-    # -contentToValidate tests/testcases-dataset-geocodingDescription.ttl
+    # -contentToValidate ../testcases/dataset-geocodingDescription.ttl
     sh:property :Dataset_Spec_geocodingDescription_1 ; # Existenz
     sh:property :Dataset_Spec_geocodingDescription_2 ; # Form - Literal
         
-    # -contentToValidate tests/testcases-dataset-legalBasis.ttl
+    # -contentToValidate ../testcases/dataset-legalBasis.ttl
     sh:property :Dataset_Spec_legalBasis_1 ; # Existenz
     sh:property :Dataset_Spec_legalBasis_2 ; # Form - Literal
     .
@@ -382,17 +393,17 @@
     sh:description "Enthält Shapes, um eine dcat-ap.de-Distribution auf seine Konformität mit der Spezifikation 1.0.2 zu überprüfen. "@de ;
     sh:deactivated false ;
 
-    # -contentToValidate tests/testcases-distribution-licenseAttributionByText.ttl
+    # -contentToValidate ../testcases/distribution-licenseAttributionByText.ttl
     sh:property :Distribution_Spec_licenseAttributionByText_1 ; # Existenz
     sh:property :Distribution_Spec_licenseAttributionByText_2 ; # Form - Literal
 
-    # -contentToValidate tests/testcases-distribution-plannedAvailability.ttl
+    # -contentToValidate ../testcases/distribution-plannedAvailability.ttl
     sh:property :Distribution_Spec_plannedAvailability_1 ; # Existenz
     sh:property :Distribution_Spec_plannedAvailability_2 ; # Maximalzahl
     sh:property :Distribution_Spec_plannedAvailability_3 ; # Form - IRI
     sh:property :Distribution_Spec_plannedAvailability_4 ; # Gelistet
 
-    # -contentToValidate tests/testcases-distribution-dct_changes.ttl
+    # -contentToValidate ../testcases/distribution-dct_changes.ttl
     sh:property :Distribution_Spec_dct_description_1 ; # Existenz
     sh:property :Distribution_Spec_dct_title_1 ;       # Existenz
     sh:property :Distribution_Spec_dct_modified_1 ;    # Existenz
