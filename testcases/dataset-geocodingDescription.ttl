@@ -1,0 +1,22 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dcatde: <http://dcat-ap.de/def/dcatde/> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+
+@base <dataset-geocodingDescription#> .
+
+<01-P-working>
+  a dcat:Dataset ;
+  dcatde:geocodingDescription "Berlin" .
+
+<02-P-multiple> 
+  a dcat:Dataset ;
+  dcatde:geocodingDescription "Berlin" , "Brandenburg" .
+
+<03-I-nothing> 
+  a dcat:Dataset .
+
+<04-F-wrong_typ> 
+  a dcat:Dataset ;
+  dcatde:geocodingDescription <https://de.wikipedia.org/wiki/Berlin> .

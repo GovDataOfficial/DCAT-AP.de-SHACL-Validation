@@ -1,0 +1,29 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dcatde: <http://dcat-ap.de/def/dcatde/> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@base <distribution-dct_changes#> .
+
+<01-P-working>
+  a dcat:Distribution ;
+  dct:title "Ein Titel"@de ;
+  dct:description "Eine Beschreibung"@de ;
+  dct:modified "2020-01-15"^^xsd:date .
+
+<02-I-no_title> 
+  a dcat:Distribution ;
+  dct:description "Eine Beschreibung"@de ;
+  dct:modified "2020-01-15"^^xsd:date .
+
+<03-W-no_description> 
+  a dcat:Distribution ;
+  dct:title "Ein Titel"@de ;
+  dct:modified "2020-01-15"^^xsd:date .
+
+<04-W-no_modified> 
+  a dcat:Distribution ;
+  dct:title "Ein Titel"@de ;
+  dct:description "Eine Beschreibung"@de .  

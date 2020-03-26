@@ -1,0 +1,42 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dcatde: <http://dcat-ap.de/def/dcatde/> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+
+@base <dataset-politicalGeocodingURI#> .
+
+<01-P-working_district>
+  a dcat:Dataset ;
+  dcatde:politicalGeocodingURI <http://dcat-ap.de/def/politicalGeocoding/districtKey/01001> .
+
+<02-P-working_region>
+  a dcat:Dataset ;
+  dcatde:politicalGeocodingURI <http://dcat-ap.de/def/politicalGeocoding/regionalKey/010010000000> .
+
+<03-P-working_state>
+  a dcat:Dataset ;
+  dcatde:politicalGeocodingURI <http://dcat-ap.de/def/politicalGeocoding/stateKey/11> .
+
+<04-P-working_d_r>
+  a dcat:Dataset ;
+  dcatde:politicalGeocodingURI <http://dcat-ap.de/def/politicalGeocoding/districtKey/01001> , <http://dcat-ap.de/def/politicalGeocoding/regionalKey/010010000000> .
+
+<05-P-working_r_s>
+  a dcat:Dataset ;
+  dcatde:politicalGeocodingURI <http://dcat-ap.de/def/politicalGeocoding/regionalKey/010010000000> , <http://dcat-ap.de/def/politicalGeocoding/stateKey/11> .
+
+<06-P-working_d_r_s>
+  a dcat:Dataset ;
+  dcatde:politicalGeocodingURI <http://dcat-ap.de/def/politicalGeocoding/districtKey/01001> , <http://dcat-ap.de/def/politicalGeocoding/regionalKey/010010000000> , <http://dcat-ap.de/def/politicalGeocoding/stateKey/11> .
+
+<07-W-No_politicalGeocodingURI> 
+  a dcat:Dataset .
+
+<08-F-multiple_one_wrong_type>
+  a dcat:Dataset ;
+  dcatde:politicalGeocodingURI <http://dcat-ap.de/def/politicalGeocoding/districtKey/01001> , "http://dcat-ap.de/def/politicalGeocoding/districtKey/01001" .
+
+<09-W-multiple_one_unknown>
+  a dcat:Dataset ;
+  dcatde:politicalGeocodingURI <http://dcat-ap.de/def/politicalGeocoding/districtKey/01001> , <http://dcat-ap.de/def/politicalGeocoding/regionalKey/unknownx> .

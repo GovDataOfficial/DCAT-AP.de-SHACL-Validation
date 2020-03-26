@@ -1,0 +1,26 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dcatde: <http://dcat-ap.de/def/dcatde/> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+
+@base <distribution-plannedAvailability#> .
+
+<01-P-working>
+  a dcat:Distribution ;
+  dcatde:plannedAvailability <http://dcat-ap.de/def/plannedAvailability/experimental>  .
+
+<02-I-nothing> 
+  a dcat:Distribution .
+
+<03-F-multiple> 
+  a dcat:Distribution ;
+  dcatde:plannedAvailability <http://dcat-ap.de/def/plannedAvailability/experimental> , <http://dcat-ap.de/def/plannedAvailability/available> .
+
+<04-F-wrong_typ> 
+  a dcat:Distribution ;
+  dcatde:plannedAvailability "https://de.wikipedia.org/wiki/Fehler" .
+  
+<05-W-not_in_list> 
+  a dcat:Distribution ;
+  dcatde:plannedAvailability <https://de.wikipedia.org/wiki/Fehler> .

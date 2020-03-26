@@ -1,0 +1,54 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dcatde: <http://dcat-ap.de/def/dcatde/> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+
+@base <dataset-originator-maintainer-contributor-creator#> .
+
+<ex_agent>
+  a foaf:Agent ;
+  foaf:name "James Bond" .
+
+<ex_agent_smith>
+  a foaf:Agent ;
+  foaf:name "Smith" .
+
+<ex_person>
+  a foaf:Person ;
+  foaf:nick "Q" .
+
+<ex_organization>
+  a foaf:Organitation ;
+  foaf:name "MI-6" .
+
+<01-P-working>
+  a dcat:Dataset ;
+  dcatde:originator <ex_agent> ;
+  dcatde:maintainer <ex_agent> ;
+  dct:contributor <ex_agent> ;
+  dct:creator <ex_agent> .
+
+<01-P-working_multiple>
+  a dcat:Dataset ;
+  dcatde:originator <ex_agent>, <ex_agent_smith> ;
+  dcatde:maintainer <ex_agent>, <ex_agent_smith> ;
+  dct:contributor <ex_agent>, <ex_agent_smith> ;
+  dct:creator <ex_agent>, <ex_agent_smith> .
+
+<04-I-Nothing> 
+  a dcat:Dataset .
+
+<05-Fs-wrong_type_1>
+  a dcat:Dataset ;
+  dcatde:originator "James Bond" ;
+  dcatde:maintainer "James Bond" ;
+  dct:contributor "James Bond" ;
+  dct:creator "James Bond" .
+
+<04-Fs-wrong_type_2>
+  a dcat:Dataset ;
+  dcatde:originator <ex_person> ;
+  dcatde:maintainer "James Bond" ;
+  dct:contributor "James Bond" ;
+  dct:creator "James Bond" .

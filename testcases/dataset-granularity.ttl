@@ -1,0 +1,26 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dcatde: <http://dcat-ap.de/def/dcatde/> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+
+@base <dataset-granularity#> .
+
+<01-P-working>
+  a dcat:Dataset ;
+  dcat:granularity <http://publications.europa.eu/resource/authority/frequency/WEEKLY> .
+
+<02-I-No_granularity> 
+  a dcat:Dataset .
+
+<03-F-granularity_wrong_type>
+  a dcat:Dataset ;
+  dcat:granularity "http://publications.europa.eu/resource/authority/frequency/WEEKLY" .
+
+<04-F-granularity_not_in_list>
+  a dcat:Dataset ;
+  dcat:granularity <http://example.com/daily> .
+
+<05-F-granularity_multiple>
+  a dcat:Dataset ;
+  dcat:granularity <http://publications.europa.eu/resource/authority/frequency/WEEKLY> , <http://publications.europa.eu/resource/authority/frequency/DAILY> .

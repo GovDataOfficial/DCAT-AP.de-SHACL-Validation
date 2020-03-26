@@ -1,0 +1,34 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dcatde: <http://dcat-ap.de/def/dcatde/> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+
+@base <dataset-politicalGeocodingLevelURI#> .
+
+<01-P-working>
+  a dcat:Dataset ;
+  dcatde:politicalGeocodingLevelURI <http://dcat-ap.de/def/politicalGeocoding/Level/international> .
+
+<02-P-working_multiple>
+  a dcat:Dataset ;
+  dcatde:politicalGeocodingLevelURI <http://dcat-ap.de/def/politicalGeocoding/Level/international> , <http://dcat-ap.de/def/politicalGeocoding/Level/european> .
+
+<03-W-No_politicalGeocodingLevelURI> 
+  a dcat:Dataset .
+
+<04-F-politicalGeocodingLevelURI_wrong_type>
+  a dcat:Dataset ;
+  dcatde:politicalGeocodingLevelURI "http://dcat-ap.de/def/contributors/transparenzportalHamburg" .
+
+<05-W-politicalGeocodingLevelURI_not_in_list>
+  a dcat:Dataset ;
+  dcatde:politicalGeocodingLevelURI <politicalGeocoding/Level/unknownLevel> .
+
+<06-W-politicalGeocodingLevelURI_multiple_with_other_IRI>
+  a dcat:Dataset ;
+  dcatde:politicalGeocodingLevelURI <http://dcat-ap.de/def/politicalGeocoding/Level/international> , <https://opendata.umea.se/> .
+
+<07-F-politicalGeocodingLevelURI_multiple_with_wrong_type>
+  a dcat:Dataset ;
+  dcatde:politicalGeocodingLevelURI <http://dcat-ap.de/def/politicalGeocoding/Level/international> , "https://opendata.umea.se/" .
