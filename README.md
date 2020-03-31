@@ -6,7 +6,7 @@ Der Validator ist Online unter https://www.itb.ec.europa.eu/shacl/dcat-ap.de/upl
 Eine Offline-Java-Version kann unter https://www.itb.ec.europa.eu/shacl-offline/dcat-ap.de/validator.jar bezogen werden.
 
 ## Umfang
-Die vorliegenden Shapes prüfen die Eigenschaften, die das deutsche DCAT-AP.de 1.0.2 Spezifikationsdokument zusätzlich oder abweichend vom europäischen DCAT-AP 1.2.1 Standard festlegt.
+Die vorliegenden Shapes prüfen die Eigenschaften, die das deutsche DCAT-AP.de 1.0.2 Spezifikationsdokument zusätzlich oder abweichend vom europäischen DCAT-AP 1.2.1 Standard festlegt. (Hinweis: Eine Weiterentwicklung der Shapes um die Prüfung der DCAT-AP.de Konventionenhandbuch-Konformität ist aktuell in Arbeit. Parallel hierzu beteiligt sich die GKSt GovData an der Weiterentwicklung der Shapes für den europäischen Metadatenstandard DCAT-AP.)   
 
 ### Nicht geprüft wird
 - ob es valides [DCAT](https://www.w3.org/TR/vocab-dcat/) ist
