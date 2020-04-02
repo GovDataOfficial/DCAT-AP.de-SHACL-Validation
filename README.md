@@ -1,9 +1,13 @@
 # DCAT-AP.de SHACL-Validation (BETA)
 *SHACL-Shapes für DCAT-AP.de*
 
-## Verfügbarkeit
-Der Validator ist Online unter https://www.itb.ec.europa.eu/shacl/dcat-ap.de/upload verfügbar.
-Eine Offline-Java-Version kann unter https://www.itb.ec.europa.eu/shacl-offline/dcat-ap.de/validator.jar bezogen werden.
+## Verfügbarkeit und Verwendung
+Wie der Validator verwendet werden kann, wird auf https://www.itb.ec.europa.eu/docs/guides/latest/validatingRDF/index.html#step-6-use-the-validator beschrieben.
+
+**Webseite User-Interface:** https://www.itb.ec.europa.eu/shacl/dcat-ap.de/upload
+**Download Commandline-Tool:** https://www.itb.ec.europa.eu/shacl-offline/dcat-ap.de/validator.jar
+**Endpoint REST-API:** https://www.itb.ec.europa.eu/shacl/dcat-ap.de/api
+**Endpoint SOAP-API:** https://www.itb.ec.europa.eu/shacl/soap/dcat-ap.de/validation?wsdl
 
 ## Umfang
 Die vorliegenden Shapes prüfen die Eigenschaften, die das deutsche DCAT-AP.de 1.0.2 Spezifikationsdokument zusätzlich oder abweichend vom europäischen DCAT-AP 1.2.1 Standard festlegt. (Hinweis: Eine Weiterentwicklung der Shapes um die Prüfung der DCAT-AP.de Konventionenhandbuch-Konformität ist aktuell in Arbeit. Parallel hierzu beteiligt sich die GKSt GovData an der Weiterentwicklung der Shapes für den europäischen Metadatenstandard DCAT-AP.)   
@@ -36,7 +40,7 @@ Distribution | dcatde:plannedAvailability      | recommended  | rdfs:Resource | 
 Distribution | dcatde:licenseAttributionByText | optional     | rdfs:Literal  | 0..n  | Distribution_Spec_licenseAttributionByText_Ex<br>Distribution_Spec_licenseAttributionByText_Literal
 
 **Prüfungen:**
-Suffix       | Type            | Beschreibung
+Suffix       | Typ             | Beschreibung
 ------------ | --------------- | ----------------------------------------
 _Ex          | **Existenz**    | Prüft, ob eine Eigenschaft vorhanden ist.
 _IRI         | **IRI**         | Prüft, ob das Objekt des Tripels eine IRI ist.
