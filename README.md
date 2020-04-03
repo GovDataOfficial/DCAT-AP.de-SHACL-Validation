@@ -4,10 +4,10 @@
 ## Verfügbarkeit und Verwendung
 Wie der Validator verwendet werden kann, wird auf https://www.itb.ec.europa.eu/docs/guides/latest/validatingRDF/index.html#step-6-use-the-validator beschrieben.
 
-**Webseite User-Interface:** https://www.itb.ec.europa.eu/shacl/dcat-ap.de/upload
-**Download Commandline-Tool:** https://www.itb.ec.europa.eu/shacl-offline/dcat-ap.de/validator.jar
-**Endpoint REST-API:** https://www.itb.ec.europa.eu/shacl/dcat-ap.de/api
-**Endpoint SOAP-API:** https://www.itb.ec.europa.eu/shacl/soap/dcat-ap.de/validation?wsdl
+**Webseite User-Interface:** https://www.itb.ec.europa.eu/shacl/dcat-ap.de/upload  
+**Download Commandline-Tool:** https://www.itb.ec.europa.eu/shacl-offline/dcat-ap.de/validator.jar  
+**Endpoint REST-API:** https://www.itb.ec.europa.eu/shacl/dcat-ap.de/api  
+**Endpoint SOAP-API:** https://www.itb.ec.europa.eu/shacl/soap/dcat-ap.de/validation?wsdl  
 
 ## Umfang
 Die vorliegenden Shapes prüfen die Eigenschaften, die das deutsche DCAT-AP.de 1.0.2 Spezifikationsdokument zusätzlich oder abweichend vom europäischen DCAT-AP 1.2.1 Standard festlegt. (Hinweis: Eine Weiterentwicklung der Shapes um die Prüfung der DCAT-AP.de Konventionenhandbuch-Konformität ist aktuell in Arbeit. Parallel hierzu beteiligt sich die GKSt GovData an der Weiterentwicklung der Shapes für den europäischen Metadatenstandard DCAT-AP.)   
