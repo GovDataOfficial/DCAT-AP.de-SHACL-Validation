@@ -49,6 +49,13 @@
 <04-Fs-wrong_type_2>
   a dcat:Dataset ;
   dcatde:originator <ex_person> ;
-  dcatde:maintainer "James Bond" ;
-  dct:contributor "James Bond" ;
-  dct:creator "James Bond" .
+  dcatde:maintainer <ex_person> ;
+  dct:contributor <ex_person> ;
+  dct:creator <ex_person> .
+  
+<05-Fs-wrong_type_3>
+  a dcat:Dataset ;
+  dcatde:originator <ex_organization> ;
+  dcatde:maintainer <ex_organization> ;
+  dct:contributor <ex_organization> ;
+  dct:creator <ex_organization> .
