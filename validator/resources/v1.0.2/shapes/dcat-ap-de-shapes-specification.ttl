@@ -386,6 +386,19 @@
     sh:severity sh:Warning ;
     sh:message "Empfohlen: Sie sollten mittels dct:modified den Zeitpunkt der letzten Änderung der Distribution als xsd:date oder xsd:dateTime angeben. DCAT-AP.de hat im Vergleich zu DCAT-AP die Verbindlichkeit dieser Eigenschaft auf 'empfohlen' erhöht."@de .
 
+:Distribution_Spec_spdx_Checksum_Algo_List
+    sh:name "Shape spdx:Checksum -> algorithm - Gelistet"@de ;
+    sh:description "Prüfe, ob der in der Checksum angegebene Algorithmus in der :hashAlgorithms_List ist."@de ;
+    sh:path spdx:checksum ;
+    sh:node [
+        sh:property [
+            sh:path spdx:algorithm ;
+            sh:in :hashAlgorithms_List ;
+        ] ;
+    ] ;
+    sh:severity sh:Info ;
+    sh:message "Optional: Der Algorithmus ist unbekannt! Sie können den verwendeten Hash-Algorithmus mittels der Liste https://www.dcat-ap.de/def/hashAlgorithms/ angeben."@de .
+
 :Distribution_Spec_Shape
     a sh:NodeShape ;
     sh:targetClass dcat:Distribution ;
@@ -408,6 +421,8 @@
     sh:property :Distribution_Spec_dct_title_Ex ;       # Existenz
     sh:property :Distribution_Spec_dct_modified_Ex ;    # Existenz
     
+    # -contentToValidate ../testcases/distribution-checksum.ttl
+    sh:property :Distribution_Spec_spdx_Checksum_Algo_List ; # in Liste
     .
 
 # :Dataset_Konv_Shape 

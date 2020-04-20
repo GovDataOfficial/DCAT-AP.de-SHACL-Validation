@@ -1,0 +1,77 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dcatde: <http://dcat-ap.de/def/dcatde/> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix spdx: <http://spdx.org/rdf/terms#> .
+
+@base <distribution-checksum#> .
+
+<01-P-working>
+  a dcat:Distribution ;
+  spdx:checksum [
+      a spdx:Checksum ;
+      spdx:algorithm <http://dcat-ap.de/def/hashAlgorithms/md/5> ;
+      spdx:checksumValue "476a5533998c2b31c81c2d56a25b83a7"^^xsd:hexBinary ;
+  ] .
+
+<02-I-not_in_list> 
+  a dcat:Distribution ;
+  spdx:checksum [
+      a spdx:Checksum ;
+      spdx:algorithm <https://de.wikipedia.org/wiki/Fehler> ;
+      spdx:checksumValue "476a5533998c2b31c81c2d56a25b83a7"^^xsd:hexBinary ;
+  ] .
+
+# <03-F-multiple> 
+#   a dcat:Distribution ;
+#   spdx:checksum [
+#       a spdx:Checksum ;
+#       spdx:algorithm <http://dcat-ap.de/def/hashAlgorithms/md/5> ;
+#       spdx:checksumValue "476a5533998c2b31c81c2d56a25b83a7"^^xsd:hexBinary ;
+#   ] , [
+#       a spdx:Checksum ;
+#       spdx:algorithm <http://dcat-ap.de/def/hashAlgorithms/md/5> ;
+#       spdx:checksumValue "442c0184eb4ce608ee5f721db7b4b1fc"^^xsd:hexBinary ;
+#   ] .
+
+# <04-F-no_class> 
+#   spdx:checksum [
+#       spdx:algorithm <http://dcat-ap.de/def/hashAlgorithms/md/5> ;
+#       spdx:checksumValue "476a5533998c2b31c81c2d56a25b83a7"^^xsd:hexBinary ;
+#   ] .
+
+# <05-F-wrong_class> 
+#   spdx:checksum [
+#       a foaf:Agent ;
+#       spdx:algorithm <http://dcat-ap.de/def/hashAlgorithms/md/5> ;
+#       spdx:checksumValue "476a5533998c2b31c81c2d56a25b83a7"^^xsd:hexBinary ;
+#   ] .
+
+# <06-F-algo_wrong_type>
+#   a dcat:Distribution ;
+#   spdx:checksum [
+#       a spdx:Checksum ;
+#       spdx:algorithm "http://dcat-ap.de/def/hashAlgorithms/md/5" ;
+#       spdx:checksumValue "476a5533998c2b31c81c2d56a25b83a7"^^xsd:hexBinary ;
+#   ] .
+
+# <07-F-checksum_wrong_type>
+#   a dcat:Distribution ;
+#   spdx:checksum [
+#       a spdx:Checksum ;
+#       spdx:algorithm <http://dcat-ap.de/def/hashAlgorithms/md/5> ;
+#       spdx:checksumValue <http://example.com/> ;
+#   ] .
+
+# <08-F-checksum_wrong_type_2>
+#   a dcat:Distribution ;
+#   spdx:checksum [
+#       a spdx:Checksum ;
+#       spdx:algorithm <http://dcat-ap.de/def/hashAlgorithms/md/5> ;
+#       spdx:checksumValue "1234567890"^^xsd:Integer ;
+#   ] .
+
+# <09-I-nothing> 
+#   a dcat:Distribution .

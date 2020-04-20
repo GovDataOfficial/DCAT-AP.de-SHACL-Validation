@@ -38,6 +38,7 @@ Distribution | dct:title                       | recommended  |               | 
 Distribution | dct:modified                    | recommended  |               |       | Distribution_Spec_dct_modified_Ex
 Distribution | dcatde:plannedAvailability      | recommended  | rdfs:Resource | 0..1  | Distribution_Spec_plannedAvailability_Ex<br>Distribution_Spec_plannedAvailability_Max<br>Distribution_Spec_plannedAvailability_IRI<br>Distribution_Spec_plannedAvailability_List
 Distribution | dcatde:licenseAttributionByText | optional     | rdfs:Literal  | 0..n  | Distribution_Spec_licenseAttributionByText_Ex<br>Distribution_Spec_licenseAttributionByText_Literal
+Checksum     | spdx:algorithm                  |              | rdfs:Resource |       | Distribution_Spec_spdx_Checksum_Algo_List
 
 **Prüfungen:**
 Suffix       | Typ             | Beschreibung
