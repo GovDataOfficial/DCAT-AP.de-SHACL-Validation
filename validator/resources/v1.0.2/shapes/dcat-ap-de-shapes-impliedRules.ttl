@@ -1,0 +1,533 @@
+# (C) CC BY 4.0 ']init[ AG fuer GovData'
+#
+# Der folgende Befehl geht davon aus, dass man sich im Ordner 'tools' befindet und dort die Offline-Java-Version des Blanko-SHACL-Validators unter dem Dateinamen 'any.jar' abgelegt hat.
+# Der Blanko-SHACL-Validator kann unter https://www.itb.ec.europa.eu/shacl-offline/any/validator.jar bezogen werden.
+# java -Xss4m -jar any.jar -reportSyntax "text/turtle" -externalShapes ../validator/resources/v1.0.2/shapes/dcat-ap-de-lists.ttl -externalShapes ../validator/resources/v1.0.2/shapes/nal-lists.ttl -externalShapes ../validator/resources/v1.0.2/shapes/dcat-ap-de-shapes-impliedRules.ttl 
+#
+# Die Offline-Java-Version des dezeitigen DCAT-AP.de-SHACL-Validators kann unter https://www.itb.ec.europa.eu/shacl-offline/dcat-ap.de/validator.jar bezogen werden.
+# Für den folgenden Befehl wird davon ausgegangen, dass man ihn unter dem Dateinamen 'dcat-ap-de.jar' abgelegt hat.
+# java -Xss4m -jar dcat-ap-de.jar -reportSyntax "text/turtle" 
+#
+# Im jeweiligen NodeShape wird angegeben, wie der Befehl erweitert werden muss, um die zu den Shapes gehörenden Tests zu validieren.
+# Alternativ kann folgendes angehängt werden, um die (überarbeitete) Beispieldatei zu validieren:
+# -contentToValidate ../testcases/rewritten-example-advanced.ttl
+
+@prefix : <http://dcat-ap.de/def/dcatde/1.0.2/#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcatde: <http://dcat-ap.de/def/dcatde/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
+@prefix spdx: <http://spdx.org/rdf/terms#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# Konv 01: Kontaktinformationen MÜSSEN mit Namen sowie Telefon und/oder Email unter Nutzung des vcard Vokabulars hinterlegt werden. - Seite 5
+    # (K) - dcat:contactPoint MUSS auf einen vcard:Kind (inkl. Unterklassen) zeigen
+    # (K) - die Klasse MUSS über vcard:fn verfügen 
+    # (K) - sie MUSS vcard:hasEmail und/oder vcard:hasTelephone haben.
+    # (I) - vcard:hasURL ist optional. 
+    # (I) - Andere Attribute sind NICHT ERLAUBT.
+
+:Shapes_ImplR_Konv_01
+    a sh:NodeShape ;
+    sh:targetObjectsOf dcat:contactPoint ;
+    sh:name "Konvention 01"@de ;
+    sh:description "Kontaktinformationen MÜSSEN mit Namen sowie Telefon und/oder Email unter Nutzung des vcard Vokabulars hinterlegt werden."@de ;
+    sh:deactivated false ;
+
+    # Darf nur über die genannten vier Attribute verfügen!
+    sh:message "Pflicht (K01): dcat:contactPoint darf nur über vcard:fn, vcard:hasEmail, vcard:hasTelephone und vcard:hasURL verfügen."@de ;
+    sh:closed true ;
+    sh:ignoredProperties (rdf:type) ;
+    sh:property [ sh:path vcard:fn, vcard:hasEmail, vcard:hasTelephone, vcard:hasURL ] ;
+    sh:severity sh:Violation ;
+
+    sh:property [
+        sh:name "Shape dcat:contactPoint - vcard:Kind"@de ;
+        sh:description "Prüfe, ob der dcat:contactPoint auf einen vcard:Kind verweist."@de ;
+        sh:class vcard:Kind ;
+        sh:severity sh:Violation ;
+        sh:message "Pflicht (K01): dcat:contactPoint MUSS auf eine Klasse des Typs vcard:Kind verweisen."@de ;
+    ] ;
+
+    sh:property [
+        sh:name "Shape dcat:contactPoint - vcard:fn"@de ;
+        sh:description "Prüfe, ob ein vcard:fn vorhanden ist."@de ;
+        sh:path vcard:fn ;
+        sh:minCount 1 ;
+        sh:severity sh:Violation ;
+        sh:message "Pflicht (K01): Sie müssen den Namen mittels vcard:fn angeben."@de ;
+    ] ;
+
+    sh:property [
+        sh:name "Shape dcat:contactPoint - vcard:hasURL"@de ;
+        sh:description "Prüfe, ob ein vcard:hasURL vorhanden ist."@de ;
+        sh:path vcard:hasURL ;
+        sh:minCount 1 ;
+        sh:severity sh:Info ;
+        sh:message "Optional: Sie könnten mittels vcard:hasURL einen Link zum Kontaktformular (empfohlen) oder zur Webseite angeben."@de ;
+    ] ;
+
+    sh:property [
+        sh:name "Shape dcat:contactPoint - vcard:hasEmail oder vcard:hasTelephone"@de ;
+        sh:description "Prüfe, ob ein vcard:hasEmail oder vcard:hasTelephone vorhanden ist."@de ;
+        sh:message "Pflicht (K01): Der dcat:contactPoint MUSS über eine vcard:hasEmail oder vcard:hasTelephone verfügen."@de ;
+        sh:or (
+            [
+                sh:path vcard:hasEmail ;
+                sh:minCount 1 ;
+            ]
+            [
+                sh:path vcard:hasTelephone ;
+                sh:minCount 1 ;
+            ] 
+        ) ;
+    ] ;
+.
+
+# Konv 02: Sind Informationen im Web zu Qualitätssicherungsprozessen einer Datenstruktur vorhanden, so KÖNNEN diese über das Feld dcatde:qualityProcessURI transportiert werden. - Seite 5
+    # (K) - Die Verwendung von dcatde:qualityProcessURI ist OPTIONAL.
+    # Hinweis (Optional) bei Abwesenheit (wie :Dataset_Spec_qualityProcessURI_Ex).
+
+:Shapes_ImplR_Konv_02 
+    a sh:NodeShape ; 
+    sh:targetClass dcat:Dataset ;
+    sh:name "Konvention 02"@de ; 
+    sh:description "Sind Informationen im Web zu Qualitätssicherungsprozessen einer Datenstruktur vorhanden, so KÖNNEN diese über das Feld dcatde:qualityProcessURI transportiert werden. - Seite 5" ;
+    sh:deactivated false ;
+
+    sh:property [
+        sh:path dcatde:qualityProcessURI ;
+        sh:minCount 1 ;
+        sh:severity sh:Warning ;
+        sh:message "Optional (K02) :Sie könnten mittels dcatde:qualityProcessURI auf eine Webseite, die den Prozess zur Qualitätssicherung des Datasets beschreibt, verweisen."@de ;
+    ]
+.
+
+# # Konv 03: Beschreibungsfelder (z.B. title, description) KÖNNEN bei Vorhandensein von Metadaten in mehreren Sprachen wiederholt auftreten. Ist die Sprache nicht Deutsch, so MUSS sie mit den Sprachcodes gemäß BCP47 ausgezeichnet werden. Gibt es für eine Sprache keinen Alpha-2 Code nach ISO 639-1, so ist der Alpha-3 Code nach ISO 639-2 zu verwenden. - Seite 5
+#     # scheint nicht umsetzbar zu sein, da bei der Verwendung von sh:languageIn ein Fehlen der Sprachangabe immer als Fehler gewertet wird. 
+#     # NICHT UMSETZBAR
+
+# Konv 04 - 07: 
+    # 4/5/6/7 sehr schwierig zu überprüfen.
+    # Hinweisnachricht, immer wenn dct:spatial genutzt wird.
+
+:Shapes_ImplR_Konv_04_05_06_07 
+    a sh:NodeShape ; 
+    sh:targetClass dcat:Dataset ;
+    sh:targetClass dcat:Catalog ;
+
+    sh:name "Konvention 04 - 07"@de ; 
+    sh:description "04 Wird die räumliche Abdeckung eines Katalogs oder einer Datenstruktur (dct:spatial) unter Verwendung von Geometrien und Punkten bezeichnet, MÜSSEN die Koordinatensysteme mit angegeben werden. - Seite 9" ;
+    sh:description "05 Wird die räumliche Abdeckung eines Katalogs oder einer Datenstruktur (dct:spatial) unter Verwendung von Geometrien und Punkten angegeben, so MÜSSEN Koordinaten entsprechend der Achsenanordnung des bezeichneten Koordinatensystems angegeben werden. - Seite 9" ;
+    sh:description "06 Für die Angabe von Geometrien für die räumliche Abdeckung (dct:spatial) MÜSSEN WKT, GML, oder RDF+WKT/GML gemäß der GeoSPARQL Spezifikation, KML oder RDF von schema.org verwendet werden. - Seite 9" ;
+    sh:description "07 Bei der Angaben von Punkten für die räumliche Abdeckung (dct:spatial) MÜSSEN die für Geometrien zugelassen Werte oder geo URIs, GeoHash URIs oder das W3C Basic Geo (WGS84 lat/long) vocabulary verwendet werden. - Seite 9" ;
+    sh:deactivated false ;
+
+    sh:property [
+        sh:name "Shape dcat:Dataset oder dcat:Catalog - hat dct:spatial"@de ;
+        sh:description "Prüfe, ob ein dct:spatial vorhanden ist."@de ;
+
+        sh:path dct:spatial ;
+        sh:severity sh:Info ;
+        sh:maxCount 0 ;
+        sh:message "Konvention 04 (Hinweis): Wird die räumliche Abdeckung eines Katalogs oder einer Datenstruktur (dct:spatial) unter Verwendung von Geometrien und Punkten bezeichnet, MÜSSEN die Koordinatensysteme mit angegeben werden. - Seite 9" ;
+        sh:message "Konvention 05 (Hinweis): Wird die räumliche Abdeckung eines Katalogs oder einer Datenstruktur (dct:spatial) unter Verwendung von Geometrien und Punkten angegeben, so MÜSSEN Koordinaten entsprechend der Achsenanordnung des bezeichneten Koordinatensystems angegeben werden. - Seite 9" ;
+        sh:message "Konvention 06 (Hinweis): Für die Angabe von Geometrien für die räumliche Abdeckung (dct:spatial) MÜSSEN WKT, GML, oder RDF+WKT/GML gemäß der GeoSPARQL Spezifikation, KML oder RDF von schema.org verwendet werden. - Seite 9" ;
+        sh:message "Konvention 07 (Hinweis): Bei der Angaben von Punkten für die räumliche Abdeckung (dct:spatial) MÜSSEN die für Geometrien zugelassen Werte oder geo URIs, GeoHash URIs oder das W3C Basic Geo (WGS84 lat/long) vocabulary verwendet werden. - Seite 9" ;
+    ]  
+.
+
+# Konv 08: Der verwaltungspolitische Geobezug MUSS zusätzlich zur dct:spatial bezeichnet werden (dcatde:politicalGeocodingURI), wenn die geografische Abdeckung ausgedrückt werden soll und eine Datenstruktur das gesamte Bundesgebiet oder das Gebiet einer bestimmten Gemeinde, eines Gemeindeverbandes, eines Kreises, eines Bezirks oder eines Bundeslandes abdeckt. - Seite 12
+    # Ob der durch dct:spatial beschriebene Geobezug die gegebenen Anforderungen erfüllt, kann kaum geprüft werden.
+    # Hinweisnachricht (RECOMMENDED), immer wenn dcat:Dataset dct:spatial genutzt wird, dcatde:politicalGeocodingURI aber nicht genutzt wird
+
+:Shapes_ImplR_Konv_08 
+    a sh:NodeShape ; 
+    sh:targetSubjectsOf dct:spatial ;
+
+    sh:name "Konvention 08"@de ; 
+    sh:description "Der verwaltungspolitische Geobezug MUSS zusätzlich zur dct:spatial bezeichnet werden (dcatde:politicalGeocodingURI), wenn die geografische Abdeckung ausgedrückt werden soll und eine Datenstruktur das gesamte Bundesgebiet oder das Gebiet einer bestimmten Gemeinde, eines Gemeindeverbandes, eines Kreises, eines Bezirks oder eines Bundeslandes abdeckt. - Seite 12" ;
+    sh:deactivated false ;
+
+    sh:property [
+        sh:name "Shape dcat:Dataset oder dcat:Catalog - hat dct:spatial aber kein dcatde:politicalGeocodingURI"@de ;
+        sh:description "Prüfe, ob ein dct:spatial aber kein dcatde:politicalGeocodingURI vorhanden ist."@de ;
+        sh:message "Konvention 08 (Pflicht): Der verwaltungspolitische Geobezug MUSS zusätzlich zur dct:spatial bezeichnet werden (dcatde:politicalGeocodingURI), wenn die geografische Abdeckung ausgedrückt werden soll und eine Datenstruktur das gesamte Bundesgebiet oder das Gebiet einer bestimmten Gemeinde, eines Gemeindeverbandes, eines Kreises, eines Bezirks oder eines Bundeslandes abdeckt. - Seite 12" ;
+        
+        sh:path dcatde:politicalGeocodingURI ;
+        sh:minCount 1 ;
+    ] ;
+.
+
+# Konv 09: Die Ebene der geopolitischen Abdeckung (dcatde:politicalGeocodingLevelURI) SOLL durch einen URI bezeichnet werden, wenn eine Abdeckung durch die Datenstruktur auf abstrakter Verwaltungsebene (Bund, Land, Kreis, Kommunen) gegeben ist. - Seite 12
+    # Ob eine Abdeckung durch die Datenstruktur auf abstrakter Verwaltungsebene (Bund, Land, Kreis, Kommunen) gegeben ist, lässt sich kaum überprüfen.
+    # TODO: Hinweisnachricht (RECOMMENDED), immer wenn dcat:Dataset dct:spatial oder dcatde:politicalGeocodingURI genutzt, dcatde:politicalGeocodingLevelURI aber nicht genutzt wird-
+
+:Shapes_ImplR_Konv_09 
+    a sh:NodeShape ; 
+    sh:targetClass dcat:Dataset ;
+
+    sh:name "Konvention 09"@de ; 
+    sh:description "Die Ebene der geopolitischen Abdeckung (dcatde:politicalGeocodingLevelURI) SOLL durch einen URI bezeichnet werden, wenn eine Abdeckung durch die Datenstruktur auf abstrakter Verwaltungsebene (Bund, Land, Kreis, Kommunen) gegeben ist. - Seite 12" ;
+    sh:deactivated false ;
+
+    sh:message "Konvention 09 (Empfehlung): Die Ebene der geopolitischen Abdeckung (dcatde:politicalGeocodingLevelURI) SOLL durch einen URI bezeichnet werden, wenn eine Abdeckung durch die Datenstruktur auf abstrakter Verwaltungsebene (Bund, Land, Kreis, Kommunen) gegeben ist. - Seite 12"@de ;
+
+    sh:or (
+        [sh:and (
+            [sh:or (
+                [
+                    sh:path dct:spatial ;
+                    sh:minCount 1 ;
+                ]
+                [
+                    sh:path dcatde:politicalGeocodingURI ;
+                    sh:minCount 1 ;
+                ] 
+            )]
+            [
+                sh:path dcatde:politicalGeocodingLevelURI ;
+                sh:minCount 1 ;
+            ]
+        )]
+        [sh:and (
+            [
+                sh:path dct:spatial ;
+                sh:maxCount 0 ;
+            ]
+            [
+                sh:path dcatde:politicalGeocodingURI ;
+                sh:maxCount 0 ;
+            ] 
+        )]
+    )
+.
+
+# =================================== bis hier
+# Konv 10: Die Eigenschaft „verwaltungspolitische oder fachliche Geobezug“ (dcatde:geocodingDescription) MUSS als Freitextfeld verwendet werden, wenn eine andere geopolitische Codierung der Abdeckung der Datenstruktur nicht möglich oder zu komplex ist. - Seite 12
+    # TODO: Hinweis (MUSS), wenn dcat:Dataset KEIN dct:spatial, dcatde:politicalGeocodingURI oder dcatde:politicalGeocodingLevelURI UND trotzdem kein dcatde:geocodingDescription besitzt.
+:Shapes_ImplR_Konv_10 
+    a sh:NodeShape ; 
+    #sh:target... 
+    sh:name "Konvention 10"@de ; 
+    sh:description "Die Eigenschaft „verwaltungspolitische oder fachliche Geobezug“ (dcatde:geocodingDescription) MUSS als Freitextfeld verwendet werden, wenn eine andere geopolitische Codierung der Abdeckung der Datenstruktur nicht möglich oder zu komplex ist. - Seite 12" ;
+    sh:deactivated true ;
+    #... tbd ...
+.
+
+# Konv 11: Die in dcatde:politicalGeocodingURI ausgedrückten geografischen Bezüge SOLLEN zum Erhalt der europäischen Interoperabilität zugleich bei dct:spatial (Bundesländer, Kreise und Kommunen) als geografischer Bezug per URI gespiegelt werden. - Seite 12
+    # TODO: Wenn dcatde:politicalGeocodingURI verwendet wird, dann SOLL auch ein dct:spatial mit einer URI vorhanden sein.
+:Shapes_ImplR_Konv_11 
+    a sh:NodeShape ; 
+    #sh:target... 
+    sh:name "Konvention 11"@de ; 
+    sh:description "Die in dcatde:politicalGeocodingURI ausgedrückten geografischen Bezüge SOLLEN zum Erhalt der europäischen Interoperabilität zugleich bei dct:spatial (Bundesländer, Kreise und Kommunen) als geografischer Bezug per URI gespiegelt werden. - Seite 12" ;
+    sh:deactivated true ;
+    #... tbd ...
+.
+
+# Konv 12: Alle Datenstrukturen, die direkt an das GovData Portal geliefert werden, MÜSSEN ihre Herkunft über eine eindeutige Kennzeichnung des Datenbereitstellers über die DatenbereitstellerID (dcatde:contributorID) ausweisen. - Seite 13
+    # TODO: Wie :Dataset_Spec_contributorID_Ex, nur MUSS
+
+:Shapes_ImplR_Konv_12 
+    a sh:NodeShape ; 
+    #sh:target... 
+    sh:name "Konvention 12"@de ; 
+    sh:description "Alle Datenstrukturen, die direkt an das GovData Portal geliefert werden, MÜSSEN ihre Herkunft über eine eindeutige Kennzeichnung des Datenbereitstellers über die DatenbereitstellerID (dcatde:contributorID) ausweisen. - Seite 13" ;
+    sh:deactivated true ;
+    #... tbd ...
+.
+
+# Konv 13: Die eigene DatenbereitstellerID-Kennung MUSS föderationsweit an bestehende Einträge im Feld dcatde:contributorID angehängt werden. - Seite 13
+    # verstehe ich nicht
+:Shapes_ImplR_Konv_13 
+    a sh:NodeShape ; 
+    #sh:target... 
+    sh:name "Konvention 13"@de ; 
+    sh:description "Die eigene DatenbereitstellerID-Kennung MUSS föderationsweit an bestehende Einträge im Feld dcatde:contributorID angehängt werden. - Seite 13" ;
+    sh:deactivated true ;
+    #... tbd ...
+.
+
+# Konv 14: Collections KÖNNEN über Datenstruktur und Distributionen abgebildet werden. - Seite 14
+:Shapes_ImplR_Konv_14 
+    a sh:NodeShape ; 
+    #sh:target... 
+    sh:name "Konvention 14"@de ; 
+    sh:description "Collections KÖNNEN über Datenstruktur und Distributionen abgebildet werden. - Seite 14" ;
+    sh:deactivated true ;
+    #... tbd ...
+.
+
+# Konv 15: Collections SOLLEN bevorzugt über Datenstrukturen ausgedrückt werden. - Seite 14
+:Shapes_ImplR_Konv_15 
+    a sh:NodeShape ; 
+    #sh:target... 
+    sh:name "Konvention 15"@de ; 
+    sh:description "Collections SOLLEN bevorzugt über Datenstrukturen ausgedrückt werden. - Seite 14" ;
+    sh:deactivated true ;
+    #... tbd ...
+.
+
+# Konv 16: Die Zugehörigkeit von Einzelelementen zu einer Collection SOLL über die Eigenschaft „Weitere Versionen“ (dct:hasVersion) ausgedrückt werden. - Seite 14
+:Shapes_ImplR_Konv_16 
+    a sh:NodeShape ; 
+    #sh:target... 
+    sh:name "Konvention 16"@de ; 
+    sh:description "Die Zugehörigkeit von Einzelelementen zu einer Collection SOLL über die Eigenschaft „Weitere Versionen“ (dct:hasVersion) ausgedrückt werden. - Seite 14" ;
+    sh:deactivated true ;
+    #... tbd ...
+.
+
+# Konv 17: Die Klammerstruktur einer Collection MUSS mittels dct:type= http://dcat-ap.de/def/datasetTypes/collection gekennzeichnet werden - Seite 14
+:Shapes_ImplR_Konv_17 
+    a sh:NodeShape ; 
+    #sh:target... 
+    sh:name "Konvention 17"@de ; 
+    sh:description "Die Klammerstruktur einer Collection MUSS mittels dct:type= http://dcat-ap.de/def/datasetTypes/collection gekennzeichnet werden - Seite 14" ;
+    sh:deactivated true ;
+    #... tbd ...
+.
+
+# Konv 18: Datenstrukturen, die „Klammerelemente“ einer Collection darstellen, DÜRFEN keine Distribution haben. - Seite 15
+:Shapes_ImplR_Konv_18 
+    a sh:NodeShape ; 
+    #sh:target... 
+    sh:name "Konvention 18"@de ; 
+    sh:description "Datenstrukturen, die „Klammerelemente“ einer Collection darstellen, DÜRFEN keine Distribution haben. - Seite 15" ;
+    sh:deactivated true ;
+    #... tbd ...
+.
+
+# Konv 19: Orts- und Zeitbezug SOLLEN stets in den dafür vorgesehen Eigenschaften dct:spatial, dcatde:politicalGeocodingURI, dcatde:politicalGeocodingLevelURI und dct:temporal erfasst werden. Nur wenn es dem übergreifenden Verständnis z.B. von Datenreihen dient KÖNNEN zusätzliche Angaben in dct:title gemacht werden. - Seite 16
+:Shapes_ImplR_Konv_19 
+    a sh:NodeShape ; 
+    #sh:target... 
+    sh:name "Konvention 19"@de ; 
+    sh:description "Orts- und Zeitbezug SOLLEN stets in den dafür vorgesehen Eigenschaften dct:spatial, dcatde:politicalGeocodingURI, dcatde:politicalGeocodingLevelURI und dct:temporal erfasst werden. Nur wenn es dem übergreifenden Verständnis z.B. von Datenreihen dient KÖNNEN zusätzliche Angaben in dct:title gemacht werden. - Seite 16" ;
+    sh:deactivated true ;
+    #... tbd ...
+.
+
+# Konv 20: Distributionen werden nicht versioniert. Soll eine neue Distribution mit geänderten Inhalten zusätzlich zu den bestehenden Distributionen veröffentlicht werden, so SOLL eine neue Datenstruktur angelegt werden. - Seite 16
+:Shapes_ImplR_Konv_20 
+    a sh:NodeShape ; 
+    #sh:target... 
+    sh:name "Konvention 20"@de ; 
+    sh:description "Distributionen werden nicht versioniert. Soll eine neue Distribution mit geänderten Inhalten zusätzlich zu den bestehenden Distributionen veröffentlicht werden, so SOLL eine neue Datenstruktur angelegt werden. - Seite 16" ;
+    sh:deactivated true ;
+    #... tbd ...
+.
+
+# Konv 21: Die Eigenschaft dct:source SOLL nicht verwendet werden. - Seite 16
+:Shapes_ImplR_Konv_21 
+    a sh:NodeShape ; 
+    #sh:target... 
+    sh:name "Konvention 21"@de ; 
+    sh:description "Die Eigenschaft dct:source SOLL nicht verwendet werden. - Seite 16" ;
+    sh:deactivated true ;
+    #... tbd ...
+.
+
+# Konv 22: Es MÜSSEN Metadaten zu Datenstrukturen mit Distributionen im adms:status „Completed“, „Deprecated“ oder „Withdrawn“ transportiert werden. - Seite 17
+:Shapes_ImplR_Konv_22 
+    a sh:NodeShape ; 
+    #sh:target... 
+    sh:name "Konvention 22"@de ; 
+    sh:description "Es MÜSSEN Metadaten zu Datenstrukturen mit Distributionen im adms:status „Completed“, „Deprecated“ oder „Withdrawn“ transportiert werden. - Seite 17" ;
+    sh:deactivated true ;
+    #... tbd ...
+.
+
+# Konv 23: Es MÜSSEN Metadaten zu Datenstrukturen mit Distributionen im adms:status „Completed“, „Deprecated“ in dcat-ap.de konformen Portalen angezeigt werden. - Seite 17
+:Shapes_ImplR_Konv_23 
+    a sh:NodeShape ; 
+    #sh:target... 
+    sh:name "Konvention 23"@de ; 
+    sh:description "Es MÜSSEN Metadaten zu Datenstrukturen mit Distributionen im adms:status „Completed“, „Deprecated“ in dcat-ap.de konformen Portalen angezeigt werden. - Seite 17" ;
+    sh:deactivated true ;
+    #... tbd ...
+.
+
+# Konv 24: Es SOLLEN Datenstrukturen mit Distributionen im adms:status „Withdrawn“ zunächst mit „Deprecated“ ausgewiesen werden. - Seite 17
+:Shapes_ImplR_Konv_24 
+    a sh:NodeShape ; 
+    #sh:target... 
+    sh:name "Konvention 24"@de ; 
+    sh:description "Es SOLLEN Datenstrukturen mit Distributionen im adms:status „Withdrawn“ zunächst mit „Deprecated“ ausgewiesen werden. - Seite 17" ;
+    sh:deactivated true ;
+    #... tbd ...
+.
+
+# Konv 25: Bekommt ein Kooperationspartner eine Datenstruktur mit ausgefülltem dct:identifier, so MUSS dieser unverändert weitergegeben werden. - Seite 18
+:Shapes_ImplR_Konv_25 
+    a sh:NodeShape ; 
+    #sh:target... 
+    sh:name "Konvention 25"@de ; 
+    sh:description "Bekommt ein Kooperationspartner eine Datenstruktur mit ausgefülltem dct:identifier, so MUSS dieser unverändert weitergegeben werden. - Seite 18" ;
+    sh:deactivated true ;
+    #... tbd ...
+.
+
+# Konv 26: Kooperationspartner KÖNNEN ihre eigenen Identifier in der Eigenschaft adms:identifier auflisten. Bestehende Einträge von adms:identifier MÜSSEN unverändert bleiben. - Seite 18
+:Shapes_ImplR_Konv_26 
+    a sh:NodeShape ; 
+    #sh:target... 
+    sh:name "Konvention 26"@de ; 
+    sh:description "Kooperationspartner KÖNNEN ihre eigenen Identifier in der Eigenschaft adms:identifier auflisten. Bestehende Einträge von adms:identifier MÜSSEN unverändert bleiben. - Seite 18" ;
+    sh:deactivated true ;
+    #... tbd ...
+.
+
+# Konv 27: Bei Serialisierung in RDF/XML MUSS der dct:identifier einer Datenstruktur in das rdf:about Feld übernommen werden. - Seite 19
+:Shapes_ImplR_Konv_27 
+    a sh:NodeShape ; 
+    #sh:target... 
+    sh:name "Konvention 27"@de ; 
+    sh:description "Bei Serialisierung in RDF/XML MUSS der dct:identifier einer Datenstruktur in das rdf:about Feld übernommen werden. - Seite 19" ;
+    sh:deactivated true ;
+    #... tbd ...
+.
+
+# Konv 28: Bei Serialisierung in JSON-LD MUSS der dct:identifier einer Datenstruktur in das @id Attribut übernommen werden. - Seite 19
+:Shapes_ImplR_Konv_28 
+    a sh:NodeShape ; 
+    #sh:target... 
+    sh:name "Konvention 28"@de ; 
+    sh:description "Bei Serialisierung in JSON-LD MUSS der dct:identifier einer Datenstruktur in das @id Attribut übernommen werden. - Seite 19" ;
+    sh:deactivated true ;
+    #... tbd ...
+.
+
+# Konv 29: Verweise auf bestehende andere Verschlagwortungssysteme oder Ontologien KÖNNEN mit dct:conformsTo ausgedrückt werden. - Seite 20
+:Shapes_ImplR_Konv_29 
+    a sh:NodeShape ; 
+    #sh:target... 
+    sh:name "Konvention 29"@de ; 
+    sh:description "Verweise auf bestehende andere Verschlagwortungssysteme oder Ontologien KÖNNEN mit dct:conformsTo ausgedrückt werden. - Seite 20" ;
+    sh:deactivated true ;
+    #... tbd ...
+.
+
+# Konv 30: Werden   wie empfohlen   Kategorien verwendet, MÜSSEN die MDR data themes genutzt werden. - Seite 20
+:Shapes_ImplR_Konv_30 
+    a sh:NodeShape ; 
+    #sh:target... 
+    sh:name "Konvention 30"@de ; 
+    sh:description "Werden   wie empfohlen   Kategorien verwendet, MÜSSEN die MDR data themes genutzt werden. - Seite 20" ;
+    sh:deactivated true ;
+    #... tbd ...
+.
+
+# Konv 31: Hat die Datei, die die Daten einer Distribution beinhaltet, einen in der MDR authority file table geführten mediaType, so MUSS auf diesen mittels dct:format verwiesen werden. Andernfalls MUSS via dcat:mediaType auf die IANA Liste verwiesen und ein ggf. fehlender mediaType dort angelegt werden. - Seite 22
+:Shapes_ImplR_Konv_31 
+    a sh:NodeShape ; 
+    #sh:target... 
+    sh:name "Konvention 31"@de ; 
+    sh:description "Hat die Datei, die die Daten einer Distribution beinhaltet, einen in der MDR authority file table geführten mediaType, so MUSS auf diesen mittels dct:format verwiesen werden. Andernfalls MUSS via dcat:mediaType auf die IANA Liste verwiesen und ein ggf. fehlender mediaType dort angelegt werden. - Seite 22" ;
+    sh:deactivated true ;
+    #... tbd ...
+.
+
+# Konv 32: Distributionen von Datensätzen MÜSSEN mit einer Lizenz ausgewiesen werden. Für die Kennzeichnung der im Abschnitt 2.1 aufgeführten Lizenzen MÜSSEN die dort genannten URIs verwendet werden. - Seite 23
+:Shapes_ImplR_Konv_32 
+    a sh:NodeShape ; 
+    #sh:target... 
+    sh:name "Konvention 32"@de ; 
+    sh:description "Distributionen von Datensätzen MÜSSEN mit einer Lizenz ausgewiesen werden. Für die Kennzeichnung der im Abschnitt 2.1 aufgeführten Lizenzen MÜSSEN die dort genannten URIs verwendet werden. - Seite 23" ;
+    sh:deactivated true ;
+    #... tbd ...
+.
+
+# Konv 33: entfällt - Seite 23
+:Shapes_ImplR_Konv_33 
+    a sh:NodeShape ; 
+    #sh:target... 
+    sh:name "Konvention 33"@de ; 
+    sh:description "entfällt - Seite 23" ;
+    sh:deactivated true ;
+    #... tbd ...
+.
+
+# Konv 34: Die URIs der Lizenzen außerhalb der GovData Lizenzliste MÜSSEN zum Erhalt der DCAT-AP Konformität unverändert weitergegeben werden. - Seite 23
+:Shapes_ImplR_Konv_34 
+    a sh:NodeShape ; 
+    #sh:target... 
+    sh:name "Konvention 34"@de ; 
+    sh:description "Die URIs der Lizenzen außerhalb der GovData Lizenzliste MÜSSEN zum Erhalt der DCAT-AP Konformität unverändert weitergegeben werden. - Seite 23" ;
+    sh:deactivated true ;
+    #... tbd ...
+.
+
+# Konv 35: Wird bei der Verwendung der Lizenz die Angabe des Herausgebers gefordert, so MUSS der Namensnennungstext im Feld dcatde:licenseAttributionByText hinterlegt werden. - Seite 23
+:Shapes_ImplR_Konv_35 
+    a sh:NodeShape ; 
+    #sh:target... 
+    sh:name "Konvention 35"@de ; 
+    sh:description "Wird bei der Verwendung der Lizenz die Angabe des Herausgebers gefordert, so MUSS der Namensnennungstext im Feld dcatde:licenseAttributionByText hinterlegt werden. - Seite 23" ;
+    sh:deactivated true ;
+    #... tbd ...
+.
+
+# Konv 36: Unter dct:publisher MUSS die Organisation eingetragen werden, die die Datenstruktur (im rechtlichen, nicht technischen Sinne) veröffentlicht, d.h. die entschieden hat, dass Dritten Nutzungsrechte (hilfsweise Zugang) eingeräumt werden. - Seite 24
+:Shapes_ImplR_Konv_36 
+    a sh:NodeShape ; 
+    #sh:target... 
+    sh:name "Konvention 36"@de ; 
+    sh:description "Unter dct:publisher MUSS die Organisation eingetragen werden, die die Datenstruktur (im rechtlichen, nicht technischen Sinne) veröffentlicht, d.h. die entschieden hat, dass Dritten Nutzungsrechte (hilfsweise Zugang) eingeräumt werden. - Seite 24" ;
+    sh:deactivated true ;
+    #... tbd ...
+.
+
+# Konv 37: Es KÖNNEN Angaben zur Art eines Publishers gemacht werden, dabei MUSS die hier definierte Teilmenge des ADMS:publisherType Vokabulars verwendet werden. - Seite 26
+:Shapes_ImplR_Konv_37 
+    a sh:NodeShape ; 
+    #sh:target... 
+    sh:name "Konvention 37"@de ; 
+    sh:description "Es KÖNNEN Angaben zur Art eines Publishers gemacht werden, dabei MUSS die hier definierte Teilmenge des ADMS:publisherType Vokabulars verwendet werden. - Seite 26" ;
+    sh:deactivated true ;
+    #... tbd ...
+.
+
+# Konv 38: Bei Zeitangaben mittels „Zeitraum“ MUSS eine der Angaben Beginn (schema:startDate) oder Ende (schema:endDate) angegeben sein. - Seite 27
+:Shapes_ImplR_Konv_38 
+    a sh:NodeShape ; 
+    #sh:target... 
+    sh:name "Konvention 38"@de ; 
+    sh:description "Bei Zeitangaben mittels „Zeitraum“ MUSS eine der Angaben Beginn (schema:startDate) oder Ende (schema:endDate) angegeben sein. - Seite 27" ;
+    sh:deactivated true ;
+    #... tbd ...
+.
+
+# Konv 39: Werden die Daten nur als direkter Download veröffentlicht, so wird der URL der Datei sowohl als dcat:downloadURL als auch als dcat:accessURL angegeben. - Seite 24
+:Shapes_ImplR_Konv_39 
+    a sh:NodeShape ; 
+    #sh:target... 
+    sh:name "Konvention 39"@de ; 
+    sh:description "Werden die Daten nur als direkter Download veröffentlicht, so wird der URL der Datei sowohl als dcat:downloadURL als auch als dcat:accessURL angegeben. - Seite 24" ;
+    sh:deactivated true ;
+    #... tbd ...
+.
+
+# Konv 40: Werden DCAT-AP.de Metadaten aus ISO-Metadaten erzeugt, MUSS das „technische“ Aktualitätsdatum aus dem Element dateStamp (XPath MD_Metadata/dateStamp) als Wert der Eigenschaft dct:modified des Datasets verwendet werden. - Seite 21
+:Shapes_ImplR_Konv_40 
+    a sh:NodeShape ; 
+    #sh:target... 
+    sh:name "Konvention 40"@de ; 
+    sh:description "Werden DCAT-AP.de Metadaten aus ISO-Metadaten erzeugt, MUSS das „technische“ Aktualitätsdatum aus dem Element dateStamp (XPath MD_Metadata/dateStamp) als Wert der Eigenschaft dct:modified des Datasets verwendet werden. - Seite 21" ;
+    sh:deactivated true ;
+    #... tbd ...
+.

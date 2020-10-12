@@ -1,0 +1,59 @@
+@prefix passing: <http://example.org/passing#> .
+@prefix failing: <http://example.org/failing#> .
+
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+
+<konvention-01>
+    a dcat:Dataset;
+    dcat:contactPoint passing:full ;
+    dcat:contactPoint passing:info_no_hasURL ;
+    dcat:contactPoint failing:wrong_type ;
+    dcat:contactPoint failing:no_tel_or_email ;
+    dcat:contactPoint failing:no_fn ;
+    dcat:contactPoint failing:not_closed .
+
+passing:full
+    a vcard:Kind ;
+    vcard:hasEmail "mail@example.org" ;
+    vcard:hasURL <example.org> ;
+    vcard:fn "Mr. Smith" ;
+    vcard:hasTelephone "030 123123" .
+
+passing:info_no_hasURL
+    a vcard:Kind ;
+    vcard:hasEmail "mail@example.org" ;
+    vcard:fn "Mr. Smith" ;
+    vcard:hasTelephone "030 123123" .
+
+failing:wrong_type
+    a schema:Person ;
+    vcard:hasEmail "mail@example.org" ;
+    vcard:hasURL <example.org> ;
+    vcard:fn "Mr. Smith" ;
+    vcard:hasTelephone "030 123123" .
+
+failing:no_tel_or_email
+    a vcard:Kind ;
+    vcard:hasURL <example.org> ;
+    vcard:fn "Mr. Smith" .
+
+failing:no_fn
+    a vcard:Kind ;
+    vcard:hasEmail "mail@example.org" ;
+    vcard:hasURL <example.org> ;
+    vcard:hasTelephone "030 123123" .
+
+failing:not_closed
+    a vcard:Kind ;
+    vcard:hasEmail "mail@example.org" ;
+    vcard:hasURL <example.org> ;
+    vcard:fn "Mr. Smith" ;
+    vcard:hasTelephone "030 123123" ;
+    vcard:nickbane "ERROR" .

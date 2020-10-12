@@ -1,0 +1,37 @@
+@prefix passing: <http://example.org/passing#> .
+@prefix failing: <http://example.org/failing#> .
+
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcatde: <http://dcat-ap.de/def/dcatde/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+passing:dataset_no_spatial
+    a dcat:Dataset .
+
+passing:dataset_spatial_level
+    a dcat:Dataset ;
+    dct:spatial <http://example.org/#123> ;
+    dcatde:politicalGeocodingLevelURI <http://example.org/#123> ;
+.
+
+passing:dataset_geocodinguri_level
+    a dcat:Dataset ;
+    dcatde:politicalGeocodingURI <http://example.org/#123> ;
+    dcatde:politicalGeocodingLevelURI <http://example.org/#123> ;
+.
+
+failing:dataset_spatial_no_level
+    a dcat:Dataset ;
+    dct:spatial <http://example.org/#123> ;
+.
+
+failing:dataset_geocodinguri_no_level
+    a dcat:Dataset ;
+    dcatde:politicalGeocodingURI <http://example.org/#123> ;
+.

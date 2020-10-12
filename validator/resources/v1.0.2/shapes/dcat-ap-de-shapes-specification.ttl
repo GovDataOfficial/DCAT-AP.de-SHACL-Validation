@@ -66,7 +66,7 @@
     sh:path dcatde:qualityProcessURI ;
     sh:minCount 1 ;
     sh:severity sh:Info ;
-    sh:message "Optional: Sie könnten mittels dcatde:qualityProcessURI die Rechtsgrundlage für den Zugang zu den Informationen als Freitext angeben."@de .
+    sh:message "Optional: Sie könnten mittels dcatde:qualityProcessURI auf eine Webseite, die den Prozess zur Qualitätssicherung des Datasets beschreibt, verweisen."@de .
 
 :Dataset_Spec_qualityProcessURI_Max
     sh:name "Shape qualityProcessURI - Maximalzahl"@de ;
