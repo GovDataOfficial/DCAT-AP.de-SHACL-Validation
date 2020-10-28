@@ -43,12 +43,10 @@
 
 <http://www.hamburg.de/bue/#publisher>
   # Minimalanforderungen DCAT-AP.de
-  a foaf:Agent ;
   a foaf:Organization ;
   foaf:name "Behörde für Umwelt und Energie (BUE), Amt für Umweltschutz" .
 
 <https://www.hamburg.de/innenbehoerde/#publisher>
-  a foaf:Agent ; 
   a foaf:Organization ;
   foaf:name "Behörde für Inneres und Sport, Polizei Hamburg" .
 
