@@ -137,11 +137,11 @@
     #     sh:path dct:license ;
     #     sh:severity sh:Violation
     # ], 
-    [
-        sh:class dct:Location ;
-        sh:path dct:spatial ;
-        sh:severity sh:Violation
-    ], 
+    # [                           # ===> Not testing something external 
+    #     sh:class dct:Location ;
+    #     sh:path dct:spatial ;
+    #     sh:severity sh:Violation
+    # ], 
     [
         sh:class dcat:Catalog ;
         sh:path dct:hasPart ;
@@ -240,11 +240,11 @@
         sh:path dct:publisher ;
         sh:severity sh:Violation
     ], 
-    [
-        sh:class dct:Location ;
-        sh:path dct:spatial ;
-        sh:severity sh:Violation
-    ], 
+    # [                           # ===> Not testing something external 
+    #     sh:class dct:Location ;
+    #     sh:path dct:spatial ;
+    #     sh:severity sh:Violation
+    # ], 
     [
 	sh:class dct:PeriodOfTime ;
         sh:path dct:temporal ;
@@ -260,11 +260,11 @@
     #     sh:path dct:accessRights ;
     #     sh:severity sh:Violation
     # ], 
-    [
-        sh:class dct:Frequency ;
-        sh:path dct:accrualPeriodicity ;
-        sh:severity sh:Violation
-    ], 
+    # [                           # ===> Not testing something external 
+    #     sh:class dct:Frequency ;
+    #     sh:path dct:accrualPeriodicity ;
+    #     sh:severity sh:Violation
+    # ], 
     # [                           # ===> Not testing something external 
     #     sh:class dct:Standard ;
     #     sh:path dct:conformsTo ;
