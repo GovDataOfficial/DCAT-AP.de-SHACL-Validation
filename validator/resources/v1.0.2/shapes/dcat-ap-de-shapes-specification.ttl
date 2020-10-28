@@ -33,6 +33,23 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+# Importiere die DCAT-AP.de spezifischen Codelisten
+:codelist_imports
+    rdf:type owl:Ontology ;
+    owl:imports <https://www.dcat-ap.de/def/contributors/20200728.rdf> ;
+    owl:imports <https://www.dcat-ap.de/def/datasetTypes/1_0.rdf> ;
+    owl:imports <https://www.dcat-ap.de/def/hashAlgorithms/20200729.rdf> ;
+    owl:imports <https://www.dcat-ap.de/def/licenses/20200715.rdf> ;
+    owl:imports <https://www.dcat-ap.de/def/plannedAvailability/1_0.rdf> ;
+    owl:imports <https://www.dcat-ap.de/def/politicalGeocoding/Level/1_0.rdf> ;
+    owl:imports <https://www.dcat-ap.de/def/politicalGeocoding/districtKey/20190731.rdf> ;
+    owl:imports <https://www.dcat-ap.de/def/politicalGeocoding/governmentDistrictKey/20190731.rdf> ;
+    owl:imports <https://www.dcat-ap.de/def/politicalGeocoding/municipalAssociationKey/20200331.rdf> ;
+    owl:imports <https://www.dcat-ap.de/def/politicalGeocoding/municipalityKey/20200731.rdf> ;
+    owl:imports <https://www.dcat-ap.de/def/politicalGeocoding/regionalKey/20200731.rdf> ;
+    owl:imports <https://www.dcat-ap.de/def/politicalGeocoding/stateKey/20100401.rdf> 
+.
+
 ### DATASET ###
 
 :Dataset_contributorID_Ex
