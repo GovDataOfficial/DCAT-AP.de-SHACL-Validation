@@ -112,7 +112,7 @@
         sh:path dcatde:qualityProcessURI ;
         sh:minCount 1 ;
         sh:severity sh:Warning ;
-        sh:message "Optional (K02) :Sie könnten mittels dcatde:qualityProcessURI auf eine Webseite, die den Prozess zur Qualitätssicherung des Datasets beschreibt, verweisen."@de ;
+        sh:message "Konvention 02 (Optional): Sie könnten mittels dcatde:qualityProcessURI auf eine Webseite, die den Prozess zur Qualitätssicherung des Datasets beschreibt, verweisen."@de ;
     ]
 .
 
@@ -166,6 +166,7 @@
         sh:name "Shape dcat:Dataset oder dcat:Catalog - hat dct:spatial aber kein dcatde:politicalGeocodingURI"@de ;
         sh:description "Prüfe, ob ein dct:spatial aber kein dcatde:politicalGeocodingURI vorhanden ist."@de ;
         sh:message "Konvention 08 (Pflicht): Der verwaltungspolitische Geobezug MUSS zusätzlich zur dct:spatial bezeichnet werden (dcatde:politicalGeocodingURI), wenn die geografische Abdeckung ausgedrückt werden soll und eine Datenstruktur das gesamte Bundesgebiet oder das Gebiet einer bestimmten Gemeinde, eines Gemeindeverbandes, eines Kreises, eines Bezirks oder eines Bundeslandes abdeckt. - Seite 12" ;
+        sh:severity sh:Warning ;
         
         sh:path dcatde:politicalGeocodingURI ;
         sh:minCount 1 ;
@@ -174,7 +175,7 @@
 
 # Konv 09: Die Ebene der geopolitischen Abdeckung (dcatde:politicalGeocodingLevelURI) SOLL durch einen URI bezeichnet werden, wenn eine Abdeckung durch die Datenstruktur auf abstrakter Verwaltungsebene (Bund, Land, Kreis, Kommunen) gegeben ist. - Seite 12
     # Ob eine Abdeckung durch die Datenstruktur auf abstrakter Verwaltungsebene (Bund, Land, Kreis, Kommunen) gegeben ist, lässt sich kaum überprüfen.
-    # TODO: Hinweisnachricht (RECOMMENDED), immer wenn dcat:Dataset dct:spatial oder dcatde:politicalGeocodingURI genutzt, dcatde:politicalGeocodingLevelURI aber nicht genutzt wird-
+    # Hinweisnachricht (RECOMMENDED), immer wenn dcat:Dataset dct:spatial oder dcatde:politicalGeocodingURI genutzt, dcatde:politicalGeocodingLevelURI aber nicht genutzt wird-
 
 :Shapes_ImplR_Konv_09 
     a sh:NodeShape ; 
@@ -185,6 +186,7 @@
     sh:deactivated false ;
 
     sh:message "Konvention 09 (Empfehlung): Die Ebene der geopolitischen Abdeckung (dcatde:politicalGeocodingLevelURI) SOLL durch einen URI bezeichnet werden, wenn eine Abdeckung durch die Datenstruktur auf abstrakter Verwaltungsebene (Bund, Land, Kreis, Kommunen) gegeben ist. - Seite 12"@de ;
+    sh:severity sh:Warning ;
 
     sh:or (
         [sh:and (
@@ -216,29 +218,55 @@
     )
 .
 
-# =================================== bis hier
 # Konv 10: Die Eigenschaft „verwaltungspolitische oder fachliche Geobezug“ (dcatde:geocodingDescription) MUSS als Freitextfeld verwendet werden, wenn eine andere geopolitische Codierung der Abdeckung der Datenstruktur nicht möglich oder zu komplex ist. - Seite 12
-    # TODO: Hinweis (MUSS), wenn dcat:Dataset KEIN dct:spatial, dcatde:politicalGeocodingURI oder dcatde:politicalGeocodingLevelURI UND trotzdem kein dcatde:geocodingDescription besitzt.
+    # Hinweis (MUSS, technisch Warning, da inhaltliche Überprüfung), wenn dcat:Dataset KEIN (dct:spatial ODER dcatde:politicalGeocodingURI) UND trotzdem kein dcatde:geocodingDescription besitzt.
 :Shapes_ImplR_Konv_10 
     a sh:NodeShape ; 
-    #sh:target... 
+    sh:targetClass dcat:Dataset ;
+ 
     sh:name "Konvention 10"@de ; 
     sh:description "Die Eigenschaft „verwaltungspolitische oder fachliche Geobezug“ (dcatde:geocodingDescription) MUSS als Freitextfeld verwendet werden, wenn eine andere geopolitische Codierung der Abdeckung der Datenstruktur nicht möglich oder zu komplex ist. - Seite 12" ;
-    sh:deactivated true ;
-    #... tbd ...
+    sh:deactivated false ;
+    
+    sh:message "Konvention 10 (Pflicht): Die Eigenschaft „verwaltungspolitische oder fachliche Geobezug“ (dcatde:geocodingDescription) MUSS als Freitextfeld verwendet werden, wenn eine andere geopolitische Codierung der Abdeckung der Datenstruktur nicht möglich oder zu komplex ist. - Seite 12"@de ;
+    sh:severity sh:Warning ;
+    
+    sh:or (
+        [
+            sh:path dct:spatial ;
+            sh:minCount 1 ;
+        ]
+        [
+            sh:path dcatde:politicalGeocodingURI ;
+            sh:minCount 1 ;
+        ] 
+        [
+            sh:path dcatde:geocodingDescription ;
+            sh:minCount 1 ;
+        ]
+    )
 .
 
 # Konv 11: Die in dcatde:politicalGeocodingURI ausgedrückten geografischen Bezüge SOLLEN zum Erhalt der europäischen Interoperabilität zugleich bei dct:spatial (Bundesländer, Kreise und Kommunen) als geografischer Bezug per URI gespiegelt werden. - Seite 12
-    # TODO: Wenn dcatde:politicalGeocodingURI verwendet wird, dann SOLL auch ein dct:spatial mit einer URI vorhanden sein.
+    # Wenn dcatde:politicalGeocodingURI verwendet wird, dann SOLL auch ein dct:spatial mit einer URI vorhanden sein.
 :Shapes_ImplR_Konv_11 
     a sh:NodeShape ; 
-    #sh:target... 
+    sh:targetSubjectsOf dcatde:politicalGeocodingURI ;
+
     sh:name "Konvention 11"@de ; 
     sh:description "Die in dcatde:politicalGeocodingURI ausgedrückten geografischen Bezüge SOLLEN zum Erhalt der europäischen Interoperabilität zugleich bei dct:spatial (Bundesländer, Kreise und Kommunen) als geografischer Bezug per URI gespiegelt werden. - Seite 12" ;
-    sh:deactivated true ;
-    #... tbd ...
+    sh:deactivated false ;
+
+    sh:property [
+        sh:message "Die in dcatde:politicalGeocodingURI ausgedrückten geografischen Bezüge SOLLEN zum Erhalt der europäischen Interoperabilität zugleich bei dct:spatial (Bundesländer, Kreise und Kommunen) als geografischer Bezug per URI gespiegelt werden. - Seite 12" ;
+        sh:severity sh:Warning ;
+        
+        sh:path dct:spatial ;
+        sh:minCount 1 ;
+    ]
 .
 
+# =================================== bis hier
 # Konv 12: Alle Datenstrukturen, die direkt an das GovData Portal geliefert werden, MÜSSEN ihre Herkunft über eine eindeutige Kennzeichnung des Datenbereitstellers über die DatenbereitstellerID (dcatde:contributorID) ausweisen. - Seite 13
     # TODO: Wie :Dataset_Spec_contributorID_Ex, nur MUSS
 
