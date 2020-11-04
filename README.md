@@ -11,8 +11,10 @@ Wie der Validator verwendet werden kann, wird auf https://www.itb.ec.europa.eu/d
 
 * * *
 :warning: :warning: :warning: 
+
 Der Validator wird derzeit aktiv weiterentwickelt, um eine vollständige Validierung von DCAT.AP.de zu ermöglichen. Dazu werden die SHACL-Shapes von [DCAT-AP](https://github.com/SEMICeu/DCAT-AP/tree/2.1.0-draft/releases/2.1.0) angepasst und eingebunden.
 Die folgenden Informationen sind daher unvollständig und die Funktion des Validators kann streckenweise nicht garantiert werden.
+
 :warning: :warning: :warning: 
 * * *
 
