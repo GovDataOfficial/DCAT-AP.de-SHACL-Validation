@@ -9,6 +9,13 @@ Wie der Validator verwendet werden kann, wird auf https://www.itb.ec.europa.eu/d
 **Endpoint REST-API:** https://www.itb.ec.europa.eu/shacl/dcat-ap.de/api  
 **Endpoint SOAP-API:** https://www.itb.ec.europa.eu/shacl/soap/dcat-ap.de/validation?wsdl  
 
+* * *
+:warning: :warning: :warning: 
+Der Validator wird derzeit aktiv weiterentwickelt, um eine vollständige Validierung von DCAT.AP.de zu ermöglichen. Dazu werden die SHACL-Shapes von [DCAT-AP](https://github.com/SEMICeu/DCAT-AP/tree/2.1.0-draft/releases/2.1.0) angepasst und eingebunden.
+Die folgenden Informationen sind daher unvollständig und die Funktion des Validators kann streckenweise nicht garantiert werden.
+:warning: :warning: :warning: 
+* * *
+
 ## Umfang
 Die vorliegenden Shapes prüfen die Eigenschaften, die das deutsche DCAT-AP.de 1.0.2 Spezifikationsdokument zusätzlich oder abweichend vom europäischen DCAT-AP 1.2.1 Standard festlegt. (Hinweis: Eine Weiterentwicklung der Shapes um die Prüfung der DCAT-AP.de Konventionenhandbuch-Konformität ist aktuell in Arbeit. Parallel hierzu beteiligt sich die GKSt GovData an der Weiterentwicklung der Shapes für den europäischen Metadatenstandard DCAT-AP.)   
 
