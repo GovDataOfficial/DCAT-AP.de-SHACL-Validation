@@ -47,12 +47,13 @@
     sh:description "Kontaktinformationen MÜSSEN mit Namen sowie Telefon und/oder Email unter Nutzung des vcard Vokabulars hinterlegt werden."@de ;
     sh:deactivated false ;
 
-    # Darf nur über die genannten vier Attribute verfügen!
-    sh:message "Pflicht (K01): dcat:contactPoint darf nur über vcard:fn, vcard:hasEmail, vcard:hasTelephone und vcard:hasURL verfügen."@de ;
-    sh:closed true ;
-    sh:ignoredProperties (rdf:type) ;
-    sh:property [ sh:path vcard:fn, vcard:hasEmail, vcard:hasTelephone, vcard:hasURL ] ;
-    sh:severity sh:Violation ;
+    sh:property [
+        sh:message "Pflicht (K01): dcat:contactPoint darf nur über vcard:fn, vcard:hasEmail, vcard:hasTelephone und vcard:hasURL verfügen."@de ;
+        sh:closed true ;
+        sh:ignoredProperties (rdf:type) ;
+        sh:property [ sh:path vcard:fn, vcard:hasEmail, vcard:hasTelephone, vcard:hasURL ] ;
+        sh:severity sh:Violation ;
+    ] ;
 
     sh:property [
         sh:name "Shape dcat:contactPoint - vcard:Kind"@de ;
@@ -116,9 +117,9 @@
     ]
 .
 
-# # Konv 03: Beschreibungsfelder (z.B. title, description) KÖNNEN bei Vorhandensein von Metadaten in mehreren Sprachen wiederholt auftreten. Ist die Sprache nicht Deutsch, so MUSS sie mit den Sprachcodes gemäß BCP47 ausgezeichnet werden. Gibt es für eine Sprache keinen Alpha-2 Code nach ISO 639-1, so ist der Alpha-3 Code nach ISO 639-2 zu verwenden. - Seite 5
-#     # scheint nicht umsetzbar zu sein, da bei der Verwendung von sh:languageIn ein Fehlen der Sprachangabe immer als Fehler gewertet wird. 
-#     # NICHT UMSETZBAR
+# Konv 03: Beschreibungsfelder (z.B. title, description) KÖNNEN bei Vorhandensein von Metadaten in mehreren Sprachen wiederholt auftreten. Ist die Sprache nicht Deutsch, so MUSS sie mit den Sprachcodes gemäß BCP47 ausgezeichnet werden. Gibt es für eine Sprache keinen Alpha-2 Code nach ISO 639-1, so ist der Alpha-3 Code nach ISO 639-2 zu verwenden. - Seite 5
+    # scheint nicht umsetzbar zu sein, da bei der Verwendung von sh:languageIn ein Fehlen der Sprachangabe immer als Fehler gewertet wird. 
+    # NICHT UMSETZBAR
 
 # Konv 04 - 07: 
     # 4/5/6/7 sehr schwierig zu überprüfen.
@@ -270,292 +271,292 @@
 # Konv 12: Alle Datenstrukturen, die direkt an das GovData Portal geliefert werden, MÜSSEN ihre Herkunft über eine eindeutige Kennzeichnung des Datenbereitstellers über die DatenbereitstellerID (dcatde:contributorID) ausweisen. - Seite 13
     # TODO: Wie :Dataset_Spec_contributorID_Ex, nur MUSS
 
-:Shapes_ImplR_Konv_12 
-    a sh:NodeShape ; 
-    #sh:target... 
-    sh:name "Konvention 12"@de ; 
-    sh:description "Alle Datenstrukturen, die direkt an das GovData Portal geliefert werden, MÜSSEN ihre Herkunft über eine eindeutige Kennzeichnung des Datenbereitstellers über die DatenbereitstellerID (dcatde:contributorID) ausweisen. - Seite 13" ;
-    sh:deactivated true ;
-    #... tbd ...
-.
+# :Shapes_ImplR_Konv_12 
+#     a sh:NodeShape ; 
+#     #sh:target... 
+#     sh:name "Konvention 12"@de ; 
+#     sh:description "Alle Datenstrukturen, die direkt an das GovData Portal geliefert werden, MÜSSEN ihre Herkunft über eine eindeutige Kennzeichnung des Datenbereitstellers über die DatenbereitstellerID (dcatde:contributorID) ausweisen. - Seite 13" ;
+#     sh:deactivated true ;
+#     #... tbd ...
+# .
 
-# Konv 13: Die eigene DatenbereitstellerID-Kennung MUSS föderationsweit an bestehende Einträge im Feld dcatde:contributorID angehängt werden. - Seite 13
-    # verstehe ich nicht
-:Shapes_ImplR_Konv_13 
-    a sh:NodeShape ; 
-    #sh:target... 
-    sh:name "Konvention 13"@de ; 
-    sh:description "Die eigene DatenbereitstellerID-Kennung MUSS föderationsweit an bestehende Einträge im Feld dcatde:contributorID angehängt werden. - Seite 13" ;
-    sh:deactivated true ;
-    #... tbd ...
-.
+# # Konv 13: Die eigene DatenbereitstellerID-Kennung MUSS föderationsweit an bestehende Einträge im Feld dcatde:contributorID angehängt werden. - Seite 13
+#     # verstehe ich nicht
+# :Shapes_ImplR_Konv_13 
+#     a sh:NodeShape ; 
+#     #sh:target... 
+#     sh:name "Konvention 13"@de ; 
+#     sh:description "Die eigene DatenbereitstellerID-Kennung MUSS föderationsweit an bestehende Einträge im Feld dcatde:contributorID angehängt werden. - Seite 13" ;
+#     sh:deactivated true ;
+#     #... tbd ...
+# .
 
-# Konv 14: Collections KÖNNEN über Datenstruktur und Distributionen abgebildet werden. - Seite 14
-:Shapes_ImplR_Konv_14 
-    a sh:NodeShape ; 
-    #sh:target... 
-    sh:name "Konvention 14"@de ; 
-    sh:description "Collections KÖNNEN über Datenstruktur und Distributionen abgebildet werden. - Seite 14" ;
-    sh:deactivated true ;
-    #... tbd ...
-.
+# # Konv 14: Collections KÖNNEN über Datenstruktur und Distributionen abgebildet werden. - Seite 14
+# :Shapes_ImplR_Konv_14 
+#     a sh:NodeShape ; 
+#     #sh:target... 
+#     sh:name "Konvention 14"@de ; 
+#     sh:description "Collections KÖNNEN über Datenstruktur und Distributionen abgebildet werden. - Seite 14" ;
+#     sh:deactivated true ;
+#     #... tbd ...
+# .
 
-# Konv 15: Collections SOLLEN bevorzugt über Datenstrukturen ausgedrückt werden. - Seite 14
-:Shapes_ImplR_Konv_15 
-    a sh:NodeShape ; 
-    #sh:target... 
-    sh:name "Konvention 15"@de ; 
-    sh:description "Collections SOLLEN bevorzugt über Datenstrukturen ausgedrückt werden. - Seite 14" ;
-    sh:deactivated true ;
-    #... tbd ...
-.
+# # Konv 15: Collections SOLLEN bevorzugt über Datenstrukturen ausgedrückt werden. - Seite 14
+# :Shapes_ImplR_Konv_15 
+#     a sh:NodeShape ; 
+#     #sh:target... 
+#     sh:name "Konvention 15"@de ; 
+#     sh:description "Collections SOLLEN bevorzugt über Datenstrukturen ausgedrückt werden. - Seite 14" ;
+#     sh:deactivated true ;
+#     #... tbd ...
+# .
 
-# Konv 16: Die Zugehörigkeit von Einzelelementen zu einer Collection SOLL über die Eigenschaft „Weitere Versionen“ (dct:hasVersion) ausgedrückt werden. - Seite 14
-:Shapes_ImplR_Konv_16 
-    a sh:NodeShape ; 
-    #sh:target... 
-    sh:name "Konvention 16"@de ; 
-    sh:description "Die Zugehörigkeit von Einzelelementen zu einer Collection SOLL über die Eigenschaft „Weitere Versionen“ (dct:hasVersion) ausgedrückt werden. - Seite 14" ;
-    sh:deactivated true ;
-    #... tbd ...
-.
+# # Konv 16: Die Zugehörigkeit von Einzelelementen zu einer Collection SOLL über die Eigenschaft „Weitere Versionen“ (dct:hasVersion) ausgedrückt werden. - Seite 14
+# :Shapes_ImplR_Konv_16 
+#     a sh:NodeShape ; 
+#     #sh:target... 
+#     sh:name "Konvention 16"@de ; 
+#     sh:description "Die Zugehörigkeit von Einzelelementen zu einer Collection SOLL über die Eigenschaft „Weitere Versionen“ (dct:hasVersion) ausgedrückt werden. - Seite 14" ;
+#     sh:deactivated true ;
+#     #... tbd ...
+# .
 
-# Konv 17: Die Klammerstruktur einer Collection MUSS mittels dct:type= http://dcat-ap.de/def/datasetTypes/collection gekennzeichnet werden - Seite 14
-:Shapes_ImplR_Konv_17 
-    a sh:NodeShape ; 
-    #sh:target... 
-    sh:name "Konvention 17"@de ; 
-    sh:description "Die Klammerstruktur einer Collection MUSS mittels dct:type= http://dcat-ap.de/def/datasetTypes/collection gekennzeichnet werden - Seite 14" ;
-    sh:deactivated true ;
-    #... tbd ...
-.
+# # Konv 17: Die Klammerstruktur einer Collection MUSS mittels dct:type= http://dcat-ap.de/def/datasetTypes/collection gekennzeichnet werden - Seite 14
+# :Shapes_ImplR_Konv_17 
+#     a sh:NodeShape ; 
+#     #sh:target... 
+#     sh:name "Konvention 17"@de ; 
+#     sh:description "Die Klammerstruktur einer Collection MUSS mittels dct:type= http://dcat-ap.de/def/datasetTypes/collection gekennzeichnet werden - Seite 14" ;
+#     sh:deactivated true ;
+#     #... tbd ...
+# .
 
-# Konv 18: Datenstrukturen, die „Klammerelemente“ einer Collection darstellen, DÜRFEN keine Distribution haben. - Seite 15
-:Shapes_ImplR_Konv_18 
-    a sh:NodeShape ; 
-    #sh:target... 
-    sh:name "Konvention 18"@de ; 
-    sh:description "Datenstrukturen, die „Klammerelemente“ einer Collection darstellen, DÜRFEN keine Distribution haben. - Seite 15" ;
-    sh:deactivated true ;
-    #... tbd ...
-.
+# # Konv 18: Datenstrukturen, die „Klammerelemente“ einer Collection darstellen, DÜRFEN keine Distribution haben. - Seite 15
+# :Shapes_ImplR_Konv_18 
+#     a sh:NodeShape ; 
+#     #sh:target... 
+#     sh:name "Konvention 18"@de ; 
+#     sh:description "Datenstrukturen, die „Klammerelemente“ einer Collection darstellen, DÜRFEN keine Distribution haben. - Seite 15" ;
+#     sh:deactivated true ;
+#     #... tbd ...
+# .
 
-# Konv 19: Orts- und Zeitbezug SOLLEN stets in den dafür vorgesehen Eigenschaften dct:spatial, dcatde:politicalGeocodingURI, dcatde:politicalGeocodingLevelURI und dct:temporal erfasst werden. Nur wenn es dem übergreifenden Verständnis z.B. von Datenreihen dient KÖNNEN zusätzliche Angaben in dct:title gemacht werden. - Seite 16
-:Shapes_ImplR_Konv_19 
-    a sh:NodeShape ; 
-    #sh:target... 
-    sh:name "Konvention 19"@de ; 
-    sh:description "Orts- und Zeitbezug SOLLEN stets in den dafür vorgesehen Eigenschaften dct:spatial, dcatde:politicalGeocodingURI, dcatde:politicalGeocodingLevelURI und dct:temporal erfasst werden. Nur wenn es dem übergreifenden Verständnis z.B. von Datenreihen dient KÖNNEN zusätzliche Angaben in dct:title gemacht werden. - Seite 16" ;
-    sh:deactivated true ;
-    #... tbd ...
-.
+# # Konv 19: Orts- und Zeitbezug SOLLEN stets in den dafür vorgesehen Eigenschaften dct:spatial, dcatde:politicalGeocodingURI, dcatde:politicalGeocodingLevelURI und dct:temporal erfasst werden. Nur wenn es dem übergreifenden Verständnis z.B. von Datenreihen dient KÖNNEN zusätzliche Angaben in dct:title gemacht werden. - Seite 16
+# :Shapes_ImplR_Konv_19 
+#     a sh:NodeShape ; 
+#     #sh:target... 
+#     sh:name "Konvention 19"@de ; 
+#     sh:description "Orts- und Zeitbezug SOLLEN stets in den dafür vorgesehen Eigenschaften dct:spatial, dcatde:politicalGeocodingURI, dcatde:politicalGeocodingLevelURI und dct:temporal erfasst werden. Nur wenn es dem übergreifenden Verständnis z.B. von Datenreihen dient KÖNNEN zusätzliche Angaben in dct:title gemacht werden. - Seite 16" ;
+#     sh:deactivated true ;
+#     #... tbd ...
+# .
 
-# Konv 20: Distributionen werden nicht versioniert. Soll eine neue Distribution mit geänderten Inhalten zusätzlich zu den bestehenden Distributionen veröffentlicht werden, so SOLL eine neue Datenstruktur angelegt werden. - Seite 16
-:Shapes_ImplR_Konv_20 
-    a sh:NodeShape ; 
-    #sh:target... 
-    sh:name "Konvention 20"@de ; 
-    sh:description "Distributionen werden nicht versioniert. Soll eine neue Distribution mit geänderten Inhalten zusätzlich zu den bestehenden Distributionen veröffentlicht werden, so SOLL eine neue Datenstruktur angelegt werden. - Seite 16" ;
-    sh:deactivated true ;
-    #... tbd ...
-.
+# # Konv 20: Distributionen werden nicht versioniert. Soll eine neue Distribution mit geänderten Inhalten zusätzlich zu den bestehenden Distributionen veröffentlicht werden, so SOLL eine neue Datenstruktur angelegt werden. - Seite 16
+# :Shapes_ImplR_Konv_20 
+#     a sh:NodeShape ; 
+#     #sh:target... 
+#     sh:name "Konvention 20"@de ; 
+#     sh:description "Distributionen werden nicht versioniert. Soll eine neue Distribution mit geänderten Inhalten zusätzlich zu den bestehenden Distributionen veröffentlicht werden, so SOLL eine neue Datenstruktur angelegt werden. - Seite 16" ;
+#     sh:deactivated true ;
+#     #... tbd ...
+# .
 
-# Konv 21: Die Eigenschaft dct:source SOLL nicht verwendet werden. - Seite 16
-:Shapes_ImplR_Konv_21 
-    a sh:NodeShape ; 
-    #sh:target... 
-    sh:name "Konvention 21"@de ; 
-    sh:description "Die Eigenschaft dct:source SOLL nicht verwendet werden. - Seite 16" ;
-    sh:deactivated true ;
-    #... tbd ...
-.
+# # Konv 21: Die Eigenschaft dct:source SOLL nicht verwendet werden. - Seite 16
+# :Shapes_ImplR_Konv_21 
+#     a sh:NodeShape ; 
+#     #sh:target... 
+#     sh:name "Konvention 21"@de ; 
+#     sh:description "Die Eigenschaft dct:source SOLL nicht verwendet werden. - Seite 16" ;
+#     sh:deactivated true ;
+#     #... tbd ...
+# .
 
-# Konv 22: Es MÜSSEN Metadaten zu Datenstrukturen mit Distributionen im adms:status „Completed“, „Deprecated“ oder „Withdrawn“ transportiert werden. - Seite 17
-:Shapes_ImplR_Konv_22 
-    a sh:NodeShape ; 
-    #sh:target... 
-    sh:name "Konvention 22"@de ; 
-    sh:description "Es MÜSSEN Metadaten zu Datenstrukturen mit Distributionen im adms:status „Completed“, „Deprecated“ oder „Withdrawn“ transportiert werden. - Seite 17" ;
-    sh:deactivated true ;
-    #... tbd ...
-.
+# # Konv 22: Es MÜSSEN Metadaten zu Datenstrukturen mit Distributionen im adms:status „Completed“, „Deprecated“ oder „Withdrawn“ transportiert werden. - Seite 17
+# :Shapes_ImplR_Konv_22 
+#     a sh:NodeShape ; 
+#     #sh:target... 
+#     sh:name "Konvention 22"@de ; 
+#     sh:description "Es MÜSSEN Metadaten zu Datenstrukturen mit Distributionen im adms:status „Completed“, „Deprecated“ oder „Withdrawn“ transportiert werden. - Seite 17" ;
+#     sh:deactivated true ;
+#     #... tbd ...
+# .
 
-# Konv 23: Es MÜSSEN Metadaten zu Datenstrukturen mit Distributionen im adms:status „Completed“, „Deprecated“ in dcat-ap.de konformen Portalen angezeigt werden. - Seite 17
-:Shapes_ImplR_Konv_23 
-    a sh:NodeShape ; 
-    #sh:target... 
-    sh:name "Konvention 23"@de ; 
-    sh:description "Es MÜSSEN Metadaten zu Datenstrukturen mit Distributionen im adms:status „Completed“, „Deprecated“ in dcat-ap.de konformen Portalen angezeigt werden. - Seite 17" ;
-    sh:deactivated true ;
-    #... tbd ...
-.
+# # Konv 23: Es MÜSSEN Metadaten zu Datenstrukturen mit Distributionen im adms:status „Completed“, „Deprecated“ in dcat-ap.de konformen Portalen angezeigt werden. - Seite 17
+# :Shapes_ImplR_Konv_23 
+#     a sh:NodeShape ; 
+#     #sh:target... 
+#     sh:name "Konvention 23"@de ; 
+#     sh:description "Es MÜSSEN Metadaten zu Datenstrukturen mit Distributionen im adms:status „Completed“, „Deprecated“ in dcat-ap.de konformen Portalen angezeigt werden. - Seite 17" ;
+#     sh:deactivated true ;
+#     #... tbd ...
+# .
 
-# Konv 24: Es SOLLEN Datenstrukturen mit Distributionen im adms:status „Withdrawn“ zunächst mit „Deprecated“ ausgewiesen werden. - Seite 17
-:Shapes_ImplR_Konv_24 
-    a sh:NodeShape ; 
-    #sh:target... 
-    sh:name "Konvention 24"@de ; 
-    sh:description "Es SOLLEN Datenstrukturen mit Distributionen im adms:status „Withdrawn“ zunächst mit „Deprecated“ ausgewiesen werden. - Seite 17" ;
-    sh:deactivated true ;
-    #... tbd ...
-.
+# # Konv 24: Es SOLLEN Datenstrukturen mit Distributionen im adms:status „Withdrawn“ zunächst mit „Deprecated“ ausgewiesen werden. - Seite 17
+# :Shapes_ImplR_Konv_24 
+#     a sh:NodeShape ; 
+#     #sh:target... 
+#     sh:name "Konvention 24"@de ; 
+#     sh:description "Es SOLLEN Datenstrukturen mit Distributionen im adms:status „Withdrawn“ zunächst mit „Deprecated“ ausgewiesen werden. - Seite 17" ;
+#     sh:deactivated true ;
+#     #... tbd ...
+# .
 
-# Konv 25: Bekommt ein Kooperationspartner eine Datenstruktur mit ausgefülltem dct:identifier, so MUSS dieser unverändert weitergegeben werden. - Seite 18
-:Shapes_ImplR_Konv_25 
-    a sh:NodeShape ; 
-    #sh:target... 
-    sh:name "Konvention 25"@de ; 
-    sh:description "Bekommt ein Kooperationspartner eine Datenstruktur mit ausgefülltem dct:identifier, so MUSS dieser unverändert weitergegeben werden. - Seite 18" ;
-    sh:deactivated true ;
-    #... tbd ...
-.
+# # Konv 25: Bekommt ein Kooperationspartner eine Datenstruktur mit ausgefülltem dct:identifier, so MUSS dieser unverändert weitergegeben werden. - Seite 18
+# :Shapes_ImplR_Konv_25 
+#     a sh:NodeShape ; 
+#     #sh:target... 
+#     sh:name "Konvention 25"@de ; 
+#     sh:description "Bekommt ein Kooperationspartner eine Datenstruktur mit ausgefülltem dct:identifier, so MUSS dieser unverändert weitergegeben werden. - Seite 18" ;
+#     sh:deactivated true ;
+#     #... tbd ...
+# .
 
-# Konv 26: Kooperationspartner KÖNNEN ihre eigenen Identifier in der Eigenschaft adms:identifier auflisten. Bestehende Einträge von adms:identifier MÜSSEN unverändert bleiben. - Seite 18
-:Shapes_ImplR_Konv_26 
-    a sh:NodeShape ; 
-    #sh:target... 
-    sh:name "Konvention 26"@de ; 
-    sh:description "Kooperationspartner KÖNNEN ihre eigenen Identifier in der Eigenschaft adms:identifier auflisten. Bestehende Einträge von adms:identifier MÜSSEN unverändert bleiben. - Seite 18" ;
-    sh:deactivated true ;
-    #... tbd ...
-.
+# # Konv 26: Kooperationspartner KÖNNEN ihre eigenen Identifier in der Eigenschaft adms:identifier auflisten. Bestehende Einträge von adms:identifier MÜSSEN unverändert bleiben. - Seite 18
+# :Shapes_ImplR_Konv_26 
+#     a sh:NodeShape ; 
+#     #sh:target... 
+#     sh:name "Konvention 26"@de ; 
+#     sh:description "Kooperationspartner KÖNNEN ihre eigenen Identifier in der Eigenschaft adms:identifier auflisten. Bestehende Einträge von adms:identifier MÜSSEN unverändert bleiben. - Seite 18" ;
+#     sh:deactivated true ;
+#     #... tbd ...
+# .
 
-# Konv 27: Bei Serialisierung in RDF/XML MUSS der dct:identifier einer Datenstruktur in das rdf:about Feld übernommen werden. - Seite 19
-:Shapes_ImplR_Konv_27 
-    a sh:NodeShape ; 
-    #sh:target... 
-    sh:name "Konvention 27"@de ; 
-    sh:description "Bei Serialisierung in RDF/XML MUSS der dct:identifier einer Datenstruktur in das rdf:about Feld übernommen werden. - Seite 19" ;
-    sh:deactivated true ;
-    #... tbd ...
-.
+# # Konv 27: Bei Serialisierung in RDF/XML MUSS der dct:identifier einer Datenstruktur in das rdf:about Feld übernommen werden. - Seite 19
+# :Shapes_ImplR_Konv_27 
+#     a sh:NodeShape ; 
+#     #sh:target... 
+#     sh:name "Konvention 27"@de ; 
+#     sh:description "Bei Serialisierung in RDF/XML MUSS der dct:identifier einer Datenstruktur in das rdf:about Feld übernommen werden. - Seite 19" ;
+#     sh:deactivated true ;
+#     #... tbd ...
+# .
 
-# Konv 28: Bei Serialisierung in JSON-LD MUSS der dct:identifier einer Datenstruktur in das @id Attribut übernommen werden. - Seite 19
-:Shapes_ImplR_Konv_28 
-    a sh:NodeShape ; 
-    #sh:target... 
-    sh:name "Konvention 28"@de ; 
-    sh:description "Bei Serialisierung in JSON-LD MUSS der dct:identifier einer Datenstruktur in das @id Attribut übernommen werden. - Seite 19" ;
-    sh:deactivated true ;
-    #... tbd ...
-.
+# # Konv 28: Bei Serialisierung in JSON-LD MUSS der dct:identifier einer Datenstruktur in das @id Attribut übernommen werden. - Seite 19
+# :Shapes_ImplR_Konv_28 
+#     a sh:NodeShape ; 
+#     #sh:target... 
+#     sh:name "Konvention 28"@de ; 
+#     sh:description "Bei Serialisierung in JSON-LD MUSS der dct:identifier einer Datenstruktur in das @id Attribut übernommen werden. - Seite 19" ;
+#     sh:deactivated true ;
+#     #... tbd ...
+# .
 
-# Konv 29: Verweise auf bestehende andere Verschlagwortungssysteme oder Ontologien KÖNNEN mit dct:conformsTo ausgedrückt werden. - Seite 20
-:Shapes_ImplR_Konv_29 
-    a sh:NodeShape ; 
-    #sh:target... 
-    sh:name "Konvention 29"@de ; 
-    sh:description "Verweise auf bestehende andere Verschlagwortungssysteme oder Ontologien KÖNNEN mit dct:conformsTo ausgedrückt werden. - Seite 20" ;
-    sh:deactivated true ;
-    #... tbd ...
-.
+# # Konv 29: Verweise auf bestehende andere Verschlagwortungssysteme oder Ontologien KÖNNEN mit dct:conformsTo ausgedrückt werden. - Seite 20
+# :Shapes_ImplR_Konv_29 
+#     a sh:NodeShape ; 
+#     #sh:target... 
+#     sh:name "Konvention 29"@de ; 
+#     sh:description "Verweise auf bestehende andere Verschlagwortungssysteme oder Ontologien KÖNNEN mit dct:conformsTo ausgedrückt werden. - Seite 20" ;
+#     sh:deactivated true ;
+#     #... tbd ...
+# .
 
-# Konv 30: Werden   wie empfohlen   Kategorien verwendet, MÜSSEN die MDR data themes genutzt werden. - Seite 20
-:Shapes_ImplR_Konv_30 
-    a sh:NodeShape ; 
-    #sh:target... 
-    sh:name "Konvention 30"@de ; 
-    sh:description "Werden   wie empfohlen   Kategorien verwendet, MÜSSEN die MDR data themes genutzt werden. - Seite 20" ;
-    sh:deactivated true ;
-    #... tbd ...
-.
+# # Konv 30: Werden   wie empfohlen   Kategorien verwendet, MÜSSEN die MDR data themes genutzt werden. - Seite 20
+# :Shapes_ImplR_Konv_30 
+#     a sh:NodeShape ; 
+#     #sh:target... 
+#     sh:name "Konvention 30"@de ; 
+#     sh:description "Werden   wie empfohlen   Kategorien verwendet, MÜSSEN die MDR data themes genutzt werden. - Seite 20" ;
+#     sh:deactivated true ;
+#     #... tbd ...
+# .
 
-# Konv 31: Hat die Datei, die die Daten einer Distribution beinhaltet, einen in der MDR authority file table geführten mediaType, so MUSS auf diesen mittels dct:format verwiesen werden. Andernfalls MUSS via dcat:mediaType auf die IANA Liste verwiesen und ein ggf. fehlender mediaType dort angelegt werden. - Seite 22
-:Shapes_ImplR_Konv_31 
-    a sh:NodeShape ; 
-    #sh:target... 
-    sh:name "Konvention 31"@de ; 
-    sh:description "Hat die Datei, die die Daten einer Distribution beinhaltet, einen in der MDR authority file table geführten mediaType, so MUSS auf diesen mittels dct:format verwiesen werden. Andernfalls MUSS via dcat:mediaType auf die IANA Liste verwiesen und ein ggf. fehlender mediaType dort angelegt werden. - Seite 22" ;
-    sh:deactivated true ;
-    #... tbd ...
-.
+# # Konv 31: Hat die Datei, die die Daten einer Distribution beinhaltet, einen in der MDR authority file table geführten mediaType, so MUSS auf diesen mittels dct:format verwiesen werden. Andernfalls MUSS via dcat:mediaType auf die IANA Liste verwiesen und ein ggf. fehlender mediaType dort angelegt werden. - Seite 22
+# :Shapes_ImplR_Konv_31 
+#     a sh:NodeShape ; 
+#     #sh:target... 
+#     sh:name "Konvention 31"@de ; 
+#     sh:description "Hat die Datei, die die Daten einer Distribution beinhaltet, einen in der MDR authority file table geführten mediaType, so MUSS auf diesen mittels dct:format verwiesen werden. Andernfalls MUSS via dcat:mediaType auf die IANA Liste verwiesen und ein ggf. fehlender mediaType dort angelegt werden. - Seite 22" ;
+#     sh:deactivated true ;
+#     #... tbd ...
+# .
 
-# Konv 32: Distributionen von Datensätzen MÜSSEN mit einer Lizenz ausgewiesen werden. Für die Kennzeichnung der im Abschnitt 2.1 aufgeführten Lizenzen MÜSSEN die dort genannten URIs verwendet werden. - Seite 23
-:Shapes_ImplR_Konv_32 
-    a sh:NodeShape ; 
-    #sh:target... 
-    sh:name "Konvention 32"@de ; 
-    sh:description "Distributionen von Datensätzen MÜSSEN mit einer Lizenz ausgewiesen werden. Für die Kennzeichnung der im Abschnitt 2.1 aufgeführten Lizenzen MÜSSEN die dort genannten URIs verwendet werden. - Seite 23" ;
-    sh:deactivated true ;
-    #... tbd ...
-.
+# # Konv 32: Distributionen von Datensätzen MÜSSEN mit einer Lizenz ausgewiesen werden. Für die Kennzeichnung der im Abschnitt 2.1 aufgeführten Lizenzen MÜSSEN die dort genannten URIs verwendet werden. - Seite 23
+# :Shapes_ImplR_Konv_32 
+#     a sh:NodeShape ; 
+#     #sh:target... 
+#     sh:name "Konvention 32"@de ; 
+#     sh:description "Distributionen von Datensätzen MÜSSEN mit einer Lizenz ausgewiesen werden. Für die Kennzeichnung der im Abschnitt 2.1 aufgeführten Lizenzen MÜSSEN die dort genannten URIs verwendet werden. - Seite 23" ;
+#     sh:deactivated true ;
+#     #... tbd ...
+# .
 
-# Konv 33: entfällt - Seite 23
-:Shapes_ImplR_Konv_33 
-    a sh:NodeShape ; 
-    #sh:target... 
-    sh:name "Konvention 33"@de ; 
-    sh:description "entfällt - Seite 23" ;
-    sh:deactivated true ;
-    #... tbd ...
-.
+# # Konv 33: entfällt - Seite 23
+# :Shapes_ImplR_Konv_33 
+#     a sh:NodeShape ; 
+#     #sh:target... 
+#     sh:name "Konvention 33"@de ; 
+#     sh:description "entfällt - Seite 23" ;
+#     sh:deactivated true ;
+#     #... tbd ...
+# .
 
-# Konv 34: Die URIs der Lizenzen außerhalb der GovData Lizenzliste MÜSSEN zum Erhalt der DCAT-AP Konformität unverändert weitergegeben werden. - Seite 23
-:Shapes_ImplR_Konv_34 
-    a sh:NodeShape ; 
-    #sh:target... 
-    sh:name "Konvention 34"@de ; 
-    sh:description "Die URIs der Lizenzen außerhalb der GovData Lizenzliste MÜSSEN zum Erhalt der DCAT-AP Konformität unverändert weitergegeben werden. - Seite 23" ;
-    sh:deactivated true ;
-    #... tbd ...
-.
+# # Konv 34: Die URIs der Lizenzen außerhalb der GovData Lizenzliste MÜSSEN zum Erhalt der DCAT-AP Konformität unverändert weitergegeben werden. - Seite 23
+# :Shapes_ImplR_Konv_34 
+#     a sh:NodeShape ; 
+#     #sh:target... 
+#     sh:name "Konvention 34"@de ; 
+#     sh:description "Die URIs der Lizenzen außerhalb der GovData Lizenzliste MÜSSEN zum Erhalt der DCAT-AP Konformität unverändert weitergegeben werden. - Seite 23" ;
+#     sh:deactivated true ;
+#     #... tbd ...
+# .
 
-# Konv 35: Wird bei der Verwendung der Lizenz die Angabe des Herausgebers gefordert, so MUSS der Namensnennungstext im Feld dcatde:licenseAttributionByText hinterlegt werden. - Seite 23
-:Shapes_ImplR_Konv_35 
-    a sh:NodeShape ; 
-    #sh:target... 
-    sh:name "Konvention 35"@de ; 
-    sh:description "Wird bei der Verwendung der Lizenz die Angabe des Herausgebers gefordert, so MUSS der Namensnennungstext im Feld dcatde:licenseAttributionByText hinterlegt werden. - Seite 23" ;
-    sh:deactivated true ;
-    #... tbd ...
-.
+# # Konv 35: Wird bei der Verwendung der Lizenz die Angabe des Herausgebers gefordert, so MUSS der Namensnennungstext im Feld dcatde:licenseAttributionByText hinterlegt werden. - Seite 23
+# :Shapes_ImplR_Konv_35 
+#     a sh:NodeShape ; 
+#     #sh:target... 
+#     sh:name "Konvention 35"@de ; 
+#     sh:description "Wird bei der Verwendung der Lizenz die Angabe des Herausgebers gefordert, so MUSS der Namensnennungstext im Feld dcatde:licenseAttributionByText hinterlegt werden. - Seite 23" ;
+#     sh:deactivated true ;
+#     #... tbd ...
+# .
 
-# Konv 36: Unter dct:publisher MUSS die Organisation eingetragen werden, die die Datenstruktur (im rechtlichen, nicht technischen Sinne) veröffentlicht, d.h. die entschieden hat, dass Dritten Nutzungsrechte (hilfsweise Zugang) eingeräumt werden. - Seite 24
-:Shapes_ImplR_Konv_36 
-    a sh:NodeShape ; 
-    #sh:target... 
-    sh:name "Konvention 36"@de ; 
-    sh:description "Unter dct:publisher MUSS die Organisation eingetragen werden, die die Datenstruktur (im rechtlichen, nicht technischen Sinne) veröffentlicht, d.h. die entschieden hat, dass Dritten Nutzungsrechte (hilfsweise Zugang) eingeräumt werden. - Seite 24" ;
-    sh:deactivated true ;
-    #... tbd ...
-.
+# # Konv 36: Unter dct:publisher MUSS die Organisation eingetragen werden, die die Datenstruktur (im rechtlichen, nicht technischen Sinne) veröffentlicht, d.h. die entschieden hat, dass Dritten Nutzungsrechte (hilfsweise Zugang) eingeräumt werden. - Seite 24
+# :Shapes_ImplR_Konv_36 
+#     a sh:NodeShape ; 
+#     #sh:target... 
+#     sh:name "Konvention 36"@de ; 
+#     sh:description "Unter dct:publisher MUSS die Organisation eingetragen werden, die die Datenstruktur (im rechtlichen, nicht technischen Sinne) veröffentlicht, d.h. die entschieden hat, dass Dritten Nutzungsrechte (hilfsweise Zugang) eingeräumt werden. - Seite 24" ;
+#     sh:deactivated true ;
+#     #... tbd ...
+# .
 
-# Konv 37: Es KÖNNEN Angaben zur Art eines Publishers gemacht werden, dabei MUSS die hier definierte Teilmenge des ADMS:publisherType Vokabulars verwendet werden. - Seite 26
-:Shapes_ImplR_Konv_37 
-    a sh:NodeShape ; 
-    #sh:target... 
-    sh:name "Konvention 37"@de ; 
-    sh:description "Es KÖNNEN Angaben zur Art eines Publishers gemacht werden, dabei MUSS die hier definierte Teilmenge des ADMS:publisherType Vokabulars verwendet werden. - Seite 26" ;
-    sh:deactivated true ;
-    #... tbd ...
-.
+# # Konv 37: Es KÖNNEN Angaben zur Art eines Publishers gemacht werden, dabei MUSS die hier definierte Teilmenge des ADMS:publisherType Vokabulars verwendet werden. - Seite 26
+# :Shapes_ImplR_Konv_37 
+#     a sh:NodeShape ; 
+#     #sh:target... 
+#     sh:name "Konvention 37"@de ; 
+#     sh:description "Es KÖNNEN Angaben zur Art eines Publishers gemacht werden, dabei MUSS die hier definierte Teilmenge des ADMS:publisherType Vokabulars verwendet werden. - Seite 26" ;
+#     sh:deactivated true ;
+#     #... tbd ...
+# .
 
-# Konv 38: Bei Zeitangaben mittels „Zeitraum“ MUSS eine der Angaben Beginn (schema:startDate) oder Ende (schema:endDate) angegeben sein. - Seite 27
-:Shapes_ImplR_Konv_38 
-    a sh:NodeShape ; 
-    #sh:target... 
-    sh:name "Konvention 38"@de ; 
-    sh:description "Bei Zeitangaben mittels „Zeitraum“ MUSS eine der Angaben Beginn (schema:startDate) oder Ende (schema:endDate) angegeben sein. - Seite 27" ;
-    sh:deactivated true ;
-    #... tbd ...
-.
+# # Konv 38: Bei Zeitangaben mittels „Zeitraum“ MUSS eine der Angaben Beginn (schema:startDate) oder Ende (schema:endDate) angegeben sein. - Seite 27
+# :Shapes_ImplR_Konv_38 
+#     a sh:NodeShape ; 
+#     #sh:target... 
+#     sh:name "Konvention 38"@de ; 
+#     sh:description "Bei Zeitangaben mittels „Zeitraum“ MUSS eine der Angaben Beginn (schema:startDate) oder Ende (schema:endDate) angegeben sein. - Seite 27" ;
+#     sh:deactivated true ;
+#     #... tbd ...
+# .
 
-# Konv 39: Werden die Daten nur als direkter Download veröffentlicht, so wird der URL der Datei sowohl als dcat:downloadURL als auch als dcat:accessURL angegeben. - Seite 24
-:Shapes_ImplR_Konv_39 
-    a sh:NodeShape ; 
-    #sh:target... 
-    sh:name "Konvention 39"@de ; 
-    sh:description "Werden die Daten nur als direkter Download veröffentlicht, so wird der URL der Datei sowohl als dcat:downloadURL als auch als dcat:accessURL angegeben. - Seite 24" ;
-    sh:deactivated true ;
-    #... tbd ...
-.
+# # Konv 39: Werden die Daten nur als direkter Download veröffentlicht, so wird der URL der Datei sowohl als dcat:downloadURL als auch als dcat:accessURL angegeben. - Seite 24
+# :Shapes_ImplR_Konv_39 
+#     a sh:NodeShape ; 
+#     #sh:target... 
+#     sh:name "Konvention 39"@de ; 
+#     sh:description "Werden die Daten nur als direkter Download veröffentlicht, so wird der URL der Datei sowohl als dcat:downloadURL als auch als dcat:accessURL angegeben. - Seite 24" ;
+#     sh:deactivated true ;
+#     #... tbd ...
+# .
 
-# Konv 40: Werden DCAT-AP.de Metadaten aus ISO-Metadaten erzeugt, MUSS das „technische“ Aktualitätsdatum aus dem Element dateStamp (XPath MD_Metadata/dateStamp) als Wert der Eigenschaft dct:modified des Datasets verwendet werden. - Seite 21
-:Shapes_ImplR_Konv_40 
-    a sh:NodeShape ; 
-    #sh:target... 
-    sh:name "Konvention 40"@de ; 
-    sh:description "Werden DCAT-AP.de Metadaten aus ISO-Metadaten erzeugt, MUSS das „technische“ Aktualitätsdatum aus dem Element dateStamp (XPath MD_Metadata/dateStamp) als Wert der Eigenschaft dct:modified des Datasets verwendet werden. - Seite 21" ;
-    sh:deactivated true ;
-    #... tbd ...
-.
+# # Konv 40: Werden DCAT-AP.de Metadaten aus ISO-Metadaten erzeugt, MUSS das „technische“ Aktualitätsdatum aus dem Element dateStamp (XPath MD_Metadata/dateStamp) als Wert der Eigenschaft dct:modified des Datasets verwendet werden. - Seite 21
+# :Shapes_ImplR_Konv_40 
+#     a sh:NodeShape ; 
+#     #sh:target... 
+#     sh:name "Konvention 40"@de ; 
+#     sh:description "Werden DCAT-AP.de Metadaten aus ISO-Metadaten erzeugt, MUSS das „technische“ Aktualitätsdatum aus dem Element dateStamp (XPath MD_Metadata/dateStamp) als Wert der Eigenschaft dct:modified des Datasets verwendet werden. - Seite 21" ;
+#     sh:deactivated true ;
+#     #... tbd ...
+# .
