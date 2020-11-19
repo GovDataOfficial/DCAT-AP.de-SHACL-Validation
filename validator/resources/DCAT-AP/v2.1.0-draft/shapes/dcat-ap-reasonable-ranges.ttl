@@ -455,7 +455,7 @@
     #     sh:class odrl:Policy ;
     #     sh:path odrl:hasPolicy ;
     #     sh:severity sh:Warning ;
-          sh:message "Die Klassenzugehörigkeit wird zwar geprüft, kann aber bei extern verlinkten Daten nicht sichergestellt werden. Bitte prüfen Sie ggf. ob der Verlinkte Datensatz der geforderten Klasse entspricht."
+    #     sh:message "Die Klassenzugehörigkeit wird zwar geprüft, kann aber bei extern verlinkten Daten nicht sichergestellt werden. Bitte prüfen Sie ggf. ob der Verlinkte Datensatz der geforderten Klasse entspricht."
     # ], 
     [
         sh:class dcat:DataService ;
