@@ -17,7 +17,8 @@
     dcat:contactPoint failing:wrong_type ;
     dcat:contactPoint failing:no_tel_or_email ;
     dcat:contactPoint failing:no_fn ;
-    dcat:contactPoint failing:not_closed .
+    dcat:contactPoint failing:not_closed ;
+.
 
 passing:full
     a vcard:Kind ;

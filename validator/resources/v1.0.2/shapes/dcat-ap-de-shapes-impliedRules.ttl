@@ -51,7 +51,10 @@
         sh:message "Pflicht (K01): dcat:contactPoint darf nur über vcard:fn, vcard:hasEmail, vcard:hasTelephone und vcard:hasURL verfügen."@de ;
         sh:closed true ;
         sh:ignoredProperties (rdf:type) ;
-        sh:property [ sh:path vcard:fn, vcard:hasEmail, vcard:hasTelephone, vcard:hasURL ] ;
+        sh:property [ sh:path vcard:fn ] ;
+        sh:property [ sh:path vcard:hasEmail ] ;
+        sh:property [ sh:path vcard:hasTelephone ] ;
+        sh:property [ sh:path vcard:hasURL ] ;
         sh:severity sh:Violation ;
     ] ;
 
