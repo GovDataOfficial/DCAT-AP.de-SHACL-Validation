@@ -48,14 +48,14 @@
     sh:deactivated false ;
 
     sh:property [
-        sh:message "Pflicht (K01): dcat:contactPoint darf nur über vcard:fn, vcard:hasEmail, vcard:hasTelephone und vcard:hasURL verfügen."@de ;
         sh:closed true ;
         sh:ignoredProperties (rdf:type) ;
         sh:property [ sh:path vcard:fn ] ;
         sh:property [ sh:path vcard:hasEmail ] ;
         sh:property [ sh:path vcard:hasTelephone ] ;
         sh:property [ sh:path vcard:hasURL ] ;
-        sh:severity sh:Violation ;
+        sh:severity sh:Info ;
+        sh:message "(Konvention wird zukünftig überarbeitet.) Pflicht (K01): dcat:contactPoint darf nur über vcard:fn, vcard:hasEmail, vcard:hasTelephone und vcard:hasURL verfügen."@de ;
     ] ;
 
     sh:property [
@@ -81,7 +81,7 @@
         sh:path vcard:hasURL ;
         sh:minCount 1 ;
         sh:severity sh:Info ;
-        sh:message "Optional: Sie könnten mittels vcard:hasURL einen Link zum Kontaktformular (empfohlen) oder zur Webseite angeben."@de ;
+        sh:message "Optional (K01): Sie könnten mittels vcard:hasURL einen Link zum Kontaktformular (empfohlen) oder zur Webseite angeben."@de ;
     ] ;
 
     sh:property [
@@ -115,8 +115,8 @@
     sh:property [
         sh:path dcatde:qualityProcessURI ;
         sh:minCount 1 ;
-        sh:severity sh:Warning ;
-        sh:message "Konvention 02 (Optional): Sie könnten mittels dcatde:qualityProcessURI auf eine Webseite, die den Prozess zur Qualitätssicherung des Datasets beschreibt, verweisen."@de ;
+        sh:severity sh:Info ;
+        sh:message "Optional (K02): Sie könnten mittels dcatde:qualityProcessURI auf eine Webseite, die den Prozess zur Qualitätssicherung des Datasets beschreibt, verweisen."@de ;
     ]
 .
 
@@ -134,10 +134,10 @@
     sh:targetClass dcat:Catalog ;
 
     sh:name "Konvention 04 - 07"@de ; 
-    sh:description "04 Wird die räumliche Abdeckung eines Katalogs oder einer Datenstruktur (dct:spatial) unter Verwendung von Geometrien und Punkten bezeichnet, MÜSSEN die Koordinatensysteme mit angegeben werden. - Seite 9" ;
-    sh:description "05 Wird die räumliche Abdeckung eines Katalogs oder einer Datenstruktur (dct:spatial) unter Verwendung von Geometrien und Punkten angegeben, so MÜSSEN Koordinaten entsprechend der Achsenanordnung des bezeichneten Koordinatensystems angegeben werden. - Seite 9" ;
-    sh:description "06 Für die Angabe von Geometrien für die räumliche Abdeckung (dct:spatial) MÜSSEN WKT, GML, oder RDF+WKT/GML gemäß der GeoSPARQL Spezifikation, KML oder RDF von schema.org verwendet werden. - Seite 9" ;
-    sh:description "07 Bei der Angaben von Punkten für die räumliche Abdeckung (dct:spatial) MÜSSEN die für Geometrien zugelassen Werte oder geo URIs, GeoHash URIs oder das W3C Basic Geo (WGS84 lat/long) vocabulary verwendet werden. - Seite 9" ;
+    sh:description "Konvention 04 Wird die räumliche Abdeckung eines Katalogs oder einer Datenstruktur (dct:spatial) unter Verwendung von Geometrien und Punkten bezeichnet, MÜSSEN die Koordinatensysteme mit angegeben werden. - Seite 9" ;
+    sh:description "Konvention 05 Wird die räumliche Abdeckung eines Katalogs oder einer Datenstruktur (dct:spatial) unter Verwendung von Geometrien und Punkten angegeben, so MÜSSEN Koordinaten entsprechend der Achsenanordnung des bezeichneten Koordinatensystems angegeben werden. - Seite 9" ;
+    sh:description "Konvention 06 Für die Angabe von Geometrien für die räumliche Abdeckung (dct:spatial) MÜSSEN WKT, GML, oder RDF+WKT/GML gemäß der GeoSPARQL Spezifikation, KML oder RDF von schema.org verwendet werden. - Seite 9" ;
+    sh:description "Konvention 07 Bei der Angaben von Punkten für die räumliche Abdeckung (dct:spatial) MÜSSEN die für Geometrien zugelassen Werte oder geo URIs, GeoHash URIs oder das W3C Basic Geo (WGS84 lat/long) vocabulary verwendet werden. - Seite 9" ;
     sh:deactivated false ;
 
     sh:property [
@@ -145,18 +145,18 @@
         sh:description "Prüfe, ob ein dct:spatial vorhanden ist."@de ;
 
         sh:path dct:spatial ;
-        sh:severity sh:Info ;
         sh:maxCount 0 ;
-        sh:message "Konvention 04 (Hinweis): Wird die räumliche Abdeckung eines Katalogs oder einer Datenstruktur (dct:spatial) unter Verwendung von Geometrien und Punkten bezeichnet, MÜSSEN die Koordinatensysteme mit angegeben werden. - Seite 9" ;
-        sh:message "Konvention 05 (Hinweis): Wird die räumliche Abdeckung eines Katalogs oder einer Datenstruktur (dct:spatial) unter Verwendung von Geometrien und Punkten angegeben, so MÜSSEN Koordinaten entsprechend der Achsenanordnung des bezeichneten Koordinatensystems angegeben werden. - Seite 9" ;
-        sh:message "Konvention 06 (Hinweis): Für die Angabe von Geometrien für die räumliche Abdeckung (dct:spatial) MÜSSEN WKT, GML, oder RDF+WKT/GML gemäß der GeoSPARQL Spezifikation, KML oder RDF von schema.org verwendet werden. - Seite 9" ;
-        sh:message "Konvention 07 (Hinweis): Bei der Angaben von Punkten für die räumliche Abdeckung (dct:spatial) MÜSSEN die für Geometrien zugelassen Werte oder geo URIs, GeoHash URIs oder das W3C Basic Geo (WGS84 lat/long) vocabulary verwendet werden. - Seite 9" ;
+        sh:severity sh:Info ;
+        sh:message "Hinweis (K04): Wird die räumliche Abdeckung eines Katalogs oder einer Datenstruktur (dct:spatial) unter Verwendung von Geometrien und Punkten bezeichnet, MÜSSEN die Koordinatensysteme mit angegeben werden. - Seite 9" ;
+        sh:message "Hinweis (K05): Wird die räumliche Abdeckung eines Katalogs oder einer Datenstruktur (dct:spatial) unter Verwendung von Geometrien und Punkten angegeben, so MÜSSEN Koordinaten entsprechend der Achsenanordnung des bezeichneten Koordinatensystems angegeben werden. - Seite 9" ;
+        sh:message "Hinweis (K06): Für die Angabe von Geometrien für die räumliche Abdeckung (dct:spatial) MÜSSEN WKT, GML, oder RDF+WKT/GML gemäß der GeoSPARQL Spezifikation, KML oder RDF von schema.org verwendet werden. - Seite 9" ;
+        sh:message "Hinweis (K07): Bei der Angaben von Punkten für die räumliche Abdeckung (dct:spatial) MÜSSEN die für Geometrien zugelassen Werte oder geo URIs, GeoHash URIs oder das W3C Basic Geo (WGS84 lat/long) vocabulary verwendet werden. - Seite 9" ;
     ]  
 .
 
 # Konv 08: Der verwaltungspolitische Geobezug MUSS zusätzlich zur dct:spatial bezeichnet werden (dcatde:politicalGeocodingURI), wenn die geografische Abdeckung ausgedrückt werden soll und eine Datenstruktur das gesamte Bundesgebiet oder das Gebiet einer bestimmten Gemeinde, eines Gemeindeverbandes, eines Kreises, eines Bezirks oder eines Bundeslandes abdeckt. - Seite 12
     # Ob der durch dct:spatial beschriebene Geobezug die gegebenen Anforderungen erfüllt, kann kaum geprüft werden.
-    # Hinweisnachricht (RECOMMENDED), immer wenn dcat:Dataset dct:spatial genutzt wird, dcatde:politicalGeocodingURI aber nicht genutzt wird
+    # Hinweisnachricht immer wenn dcat:Dataset dct:spatial genutzt wird, dcatde:politicalGeocodingURI aber nicht genutzt wird
 
 :Shapes_ImplR_Konv_08 
     a sh:NodeShape ; 
@@ -169,8 +169,8 @@
     sh:property [
         sh:name "Shape dcat:Dataset oder dcat:Catalog - hat dct:spatial aber kein dcatde:politicalGeocodingURI"@de ;
         sh:description "Prüfe, ob ein dct:spatial aber kein dcatde:politicalGeocodingURI vorhanden ist."@de ;
-        sh:message "Konvention 08 (Pflicht): Der verwaltungspolitische Geobezug MUSS zusätzlich zur dct:spatial bezeichnet werden (dcatde:politicalGeocodingURI), wenn die geografische Abdeckung ausgedrückt werden soll und eine Datenstruktur das gesamte Bundesgebiet oder das Gebiet einer bestimmten Gemeinde, eines Gemeindeverbandes, eines Kreises, eines Bezirks oder eines Bundeslandes abdeckt. - Seite 12" ;
-        sh:severity sh:Warning ;
+        sh:message "Hinweis (K08): Der verwaltungspolitische Geobezug MUSS zusätzlich zur dct:spatial bezeichnet werden (dcatde:politicalGeocodingURI), wenn die geografische Abdeckung ausgedrückt werden soll und eine Datenstruktur das gesamte Bundesgebiet oder das Gebiet einer bestimmten Gemeinde, eines Gemeindeverbandes, eines Kreises, eines Bezirks oder eines Bundeslandes abdeckt. - Seite 12" ;
+        sh:severity sh:Info ;
         
         sh:path dcatde:politicalGeocodingURI ;
         sh:minCount 1 ;
@@ -179,7 +179,7 @@
 
 # Konv 09: Die Ebene der geopolitischen Abdeckung (dcatde:politicalGeocodingLevelURI) SOLL durch einen URI bezeichnet werden, wenn eine Abdeckung durch die Datenstruktur auf abstrakter Verwaltungsebene (Bund, Land, Kreis, Kommunen) gegeben ist. - Seite 12
     # Ob eine Abdeckung durch die Datenstruktur auf abstrakter Verwaltungsebene (Bund, Land, Kreis, Kommunen) gegeben ist, lässt sich kaum überprüfen.
-    # Hinweisnachricht (RECOMMENDED), immer wenn dcat:Dataset dct:spatial oder dcatde:politicalGeocodingURI genutzt, dcatde:politicalGeocodingLevelURI aber nicht genutzt wird-
+    # Hinweisnachricht immer wenn dcat:Dataset dct:spatial oder dcatde:politicalGeocodingURI genutzt, dcatde:politicalGeocodingLevelURI aber nicht genutzt wird-
 
 :Shapes_ImplR_Konv_09 
     a sh:NodeShape ; 
@@ -189,8 +189,8 @@
     sh:description "Die Ebene der geopolitischen Abdeckung (dcatde:politicalGeocodingLevelURI) SOLL durch einen URI bezeichnet werden, wenn eine Abdeckung durch die Datenstruktur auf abstrakter Verwaltungsebene (Bund, Land, Kreis, Kommunen) gegeben ist. - Seite 12" ;
     sh:deactivated false ;
 
-    sh:message "Konvention 09 (Empfehlung): Die Ebene der geopolitischen Abdeckung (dcatde:politicalGeocodingLevelURI) SOLL durch einen URI bezeichnet werden, wenn eine Abdeckung durch die Datenstruktur auf abstrakter Verwaltungsebene (Bund, Land, Kreis, Kommunen) gegeben ist. - Seite 12"@de ;
-    sh:severity sh:Warning ;
+    sh:message "Hinweis (K09): Die Ebene der geopolitischen Abdeckung (dcatde:politicalGeocodingLevelURI) SOLL durch einen URI bezeichnet werden, wenn eine Abdeckung durch die Datenstruktur auf abstrakter Verwaltungsebene (Bund, Land, Kreis, Kommunen) gegeben ist. - Seite 12"@de ;
+    sh:severity sh:Info ;
 
     sh:or (
         [sh:and (
@@ -232,8 +232,8 @@
     sh:description "Die Eigenschaft „verwaltungspolitische oder fachliche Geobezug“ (dcatde:geocodingDescription) MUSS als Freitextfeld verwendet werden, wenn eine andere geopolitische Codierung der Abdeckung der Datenstruktur nicht möglich oder zu komplex ist. - Seite 12" ;
     sh:deactivated false ;
     
-    sh:message "Konvention 10 (Pflicht): Die Eigenschaft „verwaltungspolitische oder fachliche Geobezug“ (dcatde:geocodingDescription) MUSS als Freitextfeld verwendet werden, wenn eine andere geopolitische Codierung der Abdeckung der Datenstruktur nicht möglich oder zu komplex ist. - Seite 12"@de ;
-    sh:severity sh:Warning ;
+    sh:message "Hinweis (K10): Die Eigenschaft „verwaltungspolitische oder fachliche Geobezug“ (dcatde:geocodingDescription) MUSS als Freitextfeld verwendet werden, wenn eine andere geopolitische Codierung der Abdeckung der Datenstruktur nicht möglich oder zu komplex ist. - Seite 12"@de ;
+    sh:severity sh:Info ;
     
     sh:or (
         [
@@ -262,8 +262,8 @@
     sh:deactivated false ;
 
     sh:property [
-        sh:message "Die in dcatde:politicalGeocodingURI ausgedrückten geografischen Bezüge SOLLEN zum Erhalt der europäischen Interoperabilität zugleich bei dct:spatial (Bundesländer, Kreise und Kommunen) als geografischer Bezug per URI gespiegelt werden. - Seite 12" ;
-        sh:severity sh:Warning ;
+        sh:message "Hinweis (K11): Die in dcatde:politicalGeocodingURI ausgedrückten geografischen Bezüge SOLLEN zum Erhalt der europäischen Interoperabilität zugleich bei dct:spatial (Bundesländer, Kreise und Kommunen) als geografischer Bezug per URI gespiegelt werden. - Seite 12" ;
+        sh:severity sh:Info ;
         
         sh:path dct:spatial ;
         sh:minCount 1 ;
