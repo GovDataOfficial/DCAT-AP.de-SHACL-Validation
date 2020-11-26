@@ -372,15 +372,24 @@
 #     #... tbd ...
 # .
 
-# # Konv 21: Die Eigenschaft dct:source SOLL nicht verwendet werden. - Seite 16
-# :Shapes_ImplR_Konv_21 
-#     a sh:NodeShape ; 
-#     #sh:target... 
-#     sh:name "Konvention 21"@de ; 
-#     sh:description "Die Eigenschaft dct:source SOLL nicht verwendet werden. - Seite 16" ;
-#     sh:deactivated true ;
-#     #... tbd ...
-# .
+# Konv 21: Die Eigenschaft dct:source SOLL nicht verwendet werden. - Seite 16
+    # 
+:Shapes_ImplR_Konv_21 
+
+    sh:targetSubjectsOf dct:source ;
+
+    sh:name "Konvention 11"@de ; 
+    sh:description "Die Eigenschaft dct:source SOLL nicht verwendet werden. - Seite 16" ;
+    sh:deactivated false ;
+
+    sh:property [
+        sh:message "Empfehlung (K21): Die Eigenschaft dct:source SOLL nicht verwendet werden. - Seite 16" ;
+        sh:severity sh:Warning ;
+        
+        sh:path dct:source ;
+        sh:maxCount 0 ;
+    ]
+.
 
 # # Konv 22: Es MÜSSEN Metadaten zu Datenstrukturen mit Distributionen im adms:status „Completed“, „Deprecated“ oder „Withdrawn“ transportiert werden. - Seite 17
 # :Shapes_ImplR_Konv_22 
