@@ -270,19 +270,27 @@
     ]
 .
 
-# =================================== bis hier
 # Konv 12: Alle Datenstrukturen, die direkt an das GovData Portal geliefert werden, MÜSSEN ihre Herkunft über eine eindeutige Kennzeichnung des Datenbereitstellers über die DatenbereitstellerID (dcatde:contributorID) ausweisen. - Seite 13
     # TODO: Wie :Dataset_Spec_contributorID_Ex, nur MUSS
 
-# :Shapes_ImplR_Konv_12 
-#     a sh:NodeShape ; 
-#     #sh:target... 
-#     sh:name "Konvention 12"@de ; 
-#     sh:description "Alle Datenstrukturen, die direkt an das GovData Portal geliefert werden, MÜSSEN ihre Herkunft über eine eindeutige Kennzeichnung des Datenbereitstellers über die DatenbereitstellerID (dcatde:contributorID) ausweisen. - Seite 13" ;
-#     sh:deactivated true ;
-#     #... tbd ...
-# .
+:Shapes_ImplR_Konv_12 
+    a sh:NodeShape ; 
+    sh:targetClass dcat:Dataset ;
 
+    sh:name "Konvention 12"@de ; 
+    sh:description "Alle Datenstrukturen, die direkt an das GovData Portal geliefert werden, MÜSSEN ihre Herkunft über eine eindeutige Kennzeichnung des Datenbereitstellers über die DatenbereitstellerID (dcatde:contributorID) ausweisen. - Seite 13" ;
+    sh:deactivated false ;
+
+    sh:property [
+        sh:severity sh:Violation ;
+        sh:message "Pflicht (K12): Alle Datenstrukturen, die direkt an das GovData Portal geliefert werden, MÜSSEN ihre Herkunft über eine eindeutige Kennzeichnung des Datenbereitstellers über die DatenbereitstellerID (dcatde:contributorID) ausweisen. - Seite 13" ; 
+
+        sh:path dcatde:contributorID ;
+        sh:minCount 1 ;
+    ]
+.
+
+# =================================== bis hier
 # # Konv 13: Die eigene DatenbereitstellerID-Kennung MUSS föderationsweit an bestehende Einträge im Feld dcatde:contributorID angehängt werden. - Seite 13
 #     # verstehe ich nicht
 # :Shapes_ImplR_Konv_13 
