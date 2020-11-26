@@ -10,6 +10,7 @@
   rdf:type owl:Ontology ;
   owl:imports <http://xmlns.com/foaf/spec/index.rdf> ;
   owl:imports <http://www.w3.org/2006/vcard/ns.ttl> ;
+  owl:imports <http://www.w3.org/ns/org.ttl> ;                               # added
 
  # owl:imports <https://spdx.org/rdf/terms/spdx-ontology.owl.xml> ;          # no use-case yet
  # owl:imports <http://dublincore.org/2020/01/20/dublin_core_terms.ttl> ;    # no use-case yet
