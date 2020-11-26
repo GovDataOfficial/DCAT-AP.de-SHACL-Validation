@@ -42,7 +42,7 @@
     sh:path dcatde:contributorID ;
     sh:minCount 1 ;
     sh:severity sh:Info ;
-    sh:message "Optional: Es wird empfohlen, den Datenbereitsteller mittels dcatde:contributerID anzugeben. Eine Liste existierender Datenbereitsteller finden Sie unter: https://www.dcat-ap.de/def/contributors/"@de .
+    sh:message "Optional: Es wird empfohlen, den Datenbereitsteller mittels dcatde:contributorID anzugeben. Eine Liste existierender Datenbereitsteller finden Sie unter: https://www.dcat-ap.de/def/contributors/"@de .
 
 :Dataset_contributorID_IRI
     sh:name "Shape contributorID - IRI"@de ;
@@ -50,7 +50,7 @@
     sh:path dcatde:contributorID ;
     sh:nodeKind sh:IRI ;
     sh:severity sh:Violation ;
-    sh:message "Pflicht: dcatde:contributerID ist keine IRI! Der Datenbereitsteller muss mittels dcatde:contributerID als IRI angegeben werden!"@de .
+    sh:message "Pflicht: dcatde:contributerID ist keine IRI! Der Datenbereitsteller muss mittels dcatde:contributorID als IRI angegeben werden!"@de .
 
 :Dataset_contributorID_List
     sh:name "Shape contributorID - Gelistet"@de ;
@@ -58,7 +58,7 @@
     sh:path dcatde:contributorID ;
     sh:in :contributors_List ;
     sh:severity sh:Info ;
-    sh:message "Optional: Angegebene IRI ist unbekannt! dcatde:contributerID sollte auf die IRI eines unter https://www.dcat-ap.de/def/contributors/ gelisteten Datenbereitsteller verweisen. Neue Datenbereitsteller können Sie hinzufügen lassen (siehe Konventionenhandbuch)."@de .
+    sh:message "Optional: Angegebene IRI ist unbekannt! dcatde:contributorID sollte auf die IRI eines unter https://www.dcat-ap.de/def/contributors/ gelisteten Datenbereitsteller verweisen. Neue Datenbereitsteller können Sie hinzufügen lassen (siehe Konventionenhandbuch)."@de .
 
 :Dataset_qualityProcessURI_Ex
     sh:name "Shape qualityProcessURI - Existenz"@de ;
