@@ -50,7 +50,7 @@
     sh:path dcatde:contributorID ;
     sh:nodeKind sh:IRI ;
     sh:severity sh:Violation ;
-    sh:message "Pflicht: dcatde:contributerID ist keine IRI! Der Datenbereitsteller muss mittels dcatde:contributorID als IRI angegeben werden!"@de .
+    sh:message "Pflicht: dcatde:contributorID ist keine IRI! Der Datenbereitsteller muss mittels dcatde:contributorID als IRI angegeben werden!"@de .
 
 :Dataset_contributorID_List
     sh:name "Shape contributorID - Gelistet"@de ;
@@ -248,7 +248,7 @@
     sh:path dcatde:legalBasis ;
     sh:minCount 1 ;
     sh:severity sh:Info ;
-    sh:message "Optional: Mittels dcatde:legalbasis könnten sie die Rechtsgrundlage für den Zugang zu den Informationen als Freitext angeben."@de .
+    sh:message "Optional: Mittels dcatde:legalbasis könnten Sie die Rechtsgrundlage für den Zugang zu den Informationen als Freitext angeben."@de .
 
 :Dataset_legalBasis_Literal
     sh:name "Shape legalBasis - Literal"@de ;
