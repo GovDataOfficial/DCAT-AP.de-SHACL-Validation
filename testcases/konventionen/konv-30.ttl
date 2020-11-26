@@ -1,0 +1,43 @@
+@prefix passing: <http://example.org/passing#> .
+@prefix failing: <http://example.org/failing#> .
+
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dcatde: <http://dcat-ap.de/def/dcatde/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+passing:dataset_has_no_theme
+    a dcat:Dataset ;
+    .
+
+passing:dataset_has_correct_theme
+    a dcat:Dataset ;
+    dcat:theme <http://publications.europa.eu/resource/authority/data-theme/AGRI> ;
+    .
+
+passing:dataset_has_multiple_correct_theme
+    a dcat:Dataset ;
+    dcat:theme <http://publications.europa.eu/resource/authority/data-theme/ECON> ;
+    dcat:theme <http://publications.europa.eu/resource/authority/data-theme/EDUC> ;
+    .
+
+failing:dataset_theme_not_mdr_1
+    a dcat:Dataset ;
+    dcat:theme <http://google.com> ;
+    .
+
+failing:dataset_theme_not_mdr_2
+    a dcat:Dataset ;
+    dcat:theme <http://publications.europa.eu/resource/authority/data-theme/TRAN> ;
+    dcat:theme <http://google.com> ;
+    .
+
+failing:dataset_theme_not_iri
+    a dcat:Dataset ;
+    dcat:theme "some string" ;
+    .

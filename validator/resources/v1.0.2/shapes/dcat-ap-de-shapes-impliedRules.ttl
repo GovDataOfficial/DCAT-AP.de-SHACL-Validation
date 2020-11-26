@@ -471,15 +471,23 @@
 #     #... tbd ...
 # .
 
-# # Konv 30: Werden   wie empfohlen   Kategorien verwendet, MÜSSEN die MDR data themes genutzt werden. - Seite 20
-# :Shapes_ImplR_Konv_30 
-#     a sh:NodeShape ; 
-#     #sh:target... 
-#     sh:name "Konvention 30"@de ; 
-#     sh:description "Werden   wie empfohlen   Kategorien verwendet, MÜSSEN die MDR data themes genutzt werden. - Seite 20" ;
-#     sh:deactivated true ;
-#     #... tbd ...
-# .
+# Konv 30: Werden, wie empfohlen, Kategorien verwendet, MÜSSEN die MDR data themes genutzt werden. - Seite 20
+:Shapes_ImplR_Konv_30 
+    a sh:NodeShape ; 
+    sh:targetObjectsOf dcat:theme ;
+    sh:name "Konvention 30"@de ; 
+    sh:description "Werden, wie empfohlen, Kategorien verwendet, MÜSSEN die MDR data themes genutzt werden. - Seite 20" ;
+    sh:deactivated false ;
+
+    sh:property [
+        sh:hasValue <http://publications.europa.eu/resource/authority/data-theme> ;
+        # sh:minCount 1 ;
+        sh:nodeKind sh:IRI ;
+        sh:path skos:inScheme ;
+        sh:severity sh:Violation ;
+        sh:message "Pflicht (K30): Werden, wie empfohlen, Kategorien verwendet, MÜSSEN die MDR data themes genutzt werden. - Seite 20" ;
+    ] ;
+.
 
 # # Konv 31: Hat die Datei, die die Daten einer Distribution beinhaltet, einen in der MDR authority file table geführten mediaType, so MUSS auf diesen mittels dct:format verwiesen werden. Andernfalls MUSS via dcat:mediaType auf die IANA Liste verwiesen und ein ggf. fehlender mediaType dort angelegt werden. - Seite 22
 # :Shapes_ImplR_Konv_31 
