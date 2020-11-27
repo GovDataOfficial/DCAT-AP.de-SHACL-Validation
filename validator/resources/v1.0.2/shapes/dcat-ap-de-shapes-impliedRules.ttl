@@ -489,7 +489,7 @@
         ] ;
 
         sh:severity sh:Violation ;
-        sh:message "Pflicht (K32): Distributionen von Datensätzen MÜSSEN mit einer Lizenz ausgewiesen werden. Für die Kennzeichnung der im Abschnitt 2.1 aufgeführten Lizenzen MÜSSEN die dort genannten URIs verwendet werden. - Seite 23" ;
+        sh:message "Pflicht (K30): Werden, wie empfohlen, Kategorien verwendet, MÜSSEN die MDR data themes genutzt werden. - Seite 20" ;
     ] ;
 .
 
