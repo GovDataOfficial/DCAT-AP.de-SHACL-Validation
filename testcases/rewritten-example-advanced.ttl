@@ -153,7 +153,7 @@
   
   # Konvention 1 {
   dcat:contactPoint [
-    a <http://www.w3.org/2006/vcard/ns#Individual> ;
+    a vcard:Individual ;
     vcard:fn "Koenig, Julia, Frau" ;
     vcard:hasTelephone "+49 40 123 45665"
   ] ; # }
