@@ -9,5 +9,6 @@
 <http://dcat-ap.de/def/dcatde/1.0.2/>
   rdf:type owl:Ontology ;
 
-  owl:imports <http://publications.europa.eu/resource/authority/data-theme> ;
+  owl:imports <http://publications.europa.eu/resource/authority/data-theme> ; # MDR NAL
+  owl:imports <https://www.dcat-ap.de/def/licenses/20200715.rdf> ;            # DCAT-AP.de Lizenzen
 .

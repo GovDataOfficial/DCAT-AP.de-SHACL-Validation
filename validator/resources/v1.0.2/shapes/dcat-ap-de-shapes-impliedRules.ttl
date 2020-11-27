@@ -503,15 +503,38 @@
 #     #... tbd ...
 # .
 
-# # Konv 32: Distributionen von Datensätzen MÜSSEN mit einer Lizenz ausgewiesen werden. Für die Kennzeichnung der im Abschnitt 2.1 aufgeführten Lizenzen MÜSSEN die dort genannten URIs verwendet werden. - Seite 23
-# :Shapes_ImplR_Konv_32 
-#     a sh:NodeShape ; 
-#     #sh:target... 
-#     sh:name "Konvention 32"@de ; 
-#     sh:description "Distributionen von Datensätzen MÜSSEN mit einer Lizenz ausgewiesen werden. Für die Kennzeichnung der im Abschnitt 2.1 aufgeführten Lizenzen MÜSSEN die dort genannten URIs verwendet werden. - Seite 23" ;
-#     sh:deactivated true ;
-#     #... tbd ...
-# .
+# Konv 32: Distributionen von Datensätzen MÜSSEN mit einer Lizenz ausgewiesen werden. Für die Kennzeichnung der im Abschnitt 2.1 aufgeführten Lizenzen MÜSSEN die dort genannten URIs verwendet werden. - Seite 23
+    # Diese Konvention bezieht sich nur auf Lizenzen einer Distribution, auch Catalog kann dct:license verwenden, auch dort wäre anzunehmen, dass unsere URIs verwendet werden müssen.
+    # 1. Lizenz muss vorhanden sein
+    # 2. Lizenz muss DCAT-AP.de Lizenz sein
+:Shapes_ImplR_Konv_32 
+    a sh:NodeShape ; 
+    sh:targetClass dcat:Distribution ;
+    sh:name "Konvention 32"@de ; 
+    sh:description "Distributionen von Datensätzen MÜSSEN mit einer Lizenz ausgewiesen werden. Für die Kennzeichnung der im Abschnitt 2.1 aufgeführten Lizenzen MÜSSEN die dort genannten URIs verwendet werden. - Seite 23" ;
+    sh:deactivated false ;
+
+    sh:property [
+        sh:path dct:license ;
+        sh:minCount 1 ;
+
+        sh:severity sh:Violation ;
+        sh:message "Pflicht (K32): Distributionen von Datensätzen MÜSSEN mit einer Lizenz ausgewiesen werden. Für die Kennzeichnung der im Abschnitt 2.1 aufgeführten Lizenzen MÜSSEN die dort genannten URIs verwendet werden. - Seite 23" ;
+    ] ;
+
+    sh:property [
+        sh:path dct:license ;
+        sh:node [
+            sh:hasValue <http://dcat-ap.de/def/licenses> ;
+            # sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path skos:inScheme ;
+        ] ;
+
+        sh:severity sh:Violation ;
+        sh:message "Pflicht (K32): Distributionen von Datensätzen MÜSSEN mit einer Lizenz ausgewiesen werden. Für die Kennzeichnung der im Abschnitt 2.1 aufgeführten Lizenzen MÜSSEN die dort genannten URIs verwendet werden. - Seite 23" ;
+    ] ;
+.
 
 # # Konv 33: entfällt - Seite 23
 # :Shapes_ImplR_Konv_33 
