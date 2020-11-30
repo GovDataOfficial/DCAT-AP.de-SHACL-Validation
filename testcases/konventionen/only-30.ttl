@@ -1,0 +1,47 @@
+
+@prefix : <http://dcat-ap.de/def/dcatde/1.0.2/#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcatde: <http://dcat-ap.de/def/dcatde/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
+@prefix spdx: <http://spdx.org/rdf/terms#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://dcat-ap.de/def/dcatde/1.0.2/>
+  rdf:type owl:Ontology ;
+  owl:imports <http://publications.europa.eu/resource/authority/data-theme> ;
+.
+
+:Shapes_ImplR_Konv_30 
+    a sh:NodeShape ;
+    sh:targetClass dcat:Dataset ;
+
+    sh:name "Konvention 30"@de ; 
+    sh:description "Werden, wie empfohlen, Kategorien verwendet, MÜSSEN die MDR data themes genutzt werden. - Seite 20" ;
+    sh:deactivated false ;
+
+    sh:property [
+        sh:path dcat:theme ;
+        sh:node [
+            sh:hasValue <http://publications.europa.eu/resource/authority/data-theme> ;
+            sh:nodeKind sh:IRI ;
+            sh:path skos:inScheme ;
+        ] ;
+
+        sh:severity sh:Violation ;
+        sh:message "Pflicht (K30): Werden, wie empfohlen, Kategorien verwendet, MÜSSEN die MDR data themes genutzt werden. - Seite 20" ;
+    ] ;
+.
