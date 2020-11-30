@@ -13,21 +13,81 @@ Wie der Validator verwendet werden kann, wird auf https://www.itb.ec.europa.eu/d
 :warning: :warning: :warning: 
 
 Der Validator wird derzeit aktiv weiterentwickelt, um eine vollständige Validierung von DCAT.AP.de zu ermöglichen. Dazu werden die SHACL-Shapes von [DCAT-AP](https://github.com/SEMICeu/DCAT-AP/tree/2.1.0-draft/releases/2.1.0) angepasst und eingebunden.
-Die folgenden Informationen sind daher unvollständig und die Funktion des Validators kann streckenweise nicht garantiert werden.
+Die folgenden Informationen können daher unvollständig sein und die Funktion des Validators kann streckenweise nicht garantiert werden.
 
 :warning: :warning: :warning: 
+
 * * *
 
-## Umfang
-Die vorliegenden Shapes prüfen die Eigenschaften, die das deutsche DCAT-AP.de 1.0.2 Spezifikationsdokument zusätzlich oder abweichend vom europäischen DCAT-AP 1.2.1 Standard festlegt. (Hinweis: Eine Weiterentwicklung der Shapes um die Prüfung der DCAT-AP.de Konventionenhandbuch-Konformität ist aktuell in Arbeit. Parallel hierzu beteiligt sich die GKSt GovData an der Weiterentwicklung der Shapes für den europäischen Metadatenstandard DCAT-AP.)   
+## Überblick über die Test-Profile
+Es werden die folgenden Test-Profile zur Verfügung gestellt, die Regeln aus einen Anzahl von Dateien kombinieren, um bedarfsgerecht testen zu können:
 
-### Nicht geprüft wird
-- ob es valides [DCAT](https://www.w3.org/TR/vocab-dcat/) ist
-- ob es valides [DCAT-AP](https://github.com/SEMICeu/DCAT-AP) ist
-- ob das [Konventionenhandbuch](https://www.dcat-ap.de/def/) eingehalten wird
+Test-Profil                                                        | A | B | C | D | E | F | G | H | I |
+-------------------------------------------------------------------|---|---|---|---|---|---|---|---|---|
+DCAT-AP.de 1.1 - nur Spezifikation (1.1)                           | X | X | X | X |   |   |   |   |   |
+DCAT-AP 2.1 - nur Mandatory (Auswahl)                              | X |   |   |   | X | X |   |   |   |
+DCAT-AP 2.1 - Mandatory & Recommended (Auswahl)                    | X |   |   |   | X | X | X |   |   |
+DCAT-AP.de 1.1 Spezifikation & DCAT-AP 2.1 Mandatory               | X | X | X | X | X | X |   |   |   |
+DCAT-AP.de 1.1 Spezifikation & DCAT-AP 2.1 Mandatory & Recommended | X | X | X | X | X | X | X |   |   |
+DCAT-AP.de 1.1 Konventionen (1, 2, 4-12, 21, 30, 32)               | X |   |   |   |   |   |   | X | X |
+alles zusammen                                                     | X | X | X | X | X | X | X | X | X |
 
-### Geprüft wird
+
+\# | Dateiname                                  | Intern/Extern
+---|--------------------------------------------|---------------
+ A | dcat-ap-de-imports.ttl                     | intern
+ B | dcat-ap-de-lists.ttl                       | intern
+ C | nal-lists.ttl                              | intern
+ D | dcat-ap-de-shapes-specification.ttl        | intern
+ E | dcat-ap-reasonable-ranges.ttl              | intern (Auswahl)
+ F | dcat-ap_2.1.0_shacl_shapes.ttl             | extern
+ G | dcat-ap_2.1.0_shacl_shapes_recommended.ttl | extern
+ H | dcat-ap-de-import-lists.ttl                | intern
+ I | dcat-ap-de-shapes-impliedRules.ttl         | intern
+
+* * *
+
+## Inhalt der Dateien
+
+### A - dcat-ap-de-imports.ttl
+Basierend auf dem SHACL-Import von DCAT-AP (https://github.com/SEMICeu/DCAT-AP) wurden die folgenden Listen importiert:
+- http://xmlns.com/foaf/spec/index.rdf
+- http://www.w3.org/2006/vcard/ns.ttl
+- http://www.w3.org/ns/org.ttl
+
+Dadurch wird sichergestellt, `foaf:Person`, `foaf:Organization`, `org:Organization` und die sonstigen enthaltenen Subklassen von `foaf:Agent` als Klasse genutzt werden dürfen, wenn ein `foaf:Agent` erlaubt ist.
+Vergleichbares gilt für die Subklassen von `vcard:Kind`.
+
+* * *
+
+### B - dcat-ap-de-lists.ttl
+Um die Validität von Eigenschaften prüfen zu können, wurden die folgenden externen Listen in SHACL-Listen umgewandelt:
+- https://www.dcat-ap.de/def/contributors/20190531/
+- https://www.dcat-ap.de/def/datasetTypes/1_0/
+- https://www.dcat-ap.de/def/hashAlgorithms/1_0/
+- https://www.dcat-ap.de/def/licenses/20190731/
+- https://www.dcat-ap.de/def/plannedAvailability/1_0/
+- https://www.dcat-ap.de/def/politicalGeocoding/Level/1_0/
+- https://www.dcat-ap.de/def/politicalGeocoding/districtKey/20190731/
+- https://www.dcat-ap.de/def/politicalGeocoding/regionalKey/20191231/
+- https://www.dcat-ap.de/def/politicalGeocoding/stateKey/20100401/
+
+Dieses Vorgehen soll zu Gunsten von `skos:inSchema` und dem Import von Listen aufgegeben werden. Siehe  **H - dcat-ap-de-import-lists.ttl**.
+
+* * *
+
+### C - nal-lists.ttl
+Um die Validität von Eigenschaften prüfen zu können, wurden die folgende externe Listen in eine SHACL-Liste umgewandelt:
+- http://publications.europa.eu/resource/authority/frequency/
+
+Dieses Vorgehen soll zu Gunsten von `skos:inSchema` und dem Import von Listen aufgegeben werden. Siehe  **H - dcat-ap-de-import-lists.ttl**.
+
+* * *
+
+### D - dcat-ap-de-shapes-specification.ttl
 *Zelle sind nur befüllt, wenn DCAT-AP.de 1.0.2 von DCAT-AP 1.2.1 abweicht.*
+
+Zentrale Datei zur Überprüfung gemäß der Spezifikation DCAT-AP.de. 
 
 Klasse  | Eigenschaft                       | Verbindlichkeit | Range         | Card. | Shape (_Prüfung)
 --------|-----------------------------------|-----------------|---------------|-------|----------------------------
@@ -59,23 +119,34 @@ _Max         | **Maximalzahl** | Prüft, ob die angegebene maximale Kardinalitä
 _foafAgent   | **foaf:Agent**  | Prüft, ob das Objekt der Tripels ein foaf:Agent ist.
 _Literal     | **Literal**     | Prüft, ob das Objekt der Tripels ein Literal ist.
 
-### Listen
-Um die Validität von Eigenschaften prüfen zu können, wurden die folgenden externen Listen in SHACL-Listen umgewandelt:
-**dcat-ap-de-lists.ttl:**
-- https://www.dcat-ap.de/def/contributors/20190531/
-- https://www.dcat-ap.de/def/datasetTypes/1_0/
-- https://www.dcat-ap.de/def/hashAlgorithms/1_0/
-- https://www.dcat-ap.de/def/licenses/20190731/
-- https://www.dcat-ap.de/def/plannedAvailability/1_0/
-- https://www.dcat-ap.de/def/politicalGeocoding/Level/1_0/
-- https://www.dcat-ap.de/def/politicalGeocoding/districtKey/20190731/
-- https://www.dcat-ap.de/def/politicalGeocoding/regionalKey/20191231/
-- https://www.dcat-ap.de/def/politicalGeocoding/stateKey/20100401/
+* * *
 
-**nal-lists.ttl:**
-- http://publications.europa.eu/resource/authority/frequency/
+### E - dcat-ap-reasonable-ranges.ttl
+*tbd*
+* * *
 
+### F - dcat-ap_2.1.0_shacl_shapes.ttl
+*tbd*
+* * *
 
+### G - dcat-ap_2.1.0_shacl_shapes_recommended.ttl
+*tbd*
+* * *
+
+### H - dcat-ap-de-import-lists.ttl
+*tbd*
+* * *
+
+### I - dcat-ap-de-shapes-impliedRules.ttl
+*tbd*
+* * *
+
+## Bekannte Probleme / übergreifende ToDos
+
+* SPDX akzeptiert nicht die URIs von DCAT-AP.de
+* von DCAT-AP.de 1.0.2 auf 1.1 umstellen
+
+* * *
 ## Kontakt und Lizenz
 Feedback gerne als GitHub Issue oder per E-Mail an info@govdata.de.
 
