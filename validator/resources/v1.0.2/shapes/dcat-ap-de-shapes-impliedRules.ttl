@@ -271,7 +271,8 @@
 .
 
 # Konv 12: Alle Datenstrukturen, die direkt an das GovData Portal geliefert werden, MÜSSEN ihre Herkunft über eine eindeutige Kennzeichnung des Datenbereitstellers über die DatenbereitstellerID (dcatde:contributorID) ausweisen. - Seite 13
-    # TODO: Wie :Dataset_Spec_contributorID_Ex, nur MUSS
+    # 1.: Existenz der contributorID
+    # TODO 2.: Prüfen, ob contributorID der dcat-ap.de-Liste entstammt
 
 :Shapes_ImplR_Konv_12 
     a sh:NodeShape ; 
