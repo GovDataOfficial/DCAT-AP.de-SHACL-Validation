@@ -128,31 +128,31 @@ Es wird versucht, die Klassenzugehörigkeit von Objekten zu prüfen. Dies kann b
 
 Die Prüfungen wurden auf folgende Ranges beschränkt:
 
- \#  | Subjekt              | Prädikat            | Objekt
------|----------------------|---------------------|--------------------------------
-  1. | `dcat:CatalogRecord` | `foaf:primaryTopic` | `dcat:Catalog`, `dcat:Dataset`
-  2. | `dcat:CatalogRecord` | `dct:source`        | `dcat:CatalogRecord`
-  3. | `dcat:Catalog`       | `dct:hasPart`       | `dcat:Catalog`
-  4. | `dcat:Catalog`       | `dct:isPartOf`      | `dcat:Catalog`
-  5. | `dcat:Catalog`       | `dcat:record`       | `dcat:CatalogRecord`
-  6. | `dcat:Catalog`       | `dcat:catalog`      | `dcat:Catalog`
-  7. | `dcat:Catalog`       | `dct:creator`       | `foaf:Agent`
-  8. | `dcat:Catalog`       | `dcat:dataset`      | `dcat:Dataset`
-  9. | `dcat:Catalog`       | `dct:publisher`     | `foaf:Agent`
- 10. | `dcat:Dataset`       | `dcat:contactPoint` | `vcard:Kind`
- 11. | `dcat:Dataset`       | `dcat:distribution` | `dcat:Distribution`
- 12. | `dcat:Dataset`       | `dct:publisher`     | `foaf:Agent`
- 13. | `dcat:Dataset`       | `dct:temporal`      | `dct:PeriodOfTime`
- 14. | `dcat:Dataset`       | `dct:hasVersion`    | `dcat:Dataset`
- 15. | `dcat:Dataset`       | `dct:isVersionOf`   | `dcat:Dataset`
- 16. | `dcat:Dataset`       | `dct:source`        | `dcat:Dataset`
- 17. | `dcat:Dataset`       | `adms:identifier`   | `adms:Identifier`
- 18. | `dcat:Dataset`       | `adms:sample`       | `dcat:Distribution`
- 19. | `dcat:Dataset`       | `dct:creator`       | `foaf:Agent`
- 20. | `dcat:Distribution`  | `spdx:checksum`     | `spdx:Checksum`
- 21. | `dct:PeriodOfTime`   | `time:hasBeginning` | `time:Instant`
- 22. | `dct:PeriodOfTime`   | `time:hasEnd`       | `time:Instant`
-
+ \#   | Subjekt              | Prädikat            | Objekt 
+------|----------------------|---------------------|--------------------------------
+ #01. | `dcat:CatalogRecord` | `foaf:primaryTopic` | `dcat:Catalog`, `dcat:Dataset`
+ #02. | `dcat:CatalogRecord` | `dct:source`        | `dcat:CatalogRecord`
+ #03. | `dcat:Catalog`       | `dct:hasPart`       | `dcat:Catalog`
+ #04. | `dcat:Catalog`       | `dct:isPartOf`      | `dcat:Catalog`
+ #05. | `dcat:Catalog`       | `dcat:record`       | `dcat:CatalogRecord`
+ #06. | `dcat:Catalog`       | `dcat:catalog`      | `dcat:Catalog`
+ #07. | `dcat:Catalog`       | `dct:creator`       | `foaf:Agent`
+ #08. | `dcat:Catalog`       | `dcat:dataset`      | `dcat:Dataset`
+ #09. | `dcat:Catalog`       | `dct:publisher`     | `foaf:Agent`
+ #10. | `dcat:Dataset`       | `dcat:contactPoint` | `vcard:Kind`
+ #11. | `dcat:Dataset`       | `dcat:distribution` | `dcat:Distribution`
+ #12. | `dcat:Dataset`       | `dct:publisher`     | `foaf:Agent`
+ #13. | `dcat:Dataset`       | `dct:temporal`      | `dct:PeriodOfTime`
+ #14. | `dcat:Dataset`       | `dct:hasVersion`    | `dcat:Dataset`
+ #15. | `dcat:Dataset`       | `dct:isVersionOf`   | `dcat:Dataset`
+ #16. | `dcat:Dataset`       | `dct:source`        | `dcat:Dataset`
+ #17. | `dcat:Dataset`       | `adms:identifier`   | `adms:Identifier`
+ #18. | `dcat:Dataset`       | `adms:sample`       | `dcat:Distribution`
+ #19. | `dcat:Dataset`       | `dct:creator`       | `foaf:Agent`
+ #20. | `dcat:Distribution`  | `spdx:checksum`     | `spdx:Checksum`
+ #21. | `dct:PeriodOfTime`   | `time:hasBeginning` | `time:Instant`
+ #22. | `dct:PeriodOfTime`   | `time:hasEnd`       | `time:Instant`
+ 
 #### **ToDos**
 - prüfen, ob die Range von 1. korrekt ist
 - schema/dcat Zeitperioden hinzufügen
