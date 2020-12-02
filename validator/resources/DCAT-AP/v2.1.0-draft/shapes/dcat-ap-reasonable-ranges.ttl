@@ -181,12 +181,12 @@
     #     sh:severity sh:Warning ;
     #     sh:message "Hinweis: Die Klassenzugehörigkeit wird zwar geprüft, kann aber bei extern verlinkten Daten nicht sichergestellt werden. Bitte prüfen Sie ggf. ob der verlinkte Datensatz der geforderten Klasse entspricht."
     # ], 
-    [
-        sh:class dcat:DataService ;
-        sh:path dcat:service ;
-        sh:severity sh:Warning ;
-        sh:message "Hinweis: Die Klassenzugehörigkeit wird zwar geprüft, kann aber bei extern verlinkten Daten nicht sichergestellt werden. Bitte prüfen Sie ggf. ob der verlinkte Datensatz der geforderten Klasse entspricht."
-    ], 
+    # [
+    #     sh:class dcat:DataService ;
+    #     sh:path dcat:service ;
+    #     sh:severity sh:Warning ;
+    #     sh:message "Hinweis: Die Klassenzugehörigkeit wird zwar geprüft, kann aber bei extern verlinkten Daten nicht sichergestellt werden. Bitte prüfen Sie ggf. ob der verlinkte Datensatz der geforderten Klasse entspricht."
+    # ], 
     [
         sh:class dcat:Catalog ;
         sh:path dcat:catalog ;
@@ -220,29 +220,29 @@
     sh:targetClass dcat:Catalog .
 
 
-:DataService_Shape
-    a sh:NodeShape ;
-    sh:name "Data Service"@en ;
-    sh:property 
-    [
-        sh:class dcat:Dataset ;
-        sh:path dcat:servesDataset ;
-        sh:severity sh:Warning ;
-        sh:message "Hinweis: Die Klassenzugehörigkeit wird zwar geprüft, kann aber bei extern verlinkten Daten nicht sichergestellt werden. Bitte prüfen Sie ggf. ob der verlinkte Datensatz der geforderten Klasse entspricht."
-    ] ; 
-    # [                           # ===> Not testing something external 
-    #     sh:class dct:LicenseDocument ;
-    #     sh:path dct:licence ;
-    #     sh:severity sh:Warning ;
-    #     sh:message "Hinweis: Die Klassenzugehörigkeit wird zwar geprüft, kann aber bei extern verlinkten Daten nicht sichergestellt werden. Bitte prüfen Sie ggf. ob der verlinkte Datensatz der geforderten Klasse entspricht."
-    # ], 
-    # [                           # ===> Not testing something external 
-    #     sh:class dct:RightsStatement ;
-    #     sh:path dct:accessRights ;
-    #     sh:severity sh:Warning ;
-    #     sh:message "Hinweis: Die Klassenzugehörigkeit wird zwar geprüft, kann aber bei extern verlinkten Daten nicht sichergestellt werden. Bitte prüfen Sie ggf. ob der verlinkte Datensatz der geforderten Klasse entspricht."
-    # ] ;
-    sh:targetClass dcat:DataService .
+# :DataService_Shape
+#     a sh:NodeShape ;
+#     sh:name "Data Service"@en ;
+#     sh:property 
+#     [
+#         sh:class dcat:Dataset ;
+#         sh:path dcat:servesDataset ;
+#         sh:severity sh:Warning ;
+#         sh:message "Hinweis: Die Klassenzugehörigkeit wird zwar geprüft, kann aber bei extern verlinkten Daten nicht sichergestellt werden. Bitte prüfen Sie ggf. ob der verlinkte Datensatz der geforderten Klasse entspricht."
+#     ] ; 
+#     # [                           # ===> Not testing something external 
+#     #     sh:class dct:LicenseDocument ;
+#     #     sh:path dct:licence ;
+#     #     sh:severity sh:Warning ;
+#     #     sh:message "Hinweis: Die Klassenzugehörigkeit wird zwar geprüft, kann aber bei extern verlinkten Daten nicht sichergestellt werden. Bitte prüfen Sie ggf. ob der verlinkte Datensatz der geforderten Klasse entspricht."
+#     # ], 
+#     # [                           # ===> Not testing something external 
+#     #     sh:class dct:RightsStatement ;
+#     #     sh:path dct:accessRights ;
+#     #     sh:severity sh:Warning ;
+#     #     sh:message "Hinweis: Die Klassenzugehörigkeit wird zwar geprüft, kann aber bei extern verlinkten Daten nicht sichergestellt werden. Bitte prüfen Sie ggf. ob der verlinkte Datensatz der geforderten Klasse entspricht."
+#     # ] ;
+#     sh:targetClass dcat:DataService .
 
 :Dataset_Shape
     a sh:NodeShape ;
@@ -362,24 +362,24 @@
     #     sh:severity sh:Warning ;
     #     sh:message "Hinweis: Die Klassenzugehörigkeit wird zwar geprüft, kann aber bei extern verlinkten Daten nicht sichergestellt werden. Bitte prüfen Sie ggf. ob der verlinkte Datensatz der geforderten Klasse entspricht."
     # ], 
-    [
-        sh:class dcat:Relationship ;
-        sh:path dcat:qualifiedRelation ;
-        sh:severity sh:Warning ;
-        sh:message "Hinweis: Die Klassenzugehörigkeit wird zwar geprüft, kann aber bei extern verlinkten Daten nicht sichergestellt werden. Bitte prüfen Sie ggf. ob der verlinkte Datensatz der geforderten Klasse entspricht."
-    ], 
-    [
-        sh:class prov:Attribution ;
-        sh:path prov:qualifiedAttribution ;
-        sh:severity sh:Warning ;
-        sh:message "Hinweis: Die Klassenzugehörigkeit wird zwar geprüft, kann aber bei extern verlinkten Daten nicht sichergestellt werden. Bitte prüfen Sie ggf. ob der verlinkte Datensatz der geforderten Klasse entspricht."
-    ], 
-    [
-        sh:class prov:Activity ;
-        sh:path prov:wasGeneratedBy ;
-        sh:severity sh:Warning ;
-        sh:message "Hinweis: Die Klassenzugehörigkeit wird zwar geprüft, kann aber bei extern verlinkten Daten nicht sichergestellt werden. Bitte prüfen Sie ggf. ob der verlinkte Datensatz der geforderten Klasse entspricht."
-    ], 
+    # [
+    #     sh:class dcat:Relationship ;
+    #     sh:path dcat:qualifiedRelation ;
+    #     sh:severity sh:Warning ;
+    #     sh:message "Hinweis: Die Klassenzugehörigkeit wird zwar geprüft, kann aber bei extern verlinkten Daten nicht sichergestellt werden. Bitte prüfen Sie ggf. ob der verlinkte Datensatz der geforderten Klasse entspricht."
+    # ], 
+    # [
+    #     sh:class prov:Attribution ;
+    #     sh:path prov:qualifiedAttribution ;
+    #     sh:severity sh:Warning ;
+    #     sh:message "Hinweis: Die Klassenzugehörigkeit wird zwar geprüft, kann aber bei extern verlinkten Daten nicht sichergestellt werden. Bitte prüfen Sie ggf. ob der verlinkte Datensatz der geforderten Klasse entspricht."
+    # ], 
+    # [
+    #     sh:class prov:Activity ;
+    #     sh:path prov:wasGeneratedBy ;
+    #     sh:severity sh:Warning ;
+    #     sh:message "Hinweis: Die Klassenzugehörigkeit wird zwar geprüft, kann aber bei extern verlinkten Daten nicht sichergestellt werden. Bitte prüfen Sie ggf. ob der verlinkte Datensatz der geforderten Klasse entspricht."
+    # ], 
     [
         sh:class foaf:Agent ;
         sh:path dct:creator ;
@@ -432,7 +432,7 @@
         sh:path spdx:checksum ;
         sh:severity sh:Warning ;
         sh:message "Hinweis: Die Klassenzugehörigkeit wird zwar geprüft, kann aber bei extern verlinkten Daten nicht sichergestellt werden. Bitte prüfen Sie ggf. ob der verlinkte Datensatz der geforderten Klasse entspricht."
-    ], 
+    ] ; 
     # [                           # ===> Not testing for skos:Concept
     #     sh:class skos:Concept ;
     #     sh:path adms:status ;
@@ -457,12 +457,12 @@
     #     sh:severity sh:Warning ;
     #     sh:message "Hinweis: Die Klassenzugehörigkeit wird zwar geprüft, kann aber bei extern verlinkten Daten nicht sichergestellt werden. Bitte prüfen Sie ggf. ob der verlinkte Datensatz der geforderten Klasse entspricht."
     # ], 
-    [
-        sh:class dcat:DataService ;
-        sh:path dcat:accessService ;
-        sh:severity sh:Warning ;
-        sh:message "Hinweis: Die Klassenzugehörigkeit wird zwar geprüft, kann aber bei extern verlinkten Daten nicht sichergestellt werden. Bitte prüfen Sie ggf. ob der verlinkte Datensatz der geforderten Klasse entspricht."
-    ] ; 
+    # [
+    #     sh:class dcat:DataService ;
+    #     sh:path dcat:accessService ;
+    #     sh:severity sh:Warning ;
+    #     sh:message "Hinweis: Die Klassenzugehörigkeit wird zwar geprüft, kann aber bei extern verlinkten Daten nicht sichergestellt werden. Bitte prüfen Sie ggf. ob der verlinkte Datensatz der geforderten Klasse entspricht."
+    # ] ; 
     # [                           # ===> Not testing something external 
     #     sh:class dct:MediaType ;
     #     sh:path dcat:compressFormat ;
@@ -527,20 +527,20 @@
     ] ;
     sh:targetClass dct:PeriodOfTime .
 
-:Relationship_Shape
-    a sh:NodeShape ;
-    sh:name "Relationship"@en ;
-    sh:property [
-        sh:node :DcatResource_Shape ;
-        sh:path dct:relation ;
-        sh:severity sh:Warning ;
-        sh:message "Hinweis: Die Klassenzugehörigkeit wird zwar geprüft, kann aber bei extern verlinkten Daten nicht sichergestellt werden. Bitte prüfen Sie ggf. ob der verlinkte Datensatz der geforderten Klasse entspricht."
-    ], 
-    [
-        sh:class dcat:Role ;
-        sh:path dcat:hadRole ;
-        sh:severity sh:Warning ;
-        sh:message "Hinweis: Die Klassenzugehörigkeit wird zwar geprüft, kann aber bei extern verlinkten Daten nicht sichergestellt werden. Bitte prüfen Sie ggf. ob der verlinkte Datensatz der geforderten Klasse entspricht."
-    ] ;
-    sh:targetClass dcat:Relationship .
+# :Relationship_Shape
+#     a sh:NodeShape ;
+#     sh:name "Relationship"@en ;
+#     sh:property [
+#         sh:node :DcatResource_Shape ;
+#         sh:path dct:relation ;
+#         sh:severity sh:Warning ;
+#         sh:message "Hinweis: Die Klassenzugehörigkeit wird zwar geprüft, kann aber bei extern verlinkten Daten nicht sichergestellt werden. Bitte prüfen Sie ggf. ob der verlinkte Datensatz der geforderten Klasse entspricht."
+#     ], 
+#     [
+#         sh:class dcat:Role ;
+#         sh:path dcat:hadRole ;
+#         sh:severity sh:Warning ;
+#         sh:message "Hinweis: Die Klassenzugehörigkeit wird zwar geprüft, kann aber bei extern verlinkten Daten nicht sichergestellt werden. Bitte prüfen Sie ggf. ob der verlinkte Datensatz der geforderten Klasse entspricht."
+#     ] ;
+#     sh:targetClass dcat:Relationship .
 
