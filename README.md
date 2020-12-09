@@ -12,14 +12,10 @@
     - [C - nal-lists.ttl](#c---nal-liststtl)
     - [D - dcat-ap-de-shapes-specification.ttl](#d---dcat-ap-de-shapes-specificationttl)
     - [E - dcat-ap-reasonable-ranges.ttl](#e---dcat-ap-reasonable-rangesttl)
-      - [**ToDos**](#todos)
     - [F - dcat-ap_2.1.0_shacl_shapes.ttl](#f---dcat-ap_210_shacl_shapesttl)
-      - [Bekannte Probleme](#bekannte-probleme)
     - [G - dcat-ap_2.1.0_shacl_shapes_recommended.ttl](#g---dcat-ap_210_shacl_shapes_recommendedttl)
-      - [Bekannte Probleme](#bekannte-probleme-1)
     - [H - dcat-ap-de-import-lists.ttl](#h---dcat-ap-de-import-liststtl)
     - [I - dcat-ap-de-shapes-impliedRules.ttl](#i---dcat-ap-de-shapes-impliedrulesttl)
-      - [Bekannte Probleme](#bekannte-probleme-2)
   - [Bekannte Probleme / übergreifende ToDos](#bekannte-probleme--übergreifende-todos)
   - [Kontakt und Lizenz](#kontakt-und-lizenz)
 
@@ -54,17 +50,17 @@ DCAT-AP.de 1.1 Spezifikation & DCAT-AP 2.1 Mandatory & Recommended | X | X | X |
 DCAT-AP.de 1.1 Konventionen (1, 2, 4-12, 21, 30, 32)               | X |   |   |   |   |   |   | X | X |
 alles zusammen                                                     | X | X | X | X | X | X | X | X | X |
 
-\# | Dateiname                                  | Intern/Extern
----|--------------------------------------------|---------------
- A | dcat-ap-de-imports.ttl                     | intern
- B | dcat-ap-de-lists.ttl                       | intern
- C | nal-lists.ttl                              | intern
- D | dcat-ap-de-shapes-specification.ttl        | intern
- E | dcat-ap-reasonable-ranges.ttl              | intern (Auswahl)
- F | dcat-ap_2.1.0_shacl_shapes.ttl             | extern
- G | dcat-ap_2.1.0_shacl_shapes_recommended.ttl | extern
- H | dcat-ap-de-import-lists.ttl                | intern
- I | dcat-ap-de-shapes-impliedRules.ttl         | intern
+\# | Dateiname                                                                       | Intern/Extern
+---|---------------------------------------------------------------------------------|---------------
+ A | [dcat-ap-de-imports.ttl](#a---dcat-ap-de-importsttl)                            | intern
+ B | [dcat-ap-de-lists.ttl](#b---dcat-ap-de-liststtl)                                | intern
+ C | [nal-lists.ttl](#c---nal-liststtl)                                              | intern
+ D | [dcat-ap-de-shapes-specification.ttl](#d---dcat-ap-de-shapes-specificationttl)  | intern
+ E | [dcat-ap-reasonable-ranges.ttl](#e---dcat-ap-reasonable-rangesttl)              | intern (Auswahl)
+ F | [dcat-ap_2.1.0_shacl_shapes.ttl](#f---dcat-ap_210_shacl_shapesttl)              | extern
+ G | [dcat-ap_2.1.0_shacl_shapes_recommended.ttl](#g---dcat-ap_210_shacl_shapes_recommendedttl) | extern
+ H | [dcat-ap-de-import-lists.ttl](#h---dcat-ap-de-import-liststtl)                  | intern
+ I | [dcat-ap-de-shapes-impliedRules.ttl](#i---dcat-ap-de-shapes-impliedrulesttl)    | intern
 
 * * *
 
@@ -174,7 +170,7 @@ Die Prüfungen wurden auf folgende Ranges beschränkt:
  #21. | `dct:PeriodOfTime`   | `time:hasBeginning` | `time:Instant`
  #22. | `dct:PeriodOfTime`   | `time:hasEnd`       | `time:Instant`
  
-#### **ToDos**
+**ToDos**
 - prüfen, ob die Range von 1. korrekt ist
 - schema/dcat Zeitperioden hinzufügen
 
@@ -208,7 +204,7 @@ Die Prüfung erfolgt für
 - `dct:PeriodOfTime`
 - `spdx:Checksum`
 
-#### Bekannte Probleme
+**Bekannte Probleme**
 - für `dct:PeriodOfTime` werden die `schema`-Eigenschaften getestet
 - `spdx:Checksum` erlaubt *nur* SHA1
 - es werden bereits Klassen geprüft, die in DCAT-AP.de 1.1 nicht enthalten sind
@@ -233,7 +229,7 @@ Die Prüfung erfolgt für
 - `dct:Location`
 - `dct:PeriodOfTime`
 
-#### Bekannte Probleme
+**Bekannte Probleme**
 - für `dct:PeriodOfTime` wird, verwendet man etwas anderes als `dcat:startDate`/`dcat:endDate`, immer eine Warnung ausgegeben
 - es werden bereits Klassen geprüft, die in DCAT-AP.de 1.1 nicht enthalten sind
 
@@ -266,7 +262,7 @@ Getestet werden die folgenden Konventionen:
 - 8 bis 12
 - 21, 30 und 32
 
-#### Bekannte Probleme
+**Bekannte Probleme**
 - zum Teil unklar, wie eine Konvention exakt gemeint ist
 - manche Konventionen machen inhaltliche Vorgaben, die technisch nicht geprüft werden können
 
