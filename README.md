@@ -1,6 +1,28 @@
 # DCAT-AP.de SHACL-Validation (BETA)
 *SHACL-Shapes für DCAT-AP.de*
 
+## Inhalt
+- [DCAT-AP.de SHACL-Validation (BETA)](#dcat-apde-shacl-validation-beta)
+  - [Inhalt](#inhalt)
+  - [Verfügbarkeit und Verwendung](#verfügbarkeit-und-verwendung)
+  - [Überblick über die Test-Profile](#überblick-über-die-test-profile)
+  - [Inhalt der Dateien](#inhalt-der-dateien)
+    - [A - dcat-ap-de-imports.ttl](#a---dcat-ap-de-importsttl)
+    - [B - dcat-ap-de-lists.ttl](#b---dcat-ap-de-liststtl)
+    - [C - nal-lists.ttl](#c---nal-liststtl)
+    - [D - dcat-ap-de-shapes-specification.ttl](#d---dcat-ap-de-shapes-specificationttl)
+    - [E - dcat-ap-reasonable-ranges.ttl](#e---dcat-ap-reasonable-rangesttl)
+      - [**ToDos**](#todos)
+    - [F - dcat-ap_2.1.0_shacl_shapes.ttl](#f---dcat-ap_210_shacl_shapesttl)
+      - [Bekannte Probleme](#bekannte-probleme)
+    - [G - dcat-ap_2.1.0_shacl_shapes_recommended.ttl](#g---dcat-ap_210_shacl_shapes_recommendedttl)
+      - [Bekannte Probleme](#bekannte-probleme-1)
+    - [H - dcat-ap-de-import-lists.ttl](#h---dcat-ap-de-import-liststtl)
+    - [I - dcat-ap-de-shapes-impliedRules.ttl](#i---dcat-ap-de-shapes-impliedrulesttl)
+      - [Bekannte Probleme](#bekannte-probleme-2)
+  - [Bekannte Probleme / übergreifende ToDos](#bekannte-probleme--übergreifende-todos)
+  - [Kontakt und Lizenz](#kontakt-und-lizenz)
+
 ## Verfügbarkeit und Verwendung
 Wie der Validator verwendet werden kann, wird auf https://www.itb.ec.europa.eu/docs/guides/latest/validatingRDF/index.html#step-6-use-the-validator beschrieben.
 
@@ -22,7 +44,7 @@ Die folgenden Informationen können daher unvollständig sein und die Funktion d
 ## Überblick über die Test-Profile
 Es werden die folgenden Test-Profile zur Verfügung gestellt, die Regeln aus einen Anzahl von Dateien kombinieren, um bedarfsgerecht testen zu können:
 
-Test-Profil                                                        | A | B | C | D | E | F | G | H | I |
+Test-Profil                                                        | [A](#a---dcat-ap-de-importsttl) | [B](#b---dcat-ap-de-liststtl) | [C](#c---nal-liststtl) | [D](#d---dcat-ap-de-shapes-specificationttl) | [E](#e---dcat-ap-reasonable-rangesttl) | [F](#f---dcat-ap_210_shacl_shapesttl) | [G](#g---dcat-ap_210_shacl_shapes_recommendedttl) | [H](#h---dcat-ap-de-import-liststtl) | [I](#i---dcat-ap-de-shapes-impliedrulesttl) |
 -------------------------------------------------------------------|---|---|---|---|---|---|---|---|---|
 DCAT-AP.de 1.1 - nur Spezifikation (1.1)                           | X | X | X | X |   |   |   |   |   |
 DCAT-AP 2.1 - nur Mandatory (Auswahl)                              | X |   |   |   | X | X |   |   |   |
@@ -31,7 +53,6 @@ DCAT-AP.de 1.1 Spezifikation & DCAT-AP 2.1 Mandatory               | X | X | X |
 DCAT-AP.de 1.1 Spezifikation & DCAT-AP 2.1 Mandatory & Recommended | X | X | X | X | X | X | X |   |   |
 DCAT-AP.de 1.1 Konventionen (1, 2, 4-12, 21, 30, 32)               | X |   |   |   |   |   |   | X | X |
 alles zusammen                                                     | X | X | X | X | X | X | X | X | X |
-
 
 \# | Dateiname                                  | Intern/Extern
 ---|--------------------------------------------|---------------
@@ -72,7 +93,7 @@ Um die Validität von Eigenschaften prüfen zu können, wurden die folgenden ext
 - https://www.dcat-ap.de/def/politicalGeocoding/regionalKey/20191231/
 - https://www.dcat-ap.de/def/politicalGeocoding/stateKey/20100401/
 
-Dieses Vorgehen soll zu Gunsten von `skos:inSchema` und dem Import von Listen aufgegeben werden. Siehe  **H - dcat-ap-de-import-lists.ttl**.
+Dieses Vorgehen soll zu Gunsten von `skos:inSchema` und dem Import von Listen aufgegeben werden. Siehe  **[H - dcat-ap-de-import-lists.ttl](#h---dcat-ap-de-import-liststtl)**.
 
 * * *
 
@@ -80,7 +101,7 @@ Dieses Vorgehen soll zu Gunsten von `skos:inSchema` und dem Import von Listen au
 Um die Validität von Eigenschaften prüfen zu können, wurden die folgende externe Listen in eine SHACL-Liste umgewandelt:
 - http://publications.europa.eu/resource/authority/frequency/
 
-Dieses Vorgehen soll zu Gunsten von `skos:inSchema` und dem Import von Listen aufgegeben werden. Siehe  **H - dcat-ap-de-import-lists.ttl**.
+Dieses Vorgehen soll zu Gunsten von `skos:inSchema` und dem Import von Listen aufgegeben werden. Siehe  **[H - dcat-ap-de-import-lists.ttl](#h---dcat-ap-de-import-liststtl)**.
 
 * * *
 
@@ -160,23 +181,95 @@ Die Prüfungen wurden auf folgende Ranges beschränkt:
 * * *
 
 ### F - dcat-ap_2.1.0_shacl_shapes.ttl
-**Quelle:** https://github.com/SEMICeu/DCAT-AP/blob/2.1.0-draft/releases/2.1.0/dcat-ap_2.1.0_shacl_shapes.ttl
+**Externe Quelle:** https://github.com/SEMICeu/DCAT-AP/blob/2.1.0-draft/releases/2.1.0/dcat-ap_2.1.0_shacl_shapes.ttl
 
-*tbd*
+Die von der SEMIC bereitgestellten SHACL-Shapes führen die folgenden Prüfungen für alle Pflicht-Eigenschaften durch:
+- Mindestzahl
+- Maximalzahl
+- `nodeKind` (Literal, IRI)
+
+Bei allen empfohlenen Eigenschaften wird ihre Maximalzahl und der `nodeKind` geprüft.
+
+Alle Regelverletzungen werden als `sh:Violation` gekennzeichnet.
+
+Die Prüfung erfolgt für
+- `dcat:CatalogRecord`
+- `dcat:Catalog`
+- `dcat:DataService`
+- `dcat:Dataset`
+- `dcat:Distribution`
+- `dcat:Relationship`
+- `foaf:Agent`
+- `skos:ConceptScheme`
+- `skos:Concept`
+- `adms:Identifier`
+- `dct:LicenseDocument`
+- `dct:Location`
+- `dct:PeriodOfTime`
+- `spdx:Checksum`
+
+#### Bekannte Probleme
+- für `dct:PeriodOfTime` werden die `schema`-Eigenschaften getestet
+- `spdx:Checksum` erlaubt *nur* SHA1
+- es werden bereits Klassen geprüft, die in DCAT-AP.de 1.1 nicht enthalten sind
+
 * * *
 
 ### G - dcat-ap_2.1.0_shacl_shapes_recommended.ttl
-**Quelle:** https://github.com/SEMICeu/DCAT-AP/blob/2.1.0-draft/releases/2.1.0/dcat-ap_2.1.0_shacl_shapes_recommended.ttl
+**Externe Quelle:** https://github.com/SEMICeu/DCAT-AP/blob/2.1.0-draft/releases/2.1.0/dcat-ap_2.1.0_shacl_shapes_recommended.ttl
 
-*tbd*
+Die von der SEMIC bereitgestellten SHACL-Shapes prüfen alle empfohlenen Eigenschaften, ob sie existieren. (Die erlaubte Höchstzahl und ihr `nodeKind` werden bereits bei **[F - dcat-ap_2.1.0_shacl_shapes.ttl](#f---dcat-ap_210_shacl_shapesttl)** geprüft.)
+
+Alle Regelverletzungen werden als `sh:Warning` gekennzeichnet.
+
+Die Prüfung erfolgt für
+- `dcat:CatalogRecord`
+- `dcat:Catalog`
+- `dcat:DataService`
+- `dcat:Dataset`
+- `dcat:Distribution`
+- `foaf:Agent`
+- `dct:LicenseDocument`
+- `dct:Location`
+- `dct:PeriodOfTime`
+
+#### Bekannte Probleme
+- für `dct:PeriodOfTime` wird, verwendet man etwas anderes als `dcat:startDate`/`dcat:endDate`, immer eine Warnung ausgegeben
+- es werden bereits Klassen geprüft, die in DCAT-AP.de 1.1 nicht enthalten sind
+
 * * *
 
 ### H - dcat-ap-de-import-lists.ttl
-*tbd*
+Importiert die folgenden kontrollierten Vokabulare:
+  - http://publications.europa.eu/resource/authority/data-theme
+  - https://www.dcat-ap.de/def/licenses/20200715.rdf
+
+Ihr Import erlaubt es dann zu prüfen, ob ein Wert zur jeweiligen Liste gehört. Z.B.:
+
+```
+[
+    sh:hasValue <http://publications.europa.eu/resource/authority/data-theme> ;
+    sh:nodeKind sh:IRI ;
+    sh:path skos:inScheme ;
+]
+```
+Dieses Vorgehen soll auf alle kontrollierte Vokabulare ausgeweitet werden. (Siehe **[B - dcat-ap-de-lists.ttl](#b---dcat-ap-de-liststtl)** und **[C - nal-lists.ttl](#c---nal-liststtl)**.)
+
 * * *
 
 ### I - dcat-ap-de-shapes-impliedRules.ttl
-*tbd*
+In dieser Datei werden die SHACL-Shapes zusammengefasst, testen sollen, ob die Kovnentionen des Konventionenhandbuchs eingehalten werden.
+
+Getestet werden die folgenden Konventionen:
+- 1 und 2
+- 4 bis 7
+- 8 bis 12
+- 21, 30 und 32
+
+#### Bekannte Probleme
+- zum Teil unklar, wie eine Konvention exakt gemeint ist
+- manche Konventionen machen inhaltliche Vorgaben, die technisch nicht geprüft werden können
+
 * * *
 
 ## Bekannte Probleme / übergreifende ToDos
