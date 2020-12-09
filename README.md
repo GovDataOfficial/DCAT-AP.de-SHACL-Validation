@@ -205,9 +205,9 @@ Die Prüfung erfolgt für
 - `spdx:Checksum`
 
 **Bekannte Probleme**
-- für `dct:PeriodOfTime` werden die `schema`-Eigenschaften getestet
+- für `dct:PeriodOfTime` werden die `schema`-Eigenschaften nicht getestet (für DCAT-AP.de 1.1 noch relevant)
 - `spdx:Checksum` erlaubt *nur* SHA1
-- es werden bereits Klassen geprüft, die in DCAT-AP.de 1.1 nicht enthalten sind
+- es werden bereits Klassen geprüft, die in DCAT-AP.de 1.1 nicht enthalten sind (führt nicht zu Fehlern)
 
 * * *
 
@@ -231,7 +231,7 @@ Die Prüfung erfolgt für
 
 **Bekannte Probleme**
 - für `dct:PeriodOfTime` wird, verwendet man etwas anderes als `dcat:startDate`/`dcat:endDate`, immer eine Warnung ausgegeben
-- es werden bereits Klassen geprüft, die in DCAT-AP.de 1.1 nicht enthalten sind
+- es werden bereits Klassen geprüft, die in DCAT-AP.de 1.1 nicht enthalten sind (führt nicht zu Fehlern)
 
 * * *
 
