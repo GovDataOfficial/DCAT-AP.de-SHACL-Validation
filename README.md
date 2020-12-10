@@ -20,12 +20,10 @@
   - [Kontakt und Lizenz](#kontakt-und-lizenz)
 
 ## Verfügbarkeit und Verwendung
-Wie der Validator verwendet werden kann, wird auf https://www.itb.ec.europa.eu/docs/guides/latest/validatingRDF/index.html#step-6-use-the-validator beschrieben.
+Wir empfehlen, den Validator über die Webseite zu verwenden: **https://www.itb.ec.europa.eu/shacl/dcat-ap.de/upload**
 
-**Webseite User-Interface:** https://www.itb.ec.europa.eu/shacl/dcat-ap.de/upload  
-**Download Commandline-Tool:** https://www.itb.ec.europa.eu/shacl-offline/dcat-ap.de/validator.jar  
-**Endpoint REST-API:** https://www.itb.ec.europa.eu/shacl/dcat-ap.de/api  
-**Endpoint SOAP-API:** https://www.itb.ec.europa.eu/shacl/soap/dcat-ap.de/validation?wsdl  
+Weitere Varianten werden auf https://www.itb.ec.europa.eu/docs/guides/latest/validatingRDF/index.html#step-6-use-the-validator beschrieben.
+
 
 * * *
 :warning: :warning: :warning: 
@@ -49,18 +47,6 @@ DCAT-AP.de 1.1 Spezifikation & DCAT-AP 2.1 Mandatory               | X | X | X |
 DCAT-AP.de 1.1 Spezifikation & DCAT-AP 2.1 Mandatory & Recommended | X | X | X | X | X | X | X |   |   |
 DCAT-AP.de 1.1 Konventionen (1, 2, 4-12, 21, 30, 32)               | X |   |   |   |   |   |   | X | X |
 alles zusammen                                                     | X | X | X | X | X | X | X | X | X |
-
-\# | Dateiname                                                                       | Intern/Extern
----|---------------------------------------------------------------------------------|---------------
- A | [dcat-ap-de-imports.ttl](#a---dcat-ap-de-importsttl)                            | intern
- B | [dcat-ap-de-lists.ttl](#b---dcat-ap-de-liststtl)                                | intern
- C | [nal-lists.ttl](#c---nal-liststtl)                                              | intern
- D | [dcat-ap-de-shapes-specification.ttl](#d---dcat-ap-de-shapes-specificationttl)  | intern
- E | [dcat-ap-reasonable-ranges.ttl](#e---dcat-ap-reasonable-rangesttl)              | intern (Auswahl)
- F | [dcat-ap_2.1.0_shacl_shapes.ttl](#f---dcat-ap_210_shacl_shapesttl)              | extern
- G | [dcat-ap_2.1.0_shacl_shapes_recommended.ttl](#g---dcat-ap_210_shacl_shapes_recommendedttl) | extern
- H | [dcat-ap-de-import-lists.ttl](#h---dcat-ap-de-import-liststtl)                  | intern
- I | [dcat-ap-de-shapes-impliedRules.ttl](#i---dcat-ap-de-shapes-impliedrulesttl)    | intern
 
 * * *
 
@@ -145,30 +131,30 @@ Es wird versucht, die Klassenzugehörigkeit von Objekten zu prüfen. Dies kann b
 
 Die Prüfungen wurden auf folgende Ranges beschränkt:
 
- \#   | Subjekt              | Prädikat            | Objekt 
-------|----------------------|---------------------|--------------------------------
- #01. | `dcat:CatalogRecord` | `foaf:primaryTopic` | `dcat:Catalog`, `dcat:Dataset`
- #02. | `dcat:CatalogRecord` | `dct:source`        | `dcat:CatalogRecord`
- #03. | `dcat:Catalog`       | `dct:hasPart`       | `dcat:Catalog`
- #04. | `dcat:Catalog`       | `dct:isPartOf`      | `dcat:Catalog`
- #05. | `dcat:Catalog`       | `dcat:record`       | `dcat:CatalogRecord`
- #06. | `dcat:Catalog`       | `dcat:catalog`      | `dcat:Catalog`
- #07. | `dcat:Catalog`       | `dct:creator`       | `foaf:Agent`
- #08. | `dcat:Catalog`       | `dcat:dataset`      | `dcat:Dataset`
- #09. | `dcat:Catalog`       | `dct:publisher`     | `foaf:Agent`
- #10. | `dcat:Dataset`       | `dcat:contactPoint` | `vcard:Kind`
- #11. | `dcat:Dataset`       | `dcat:distribution` | `dcat:Distribution`
- #12. | `dcat:Dataset`       | `dct:publisher`     | `foaf:Agent`
- #13. | `dcat:Dataset`       | `dct:temporal`      | `dct:PeriodOfTime`
- #14. | `dcat:Dataset`       | `dct:hasVersion`    | `dcat:Dataset`
- #15. | `dcat:Dataset`       | `dct:isVersionOf`   | `dcat:Dataset`
- #16. | `dcat:Dataset`       | `dct:source`        | `dcat:Dataset`
- #17. | `dcat:Dataset`       | `adms:identifier`   | `adms:Identifier`
- #18. | `dcat:Dataset`       | `adms:sample`       | `dcat:Distribution`
- #19. | `dcat:Dataset`       | `dct:creator`       | `foaf:Agent`
- #20. | `dcat:Distribution`  | `spdx:checksum`     | `spdx:Checksum`
- #21. | `dct:PeriodOfTime`   | `time:hasBeginning` | `time:Instant`
- #22. | `dct:PeriodOfTime`   | `time:hasEnd`       | `time:Instant`
+ \#  | Subjekt              | Prädikat            | Objekt 
+-----|----------------------|---------------------|--------------------------------
+ #01 | `dcat:CatalogRecord` | `foaf:primaryTopic` | `dcat:Catalog`, `dcat:Dataset`
+ #02 | `dcat:CatalogRecord` | `dct:source`        | `dcat:CatalogRecord`
+ #03 | `dcat:Catalog`       | `dct:hasPart`       | `dcat:Catalog`
+ #04 | `dcat:Catalog`       | `dct:isPartOf`      | `dcat:Catalog`
+ #05 | `dcat:Catalog`       | `dcat:record`       | `dcat:CatalogRecord`
+ #06 | `dcat:Catalog`       | `dcat:catalog`      | `dcat:Catalog`
+ #07 | `dcat:Catalog`       | `dct:creator`       | `foaf:Agent`
+ #08 | `dcat:Catalog`       | `dcat:dataset`      | `dcat:Dataset`
+ #09 | `dcat:Catalog`       | `dct:publisher`     | `foaf:Agent`
+ #10 | `dcat:Dataset`       | `dcat:contactPoint` | `vcard:Kind`
+ #11 | `dcat:Dataset`       | `dcat:distribution` | `dcat:Distribution`
+ #12 | `dcat:Dataset`       | `dct:publisher`     | `foaf:Agent`
+ #13 | `dcat:Dataset`       | `dct:temporal`      | `dct:PeriodOfTime`
+ #14 | `dcat:Dataset`       | `dct:hasVersion`    | `dcat:Dataset`
+ #15 | `dcat:Dataset`       | `dct:isVersionOf`   | `dcat:Dataset`
+ #16 | `dcat:Dataset`       | `dct:source`        | `dcat:Dataset`
+ #17 | `dcat:Dataset`       | `adms:identifier`   | `adms:Identifier`
+ #18 | `dcat:Dataset`       | `adms:sample`       | `dcat:Distribution`
+ #19 | `dcat:Dataset`       | `dct:creator`       | `foaf:Agent`
+ #20 | `dcat:Distribution`  | `spdx:checksum`     | `spdx:Checksum`
+ #21 | `dct:PeriodOfTime`   | `time:hasBeginning` | `time:Instant`
+ #22 | `dct:PeriodOfTime`   | `time:hasEnd`       | `time:Instant`
  
 **ToDos**
 - prüfen, ob die Range von 1. korrekt ist
