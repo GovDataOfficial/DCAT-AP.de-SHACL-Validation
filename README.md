@@ -4,7 +4,16 @@
 ## Inhalt
 - [DCAT-AP.de SHACL-Validation (BETA)](#dcat-apde-shacl-validation-beta)
   - [Inhalt](#inhalt)
+  - [Einleitung](#einleitung)
   - [Verfügbarkeit und Verwendung](#verfügbarkeit-und-verwendung)
+  - [FAQ - Häufig gestellte Fragen](#faq---häufig-gestellte-fragen)
+    - [Was ist DCAT-AP.de?](#was-ist-dcat-apde) 
+    - [Was ist SHACL?](#was-ist-shacl)
+    - [Was ist eine Validierung?](#was-ist-eine-validierung) 
+    - [Was ist das Interoperability-Test-Bed (ITB) und warum wird es verwendet?](#was-ist-das-interoperability-test-bed-itb-und-warum-wird-es-verwendet)
+    - [Wofür kann ich den DCAT-AP.de Validator (BETA) nutzen?](#wofür-kann-ich-den-dcat-apde-validator-beta-nutzen) 
+    - [Was bedeuten die Validierungsergebnisse?](#was-bedeuten-die-validierungsergebnisse)
+    - [Wie kann ich die Validierungsergebnisse auswerten?](#wie-kann-ich-die-validierungsergebnisse-auswerten)    
   - [Überblick über die Test-Profile](#überblick-über-die-test-profile)
   - [Inhalt der Dateien](#inhalt-der-dateien)
     - [A - dcat-ap-de-imports.ttl](#a---dcat-ap-de-importsttl)
@@ -18,6 +27,11 @@
     - [I - dcat-ap-de-shapes-impliedRules.ttl](#i---dcat-ap-de-shapes-impliedrulesttl)
   - [Bekannte Probleme / übergreifende ToDos](#bekannte-probleme--übergreifende-todos)
   - [Kontakt und Lizenz](#kontakt-und-lizenz)
+  
+  
+## Einleitung
+Dieses Repo soll als Erläuterung zur Verwendung der DCAT-AP.de SHACL-Validation unter https://www.itb.ec.europa.eu/shacl/dcat-ap.de/upload dienen. Der Validator selbst soll dabei unterstützen DCAT-AP.de konforme Metadaten zu erstellen. Aktuell befindet sich der Validator in einer Beta-Testphase. Unterstützen Sie uns, indem Sie aufkommende Fragen oder Fehlfunktionen als Issue aufnehmen unter: https://github.com/GovDataOfficial/DCAT-AP.de-SHACL-Validation/issues 
+
 
 ## Verfügbarkeit und Verwendung
 Wir empfehlen, den Validator über die Webseite zu verwenden: **https://www.itb.ec.europa.eu/shacl/dcat-ap.de/upload**
@@ -34,6 +48,95 @@ Die folgenden Informationen können daher unvollständig sein und die Funktion d
 :warning: :warning: :warning: 
 
 * * *
+
+## FAQ - Häufig gestellte Fragen
+
+### Was ist DCAT-AP.de? 
+DCAT-AP.de ist der Metadatenstandard zum Austausch von offenen Verwaltungsdaten. DCAT-AP.de ist die Ableitung des Europäischen Standards [DCAT-AP](https://github.com/SEMICeu/DCAT-AP/tree/master/releases) und verwendet international etablierte Vokabulare. DCAT-AP.de bietet ein RDF-Vokabular das der Austausch von Metadaten offener Verwaltungsdaten für Open Data-Portale von der kommunalen  bis zur euopäischen Ebene ermöglicht. Weitere Infos zu DCAT-AP.de finden Sie unter: https://www.dcat-ap.de/def/ 
+
+### Was ist SHACL?
+Die Shapes Constraint Language (SHACL) ist eine Sprache, die RDF-Graphen (wie Metadatensätze von DCAT-AP.de) gegen bestimmte Bedingungen validiert – sie also prüft. Als Prüfschema werden wiederum eigene Graphen, sogenannte SHACL-Shapes eingesetzt. Weitere Infos zu SHACL finden Sie unter: https://www.w3.org/TR/shacl/ 
+
+### Was ist eine Validierung? 
+Eine Validierung ist eine Überprüfung der Einhaltung bestimmter Regeln. DCAT-AP.de z.B. schreibt bestimmte Angaben als verpflichtend vor oder trifft Regelungen zum Wertebereich bestimmter Angaben. Ein Datensatz in DCAT-AP.de muss beispielsweise zwingend einen Titel und eine Beschreibung haben. Wird der Datensatz einer Kategorie zugeordnet, muss das Dataset Theme Vocabulary genutzt werden (http://publications.europa.eu/resource/authority/data-theme). Eine Validierung überprüft die Einhaltung dieser Regeln.  
+
+### Was ist das Interoperability-Test-Bed (ITB) und warum wird es verwendet?  
+Mit dem ITB bietet die EU-Kommission Lösungen zur Validierung an. Das ITB wird von der EU zur Validierung von DCAT-AP offiziell empfohlen und steht kostenfrei zur Nutzung für DCAT-AP.de zur Verfügung. Wir verwenden das Online-Tool, da es uns einfach und kostengünstig ermöglicht eigene DCAT-AP.de SHACL-Shapes als Prüfschema für alle zugänglich zur Verfügung zu stellen. Dabei stellen wie (die GKSt GovData) nur die Prüfschemata in Form von SHACL-Shapes bereit. Der eigentliche Validierungsvorgang wird durch das ITB erledigt. Weitere Infos zu ITB finden Sie unter: https://joinup.ec.europa.eu/collection/interoperability-test-bed-repository/solution/interoperability-test-bed/about
+
+### Wofür kann ich den DCAT-AP.de Validator (BETA) nutzen?
+Der Validator ermöglicht es Ihnen unter *„Zu validierender Inhalt“* verschiedene Inhalte aus verschiedenen Quellen zu prüfen. Sie können entweder eine Datei oder eine URI prüfen oder über *"Direkte Eingabe"* direkt den Inhalt eingeben. Damit der Inhalt richtig erkannt wird, kann es z.B. bei fehlender Dateiendung nötig sein, dass Sie zusätzlich die verwendete *„Syntax des Inhalts“* angeben.
+
+Der Umfang des zu validierenden Inhalts kann dabei variieren insbesondere können (a) einzelne Metadatensätze auf ihre Konformität hin überprüft werden, (b) mehrere in einem Katalog zusammengestellte Metadatensätze auf ihre Konformität hin überprüft werden oder (c) der Inhalt von Harvesting-Endpunkte seitenweise auf seine Konformität hin überprüft werden. 
+
+Bei *„zu verwendendes Profil“*  können Sie verschiedene SHACL-Shapes also Prüfschemen auswählen, die teilweise kombiniert werden. (Detailliertere Informationen zu den Test-Profilen finden Sie im Abschnitt Überblick über die Test-Profile dieser ReadMe). Die unterschiedlichen Testprofilen sollen unterschiedlichste Testbedarfe abdecken, diese lassen sich generell in 3 Ebenen unterscheiden: 
+
+#### 1.	DCAT-AP – Validierung
+Wollen Sie überprüfen, ob Ihre Metadaten dem aktuellen Standard des Europäischen Metadatenmodell DCAT-AP entsprechen, stehen Ihnen folgende Profile zur Auswahl: 
+   - a.)   DCAT-AP 2.1 - nur Mandatory (Auswahl)  
+  Dieses Profil prüft alle Pflicht-Eigenschaften der aktuellen DCAT-AP 2.1 
+  
+   - b.)   DCAT-AP 2.1 – Mandatory & Recommended (Auswahl)   
+    Dieses Profil prüft zusätzlich zu a.) noch die  empfohlenen-Eigenschaften der DCAT-AP 2.1 
+    
+   Hinweis: Weitere Infos wie z.B. bekannte Probleme unter: Test-Profile. Hier werden die offiziellen Shapes der Pflegestelle für DCAT-AP (Bis 31.12.2020 SEMIC) verwendet. 
+   
+#### 2.	DCAT-AP.de – Validierung
+Wollen Sie überprüfen, ob Ihre Daten der aktuellen DCAT-AP.de 1.1 entspricht, stehen Ihnen folgende Profile zur Auswahl:
+
+  - a.)	DCAT-AP.de 1.1 – nur Spezifikation (1.1)  
+  Dieses Profil testet nur die Dinge bei denen DCAT-AP.de vom europäischen Standard abweicht. Z.B. neue Eigenschaften wie dcatde:contributorID
+  
+  - b.)	DCAT-AP.de 1.1 Spezifikation + DCAT-AP 2.1 Mandatory  
+  Dieses Profil testet die Pflicht-Eigenschaften des europäischen DCAT-AP 2.1 und die Dinge bei denen DCAT-AP.de vom europäischen Standard abweicht.
+  
+  - c.)	DCAT-AP.de 1.1 Spezifikation + DCAT-AP 2.1 Mandatory + Recommended  
+  Dieses Profil testet die Pflicht- und die empfohlenen Eigenschaften des europäischen DCAT-AP 2.1 und die Dinge bei denen DCAT-AP.de vom europäischen Standard abweicht.
+
+Hinweis: Weitere Infos wie z.B. bekannte Probleme unter: Test-Profile. DCAT-AP-de 1.1 basiert auf der DCAT-AP v1.1. Es werden dennoch die Shapes der DCAT-AP v2.1 verwendet, da a) die Shapes der v1.1 in sich nicht valide waren und somit die Qualität der Validierungsergebnisse mangelhaft und b) die neuen Klassen, die in der DCAT-AP v2.1 geprüft werden, aber noch in der DCAT-AP.de 1.1 vorhanden sind nach unseren Tests nicht zu Fehlern führen. Bekanntes Problem: für dct:PeriodOfTime verwendet DCAT-AP 2.1 etwas anderes als dcat:startDate/dcat:endDate, deshalb wird hier immer eine Warnung ausgegeben.
+
+#### 3.	DCAT-AP.de zur Anbindung an das GovData-Portal  - Validierung
+Zur Bereitstellung der DCAT-AP.de-Metadaten an das GovData-Portal gibt es ergänzend zu Spezifikation noch zusätzliche Vorschriften, die in einem Konventionenhandbuch festgehalten wurden (https://www.dcat-ap.de/def/dcatde/1.1/implRules.pdf). Wollen Sie überprüfen ob ihre Metadaten DCAT-AP.de entsprechen und an GovData angeliefert werden können, stehen Ihnen folgende Profile zur Auswahl:
+
+  - a.)	DCAT-AP.de Konventionen (1,2,4-12,21,30,32)   
+  Dieses Profil testet die folgenden Konventionen 1 und 2, 4 bis 12, 21, 30 und 32 der Konventionenhandbuchs unter: https://www.dcat-ap.de/def/dcatde/1.1/implRules.pdf (Die      Validierung der übrigen Konventionen ließ sich bis dato noch nicht realisieren, wird aber weiter verfolgt, siehe hierzu Hinweis). 
+  
+  - b.)	Alles Zusammen  
+  Dieses Profil testet die Pflicht- und die empfohlenen Eigenschaften des europäischen DCAT-AP 2.1, die Dinge bei denen DCAT-AP.de vom europäischen Standard abweicht und die Konventionen 1 und 2, 4 bis 12, 21, 30 und 32 des Konventionenhandbuchs. 
+
+Hinweis: Für einige der Konventionen konnte kein Prüfschema erstellt werden, was häufig daran lag, dass a) die Formulierungen zum Teil unscharf sind und b) manche inhaltliche Vorgaben der Konventionen nicht überprüft werden können. Diese Punkte sollen bei der künftigen Weiterentwicklung des Standards DCAT-AP.de (https://github.com/GovDataOfficial/DCAT-AP.de) aufgegriffen werden.
+
+### Was bedeuten die Validierungsergebnisse? 
+SHACL unterscheidet generell in drei Arten von Fehlern. 
+  - a.)	Fehler (Violation)  
+  Diese Fehlermeldung sollte immer dann ausgegeben werden, wenn der Verstoß zu nicht-konformen Metadaten führt. 
+    - Hier ein Beispiel:  
+    Das Profil „DCAT-AP.de 1.1 Konventionen (1,2,4-12,21,30,32) prüft ob die obligatorisch zu nutzende Eigenschaft dcatde:contributorID vorhanden ist. Bei einem Verstoß kommt folgende rot hinterlegte Fehlermeldung:  
+        *Pflicht (K12): Alle Datenstrukturen, die direkt an das GovData Portal geliefert werden, MÜSSEN ihre Herkunft über eine eindeutige Kennzeichnung des Datenbereitstellers über die DatenbereitstellerID (dcatde:contributorID) ausweisen. - Seite 13
+Ort:[Fokusknoten] - [https://ckan.govdata.de/dataset/1c292363-5a7c-4131-9bb8-9ac05fdf34c6] - [Ergebnispfad] - [http://dcat-ap.de/def/dcatde/contributorID]*
+
+  - b.) Warnung (Warning)  
+  Diese Fehlermeldung sollte immer dann ausgegeben werden, wenn der Verstoß mit einer empfohlenen Eigenschaft zusammenhängt. 
+    - Hier ein Beispiel:   
+    Das Profil „DCAT-AP.de 1.1 Konventionen (1,2,4-12,21,30,32) prüft ob die empfohlen zu nutzende Eigenschaft dcatde:politicalGeocodingLevelURI vorhanden ist. Bei einem Verstoß kommt folgende gelb hinterlegte Fehlermeldung:   
+*Empfohlen: dcatde:politicalGeocodingLevelURI ist nicht vorhanden! Sie sollten mittels dcatde:politicalGeocodingLevelURI die prinzipielle Verwaltungsebene, von der das Dataset erhoben und eingestellt wurde, angeben. Es wird empfohlen, folgende Liste zu verwenden: https://www.dcat-ap.de/def/politicalGeocoding/Level/
+Ort:[Fokusknoten] - [https://ckan.govdata.de/dataset/1c292363-5a7c-4131-9bb8-9ac05fdf34c6] - [Ergebnispfad] - [http://dcat-ap.de/def/dcatde/politicalGeocodingLevelURI]Test:[Shape] - [http://dcat-ap.de/def/dcatde/1.0.2/#Dataset_politicalGeocodingLevelURI_Ex]*
+
+  - c.)	Nachrichten (Info)  
+  Diese Nachricht sollte immer dann ausgegeben werden, wenn der Verstoß mit einer optionalen Eigenschaft zusammenhängt. 
+    - Hier ein Beispiel:  
+    Das Profil „DCAT-AP.de 1.1 Konventionen (1,2,4-12,21,30,32) prüft ob die optional zu nutzende Eigenschaft dcatde:qualityProcessURI vorhanden ist. Bei einem Verstoß kommt folgende grau hinterlegte Fehlermeldung:   
+*Optional (K02): Sie könnten mittels dcatde:qualityProcessURI auf eine Webseite, die den Prozess zur Qualitätssicherung des Datasets beschreibt, verweisen.
+Ort:[Fokusknoten] - [https://ckan.govdata.de/dataset/1c292363-5a7c-4131-9bb8-9ac05fdf34c6] - [Ergebnispfad] - [http://dcat-ap.de/def/dcatde/qualityProcessURI]*
+
+Hinweis: Bei den von der SEMIC bereitgestellten Prüfschemen zu DCAT-AP kam es beim Tests immer wieder zu Fehlermeldungen, die sich keinem konkreten Datensatz (Ort[Fokusknoten] zuordnen lassen. Wir sind bereits im Austausch mit der SEMIC zur Nachbesserung der Prüfschemen. Falls Sie weitere unverständliche Fehlerbeschreibungen finden, erstellen Sie gerne ein Issue in diesem Github-Repo. Vielen Dank für Ihre Mithilfe! 
+
+### Wie kann ich die Validierungsergebnisse auswerten? 
+
+Neben der Ansicht im Browser bietet der Validator die Möglichkeit den Validierungsbericht herunterzuladen. Hierzu stehen verschiedene Formate, wie PDF, Turtle oder RDF-XML zur Verfügung. 
+
+Hinweis: Insbesondere bei der Validierung von mehreren Datensätzen ist es häufig aufgrund der Anzahl der Fehlermeldungen schwer die Übersicht zu gewinnen. Hier stößt das ITB-Online-Tool aktuell noch an seine Grenzen. Wenn Sie die Möglichkeit haben könnten Auswertungen der maschinenlesbaren Validierungsberichte wie RDF-XML hilfreich sein. Teilen Sie uns auch gerne Ihre Erfahrungen oder Tipps mit, so dass auch andere davon profitieren können. :+1: 
+
+
 
 ## Überblick über die Test-Profile
 Es werden die folgenden Test-Profile zur Verfügung gestellt, die Regeln aus einen Anzahl von Dateien kombinieren, um bedarfsgerecht testen zu können:
