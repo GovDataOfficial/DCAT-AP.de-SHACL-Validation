@@ -353,7 +353,7 @@
     sh:nodeKind sh:IRI ;
     sh:severity sh:Violation ;
     sh:message "Pflicht: dcatde:plannedAvailability ist keine IRI! Sie müssen die Verfügbarkeit der Distribution über einer IRI aus der Liste https://www.dcat-ap.de/def/plannedAvailability/ angeben."@de .
-
+ 
 :Distribution_plannedAvailability_List
     sh:name "Shape plannedAvailability - Gelistet"@de ;
     sh:description "Prüfe, ob die plannedAvailability in der :plannedAvailabilities_List ist."@de ;
@@ -407,20 +407,20 @@
     sh:deactivated false ;
 
     # -contentToValidate ../testcases/distribution-licenseAttributionByText.ttl
-    sh:property :Distribution_Spec_licenseAttributionByText_Ex ;      # Existenz
-    sh:property :Distribution_Spec_licenseAttributionByText_Literal ; # Form - Literal
+    sh:property :Distribution_licenseAttributionByText_Ex ;      # Existenz
+    sh:property :Distribution_licenseAttributionByText_Literal ; # Form - Literal
 
     # -contentToValidate ../testcases/distribution-plannedAvailability.ttl
-    sh:property :Distribution_Spec_plannedAvailability_Ex ;   # Existenz
-    sh:property :Distribution_Spec_plannedAvailability_Max ;  # Maximalzahl
-    sh:property :Distribution_Spec_plannedAvailability_IRI ;  # Form - IRI
-    sh:property :Distribution_Spec_plannedAvailability_List ; # in Liste
+    sh:property :Distribution_plannedAvailability_Ex ;   # Existenz
+    sh:property :Distribution_plannedAvailability_Max ;  # Maximalzahl
+    sh:property :Distribution_plannedAvailability_IRI ;  # Form - IRI
+    sh:property :Distribution_plannedAvailability_List ; # in Liste
 
     # -contentToValidate ../testcases/distribution-dct_changes.ttl
-    sh:property :Distribution_Spec_dct_description_Ex ; # Existenz
-    sh:property :Distribution_Spec_dct_title_Ex ;       # Existenz
-    sh:property :Distribution_Spec_dct_modified_Ex ;    # Existenz
+    sh:property :Distribution_dct_description_Ex ; # Existenz
+    sh:property :Distribution_dct_title_Ex ;       # Existenz
+    sh:property :Distribution_dct_modified_Ex ;    # Existenz
     
     # -contentToValidate ../testcases/distribution-checksum.ttl
-    sh:property :Distribution_Spec_spdx_Checksum_Algo_List ; # in Liste
+    sh:property :Distribution_spdx_Checksum_Algo_List ; # in Liste
     .
