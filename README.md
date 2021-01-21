@@ -7,13 +7,17 @@
   - [Einleitung](#einleitung)
   - [Verfügbarkeit und Verwendung](#verfügbarkeit-und-verwendung)
   - [FAQ - Häufig gestellte Fragen](#faq---häufig-gestellte-fragen)
-    - [Was ist DCAT-AP.de?](#was-ist-dcat-apde) 
+    - [Was ist DCAT-AP.de?](#was-ist-dcat-apde)
     - [Was ist SHACL?](#was-ist-shacl)
-    - [Was ist eine Validierung?](#was-ist-eine-validierung) 
+    - [Was ist eine Validierung?](#was-ist-eine-validierung)
     - [Was ist das Interoperability-Test-Bed (ITB) und warum wird es verwendet?](#was-ist-das-interoperability-test-bed-itb-und-warum-wird-es-verwendet)
-    - [Wofür kann ich den DCAT-AP.de Validator (BETA) nutzen?](#wofür-kann-ich-den-dcat-apde-validator-beta-nutzen) 
+    - [Wie kann ich den DCAT-AP.de Validator als Docker-File selber betreiben?](#wie-kann-ich-den-dcat-apde-validator-als-docker-file-selber-betreiben)
+    - [Wofür kann ich den DCAT-AP.de Validator (BETA) nutzen?](#wofür-kann-ich-den-dcat-apde-validator-beta-nutzen)
+      - [1.	DCAT-AP – Validierung](#1dcat-ap--validierung)
+      - [2.	DCAT-AP.de – Validierung](#2dcat-apde--validierung)
+      - [3.	DCAT-AP.de zur Anbindung an das GovData-Portal  - Validierung](#3dcat-apde-zur-anbindung-an-das-govdata-portal----validierung)
     - [Was bedeuten die Validierungsergebnisse?](#was-bedeuten-die-validierungsergebnisse)
-    - [Wie kann ich die Validierungsergebnisse auswerten?](#wie-kann-ich-die-validierungsergebnisse-auswerten)    
+    - [Wie kann ich die Validierungsergebnisse auswerten?](#wie-kann-ich-die-validierungsergebnisse-auswerten)
   - [Überblick über die Test-Profile](#überblick-über-die-test-profile)
   - [Inhalt der Dateien](#inhalt-der-dateien)
     - [A - dcat-ap-de-imports.ttl](#a---dcat-ap-de-importsttl)
@@ -62,6 +66,9 @@ Eine Validierung ist eine Überprüfung der Einhaltung bestimmter Regeln. DCAT-A
 
 ### Was ist das Interoperability-Test-Bed (ITB) und warum wird es verwendet?  
 Mit dem ITB bietet die EU-Kommission Lösungen zur Validierung an. Das ITB wird von der EU zur Validierung von DCAT-AP offiziell empfohlen und steht kostenfrei zur Nutzung für DCAT-AP.de zur Verfügung. Wir verwenden das Online-Tool, da es uns einfach und kostengünstig ermöglicht eigene DCAT-AP.de SHACL-Shapes als Prüfschema für alle zugänglich zur Verfügung zu stellen. Dabei stellen wie (die GKSt GovData) nur die Prüfschemata in Form von SHACL-Shapes bereit. Der eigentliche Validierungsvorgang wird durch das ITB erledigt. Weitere Infos zu ITB finden Sie unter: https://joinup.ec.europa.eu/collection/interoperability-test-bed-repository/solution/interoperability-test-bed/about
+
+### Wie kann ich den DCAT-AP.de Validator als Docker-File selber betreiben?
+(tbd)
 
 ### Wofür kann ich den DCAT-AP.de Validator (BETA) nutzen?
 Der Validator ermöglicht es Ihnen unter *„Zu validierender Inhalt“* verschiedene Inhalte aus verschiedenen Quellen zu prüfen. Sie können entweder eine Datei oder eine URI prüfen oder über *"Direkte Eingabe"* direkt den Inhalt eingeben. Damit der Inhalt richtig erkannt wird, kann es z.B. bei fehlender Dateiendung nötig sein, dass Sie zusätzlich die verwendete *„Syntax des Inhalts“* angeben.
