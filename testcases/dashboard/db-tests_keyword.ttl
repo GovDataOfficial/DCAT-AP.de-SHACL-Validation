@@ -1,0 +1,95 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dcatde: <http://dcat-ap.de/def/dcatde/> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+
+@base <dashboard-keywords-tests#> .
+
+# I = Invalid, V = Valid
+
+<V-TEST-01>
+    a dcat:Dataset ;
+    dcat:keyword "A"
+.
+
+<V-TEST-02>
+    a dcat:Dataset ;
+    dcat:keyword "A", "B", "C"
+.
+
+<V-TEST-03>
+    a dcat:Dataset ;
+    dcat:keyword "A", <http://google.de>
+.
+
+<V-TEST-04>
+    a dcat:Dataset ;
+    dcat:keyword "A", <http://google.de>, <http://bing.de>
+.
+
+<I-TEST-01>
+    a dcat:Dataset ;
+.
+
+<I-TEST-02>
+    a dcat:Dataset ;
+    dcat:keyword <http://google.de>
+.
+
+<I-TEST-03>
+    a dcat:Dataset ;
+    dcat:keyword <http://google.de>, <http://bing.de>
+.
+
+
+# <01-I-distribution-no_uri>
+#     a dcat:Distribution ;
+# .
+
+# <02-I-distribution-uri_wrongtype>
+#     a dcat:Distribution ;
+#     dcat:accessURL "https://google.com" ;
+# .
+
+# <01-V-distribution-one_uri>
+#     a dcat:Distribution ;
+#     dcat:accessURL <https://google.com> ;
+# .
+
+# <02-V-distribution-two_uris>
+#     a dcat:Distribution ;
+#     dcat:accessURL <https://google.com> ;
+#     dcat:accessURL <https://bing.com> ;
+# .
+
+# <03-V-distribution-two_uris_one_wrongtype>
+#     a dcat:Distribution ;
+#     dcat:accessURL <https://google.com> ;
+#     dcat:accessURL "<https://bing.com>" ;
+# .
+
+# <01-I-dataset-no_distributions>
+#     a dcat:Dataset ;
+# .
+
+# <02-I-dataset-distribution-01-I>
+#     a dcat:Dataset ;
+#     dcat:distribution <01-I-distribution-no_uri> ;
+# .
+
+# <03-I-dataset-distribution-02-I>
+#     a dcat:Dataset ;
+#     dcat:distribution <02-I-distribution-uri_wrongtype> ;
+# .
+
+# <04-I-dataset-distribution-01-I-02-I>
+#     a dcat:Dataset ;
+#     dcat:distribution <01-I-distribution-no_uri> ;
+#     dcat:distribution <02-I-distribution-uri_wrongtype> ;
+# .
+
+# <01-V-dataset-distribution-01-V>
+#     a dcat:Dataset ;
+#     dcat:distribution <01-V-distribution-one_uri> ;
+# .

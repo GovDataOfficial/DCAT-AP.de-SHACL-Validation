@@ -1,0 +1,59 @@
+@prefix : <http://govdata.de/mqa/#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcatde: <http://dcat-ap.de/def/dcatde/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
+@prefix spdx: <http://spdx.org/rdf/terms#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix govdata: <http://govdata.de/mqa/#> .
+
+:Dataset_has_Keyword
+    a sh:NodeShape ; 
+    sh:targetClass dcat:Dataset ;
+    sh:deactivated false ;
+
+    sh:property [
+        sh:severity govdata:no_literal_keyword ;
+        sh:message "Jedes Dataset muss über wenigstens ein Keyword verfügen. Dabei muss es sich um ein Literal handeln." ; 
+
+        sh:path dcat:keyword ;
+        sh:qualifiedValueShape [
+            sh:nodeKind sh:Literal ;
+		] ;
+		sh:qualifiedMinCount 1 ;
+    ]
+.
+
+:Dataset_has_contributorID
+    a sh:NodeShape ; 
+    sh:targetClass dcat:Dataset ;
+    sh:deactivated false ;
+
+    sh:property [
+        sh:severity govdata:no_correct_contributorID ;
+        sh:message "Jedes Dataset muss über genau eine dcatde:contributorID verfügen, die auch auf dcat-ap.de veröffentlicht wurde. Weitere contributorIDs sind erlaubt, solange sie nicht auf dcat-ap.de veröffentlich wurden." ; 
+
+        sh:path dcatde:contributorID ;
+
+        sh:qualifiedValueShape [
+            sh:hasValue <http://dcat-ap.de/def/contributors> ;
+            sh:path skos:inScheme ;
+            sh:nodeKind sh:IRI ;
+		] ;
+		sh:qualifiedMinCount 1 ;
+		sh:qualifiedMaxCount 1 ;
+    ]
+.

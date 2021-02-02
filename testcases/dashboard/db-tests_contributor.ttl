@@ -1,0 +1,53 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dcatde: <http://dcat-ap.de/def/dcatde/> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+
+@base <dashboard-contributor-tests#> .
+
+# I = Invalid, V = Valid
+
+<V-TEST-01>
+    a dcat:Dataset ;
+    dcatde:contributorID <http://dcat-ap.de/def/contributors/berlinOpenData>
+.
+
+<V-TEST-02>
+    a dcat:Dataset ;
+    dcatde:contributorID <http://dcat-ap.de/def/contributors/berlinOpenData> , <http://google.de>
+.
+
+<V-TEST-05>
+    a dcat:Dataset ;
+    dcatde:contributorID <http://dcat-ap.de/def/contributors/berlinOpenData> , "string"
+.
+
+<I-TEST-01>
+    a dcat:Dataset ;
+.
+
+<I-TEST-02>
+    a dcat:Dataset ;
+    dcatde:contributorID <http://google.de>
+.
+
+<I-TEST-03>
+    a dcat:Dataset ;
+    dcatde:contributorID "string"
+.
+
+<I-TEST-04>
+    a dcat:Dataset ;
+    dcatde:contributorID <http://dcat-ap.de/def/contributors/berlinOpenData> , <http://dcat-ap.de/def/contributors/bundesamtFuerJustiz>
+.
+
+<I-TEST-05>
+    a dcat:Dataset ;
+    dcatde:contributorID <http://dcat-ap.de/def/contributors/berlinOpenData> , <http://dcat-ap.de/def/contributors/bundesamtFuerJustiz> , <http://google.de>
+.
+
+<I-TEST-05>
+    a dcat:Dataset ;
+    dcatde:contributorID <http://dcat-ap.de/def/contributors/berlinOpenData> , <http://dcat-ap.de/def/contributors/bundesamtFuerJustiz> , "string"
+.
