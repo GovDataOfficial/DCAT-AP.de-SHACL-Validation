@@ -42,6 +42,7 @@ Wir empfehlen, den Validator über die Webseite zu verwenden: **https://www.itb.
 
 Weitere Varianten werden auf https://www.itb.ec.europa.eu/docs/guides/latest/validatingRDF/index.html#step-6-use-the-validator beschrieben.
 
+Bitte beachten Sie die eingeschränkte zeitliche Verfügbarkeit des Test Beds: https://joinup.ec.europa.eu/collection/interoperability-test-bed-repository/solution/interoperability-test-bed/detailed-information#window
 
 * * *
 :warning: :warning: :warning: 
