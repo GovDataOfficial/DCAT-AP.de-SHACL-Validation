@@ -1,3 +1,6 @@
+# java -Xss4m -jar validator.jar -reportSyntax "text/turtle" -externalShapes ./db-shapes.ttl -externalShapes ./dcat-ap-de-contributors.rdf -externalShapes ./dcat-ap-de-licenses-open.rdf 
+# -contentToValidate ../../../../testcases/dashboard/bremen-catalog-dataset-extracted.ttl
+
 @prefix : <http://govdata.de/mqa/#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix adms: <http://www.w3.org/ns/adms#> .
@@ -32,8 +35,8 @@
         sh:path dcat:keyword ;
         sh:qualifiedValueShape [
             sh:nodeKind sh:Literal ;
-		] ;
-		sh:qualifiedMinCount 1 ;
+        ] ;
+        sh:qualifiedMinCount 1 ;
     ]
 .
 
@@ -52,8 +55,95 @@
             sh:hasValue <http://dcat-ap.de/def/contributors> ;
             sh:path skos:inScheme ;
             sh:nodeKind sh:IRI ;
-		] ;
-		sh:qualifiedMinCount 1 ;
-		sh:qualifiedMaxCount 1 ;
+        ] ;
+        sh:qualifiedMinCount 1 ;
+        sh:qualifiedMaxCount 1 ;
+    ]
+.
+
+:Distribution_count
+    a sh:NodeShape ; 
+    sh:targetClass dcat:Distribution ;
+    sh:deactivated false ;
+
+    sh:property [
+        sh:severity govdata:count_Distributions ;
+        sh:message "Diese Regel löst für jede Distribution aus, damit man ihre Anzahl bestimmen kann und zu den anderen Fehlermeldungen ins Verhältnis setzen kann." ; 
+        sh:path govdata:failnow ;
+        sh:minCount 1 ;
+    ]
+.
+
+:Distribution_Licenses_count
+    a sh:NodeShape ; 
+    sh:targetClass dcat:Distribution ;
+    sh:deactivated false ;
+    
+    sh:property [
+        sh:path dct:license ;
+
+        sh:property [
+            sh:message "Diese Regel löst für jede Lizenz aller Distribution aus, damit man ihre Anzahl bestimmen kann und zu den anderen Fehlermeldungen ins Verhältnis setzen kann." ; 
+            sh:severity govdata:count_Distributions_Licenses ;
+            sh:path govdata:failnow ;
+            sh:minCount 1 ;
+        ] ;
+    ]
+.
+
+# Stufe 1: Jede Distribution des untersuchtenes Datasets hat exakt eine Lizenz.
+# Stufe 2: Jede Distribution des untersuchten Datasets hat eine Lizenz-URI aus der GovData Liste.
+# Stufe 3: Mindestens eine Distribution des untersuchten Datasets hat eine offene Lizenz.
+
+:Distribution_has_one_license
+    a sh:NodeShape ; 
+    sh:targetClass dcat:Distribution ;
+    sh:deactivated false ;
+
+    sh:property [
+        sh:severity govdata:not_one_license ;
+        sh:message "Jede Distribution muss über genau eine Lizenz verfügen." ; 
+
+        sh:path dct:license ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ]
+.
+
+:Distribution_has_license_from_list
+    a sh:NodeShape ; 
+    sh:targetClass dcat:Distribution ;
+    sh:deactivated false ;
+
+    sh:property [
+        sh:path dct:license ;
+
+        sh:property [
+            sh:severity govdata:no_license_from_list ;
+            sh:message "Die Lizenz der Distribution muss gemäß http://dcat-ap.de/def/licenses angegeben werden. Löst auch aus, wenn Lizenz als Literal angegeben wird." ; 
+
+            sh:path skos:inScheme ;
+            sh:hasValue <http://dcat-ap.de/def/licenses> ;
+            # sh:nodeKind sh:IRI ;
+        ] ;
+    ]
+.
+
+:Distribution_has_open_license_from_list
+    a sh:NodeShape ; 
+    sh:targetClass dcat:Distribution ;
+    sh:deactivated false ;
+
+    sh:property [
+
+        sh:path dct:license ;
+
+        sh:property [
+            sh:severity govdata:no_open_license_from_list ;
+            sh:message "Die Lizenz der Distribution sollte eine offene Lizenz sein. Löst auch aus, wenn Lizenz als Literal angegeben wird." ; 
+
+            sh:path govdata:isOpenLicense ;
+            sh:hasValue "true"^^<xsd:boolean> ;
+        ];
     ]
 .
