@@ -61,6 +61,38 @@
     ]
 .
 
+:Dataset_has_publisher
+    a sh:NodeShape ; 
+    sh:targetClass dcat:Dataset ;
+    sh:deactivated false ;
+
+    sh:property [
+        sh:path dct:publisher ;
+        sh:severity govdata:no_correct_publisher ;
+        sh:message "Das Dataset muss über genau einen dct:publisher verfügen." ; 
+
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+
+    sh:property [
+        sh:path dct:publisher ;
+
+        sh:property [
+            sh:severity govdata:no_correct_publisher ;
+            sh:message "Der dct:publisher muss über mindestens einen foaf:name verfügen, der ein Literal ist." ; 
+            
+            sh:path foaf:name ;
+
+            sh:qualifiedValueShape [
+                sh:nodeKind sh:Literal ;
+            ] ;
+            sh:qualifiedMinCount 1 ;
+        ]
+    ]
+.
+
+
 :Distribution_count
     a sh:NodeShape ; 
     sh:targetClass dcat:Distribution ;
