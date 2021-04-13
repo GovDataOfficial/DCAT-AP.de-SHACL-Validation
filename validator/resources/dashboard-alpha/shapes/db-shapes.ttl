@@ -81,7 +81,7 @@
         sh:property [
             sh:severity govdata:no_correct_publisher ;
             sh:message "Der dct:publisher muss über mindestens einen foaf:name verfügen, der ein Literal ist." ; 
-            
+
             sh:path foaf:name ;
 
             sh:qualifiedValueShape [
@@ -127,18 +127,31 @@
 # Stufe 2: Jede Distribution des untersuchten Datasets hat eine Lizenz-URI aus der GovData Liste.
 # Stufe 3: Mindestens eine Distribution des untersuchten Datasets hat eine offene Lizenz.
 
+:Distribution_has_maximal_one_license
+    a sh:NodeShape ; 
+    sh:targetClass dcat:Distribution ;
+    sh:deactivated false ;
+
+    sh:property [
+        sh:severity govdata:multiple_licenses ;
+        sh:message "Eine Distribution darf NIEMALS über mehr als eine Lizenz verfügen!" ; 
+
+        sh:path dct:license ;
+        sh:maxCount 1 ;
+    ]
+.
+
 :Distribution_has_one_license
     a sh:NodeShape ; 
     sh:targetClass dcat:Distribution ;
     sh:deactivated false ;
 
     sh:property [
-        sh:severity govdata:not_one_license ;
-        sh:message "Jede Distribution muss über genau eine Lizenz verfügen." ; 
+        sh:severity govdata:no_license ;
+        sh:message "Jede Distribution muss über eine Lizenz verfügen." ; 
 
         sh:path dct:license ;
         sh:minCount 1 ;
-        sh:maxCount 1 ;
     ]
 .
 
@@ -167,7 +180,6 @@
     sh:deactivated false ;
 
     sh:property [
-
         sh:path dct:license ;
 
         sh:property [
