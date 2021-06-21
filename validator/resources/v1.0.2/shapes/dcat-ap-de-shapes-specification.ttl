@@ -12,7 +12,7 @@
 # Alternativ kann folgendes angehängt werden, um die (überarbeitete) Beispieldatei zu validieren:
 # -contentToValidate ../testcases/rewritten-example-advanced.ttl
 
-@prefix : <http://dcat-ap.de/def/dcatde/1.0.2/#>
+@prefix : <http://dcat-ap.de/def/dcatde/1.0.2/#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix adms: <http://www.w3.org/ns/adms#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .

@@ -473,6 +473,16 @@
 # .
 
 # Konv 30: Werden, wie empfohlen, Kategorien verwendet, MÜSSEN die MDR data themes genutzt werden. - Seite 20
+
+:DCATAPde_themes
+    a sh:NodeShape ;
+    sh:targetClass dcat:theme ;
+    sh:property [
+        sh:path skos:inScheme ;
+        sh:hasValue <http://publications.europa.eu/resource/authority/data-theme>;
+    ];
+.
+
 :Shapes_ImplR_Konv_30 
     a sh:NodeShape ;
     sh:targetClass dcat:Dataset ;
@@ -482,32 +492,29 @@
     sh:deactivated false ;
 
     sh:property [
-        sh:path dcat:theme ;
-        sh:node [
-            sh:hasValue <http://publications.europa.eu/resource/authority/data-theme> ;
-            sh:nodeKind sh:IRI ;
-            sh:path skos:inScheme ;
-        ] ;
+        sh:path dcat:theme;
+        sh:node :DCATAPde_themes;
 
         sh:severity sh:Violation ;
         sh:message "Pflicht (K30): Werden, wie empfohlen, Kategorien verwendet, MÜSSEN die MDR data themes genutzt werden. - Seite 20" ;
     ] ;
 .
 
-# # Konv 31: Hat die Datei, die die Daten einer Distribution beinhaltet, einen in der MDR authority file table geführten mediaType, so MUSS auf diesen mittels dct:format verwiesen werden. Andernfalls MUSS via dcat:mediaType auf die IANA Liste verwiesen und ein ggf. fehlender mediaType dort angelegt werden. - Seite 22
-# :Shapes_ImplR_Konv_31 
-#     a sh:NodeShape ; 
-#     #sh:target... 
-#     sh:name "Konvention 31"@de ; 
-#     sh:description "Hat die Datei, die die Daten einer Distribution beinhaltet, einen in der MDR authority file table geführten mediaType, so MUSS auf diesen mittels dct:format verwiesen werden. Andernfalls MUSS via dcat:mediaType auf die IANA Liste verwiesen und ein ggf. fehlender mediaType dort angelegt werden. - Seite 22" ;
-#     sh:deactivated true ;
-#     #... tbd ...
-# .
 
 # Konv 32: Distributionen von Datensätzen MÜSSEN mit einer Lizenz ausgewiesen werden. Für die Kennzeichnung der im Abschnitt 2.1 aufgeführten Lizenzen MÜSSEN die dort genannten URIs verwendet werden. - Seite 23
     # Diese Konvention bezieht sich nur auf Lizenzen einer Distribution, auch Catalog kann dct:license verwenden, auch dort wäre anzunehmen, dass unsere URIs verwendet werden müssen.
     # 1. Lizenz muss vorhanden sein
     # 2. Lizenz muss DCAT-AP.de Lizenz sein
+
+:DCATAPde_license
+    a sh:NodeShape ;
+    sh:targetClass dct:license ;
+    sh:property [
+        sh:path skos:inScheme ;
+        sh:hasValue <http://dcat-ap.de/def/licenses> ;
+    ];
+.
+
 :Shapes_ImplR_Konv_32 
     a sh:NodeShape ; 
     sh:targetClass dcat:Distribution ;
@@ -520,20 +527,27 @@
         sh:minCount 1 ;
 
         sh:severity sh:Violation ;
-        sh:message "Pflicht (K32): Distributionen von Datensätzen MÜSSEN mit einer Lizenz ausgewiesen werden. Für die Kennzeichnung der im Abschnitt 2.1 aufgeführten Lizenzen MÜSSEN die dort genannten URIs verwendet werden. - Seite 23" ;
+        sh:message "Pflicht (K32): Distributionen von Datensätzen MÜSSEN mit einer Lizenz ausgewiesen werden. Für die Kennzeichnung der im Abschnitt 2.1 aufgeführten Lizenzen MÜSSEN die dort genannten URIs verwendet werden. - Seite 23: Keine Lizenz angegeben" ;
     ] ;
 
     sh:property [
         sh:path dct:license ;
-        sh:node [
-            sh:hasValue <http://dcat-ap.de/def/licenses> ;
-            # sh:minCount 1 ;
-            sh:nodeKind sh:IRI ;
-            sh:path skos:inScheme ;
-        ] ;
+        sh:nodeKind sh:IRI ;
 
         sh:severity sh:Violation ;
-        sh:message "Pflicht (K32): Distributionen von Datensätzen MÜSSEN mit einer Lizenz ausgewiesen werden. Für die Kennzeichnung der im Abschnitt 2.1 aufgeführten Lizenzen MÜSSEN die dort genannten URIs verwendet werden. - Seite 23" ;
+        sh:message "Pflicht (K32): Distributionen von Datensätzen MÜSSEN mit einer Lizenz ausgewiesen werden. Für die Kennzeichnung der im Abschnitt 2.1 aufgeführten Lizenzen MÜSSEN die dort genannten URIs verwendet werden. - Seite 23. Lizenz ist keine URI" ;
+    ] ;
+
+    sh:property [
+        sh:path dct:license ;
+
+	    sh:qualifiedValueShape [
+            sh:node :DCATAPde_license;
+	    ];
+	    sh:qualifiedMinCount 1 ;
+
+        sh:severity sh:Violation ;
+        sh:message "Pflicht (K32): Distributionen von Datensätzen MÜSSEN mit einer Lizenz ausgewiesen werden. Für die Kennzeichnung der im Abschnitt 2.1 aufgeführten Lizenzen MÜSSEN die dort genannten URIs verwendet werden. - Seite 23. Nicht passende Lizenz" ;
     ] ;
 .
 
