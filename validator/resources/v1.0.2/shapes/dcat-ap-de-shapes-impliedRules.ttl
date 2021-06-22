@@ -476,7 +476,7 @@
 
 :DCATAPde_themes
     a sh:NodeShape ;
-    sh:targetClass dcat:theme ;
+    sh:targetClass skos:Concept ;
     sh:property [
         sh:path skos:inScheme ;
         sh:hasValue <http://publications.europa.eu/resource/authority/data-theme>;
@@ -508,7 +508,7 @@
 
 :DCATAPde_license
     a sh:NodeShape ;
-    sh:targetClass dct:license ;
+    sh:targetClass dct:LicenseDocument ;
     sh:property [
         sh:path skos:inScheme ;
         sh:hasValue <http://dcat-ap.de/def/licenses> ;
