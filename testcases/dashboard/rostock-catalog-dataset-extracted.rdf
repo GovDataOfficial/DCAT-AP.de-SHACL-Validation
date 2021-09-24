@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+   xmlns:ns1="http://purl.org/dc/terms/"
+   xmlns:ns2="http://www.w3.org/ns/dcat#"
+   xmlns:ns3="http://www.w3.org/2006/vcard/ns#"
+   xmlns:ns4="https://www.dcat-ap.de/def/dcatde/1.1/"
+   xmlns:ns5="http://xmlns.com/foaf/0.1/"
+   xmlns:ns6="http://spdx.org/rdf/terms#"
+   xmlns:ns7="http://www.w3.org/ns/adms#"
+   xmlns:ns8="http://www.w3.org/ns/locn#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+>
+  <rdf:Description rdf:about="https://www.opendata-hro.de/dataset/305d5bb9-28cb-496f-ad29-09838c5dcdbc">
+    <ns2:keyword>Handel und Verbrauch</ns2:keyword>
+    <ns2:distribution rdf:resource="https://www.opendata-hro.de/dataset/305d5bb9-28cb-496f-ad29-09838c5dcdbc/resource/5e551891-2327-45c7-9e81-c799a0314151"/>
+    <ns2:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/ECON"/>
+    <ns1:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-08-01T10:46:45.590516</ns1:issued>
+    <ns1:spatial rdf:nodeID="N24e50929d92b4e779ec64faed5b8a260"/>
+    <ns2:keyword>Einzelhandel</ns2:keyword>
+    <ns2:distribution rdf:resource="https://www.opendata-hro.de/dataset/305d5bb9-28cb-496f-ad29-09838c5dcdbc/resource/f4aee30b-5baf-487f-bcd5-835c42e3239b"/>
+    <ns2:keyword>Nahrung</ns2:keyword>
+    <ns1:creator rdf:nodeID="Nb22fdb62d4914550b8fb77d094d7ee2a"/>
+    <ns2:distribution rdf:resource="https://www.opendata-hro.de/dataset/305d5bb9-28cb-496f-ad29-09838c5dcdbc/resource/9a4b6f3e-6ddf-4202-ae2e-0951e201477a"/>
+    <ns1:title>Drogerien</ns1:title>
+    <ns2:keyword>Medizin</ns2:keyword>
+    <ns2:keyword>Nahrungsmittelgewerbe</ns2:keyword>
+    <ns4:maintainer rdf:nodeID="N2966c45f1529499cae1b246d51af93a6"/>
+    <ns1:language>http://publications.europa.eu/resource/authority/language/DEU</ns1:language>
+    <ns2:distribution rdf:resource="https://www.opendata-hro.de/dataset/305d5bb9-28cb-496f-ad29-09838c5dcdbc/resource/cf46ff38-9c3a-4331-8f16-9ea571043041"/>
+    <ns2:distribution rdf:resource="https://www.opendata-hro.de/dataset/305d5bb9-28cb-496f-ad29-09838c5dcdbc/resource/2bcd0750-6f13-4f8b-9ceb-9f683eb0d431"/>
+    <ns4:geocodingDescription>Rostock</ns4:geocodingDescription>
+    <ns2:contactPoint rdf:nodeID="N3477a58340114665848b9e177d117de3"/>
+    <ns4:contributorID rdf:resource="https://www.dcat-ap.de/def/contributors/openDataHRO"/>
+    <ns1:identifier>305d5bb9-28cb-496f-ad29-09838c5dcdbc</ns1:identifier>
+    <ns2:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/HEAL"/>
+    <ns2:distribution rdf:resource="https://www.opendata-hro.de/dataset/305d5bb9-28cb-496f-ad29-09838c5dcdbc/resource/2b3abb6b-2454-47f9-9dd0-505348080288"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+    <ns1:accessRights>public</ns1:accessRights>
+    <ns2:keyword>Einzelhandelsgeschäft</ns2:keyword>
+    <ns1:publisher rdf:resource="https://www.opendata-hro.de/organization/b952e781-ab4c-456a-8e7a-2845f7efaf83"/>
+    <ns4:politicalGeocodingURI rdf:resource="https://www.dcat-ap.de/def/politicalGeocoding/regionalKey/130030000000"/>
+    <ns2:keyword>Lebensmittel</ns2:keyword>
+    <ns1:description>Dieser Datensatz umfasst die Standorte der Drogerien in der Hanse- und Universitätsstadt Rostock mit Informationen zu Adresse, Bezeichnung, Betreiber, Barrierefreiheit, Öffnungszeiten und Kontaktdaten. Die Ressourcen werden in der Regel im folgenden Zeitabstand aktualisiert: 365 Tage</ns1:description>
+    <ns4:politicalGeocodingLevelURI rdf:resource="https://www.dcat-ap.de/def/politicalGeocoding/Level/administrativeDistrict"/>
+    <ns2:keyword>Wirtschaft</ns2:keyword>
+    <ns1:conformsTo rdf:resource="https://www.dcat-ap.de/def/dcatde/1.1/"/>
+    <ns2:keyword>Arzneimittel</ns2:keyword>
+    <ns2:keyword>Handel</ns2:keyword>
+    <ns2:distribution rdf:resource="https://www.opendata-hro.de/dataset/305d5bb9-28cb-496f-ad29-09838c5dcdbc/resource/c9424d63-96f3-44e7-9d3b-aec4c50cdcc4"/>
+    <ns2:keyword>Gesundheit</ns2:keyword>
+    <ns2:keyword>Ökonomie</ns2:keyword>
+    <ns1:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-01-28T05:33:37.429410</ns1:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://www.opendata-hro.de/dataset/305d5bb9-28cb-496f-ad29-09838c5dcdbc/resource/2b3abb6b-2454-47f9-9dd0-505348080288">
+    <ns4:plannedAvailability rdf:resource="https://www.dcat-ap.de/def/plannedAvailability/stable"/>
+    <ns6:checksum rdf:nodeID="N2669edf0655a475bbddfb271344726be"/>
+    <ns1:language>http://publications.europa.eu/resource/authority/language/DEU</ns1:language>
+    <ns2:mediaType rdf:resource="https://www.iana.org/assignments/media-types/application/geo+json"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+    <ns1:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-01-27T08:53:31</ns1:modified>
+    <ns1:title>Drogerien</ns1:title>
+    <ns2:byteSize rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">15910.0</ns2:byteSize>
+    <ns2:accessURL rdf:resource="https://geo.sv.rostock.de/download/opendata/drogerien/drogerien.json"/>
+    <ns1:conformsTo rdf:resource="https://www.dcat-ap.de/def/dcatde/1.1/"/>
+    <ns7:status rdf:resource="http://purl.org/adms/status/Completed"/>
+    <ns1:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-02-14T14:31:03</ns1:issued>
+    <ns1:rights rdf:resource="https://www.dcat-ap.de/def/licenses/cc-zero"/>
+    <ns1:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/GEOJSON"/>
+    <ns1:license rdf:resource="https://www.dcat-ap.de/def/licenses/cc-zero"/>
+    <ns2:downloadURL rdf:resource="https://geo.sv.rostock.de/download/opendata/drogerien/drogerien.json"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://www.opendata-hro.de/dataset/305d5bb9-28cb-496f-ad29-09838c5dcdbc/resource/c9424d63-96f3-44e7-9d3b-aec4c50cdcc4">
+    <ns4:plannedAvailability rdf:resource="https://www.dcat-ap.de/def/plannedAvailability/stable"/>
+    <ns1:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-02-14T14:31:03</ns1:issued>
+    <ns1:title>Drogerien</ns1:title>
+    <ns1:rights rdf:resource="https://www.dcat-ap.de/def/licenses/cc-zero"/>
+    <ns1:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/GML"/>
+    <ns1:license rdf:resource="https://www.dcat-ap.de/def/licenses/cc-zero"/>
+    <ns7:status rdf:resource="http://purl.org/adms/status/Completed"/>
+    <ns2:byteSize rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">31366.0</ns2:byteSize>
+    <ns1:language>http://publications.europa.eu/resource/authority/language/DEU</ns1:language>
+    <ns6:checksum rdf:nodeID="N7a00d870d1c04dd7a8e0fdca8085cfd4"/>
+    <ns1:conformsTo rdf:resource="https://www.dcat-ap.de/def/dcatde/1.1/"/>
+    <ns1:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-01-27T08:53:31</ns1:modified>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+    <ns2:accessURL rdf:resource="https://geo.sv.rostock.de/download/opendata/drogerien/drogerien.gml"/>
+    <ns2:mediaType rdf:resource="https://www.iana.org/assignments/media-types/application/gml+xml"/>
+    <ns2:downloadURL rdf:resource="https://geo.sv.rostock.de/download/opendata/drogerien/drogerien.gml"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://www.opendata-hro.de/dataset/305d5bb9-28cb-496f-ad29-09838c5dcdbc/resource/9a4b6f3e-6ddf-4202-ae2e-0951e201477a">
+    <ns7:status rdf:resource="http://purl.org/adms/status/Completed"/>
+    <ns1:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-05-19T15:53:08</ns1:issued>
+    <ns1:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/WFS"/>
+    <ns1:rights rdf:resource="https://www.dcat-ap.de/def/licenses/cc-zero"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+    <ns1:language>http://publications.europa.eu/resource/authority/language/DEU</ns1:language>
+    <ns4:plannedAvailability rdf:resource="https://www.dcat-ap.de/def/plannedAvailability/stable"/>
+    <ns1:conformsTo rdf:resource="https://www.dcat-ap.de/def/dcatde/1.1/"/>
+    <ns1:title>Drogerien</ns1:title>
+    <ns1:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-01-27T08:53:31</ns1:modified>
+    <ns2:accessURL rdf:resource="https://geo.sv.rostock.de/geodienste/drogerien/wfs"/>
+    <ns1:license rdf:resource="https://www.dcat-ap.de/def/licenses/cc-zero"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://www.opendata-hro.de/dataset/305d5bb9-28cb-496f-ad29-09838c5dcdbc/resource/5e551891-2327-45c7-9e81-c799a0314151">
+    <ns1:license rdf:resource="https://www.dcat-ap.de/def/licenses/cc-zero"/>
+    <ns1:conformsTo rdf:resource="https://www.dcat-ap.de/def/dcatde/1.1/"/>
+    <ns1:rights rdf:resource="https://www.dcat-ap.de/def/licenses/cc-zero"/>
+    <ns1:title>Drogerien</ns1:title>
+    <ns1:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-02-14T14:31:03</ns1:issued>
+    <ns4:plannedAvailability rdf:resource="https://www.dcat-ap.de/def/plannedAvailability/stable"/>
+    <ns1:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-01-27T08:53:31</ns1:modified>
+    <ns2:accessURL rdf:resource="https://geo.sv.rostock.de/geodienste/drogerien/wms"/>
+    <ns1:language>http://publications.europa.eu/resource/authority/language/DEU</ns1:language>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+    <ns1:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/WMS"/>
+    <ns7:status rdf:resource="http://purl.org/adms/status/Completed"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://www.opendata-hro.de/dataset/305d5bb9-28cb-496f-ad29-09838c5dcdbc/resource/2bcd0750-6f13-4f8b-9ceb-9f683eb0d431">
+    <ns1:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/XLSX"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+    <ns2:byteSize rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5872.0</ns2:byteSize>
+    <ns4:plannedAvailability rdf:resource="https://www.dcat-ap.de/def/plannedAvailability/stable"/>
+    <ns2:downloadURL rdf:resource="https://geo.sv.rostock.de/download/opendata/drogerien/drogerien.xlsx"/>
+    <ns1:language>http://publications.europa.eu/resource/authority/language/DEU</ns1:language>
+    <ns2:accessURL rdf:resource="https://geo.sv.rostock.de/download/opendata/drogerien/drogerien.xlsx"/>
+    <ns2:mediaType rdf:resource="https://www.iana.org/assignments/media-types/application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"/>
+    <ns1:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-02-14T14:31:03</ns1:issued>
+    <ns1:title>Drogerien</ns1:title>
+    <ns1:rights rdf:resource="https://www.dcat-ap.de/def/licenses/cc-zero"/>
+    <ns6:checksum rdf:nodeID="N71dc29fadb5f4de58770bd0e6d5df746"/>
+    <ns1:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-01-27T08:53:31</ns1:modified>
+    <ns1:license rdf:resource="https://www.dcat-ap.de/def/licenses/cc-zero"/>
+    <ns7:status rdf:resource="http://purl.org/adms/status/Completed"/>
+    <ns1:conformsTo rdf:resource="https://www.dcat-ap.de/def/dcatde/1.1/"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N24e50929d92b4e779ec64faed5b8a260">
+    <rdf:type rdf:resource="http://purl.org/dc/terms/Location"/>
+    <ns8:geometry rdf:datatype="https://www.iana.org/assignments/media-types/application/vnd.geo+json">{"type":"Polygon","coordinates":[[[11.9936, 54.0486], [11.9936, 54.2466], [12.3045, 54.2466], [12.3045, 54.0486], [11.9936, 54.0486]]]}</ns8:geometry>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nb22fdb62d4914550b8fb77d094d7ee2a">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+    <ns5:mbox>opendata.hro@rostock.de</ns5:mbox>
+    <ns5:name>Hanse- und Universitätsstadt Rostock – Kataster-, Vermessungs- und Liegenschaftsamt</ns5:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N2669edf0655a475bbddfb271344726be">
+    <rdf:type rdf:resource="http://spdx.org/rdf/terms#Checksum"/>
+    <ns6:checksumValue rdf:datatype="http://www.w3.org/2001/XMLSchema#hexBinary">f2c74594c55d0f831559be8eec073e70aeacb908d4ccc913d9bed8d9205c985f</ns6:checksumValue>
+    <ns6:algorithm rdf:resource="https://www.dcat-ap.de/def/hashAlgorithms/sha/256"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://www.opendata-hro.de/dataset/305d5bb9-28cb-496f-ad29-09838c5dcdbc/resource/f4aee30b-5baf-487f-bcd5-835c42e3239b">
+    <ns7:status rdf:resource="http://purl.org/adms/status/Completed"/>
+    <ns1:conformsTo rdf:resource="https://www.dcat-ap.de/def/dcatde/1.1/"/>
+    <ns4:plannedAvailability rdf:resource="https://www.dcat-ap.de/def/plannedAvailability/stable"/>
+    <ns1:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/CSV"/>
+    <ns1:license rdf:resource="https://www.dcat-ap.de/def/licenses/cc-zero"/>
+    <ns2:byteSize rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6701.0</ns2:byteSize>
+    <ns1:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-01-27T08:53:31</ns1:modified>
+    <ns2:accessURL rdf:resource="https://geo.sv.rostock.de/download/opendata/drogerien/drogerien.csv"/>
+    <ns1:title>Drogerien</ns1:title>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+    <ns2:mediaType rdf:resource="https://www.iana.org/assignments/media-types/text/csv"/>
+    <ns1:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-02-14T14:31:03</ns1:issued>
+    <ns2:downloadURL rdf:resource="https://geo.sv.rostock.de/download/opendata/drogerien/drogerien.csv"/>
+    <ns1:language>http://publications.europa.eu/resource/authority/language/DEU</ns1:language>
+    <ns6:checksum rdf:nodeID="N8bd30a27c5f2456c83656aaa2d33711e"/>
+    <ns1:rights rdf:resource="https://www.dcat-ap.de/def/licenses/cc-zero"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://www.opendata-hro.de/dataset/305d5bb9-28cb-496f-ad29-09838c5dcdbc/resource/cf46ff38-9c3a-4331-8f16-9ea571043041">
+    <ns6:checksum rdf:nodeID="N7a5d16a926414ff5ab36b2e63144fa10"/>
+    <ns1:rights rdf:resource="https://www.dcat-ap.de/def/licenses/cc-zero"/>
+    <ns4:plannedAvailability rdf:resource="https://www.dcat-ap.de/def/plannedAvailability/stable"/>
+    <ns1:license rdf:resource="https://www.dcat-ap.de/def/licenses/cc-zero"/>
+    <ns1:conformsTo rdf:resource="https://www.dcat-ap.de/def/dcatde/1.1/"/>
+    <ns1:language>http://publications.europa.eu/resource/authority/language/DEU</ns1:language>
+    <ns2:byteSize rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">26673.0</ns2:byteSize>
+    <ns1:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-02-14T14:31:03</ns1:issued>
+    <ns2:accessURL rdf:resource="https://geo.sv.rostock.de/download/opendata/drogerien/drogerien.kml"/>
+    <ns2:downloadURL rdf:resource="https://geo.sv.rostock.de/download/opendata/drogerien/drogerien.kml"/>
+    <ns1:title>Drogerien</ns1:title>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+    <ns2:mediaType rdf:resource="https://www.iana.org/assignments/media-types/application/vnd.google-earth.kml+xml"/>
+    <ns1:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-01-27T08:53:31</ns1:modified>
+    <ns7:status rdf:resource="http://purl.org/adms/status/Completed"/>
+    <ns1:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/KML"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7a00d870d1c04dd7a8e0fdca8085cfd4">
+    <ns6:checksumValue rdf:datatype="http://www.w3.org/2001/XMLSchema#hexBinary">b89fb27fb32e191929b93b888920dbe1f18aaed8f66ec9c65758cb3b160e042f</ns6:checksumValue>
+    <ns6:algorithm rdf:resource="https://www.dcat-ap.de/def/hashAlgorithms/sha/256"/>
+    <rdf:type rdf:resource="http://spdx.org/rdf/terms#Checksum"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N3477a58340114665848b9e177d117de3">
+    <ns3:hasEmail rdf:resource="mailto:geodienste@rostock.de"/>
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Organization"/>
+    <ns3:fn>Hanse- und Universitätsstadt Rostock – Kataster-, Vermessungs- und Liegenschaftsamt</ns3:fn>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N2966c45f1529499cae1b246d51af93a6">
+    <ns5:name>Hanse- und Universitätsstadt Rostock – Kataster-, Vermessungs- und Liegenschaftsamt</ns5:name>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+    <ns5:mbox>geodienste@rostock.de</ns5:mbox>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N7a5d16a926414ff5ab36b2e63144fa10">
+    <ns6:algorithm rdf:resource="https://www.dcat-ap.de/def/hashAlgorithms/sha/256"/>
+    <ns6:checksumValue rdf:datatype="http://www.w3.org/2001/XMLSchema#hexBinary">da4033f146d7058e65cea95001ac157c42701a905ac47e56a11e87ae27fabb59</ns6:checksumValue>
+    <rdf:type rdf:resource="http://spdx.org/rdf/terms#Checksum"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N8bd30a27c5f2456c83656aaa2d33711e">
+    <ns6:algorithm rdf:resource="https://www.dcat-ap.de/def/hashAlgorithms/sha/256"/>
+    <ns6:checksumValue rdf:datatype="http://www.w3.org/2001/XMLSchema#hexBinary">fbe16235d5fee3ed557947e755f8e897fa830269ffe7affbca0ee0614f77de88</ns6:checksumValue>
+    <rdf:type rdf:resource="http://spdx.org/rdf/terms#Checksum"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N71dc29fadb5f4de58770bd0e6d5df746">
+    <ns6:algorithm rdf:resource="https://www.dcat-ap.de/def/hashAlgorithms/sha/256"/>
+    <rdf:type rdf:resource="http://spdx.org/rdf/terms#Checksum"/>
+    <ns6:checksumValue rdf:datatype="http://www.w3.org/2001/XMLSchema#hexBinary">a87dec5f6d68ac094bd4e532cfa42e5a43567c886bd707688181393c1102910f</ns6:checksumValue>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://www.opendata-hro.de/organization/b952e781-ab4c-456a-8e7a-2845f7efaf83">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+    <ns5:name>Hanse- und Universitätsstadt Rostock</ns5:name>
+  </rdf:Description>
+</rdf:RDF>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+   xmlns:ns1="http://purl.org/dc/terms/"
+   xmlns:ns2="http://www.w3.org/ns/dcat#"
+   xmlns:ns3="http://www.w3.org/2006/vcard/ns#"
+   xmlns:ns4="http://dcat-ap.de/def/dcatde/1.0.1/"
+   xmlns:ns5="http://xmlns.com/foaf/0.1/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+>
+  <rdf:Description rdf:about="https://www.destatis.de/DE/Themen/Wirtschaft/Konjunkturindikatoren/Umsatz/kums311">
+    <ns2:contactPoint rdf:nodeID="Ne21dd6702ec44865a041976eb7ae406f"/>
+    <ns4:contributorID>http://dcat-ap.de/def/contributors/destatis</ns4:contributorID>
+    <ns2:keyword>Verarbeitendes Gewerbe</ns2:keyword>
+    <ns1:title>Volumenindex des Umsatzes, Verarbeitendes Gewerbe insgesamt</ns1:title>
+    <ns2:keyword>Index</ns2:keyword>
+    <ns2:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/ECON"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+    <ns1:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-01-06</ns1:modified>
+    <ns1:publisher rdf:resource="https://ckan.govdata.de/organization/statistisches-bundesamt"/>
+    <ns1:description>Tabellen und Diagramme mit Kalender- und Saisonbereinigung nach dem Berliner Verfahren (BV 4.1) sowie nach X13 JDemetra+</ns1:description>
+    <ns4:politicalGeocodingLevelURI rdf:resource="http://dcat-ap.de/def/politicalGeocoding/Level/federal"/>
+    <ns1:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-01-06</ns1:issued>
+    <ns2:distribution rdf:resource="https://www.destatis.de/DE/Themen/Wirtschaft/Konjunkturindikatoren/Umsatz/kums311#distribution"/>
+    <ns2:keyword>Auftrag</ns2:keyword>
+    <ns2:keyword>Umsatz</ns2:keyword>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://www.destatis.de/DE/Themen/Wirtschaft/Konjunkturindikatoren/Umsatz/kums311#distribution">
+    <ns1:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/HTML"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+    <ns1:license rdf:resource="http://dcat-ap.de/def/licenses/dl-by-de/2.0"/>
+    <ns1:description>Tabellen und Diagramme mit Kalender- und Saisonbereinigung nach dem Berliner Verfahren (BV 4.1) sowie nach X13 JDemetra+</ns1:description>
+    <ns1:language>http://publications.europa.eu/resource/authority/language/DEU</ns1:language>
+    <ns2:accessURL rdf:resource="https://www.destatis.de/DE/Themen/Wirtschaft/Konjunkturindikatoren/Umsatz/kums311.html"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Ne21dd6702ec44865a041976eb7ae406f">
+    <ns3:fn>Statistisches Bundesamt</ns3:fn>
+    <ns3:hasURL rdf:resource="https://www.destatis.de/kontakt"/>
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Organization"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://ckan.govdata.de/organization/statistisches-bundesamt">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+    <ns5:name>Statistisches Bundesamt</ns5:name>
+  </rdf:Description>
+</rdf:RDF>

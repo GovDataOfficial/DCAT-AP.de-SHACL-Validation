@@ -1,0 +1,597 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://dcat-ap.de/def/licenses"
+         xml:base="http://dcat-ap.de/def/licenses"
+         xmlns:dc="http://purl.org/dc/elements/1.1/"
+         xmlns:dcat="http://www.w3.org/ns/dcat#" 
+         xmlns:dct="http://purl.org/dc/terms/" 
+         xmlns:foaf="http://xmlns.com/foaf/0.1/" 
+         xmlns:owl="http://www.w3.org/2002/07/owl#" 
+         xmlns:org="http://www.w3.org/ns/org#" 
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
+         xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+         xmlns:skos-xl="http://www.w3.org/2008/05/skos-xl#" 
+         xmlns:void="http://rdfs.org/ns/void#" 
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+         xmlns:adms="http://www.w3.org/ns/adms#"
+         >
+  <owl:Ontology rdf:about="http://dcat-ap.de/def/licenses">
+    <owl:versionInfo>20200715</owl:versionInfo>
+    <owl:versionIRI rdf:resource="http://dcat-ap.de/def/licenses/20200715/"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Liste der Lizenzen, die im Feld dct:license einer DCAT-AP.de-konformen dcat:distribution für die Zulieferung an GovData erlaubt sind.</rdfs:comment>
+  </owl:Ontology>
+  <skos:ConceptScheme rdf:about="http://dcat-ap.de/def/licenses">
+    <rdfs:label xml:lang="de">Liste der Lizenzen</rdfs:label>
+    <skos:prefLabel xml:lang="de">Liste der Lizenzen</skos:prefLabel>
+    <dct:identifier>http://www.dcat-ap.de/def/licenses</dct:identifier>
+  </skos:ConceptScheme>
+
+  <skos:Concept rdf:about="http://dcat-ap.de/def/licenses/apache">
+    <dc:identifier>apache</dc:identifier>
+    <skos:topConceptOf rdf:resource="http://dcat-ap.de/def/licenses"/>
+    <skos:inScheme rdf:resource="http://dcat-ap.de/def/licenses"/>
+    <skos:prefLabel xml:lang="de">Freie Softwarelizenz der Apache Software Foundation</skos:prefLabel>
+    <skos-xl:prefLabel>
+      <skos-xl:Label>
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
+        <skos-xl:literalForm xml:lang="de">Freie Softwarelizenz der Apache Software Foundation</skos-xl:literalForm>
+        <rdfs:label xml:lang="de">Freie Softwarelizenz der Apache Software Foundation</rdfs:label>
+      </skos-xl:Label>
+    </skos-xl:prefLabel>
+    <skos:exactMatch rdf:resource="http://dcat-ap.de/def/licenses/apache"/>
+    <skos:altLabel xml:lang="de">apache</skos:altLabel>
+    <dct:references rdf:resource="http://www.apache.org/licenses"/>
+    <foaf:homepage rdf:resource="http://www.apache.org/licenses"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://dcat-ap.de/def/licenses/bsd">
+    <dc:identifier>bsd</dc:identifier>
+    <skos:topConceptOf rdf:resource="http://dcat-ap.de/def/licenses"/>
+    <skos:inScheme rdf:resource="http://dcat-ap.de/def/licenses"/>
+    <skos:prefLabel xml:lang="de">BSD Lizenz</skos:prefLabel>
+    <skos-xl:prefLabel>
+      <skos-xl:Label>
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
+        <skos-xl:literalForm xml:lang="de">BSD Lizenz</skos-xl:literalForm>
+        <rdfs:label xml:lang="de">BSD Lizenz</rdfs:label>
+      </skos-xl:Label>
+    </skos-xl:prefLabel>
+    <skos:exactMatch rdf:resource="http://dcat-ap.de/def/licenses/bsd"/>
+    <skos:altLabel xml:lang="de">bsdlicense</skos:altLabel>
+    <dct:references rdf:resource="http://www.opensource.org/licenses/bsd-license.php"/>
+    <foaf:homepage rdf:resource="http://www.opensource.org/licenses/bsd-license.php"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://dcat-ap.de/def/licenses/cc-by">
+    <dc:identifier>cc-by</dc:identifier>
+    <skos:topConceptOf rdf:resource="http://dcat-ap.de/def/licenses"/>
+    <skos:inScheme rdf:resource="http://dcat-ap.de/def/licenses"/>
+    <skos:prefLabel xml:lang="de">Creative Commons Namensnennung (CC-BY)</skos:prefLabel>
+    <skos-xl:prefLabel>
+      <skos-xl:Label>
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
+        <skos-xl:literalForm xml:lang="de">Creative Commons Namensnennung (CC-BY)</skos-xl:literalForm>
+        <rdfs:label xml:lang="de">Creative Commons Namensnennung (CC-BY)</rdfs:label>
+      </skos-xl:Label>
+    </skos-xl:prefLabel>
+    <skos:exactMatch rdf:resource="http://dcat-ap.de/def/licenses/cc-by"/>
+    <skos:altLabel xml:lang="de">cc-by</skos:altLabel>
+    <dct:references rdf:resource="http://www.opendefinition.org/licenses/cc-by"/>
+    <foaf:homepage rdf:resource="http://www.opendefinition.org/licenses/cc-by"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://dcat-ap.de/def/licenses/cc-by/4.0">
+    <dc:identifier>cc-by/4.0</dc:identifier>
+    <skos:topConceptOf rdf:resource="http://dcat-ap.de/def/licenses"/>
+    <skos:inScheme rdf:resource="http://dcat-ap.de/def/licenses"/>
+    <skos:prefLabel xml:lang="de">Creative Commons Namensnennung – 4.0 International (CC BY 4.0)</skos:prefLabel>
+    <skos-xl:prefLabel>
+      <skos-xl:Label>
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
+        <skos-xl:literalForm xml:lang="de">Creative Commons Namensnennung – 4.0 International (CC BY 4.0)</skos-xl:literalForm>
+        <rdfs:label xml:lang="de">Creative Commons Namensnennung – 4.0 International (CC BY 4.0)</rdfs:label>
+      </skos-xl:Label>
+    </skos-xl:prefLabel>
+    <skos:exactMatch rdf:resource="http://dcat-ap.de/def/licenses/cc-by/4.0"/>
+    <skos:altLabel xml:lang="de">cc-by/4.0</skos:altLabel>
+    <dct:references rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+    <foaf:homepage rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://dcat-ap.de/def/licenses/cc-by-de/3.0">
+    <dc:identifier>cc-by-de/3.0</dc:identifier>
+    <skos:topConceptOf rdf:resource="http://dcat-ap.de/def/licenses"/>
+    <skos:inScheme rdf:resource="http://dcat-ap.de/def/licenses"/>
+    <skos:prefLabel xml:lang="de">Creative Commons Namensnennung 3.0 Deutschland (CC BY 3.0 DE)</skos:prefLabel>
+    <skos-xl:prefLabel>
+      <skos-xl:Label>
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
+        <skos-xl:literalForm xml:lang="de">Creative Commons Namensnennung 3.0 Deutschland (CC BY 3.0 DE)</skos-xl:literalForm>
+        <rdfs:label xml:lang="de">Creative Commons Namensnennung 3.0 Deutschland (CC BY 3.0 DE)</rdfs:label>
+      </skos-xl:Label>
+    </skos-xl:prefLabel>
+    <skos:exactMatch rdf:resource="http://dcat-ap.de/def/licenses/cc-by-de/3.0"/>
+    <skos:altLabel xml:lang="de">cc-by-de/3.0</skos:altLabel>
+    <dct:references rdf:resource="https://creativecommons.org/licenses/by/3.0/de/"/>
+    <foaf:homepage rdf:resource="https://creativecommons.org/licenses/by/3.0/de/"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://dcat-ap.de/def/licenses/cc-by-nc">
+    <dc:identifier>cc-by-nc</dc:identifier>
+    <skos:topConceptOf rdf:resource="http://dcat-ap.de/def/licenses"/>
+    <skos:inScheme rdf:resource="http://dcat-ap.de/def/licenses"/>
+    <skos:prefLabel xml:lang="de">Creative Commons Namensnennung - Nicht kommerziell (CC BY-NC)</skos:prefLabel>
+    <skos-xl:prefLabel>
+      <skos-xl:Label>
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
+        <skos-xl:literalForm xml:lang="de">Creative Commons Namensnennung - Nicht kommerziell (CC BY-NC)</skos-xl:literalForm>
+        <rdfs:label xml:lang="de">Creative Commons Namensnennung - Nicht kommerziell (CC BY-NC)</rdfs:label>
+      </skos-xl:Label>
+    </skos-xl:prefLabel>
+    <skos:exactMatch rdf:resource="http://dcat-ap.de/def/licenses/cc-by-nc"/>
+    <skos:altLabel xml:lang="de">cc-by-nc</skos:altLabel>
+    <dct:references rdf:resource="http://creativecommons.org/licenses/by-nc/"/>
+    <foaf:homepage rdf:resource="http://creativecommons.org/licenses/by-nc/"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://dcat-ap.de/def/licenses/cc-by-nc-de/3.0">
+    <dc:identifier>cc-by-nc-de/3.0</dc:identifier>
+    <skos:topConceptOf rdf:resource="http://dcat-ap.de/def/licenses"/>
+    <skos:inScheme rdf:resource="http://dcat-ap.de/def/licenses"/>
+    <skos:prefLabel xml:lang="de">Creative Commons Namensnennung-Nicht kommerziell 3.0 Deutschland (CC BY-NC 3.0 DE)</skos:prefLabel>
+    <skos-xl:prefLabel>
+      <skos-xl:Label>
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
+        <skos-xl:literalForm xml:lang="de">Creative Commons Namensnennung-Nicht kommerziell 3.0 Deutschland (CC BY-NC 3.0 DE)</skos-xl:literalForm>
+        <rdfs:label xml:lang="de">Creative Commons Namensnennung-Nicht kommerziell 3.0 Deutschland (CC BY-NC 3.0 DE)</rdfs:label>
+      </skos-xl:Label>
+    </skos-xl:prefLabel>
+    <skos:exactMatch rdf:resource="http://dcat-ap.de/def/licenses/cc-by-nc-de/3.0"/>
+    <skos:altLabel xml:lang="de">cc-by-nc/3.0</skos:altLabel>
+    <dct:references rdf:resource="https://creativecommons.org/licenses/by-nc/3.0/de/"/>
+    <foaf:homepage rdf:resource="https://creativecommons.org/licenses/by-nc/3.0/de/"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://dcat-ap.de/def/licenses/cc-by-nc/4.0">
+    <dc:identifier>cc-by-nc/4.0</dc:identifier>
+    <skos:topConceptOf rdf:resource="http://dcat-ap.de/def/licenses"/>
+    <skos:inScheme rdf:resource="http://dcat-ap.de/def/licenses"/>
+    <skos:prefLabel xml:lang="de">Creative Commons Namensnennung - Nicht kommerziell 4.0 International (CC BY-NC 4.0)</skos:prefLabel>
+    <skos-xl:prefLabel>
+      <skos-xl:Label>
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
+        <skos-xl:literalForm xml:lang="de">Creative Commons Namensnennung - Nicht kommerziell 4.0 International (CC BY-NC 4.0)</skos-xl:literalForm>
+        <rdfs:label xml:lang="de">Creative Commons Namensnennung - Nicht kommerziell 4.0 International (CC BY-NC 4.0)</rdfs:label>
+      </skos-xl:Label>
+    </skos-xl:prefLabel>
+    <skos:exactMatch rdf:resource="http://dcat-ap.de/def/licenses/cc-by-nc/4.0"/>
+    <skos:altLabel xml:lang="de">cc-by-nc/4.0</skos:altLabel>
+    <dct:references rdf:resource="http://creativecommons.org/licenses/by-nc/4.0/"/>
+    <foaf:homepage rdf:resource="http://creativecommons.org/licenses/by-nc/4.0/"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://dcat-ap.de/def/licenses/cc-by-nd">
+    <dc:identifier>cc-by-nd</dc:identifier>
+    <skos:topConceptOf rdf:resource="http://dcat-ap.de/def/licenses"/>
+    <skos:inScheme rdf:resource="http://dcat-ap.de/def/licenses"/>
+    <skos:prefLabel xml:lang="de">Creative Commons Namensnennung - Keine Bearbeitung (CC BY-ND)</skos:prefLabel>
+    <skos-xl:prefLabel>
+      <skos-xl:Label>
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
+        <skos-xl:literalForm xml:lang="de">Creative Commons Namensnennung - Keine Bearbeitung (CC BY-ND)</skos-xl:literalForm>
+        <rdfs:label xml:lang="de">Creative Commons Namensnennung - Keine Bearbeitung (CC BY-ND)</rdfs:label>
+      </skos-xl:Label>
+    </skos-xl:prefLabel>
+    <skos:exactMatch rdf:resource="http://dcat-ap.de/def/licenses/cc-by-nd"/>
+    <skos:altLabel xml:lang="de">cc-by-nd</skos:altLabel>
+    <dct:references rdf:resource="http://creativecommons.org/licenses/by-nd/3.0/"/>
+    <foaf:homepage rdf:resource="http://creativecommons.org/licenses/by-nd/3.0/"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://dcat-ap.de/def/licenses/cc-by-nd/3.0">
+    <dc:identifier>cc-by-nd/3.0</dc:identifier>
+    <skos:topConceptOf rdf:resource="http://dcat-ap.de/def/licenses"/>
+    <skos:inScheme rdf:resource="http://dcat-ap.de/def/licenses"/>
+    <skos:prefLabel xml:lang="de">Creative Commons Namensnennung -- Keine Bearbeitung 3.0 Unported (CC BY-ND 3.0)</skos:prefLabel>
+    <skos-xl:prefLabel>
+      <skos-xl:Label>
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
+        <skos-xl:literalForm xml:lang="de">Creative Commons Namensnennung -- Keine Bearbeitung 3.0 Unported (CC BY-ND 3.0)</skos-xl:literalForm>
+        <rdfs:label xml:lang="de">Creative Commons Namensnennung -- Keine Bearbeitung 3.0 Unported (CC BY-ND 3.0)</rdfs:label>
+      </skos-xl:Label>
+    </skos-xl:prefLabel>
+    <skos:exactMatch rdf:resource="http://dcat-ap.de/def/licenses/cc-by-nd/3.0"/>
+    <skos:altLabel xml:lang="de">cc-by-nd/3.0</skos:altLabel>
+    <dct:references rdf:resource="http://creativecommons.org/licenses/by-nd/3.0/"/>
+    <foaf:homepage rdf:resource="http://creativecommons.org/licenses/by-nd/3.0/"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://dcat-ap.de/def/licenses/cc-by-nd/4.0">
+    <dc:identifier>cc-by-nd/4.0</dc:identifier>
+    <skos:topConceptOf rdf:resource="http://dcat-ap.de/def/licenses"/>
+    <skos:inScheme rdf:resource="http://dcat-ap.de/def/licenses"/>
+    <skos:prefLabel xml:lang="de">Creative Commons Namensnennung - - Keine Bearbeitung 4.0 International (CC BY-ND 4.0)</skos:prefLabel>
+    <skos-xl:prefLabel>
+      <skos-xl:Label>
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
+        <skos-xl:literalForm xml:lang="de">Creative Commons Namensnennung - - Keine Bearbeitung 4.0 International (CC BY-ND 4.0)</skos-xl:literalForm>
+        <rdfs:label xml:lang="de">Creative Commons Namensnennung - - Keine Bearbeitung 4.0 International (CC BY-ND 4.0)</rdfs:label>
+      </skos-xl:Label>
+    </skos-xl:prefLabel>
+    <skos:exactMatch rdf:resource="http://dcat-ap.de/def/licenses/cc-by-nd/4.0"/>
+    <skos:altLabel xml:lang="de">cc-by-nd/4.0</skos:altLabel>
+    <dct:references rdf:resource="https://creativecommons.org/licenses/by-nd/4.0/"/>
+    <foaf:homepage rdf:resource="https://creativecommons.org/licenses/by-nd/4.0/"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://dcat-ap.de/def/licenses/cc-by-sa">
+    <dc:identifier>cc-by-sa</dc:identifier>
+    <skos:topConceptOf rdf:resource="http://dcat-ap.de/def/licenses"/>
+    <skos:inScheme rdf:resource="http://dcat-ap.de/def/licenses"/>
+    <skos:prefLabel xml:lang="de">Creative Commons Namensnennung - Weitergabe unter gleichen Bedingungen (CC-BY-SA)</skos:prefLabel>
+    <skos-xl:prefLabel>
+      <skos-xl:Label>
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
+        <skos-xl:literalForm xml:lang="de">Creative Commons Namensnennung - Weitergabe unter gleichen Bedingungen (CC-BY-SA)</skos-xl:literalForm>
+        <rdfs:label xml:lang="de">Creative Commons Namensnennung - Weitergabe unter gleichen Bedingungen (CC-BY-SA)</rdfs:label>
+      </skos-xl:Label>
+    </skos-xl:prefLabel>
+    <skos:exactMatch rdf:resource="http://dcat-ap.de/def/licenses/cc-by-sa"/>
+    <skos:altLabel xml:lang="de">cc-by-sa</skos:altLabel>
+    <dct:references rdf:resource="http://www.opendefinition.org/licenses/cc-by-sa"/>
+    <foaf:homepage rdf:resource="http://www.opendefinition.org/licenses/cc-by-sa"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://dcat-ap.de/def/licenses/cc-by-sa-de/3.0">
+    <dc:identifier>cc-by-sa-de/3.0</dc:identifier>
+    <skos:topConceptOf rdf:resource="http://dcat-ap.de/def/licenses"/>
+    <skos:inScheme rdf:resource="http://dcat-ap.de/def/licenses"/>
+    <skos:prefLabel xml:lang="de">Creative Commons Namensnennung - Weitergabe unter gleichen Bedingungen 3.0 Deutschland (CC BY-SA 3.0 DE) </skos:prefLabel>
+    <skos-xl:prefLabel>
+      <skos-xl:Label>
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
+        <skos-xl:literalForm xml:lang="de">Creative Commons Namensnennung - Weitergabe unter gleichen Bedingungen 3.0 Deutschland (CC BY-SA 3.0 DE) </skos-xl:literalForm>
+        <rdfs:label xml:lang="de">Creative Commons Namensnennung - Weitergabe unter gleichen Bedingungen 3.0 Deutschland (CC BY-SA 3.0 DE) </rdfs:label>
+      </skos-xl:Label>
+    </skos-xl:prefLabel>
+    <skos:exactMatch rdf:resource="http://dcat-ap.de/def/licenses/cc-by-sa-de/3.0"/>
+    <skos:altLabel xml:lang="de">cc-by-sa-de/3.0</skos:altLabel>
+    <dct:references rdf:resource="https://creativecommons.org/licenses/by-sa/3.0/de/"/>
+    <foaf:homepage rdf:resource="https://creativecommons.org/licenses/by-sa/3.0/de/"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://dcat-ap.de/def/licenses/cc-by-sa/4.0">
+    <dc:identifier>cc-by-sa/4.0</dc:identifier>
+    <skos:topConceptOf rdf:resource="http://dcat-ap.de/def/licenses"/>
+    <skos:inScheme rdf:resource="http://dcat-ap.de/def/licenses"/>
+    <skos:prefLabel xml:lang="de">Creative Commons Namensnennung - Weitergabe unter gleichen Bedingungen 4.0 International (CC-BY-SA 4.0)</skos:prefLabel>
+    <skos-xl:prefLabel>
+      <skos-xl:Label>
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
+        <skos-xl:literalForm xml:lang="de">Creative Commons Namensnennung - Weitergabe unter gleichen Bedingungen 4.0 International (CC-BY-SA 4.0)</skos-xl:literalForm>
+        <rdfs:label xml:lang="de">Creative Commons Namensnennung - Weitergabe unter gleichen Bedingungen 4.0 International (CC-BY-SA 4.0)</rdfs:label>
+      </skos-xl:Label>
+    </skos-xl:prefLabel>
+    <skos:exactMatch rdf:resource="http://dcat-ap.de/def/licenses/cc-by-sa/4.0"/>
+    <skos:altLabel xml:lang="de">cc-by-sa/4.0</skos:altLabel>
+    <dct:references rdf:resource="http://creativecommons.org/licenses/by-sa/4.0/"/>
+    <foaf:homepage rdf:resource="http://creativecommons.org/licenses/by-sa/4.0/"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://dcat-ap.de/def/licenses/ccpdm/1.0">
+    <dc:identifier>ccpdm/1.0</dc:identifier>
+    <skos:topConceptOf rdf:resource="http://dcat-ap.de/def/licenses"/>
+    <skos:inScheme rdf:resource="http://dcat-ap.de/def/licenses"/>
+    <skos:prefLabel xml:lang="de">Public Domain Mark 1.0 (PDM)</skos:prefLabel>
+    <skos-xl:prefLabel>
+      <skos-xl:Label>
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
+        <skos-xl:literalForm xml:lang="de">Public Domain Mark 1.0 (PDM)</skos-xl:literalForm>
+        <rdfs:label xml:lang="de">Public Domain Mark 1.0 (PDM)</rdfs:label>
+      </skos-xl:Label>
+    </skos-xl:prefLabel>
+    <skos:exactMatch rdf:resource="http://dcat-ap.de/def/licenses/ccpdm/1.0"/>
+    <skos:altLabel xml:lang="de">ccpdm/1.0</skos:altLabel>
+    <dct:references rdf:resource="http://creativecommons.org/publicdomain/mark/1.0/"/>
+    <foaf:homepage rdf:resource="http://creativecommons.org/publicdomain/mark/1.0/"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://dcat-ap.de/def/licenses/cc-zero">
+    <dc:identifier>cc-zero</dc:identifier>
+    <skos:topConceptOf rdf:resource="http://dcat-ap.de/def/licenses"/>
+    <skos:inScheme rdf:resource="http://dcat-ap.de/def/licenses"/>
+    <skos:prefLabel xml:lang="de">Creative Commons CC Zero License (cc-zero)</skos:prefLabel>
+    <skos-xl:prefLabel>
+      <skos-xl:Label>
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
+        <skos-xl:literalForm xml:lang="de">Creative Commons CC Zero License (cc-zero)</skos-xl:literalForm>
+        <rdfs:label xml:lang="de">Creative Commons CC Zero License (cc-zero)</rdfs:label>
+      </skos-xl:Label>
+    </skos-xl:prefLabel>
+    <skos:exactMatch rdf:resource="http://dcat-ap.de/def/licenses/cc-zero"/>
+    <skos:altLabel xml:lang="de">cc-zero</skos:altLabel>
+    <dct:references rdf:resource="http://www.opendefinition.org/licenses/cc-zero"/>
+    <foaf:homepage rdf:resource="http://www.opendefinition.org/licenses/cc-zero"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://dcat-ap.de/def/licenses/dl-by-de/1.0">
+    <dc:identifier>dl-by-de/1.0</dc:identifier>
+    <skos:topConceptOf rdf:resource="http://dcat-ap.de/def/licenses"/>
+    <skos:inScheme rdf:resource="http://dcat-ap.de/def/licenses"/>
+    <skos:prefLabel xml:lang="de">Datenlizenz Deutschland Namensnennung 1.0</skos:prefLabel>
+    <skos-xl:prefLabel>
+      <skos-xl:Label>
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
+        <skos-xl:literalForm xml:lang="de">Datenlizenz Deutschland Namensnennung 1.0</skos-xl:literalForm>
+        <rdfs:label xml:lang="de">Datenlizenz Deutschland Namensnennung 1.0</rdfs:label>
+      </skos-xl:Label>
+    </skos-xl:prefLabel>
+    <skos:exactMatch rdf:resource="http://dcat-ap.de/def/licenses/dl-by-de/1.0"/>
+    <skos:altLabel xml:lang="de">dl-by-de/1.0</skos:altLabel>
+    <dct:references rdf:resource="https://www.govdata.de/dl-de/by-1-0"/>
+    <foaf:homepage rdf:resource="https://www.govdata.de/dl-de/by-1-0"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://dcat-ap.de/def/licenses/dl-by-de/2.0">
+    <dc:identifier>dl-by-de/2.0</dc:identifier>
+    <skos:topConceptOf rdf:resource="http://dcat-ap.de/def/licenses"/>
+    <skos:inScheme rdf:resource="http://dcat-ap.de/def/licenses"/>
+    <skos:prefLabel xml:lang="de">Datenlizenz Deutschland Namensnennung 2.0</skos:prefLabel>
+    <skos-xl:prefLabel>
+      <skos-xl:Label>
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
+        <skos-xl:literalForm xml:lang="de">Datenlizenz Deutschland Namensnennung 2.0</skos-xl:literalForm>
+        <rdfs:label xml:lang="de">Datenlizenz Deutschland Namensnennung 2.0</rdfs:label>
+      </skos-xl:Label>
+    </skos-xl:prefLabel>
+    <skos:exactMatch rdf:resource="http://dcat-ap.de/def/licenses/dl-by-de/2.0"/>
+    <skos:altLabel xml:lang="de">dl-by-de/2.0</skos:altLabel>
+    <dct:references rdf:resource="https://www.govdata.de/dl-de/by-2-0"/>
+    <foaf:homepage rdf:resource="https://www.govdata.de/dl-de/by-2-0"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://dcat-ap.de/def/licenses/dl-by-nc-de/1.0">
+    <dc:identifier>dl-by-nc-de/1.0</dc:identifier>
+    <skos:topConceptOf rdf:resource="http://dcat-ap.de/def/licenses"/>
+    <skos:inScheme rdf:resource="http://dcat-ap.de/def/licenses"/>
+    <skos:prefLabel xml:lang="de">Datenlizenz Deutschland Namensnennung nicht-kommerziell 1.0</skos:prefLabel>
+    <skos-xl:prefLabel>
+      <skos-xl:Label>
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
+        <skos-xl:literalForm xml:lang="de">Datenlizenz Deutschland Namensnennung nicht-kommerziell 1.0</skos-xl:literalForm>
+        <rdfs:label xml:lang="de">Datenlizenz Deutschland Namensnennung nicht-kommerziell 1.0</rdfs:label>
+      </skos-xl:Label>
+    </skos-xl:prefLabel>
+    <skos:exactMatch rdf:resource="http://dcat-ap.de/def/licenses/dl-by-nc-de/1.0"/>
+    <skos:altLabel xml:lang="de">dl-by-nc-de/1.0</skos:altLabel>
+    <dct:references rdf:resource="https://www.govdata.de/dl-de/by-nc-1-0"/>
+    <foaf:homepage rdf:resource="https://www.govdata.de/dl-de/by-nc-1-0"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://dcat-ap.de/def/licenses/dl-zero-de/2.0">
+    <dc:identifier>dl-zero-de/2.0</dc:identifier>
+    <skos:topConceptOf rdf:resource="http://dcat-ap.de/def/licenses"/>
+    <skos:inScheme rdf:resource="http://dcat-ap.de/def/licenses"/>
+    <skos:prefLabel xml:lang="de">Datenlizenz Deutschland – Zero – Version 2.0</skos:prefLabel>
+    <skos-xl:prefLabel>
+      <skos-xl:Label>
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
+        <skos-xl:literalForm xml:lang="de">Datenlizenz Deutschland – Zero – Version 2.0</skos-xl:literalForm>
+        <rdfs:label xml:lang="de">Datenlizenz Deutschland – Zero – Version 2.0</rdfs:label>
+      </skos-xl:Label>
+    </skos-xl:prefLabel>
+    <skos:exactMatch rdf:resource="http://dcat-ap.de/def/licenses/dl-zero-de/2.0"/>
+    <skos:altLabel xml:lang="de">dl-zero-de/2.0</skos:altLabel>
+    <dct:references rdf:resource="https://www.govdata.de/dl-de/zero-2-0"/>
+    <foaf:homepage rdf:resource="https://www.govdata.de/dl-de/zero-2-0"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://dcat-ap.de/def/licenses/geonutz/20130319">
+    <dc:identifier>geonutz/20130319</dc:identifier>
+    <skos:topConceptOf rdf:resource="http://dcat-ap.de/def/licenses"/>
+    <skos:inScheme rdf:resource="http://dcat-ap.de/def/licenses"/>
+    <skos:prefLabel xml:lang="de">Nutzungsbestimmungen für die Bereitstellung von Geodaten des Bundes</skos:prefLabel>
+    <skos-xl:prefLabel>
+      <skos-xl:Label>
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
+        <skos-xl:literalForm xml:lang="de">Nutzungsbestimmungen für die Bereitstellung von Geodaten des Bundes</skos-xl:literalForm>
+        <rdfs:label xml:lang="de">Nutzungsbestimmungen für die Bereitstellung von Geodaten des Bundes</rdfs:label>
+      </skos-xl:Label>
+    </skos-xl:prefLabel>
+    <skos:exactMatch rdf:resource="http://dcat-ap.de/def/licenses/geonutz/20130319"/>
+    <skos:altLabel xml:lang="de">geoNutz/20130319</skos:altLabel>
+    <dct:references rdf:resource="https://sg.geodatenzentrum.de/web_public/gdz/lizenz/geonutzv.pdf"/>
+    <foaf:homepage rdf:resource="https://sg.geodatenzentrum.de/web_public/gdz/lizenz/geonutzv.pdf"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://dcat-ap.de/def/licenses/geoNutz/20131001">
+    <dc:identifier>geoNutz/20131001</dc:identifier>
+    <skos:topConceptOf rdf:resource="http://dcat-ap.de/def/licenses"/>
+    <skos:inScheme rdf:resource="http://dcat-ap.de/def/licenses"/>
+    <skos:prefLabel xml:lang="de">Nutzungsbestimmungen für die Bereitstellung von Geodaten des Landes Berlin</skos:prefLabel>
+    <skos-xl:prefLabel>
+      <skos-xl:Label>
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
+        <skos-xl:literalForm xml:lang="de">Nutzungsbestimmungen für die Bereitstellung von Geodaten des Landes Berlin</skos-xl:literalForm>
+        <rdfs:label xml:lang="de">Nutzungsbestimmungen für die Bereitstellung von Geodaten des Landes Berlin</rdfs:label>
+      </skos-xl:Label>
+    </skos-xl:prefLabel>
+    <skos:exactMatch rdf:resource="http://dcat-ap.de/def/licenses/geoNutz/20131001"/>
+    <skos:altLabel xml:lang="de">geoNutz/20131001</skos:altLabel>
+    <dct:references rdf:resource="http://www.stadtentwicklung.berlin.de/geoinformation/download/nutzIII.pdf"/>
+    <foaf:homepage rdf:resource="http://www.stadtentwicklung.berlin.de/geoinformation/download/nutzIII.pdf"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://dcat-ap.de/def/licenses/gfdl">
+    <dc:identifier>gfdl</dc:identifier>
+    <skos:topConceptOf rdf:resource="http://dcat-ap.de/def/licenses"/>
+    <skos:inScheme rdf:resource="http://dcat-ap.de/def/licenses"/>
+    <skos:prefLabel xml:lang="de">GNU Free Documentation License (GFDL)</skos:prefLabel>
+    <skos-xl:prefLabel>
+      <skos-xl:Label>
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
+        <skos-xl:literalForm xml:lang="de">GNU Free Documentation License (GFDL)</skos-xl:literalForm>
+        <rdfs:label xml:lang="de">GNU Free Documentation License (GFDL)</rdfs:label>
+      </skos-xl:Label>
+    </skos-xl:prefLabel>
+    <skos:exactMatch rdf:resource="http://dcat-ap.de/def/licenses/gfdl"/>
+    <skos:altLabel xml:lang="de">gfdl</skos:altLabel>
+    <dct:references rdf:resource="http://www.opendefinition.org/licenses/gfdl"/>
+    <foaf:homepage rdf:resource="http://www.opendefinition.org/licenses/gfdl"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://dcat-ap.de/def/licenses/gpl/3.0">
+    <dc:identifier>gpl/3.0</dc:identifier>
+    <skos:topConceptOf rdf:resource="http://dcat-ap.de/def/licenses"/>
+    <skos:inScheme rdf:resource="http://dcat-ap.de/def/licenses"/>
+    <skos:prefLabel xml:lang="de">GNU General Public License version 3.0 (GPLv3)</skos:prefLabel>
+    <skos-xl:prefLabel>
+      <skos-xl:Label>
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
+        <skos-xl:literalForm xml:lang="de">GNU General Public License version 3.0 (GPLv3)</skos-xl:literalForm>
+        <rdfs:label xml:lang="de">GNU General Public License version 3.0 (GPLv3)</rdfs:label>
+      </skos-xl:Label>
+    </skos-xl:prefLabel>
+    <skos:exactMatch rdf:resource="http://dcat-ap.de/def/licenses/gpl/3.0"/>
+    <skos:altLabel xml:lang="de">gpl/3.0</skos:altLabel>
+    <dct:references rdf:resource="http://www.opensource.org/licenses/gpl-3.0.html"/>
+    <foaf:homepage rdf:resource="http://www.opensource.org/licenses/gpl-3.0.html"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://dcat-ap.de/def/licenses/mozilla">
+    <dc:identifier>mozilla</dc:identifier>
+    <skos:topConceptOf rdf:resource="http://dcat-ap.de/def/licenses"/>
+    <skos:inScheme rdf:resource="http://dcat-ap.de/def/licenses"/>
+    <skos:prefLabel xml:lang="de">Mozilla Public License 2.0 (MPL)</skos:prefLabel>
+    <skos-xl:prefLabel>
+      <skos-xl:Label>
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
+        <skos-xl:literalForm xml:lang="de">Mozilla Public License 2.0 (MPL)</skos-xl:literalForm>
+        <rdfs:label xml:lang="de">Mozilla Public License 2.0 (MPL)</rdfs:label>
+      </skos-xl:Label>
+    </skos-xl:prefLabel>
+    <skos:exactMatch rdf:resource="http://dcat-ap.de/def/licenses/mozilla"/>
+    <skos:altLabel xml:lang="de">mozilla</skos:altLabel>
+    <dct:references rdf:resource="http://www.mozilla.org/MPL"/>
+    <foaf:homepage rdf:resource="http://www.mozilla.org/MPL"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://dcat-ap.de/def/licenses/odbl">
+    <dc:identifier>odbl</dc:identifier>
+    <skos:topConceptOf rdf:resource="http://dcat-ap.de/def/licenses"/>
+    <skos:inScheme rdf:resource="http://dcat-ap.de/def/licenses"/>
+    <skos:prefLabel xml:lang="de">Open Data Commons Open Database License (ODbL)</skos:prefLabel>
+    <skos-xl:prefLabel>
+      <skos-xl:Label>
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
+        <skos-xl:literalForm xml:lang="de">Open Data Commons Open Database License (ODbL)</skos-xl:literalForm>
+        <rdfs:label xml:lang="de">Open Data Commons Open Database License (ODbL)</rdfs:label>
+      </skos-xl:Label>
+    </skos-xl:prefLabel>
+    <skos:exactMatch rdf:resource="http://dcat-ap.de/def/licenses/odbl"/>
+    <skos:altLabel xml:lang="de">odbl</skos:altLabel>
+    <dct:references rdf:resource="http://www.opendefinition.org/licenses/odc-odbl"/>
+    <foaf:homepage rdf:resource="http://www.opendefinition.org/licenses/odc-odbl"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://dcat-ap.de/def/licenses/odby">
+    <dc:identifier>odby</dc:identifier>
+    <skos:topConceptOf rdf:resource="http://dcat-ap.de/def/licenses"/>
+    <skos:inScheme rdf:resource="http://dcat-ap.de/def/licenses"/>
+    <skos:prefLabel xml:lang="de">Open Data Commons Attribution License (ODC-BY 1.0)</skos:prefLabel>
+    <skos-xl:prefLabel>
+      <skos-xl:Label>
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
+        <skos-xl:literalForm xml:lang="de">Open Data Commons Attribution License (ODC-BY 1.0)</skos-xl:literalForm>
+        <rdfs:label xml:lang="de">Open Data Commons Attribution License (ODC-BY 1.0)</rdfs:label>
+      </skos-xl:Label>
+    </skos-xl:prefLabel>
+    <skos:exactMatch rdf:resource="http://dcat-ap.de/def/licenses/odby"/>
+    <skos:altLabel xml:lang="de">odby</skos:altLabel>
+    <dct:references rdf:resource="http://www.opendefinition.org/licenses/odc-by"/>
+    <foaf:homepage rdf:resource="http://www.opendefinition.org/licenses/odc-by"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://dcat-ap.de/def/licenses/odcpddl">
+    <dc:identifier>odcpddl</dc:identifier>
+    <skos:topConceptOf rdf:resource="http://dcat-ap.de/def/licenses"/>
+    <skos:inScheme rdf:resource="http://dcat-ap.de/def/licenses"/>
+    <skos:prefLabel xml:lang="de">Open Data Commons Public Domain Dedication and Licence (ODC PDDL)</skos:prefLabel>
+    <skos-xl:prefLabel>
+      <skos-xl:Label>
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
+        <skos-xl:literalForm xml:lang="de">Open Data Commons Public Domain Dedication and Licence (ODC PDDL)</skos-xl:literalForm>
+        <rdfs:label xml:lang="de">Open Data Commons Public Domain Dedication and Licence (ODC PDDL)</rdfs:label>
+      </skos-xl:Label>
+    </skos-xl:prefLabel>
+    <skos:exactMatch rdf:resource="http://dcat-ap.de/def/licenses/odcpddl"/>
+    <skos:altLabel xml:lang="de">odcpddl</skos:altLabel>
+    <dct:references rdf:resource="http://www.opendefinition.org/licenses/odc-pddl"/>
+    <foaf:homepage rdf:resource="http://www.opendefinition.org/licenses/odc-pddl"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://dcat-ap.de/def/licenses/officialWork">
+    <dc:identifier>officialWork</dc:identifier>
+    <skos:topConceptOf rdf:resource="http://dcat-ap.de/def/licenses"/>
+    <skos:inScheme rdf:resource="http://dcat-ap.de/def/licenses"/>
+    <skos:prefLabel xml:lang="de">Amtliches Werk, lizenzfrei nach §5 Abs. 1 UrhG</skos:prefLabel>
+    <skos-xl:prefLabel>
+      <skos-xl:Label>
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
+        <skos-xl:literalForm xml:lang="de">Amtliches Werk, lizenzfrei nach §5 Abs. 1 UrhG</skos-xl:literalForm>
+        <rdfs:label xml:lang="de">Amtliches Werk, lizenzfrei nach §5 Abs. 1 UrhG</rdfs:label>
+      </skos-xl:Label>
+    </skos-xl:prefLabel>
+    <skos:exactMatch rdf:resource="http://dcat-ap.de/def/licenses/officialWork"/>
+    <skos:altLabel xml:lang="de">officialWork</skos:altLabel>
+    <dct:references rdf:resource="http://www.gesetze-im-internet.de/urhg/__5.html"/>
+    <foaf:homepage rdf:resource="http://www.gesetze-im-internet.de/urhg/__5.html"/>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://dcat-ap.de/def/licenses/other-closed">
+    <dc:identifier>other-closed</dc:identifier>
+    <skos:topConceptOf rdf:resource="http://dcat-ap.de/def/licenses"/>
+    <skos:inScheme rdf:resource="http://dcat-ap.de/def/licenses"/>
+    <skos:prefLabel xml:lang="de">Andere geschlossene Lizenz</skos:prefLabel>
+    <skos-xl:prefLabel>
+      <skos-xl:Label>
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
+        <skos-xl:literalForm xml:lang="de">Andere geschlossene Lizenz</skos-xl:literalForm>
+        <rdfs:label xml:lang="de">Andere geschlossene Lizenz</rdfs:label>
+      </skos-xl:Label>
+    </skos-xl:prefLabel>
+    <skos:exactMatch rdf:resource="http://dcat-ap.de/def/licenses/other-closed"/>
+    <skos:altLabel xml:lang="de">other-closed</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://dcat-ap.de/def/licenses/other-commercial">
+    <dc:identifier>other-commercial</dc:identifier>
+    <skos:topConceptOf rdf:resource="http://dcat-ap.de/def/licenses"/>
+    <skos:inScheme rdf:resource="http://dcat-ap.de/def/licenses"/>
+    <skos:prefLabel xml:lang="de">Andere kommerzielle Lizenz</skos:prefLabel>
+    <skos-xl:prefLabel>
+      <skos-xl:Label>
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
+        <skos-xl:literalForm xml:lang="de">Andere kommerzielle Lizenz</skos-xl:literalForm>
+        <rdfs:label xml:lang="de">Andere kommerzielle Lizenz</rdfs:label>
+      </skos-xl:Label>
+    </skos-xl:prefLabel>
+    <skos:exactMatch rdf:resource="http://dcat-ap.de/def/licenses/other-commercial"/>
+    <skos:altLabel xml:lang="de">other-commercial</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://dcat-ap.de/def/licenses/other-freeware">
+    <dc:identifier>other-freeware</dc:identifier>
+    <skos:topConceptOf rdf:resource="http://dcat-ap.de/def/licenses"/>
+    <skos:inScheme rdf:resource="http://dcat-ap.de/def/licenses"/>
+    <skos:prefLabel xml:lang="de">Andere Freeware Lizenz</skos:prefLabel>
+    <skos-xl:prefLabel>
+      <skos-xl:Label>
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
+        <skos-xl:literalForm xml:lang="de">Andere Freeware Lizenz</skos-xl:literalForm>
+        <rdfs:label xml:lang="de">Andere Freeware Lizenz</rdfs:label>
+      </skos-xl:Label>
+    </skos-xl:prefLabel>
+    <skos:exactMatch rdf:resource="http://dcat-ap.de/def/licenses/other-freeware"/>
+    <skos:altLabel xml:lang="de">other-freeware</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://dcat-ap.de/def/licenses/other-open">
+    <dc:identifier>other-open</dc:identifier>
+    <skos:topConceptOf rdf:resource="http://dcat-ap.de/def/licenses"/>
+    <skos:inScheme rdf:resource="http://dcat-ap.de/def/licenses"/>
+    <skos:prefLabel xml:lang="de">Andere offene Lizenz</skos:prefLabel>
+    <skos-xl:prefLabel>
+      <skos-xl:Label>
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
+        <skos-xl:literalForm xml:lang="de">Andere offene Lizenz</skos-xl:literalForm>
+        <rdfs:label xml:lang="de">Andere offene Lizenz</rdfs:label>
+      </skos-xl:Label>
+    </skos-xl:prefLabel>
+    <skos:exactMatch rdf:resource="http://dcat-ap.de/def/licenses/other-open"/>
+    <skos:altLabel xml:lang="de">other-open</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://dcat-ap.de/def/licenses/other-opensource">
+    <dc:identifier>other-opensource</dc:identifier>
+    <skos:topConceptOf rdf:resource="http://dcat-ap.de/def/licenses"/>
+    <skos:inScheme rdf:resource="http://dcat-ap.de/def/licenses"/>
+    <skos:prefLabel xml:lang="de">Andere Open Source Lizenz</skos:prefLabel>
+    <skos-xl:prefLabel>
+      <skos-xl:Label>
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
+        <skos-xl:literalForm xml:lang="de">Andere Open Source Lizenz</skos-xl:literalForm>
+        <rdfs:label xml:lang="de">Andere Open Source Lizenz</rdfs:label>
+      </skos-xl:Label>
+    </skos-xl:prefLabel>
+    <skos:exactMatch rdf:resource="http://dcat-ap.de/def/licenses/other-opensource"/>
+    <skos:altLabel xml:lang="de">other-opensource</skos:altLabel>
+  </skos:Concept>
+</rdf:RDF>
