@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+   xmlns:ns1="http://www.w3.org/ns/dcat#"
+   xmlns:ns2="http://purl.org/dc/terms/"
+   xmlns:ns3="http://www.w3.org/2006/vcard/ns#"
+   xmlns:ns4="http://dcat-ap.de/def/dcatde/1.0/"
+   xmlns:ns5="http://www.w3.org/ns/locn#"
+   xmlns:ns6="http://xmlns.com/foaf/0.1/"
+   xmlns:ns7="http://schema.org/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+>
+  <rdf:Description rdf:about="https://www.transparenz.bremen.de/de/datensatz/bremen65.c.41494.de">
+    <ns2:accrualPeriodicity rdf:resource="http://publications.europa.eu/resource/authority/frequency/ANNUAL"/>
+    <ns2:language rdf:resource="http://publications.europa.eu/resource/authority/language/GER"/>
+    <ns2:title>Die Sozialhilfe im Land Bremen Teil II</ns2:title>
+    <ns1:distribution rdf:resource="https://www.transparenz.bremen.de/de/datensatz/bremen65.c.41494.de#distribution_146367"/>
+    <ns1:contactPoint rdf:nodeID="Nc6b9e31f75be400ea025c7fc2111d10e"/>
+    <ns2:issued>2020-03-25</ns2:issued>
+    <ns2:publisher rdf:resource="https://www.bremen.de"/>
+    <ns1:keyword>Wirtschaft</ns1:keyword>
+    <ns2:temporal rdf:nodeID="N6519b6ced55849e4ac2193503717d79f"/>
+    <ns1:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/ECON"/>
+    <ns1:keyword>SGB</ns1:keyword>
+    <ns4:maintainer rdf:nodeID="N399d7bc9ef8d4e5fa90c44f2ae92c68e"/>
+    <ns2:description>&lt;p&gt;Statistischer Bericht&lt;/p&gt;&lt;p&gt;Der Bericht enthält Tabellen und Grafiken über die Empfänger nach dem 3. bis 9. Kapitel des Zwölften Buches Sozialgesetzbuch (SGB XII).Die Angaben liegen für das Land Bremen und die Städte Bremen und Bremerhaven vor. Der Bericht wird jährlich aktualisiert. Er ist als PDF-Datei verfügbar.Herausgegeben wird der Bericht vom Statistischen Landesamt Bremen. &lt;/p&gt;</ns2:description>
+    <ns2:spatial rdf:nodeID="Nceeec36b02cd404c890d4529c599f6e2"/>
+    <ns1:keyword>Sozialhilfe</ns1:keyword>
+    <ns4:contributorID rdf:resource="http://dcat-ap.de/def/contributors/transparenzportalBremen"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+    <ns4:originator rdf:nodeID="N8a29453531d447878e8d1dacce48a1c8"/>
+    <ns1:keyword>Sozialgesetzbuch</ns1:keyword>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nc6b9e31f75be400ea025c7fc2111d10e">
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Individual"/>
+    <ns3:hasPostalCode>28195</ns3:hasPostalCode>
+    <ns3:hasStreetAddress>An der Weide 14-16</ns3:hasStreetAddress>
+    <ns3:fn>Statistisches Landesamt Bremen</ns3:fn>
+    <ns3:hasLocality>Bremen</ns3:hasLocality>
+    <ns3:hasEmail rdf:resource="info@statistik.bremen.de"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://www.transparenz.bremen.de/de/datensatz/bremen65.c.41494.de#distribution_146367">
+    <ns1:accessURL>http://www.statistik.bremen.de/sixcms/detail.php?id=11569</ns1:accessURL>
+    <ns2:language rdf:resource="http://publications.europa.eu/resource/authority/language/GER"/>
+    <ns2:description>Statistischer Bericht, Sozialleistungen</ns2:description>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+    <ns2:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/HTML"/>
+    <ns2:license rdf:resource="http://dcat-ap.de/def/licenses/cc-by"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N8a29453531d447878e8d1dacce48a1c8">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <ns6:name>Statistisches Landesamt Bremenemail: info@statistik.bremen.de</ns6:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N6519b6ced55849e4ac2193503717d79f">
+    <rdf:type rdf:resource="http://purl.org/dc/terms/PeriodOfTime"/>
+    <ns7:endDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">9999-01-01</ns7:endDate>
+    <ns7:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-03-25</ns7:startDate>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="Nceeec36b02cd404c890d4529c599f6e2">
+    <ns5:adminUnitL2 rdf:resource="http://dcat-ap.de/def/politicalGeocoding/regionalKey/040110000000"/>
+    <rdf:type rdf:resource="http://purl.org/dc/terms/Location"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="N399d7bc9ef8d4e5fa90c44f2ae92c68e">
+    <ns6:name>email: info@statistik.bremen.de</ns6:name>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://www.bremen.de">
+    <ns2:type rdf:resource="http://purl.org/adms/publishertype/LocalAuthority"/>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+    <ns6:name>Freie und Hansestadt Bremen</ns6:name>
+  </rdf:Description>
+</rdf:RDF>

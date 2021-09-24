@@ -1,0 +1,70 @@
+@prefix dcat:     <http://www.w3.org/ns/dcat#> .
+@prefix dcterms:  <http://purl.org/dc/terms/> .
+@prefix foaf:     <http://xmlns.com/foaf/0.1/> .
+@prefix locn:     <http://www.w3.org/ns/locn#> .
+@prefix dcatapde: <http://dcat-ap.de/def/dcatde/> .
+@prefix schema:   <http://schema.org/> .
+@prefix vcard:    <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:      <http://www.w3.org/2001/XMLSchema#> .
+
+<https://www.transparenz.bremen.de/de/datensatz/bremen65.c.41494.de> a dcat:Dataset ;
+    dcatapde:contributorID <http://dcat-ap.de/def/contributors/transparenzportalBremen> ;
+    dcatapde:maintainer [ a foaf:Person ;
+            foaf:name "email: info@statistik.bremen.de" ] ;
+    dcatapde:originator [ a foaf:Person ;
+            foaf:name "Statistisches Landesamt Bremenemail: info@statistik.bremen.de" ] ;
+    dcterms:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/ANNUAL> ;
+    dcterms:description "<p>Statistischer Bericht</p><p>Der Bericht enthält Tabellen und Grafiken über die Empfänger nach dem 3. bis 9. Kapitel des Zwölften Buches Sozialgesetzbuch (SGB XII).Die Angaben liegen für das Land Bremen und die Städte Bremen und Bremerhaven vor. Der Bericht wird jährlich aktualisiert. Er ist als PDF-Datei verfügbar.Herausgegeben wird der Bericht vom Statistischen Landesamt Bremen. </p>" ;
+    dcterms:issued "2020-03-25" ;
+    dcterms:language <http://publications.europa.eu/resource/authority/language/GER> ;
+    dcterms:publisher <https://www.bremen.de> ;
+    dcterms:spatial [ a dcterms:Location ;
+            locn:adminUnitL2 <http://dcat-ap.de/def/politicalGeocoding/regionalKey/040110000000> ] ;
+    dcterms:temporal [ a dcterms:PeriodOfTime ;
+            schema:endDate "9999-01-01"^^xsd:date ;
+            schema:startDate "2020-03-25"^^xsd:date ] ;
+    dcterms:title "Die Sozialhilfe im Land Bremen Teil II" ;
+    dcat:contactPoint [ a vcard:Individual ;
+            vcard:fn "Statistisches Landesamt Bremen" ;
+            vcard:hasEmail <info@statistik.bremen.de> ;
+            vcard:hasLocality "Bremen" ;
+            vcard:hasPostalCode "28195" ;
+            vcard:hasStreetAddress "An der Weide 14-16" ] ;
+    dcat:distribution 
+        <https://www.transparenz.bremen.de/de/datensatz/bremen65.c.41494.de#D1> ,
+        <https://www.transparenz.bremen.de/de/datensatz/bremen65.c.41494.de#D2> ;
+
+    dcat:keyword 
+        "SGB",
+        "Sozialgesetzbuch",
+        "Sozialhilfe",
+        "Wirtschaft" ;
+    dcat:theme <http://publications.europa.eu/resource/authority/data-theme/ECON> .
+
+<https://www.bremen.de> a foaf:Organization ;
+    dcterms:type <http://purl.org/adms/publishertype/LocalAuthority> ;
+    foaf:name "Freie und Hansestadt Bremen" ; 
+    foaf:name "Freie und Hansestadt Bremen 2" ; 
+#     foaf:name <asd.de> ; 
+.
+
+<https://www.transparenz.bremen.de/de/datensatz/bremen65.c.41494.de#D1> a dcat:Distribution ;
+    dcterms:description "Statistischer Bericht, Sozialleistungen" ;
+    dcterms:format <http://publications.europa.eu/resource/authority/file-type/HTML> ;
+    dcterms:language <http://publications.europa.eu/resource/authority/language/GER> ;
+#     dcterms:license "Public Domain" ;
+#     dcterms:license <http://dcat-ap.de/def/licenses/cc-by> ;
+    dcterms:license <http://dcat-ap.de/def/licenses/bsd> ;
+#     dcterms:license <http://dcat-ap.de/def/licenses/other-closed> ;
+    dcat:accessURL "http://www.statistik.bremen.de/sixcms/detail.php?id=11569" .
+
+<https://www.transparenz.bremen.de/de/datensatz/bremen65.c.41494.de#D2> a dcat:Distribution ;
+    dcterms:description "Statistischer Bericht, Sozialleistungen" ;
+    dcterms:format <http://publications.europa.eu/resource/authority/file-type/HTML> ;
+    dcterms:language <http://publications.europa.eu/resource/authority/language/GER> ;
+#     dcterms:license "Public Domain" ;
+#     dcterms:license <http://dcat-ap.de/def/licenses/cc-by> ;
+#     dcterms:license <http://dcat-ap.de/def/licenses/bsd> ;
+    dcterms:license <http://dcat-ap.de/def/licenses/other-closed> ;
+    dcterms:license <http://another-uri.de/> ;
+    dcat:accessURL "http://www.statistik.bremen.de/sixcms/detail.php?id=11569" .

@@ -1,0 +1,48 @@
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dcatde: <http://dcat-ap.de/def/dcatde/> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+
+@base <dashboard-licenses-tests#> .
+
+# I = Invalid, no license property
+# L = Lincensed, license property exists, no matter what's behind
+# V = Valid license, given as correct GovData-URI
+# O = Open license, given as correct GovData-URI
+
+<I-TEST-01>
+    a dcat:Distribution ;
+.
+
+<I-TEST-02>
+    a dcat:Distribution ;
+    dct:license <http://dcat-ap.de/def/licenses/other-commercial> ;
+    dct:license <http://dcat-ap.de/def/licenses/other-open> ;
+.
+
+<I-TEST-03>
+    a dcat:Distribution ;
+    dct:license "<http://dcat-ap.de/def/licenses/other-commercial>" ;
+    dct:license "<http://dcat-ap.de/def/licenses/other-open>" ;
+.
+
+<L-TEST-01>
+    a dcat:Distribution ;
+    dct:license "apache" ;
+.
+
+<L-TEST-02>
+    a dcat:Distribution ;
+    dct:license <http://www.apache.org/licenses> ;
+.
+
+<V-TEST-01>
+    a dcat:Distribution ;
+    dct:license <http://dcat-ap.de/def/licenses/other-commercial> ;
+.
+
+<O-TEST-01>
+    a dcat:Distribution ;
+    dct:license <http://dcat-ap.de/def/licenses/other-open> ;
+.
