@@ -366,7 +366,7 @@ Getestet werden die folgenden Konventionen:
 
 * * *
 
-### J - dcat-ap-de-govdata-dashboard-shapes-db-shapes.ttl 
+### J - dcat-ap-de-govdata-dashboard-db-shapes.ttl 
 
 Das Prüfschema GovData Dashboard Qualitätsmerkmale wird verwendet, um die Prüfergebnisse für die Qualitätsmerkmale im Dashboard zur Metadatenqualität zu ermitteln. <br>
 
