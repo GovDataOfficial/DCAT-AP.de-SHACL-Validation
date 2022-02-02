@@ -29,7 +29,7 @@
     - [G - dcat-ap_2.1.0_shacl_shapes_recommended.ttl](#g---dcat-ap_210_shacl_shapes_recommendedttl)
     - [H - dcat-ap-de-import-lists.ttl](#h---dcat-ap-de-import-liststtl)
     - [I - dcat-ap-de-shapes-impliedRules.ttl](#i---dcat-ap-de-shapes-impliedrulesttl)
-    - [J - dcat-ap-de-dashboard-alpha-shapes-db-shapes.ttl](#j---dcat-ap-de-dashboard-alpha-shapes-db-shapesttl)
+    - [J - dcat-ap-de-govdata-dashboard-shapes-db-shapes.ttl](#j---dcat-ap-de-govdata-dashboard-db-shapesttl)
   - [Bekannte Probleme / übergreifende ToDos](#bekannte-probleme--übergreifende-todos)
   - [Kontakt und Lizenz](#kontakt-und-lizenz)
   
@@ -366,9 +366,9 @@ Getestet werden die folgenden Konventionen:
 
 * * *
 
-### J - dcat-ap-de-dashboard-alpha-shapes-db-shapes.ttl
+### J - dcat-ap-de-govdata-dashboard-shapes-db-shapes.ttl
 
-Das Prüfschema Dashboard-Alpha wird verwendet, um die Prüfergebnisse für die Qualitätsmerkmale im Dashboard zur Metadatenqualität zu ermitteln. <br>
+Das Prüfschema GovData Dashboard Qualitätsmerkmale wird verwendet, um die Prüfergebnisse für die Qualitätsmerkmale im Dashboard zur Metadatenqualität zu ermitteln. <br>
 
 Im SPARQL-Assistent auf GovData.de können die Prüfergebnisse des Dashboards auch abgefragt werden. Hierzu muss der Endpunkt „Validierungsdaten“ ausgewählt werden. <br>
 
