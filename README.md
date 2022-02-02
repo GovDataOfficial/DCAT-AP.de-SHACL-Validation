@@ -372,9 +372,9 @@ Das Prüfschema Dashboard-Alpha wird verwendet, um die Prüfergebnisse für die 
 
 Im SPARQL-Assistent auf GovData.de können die Prüfergebnisse des Dashboards auch abgefragt werden. Hierzu muss der Endpunkt „Validierungsdaten“ ausgewählt werden. <br>
 
-In der folgenden Tabelle werden die Validierungsergebnisse (wie sie im SPARQL-Assistent abgefragt werden können) dem Qualitätsmerkmal aus dem Dashboard zugeordnet. Ergänzend wird die geprüfte Regel aufgeführt: 
+In der folgenden Tabelle werden die Validierungsergebnisse (wie sie im SPARQL-Assistent abgefragt werden können) dem Qualitätsmerkmal zugeordnet. Ergänzend wird die geprüfte Regel aufgeführt: 
 
-Qualitätsmerkmal Dashboard | Validierungsergebnis          |	Regel
+Qualitätsmerkmal           | Validierungsergebnis          |	Regel
 ---------------------------|-------------------------------|-------------------------------------------
 Keywords                   | mqa:no_literal_keyword        | Jedes Dataset muss über wenigstens ein Keyword verfügen. Dabei muss es sich um ein Literal handeln.
 Lizenzangaben              | mqa:no_license	               | Jede Distribution muss über eine Lizenz verfügen.
