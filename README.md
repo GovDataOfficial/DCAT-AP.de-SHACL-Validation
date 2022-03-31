@@ -29,6 +29,7 @@
     - [G - dcat-ap_2.1.0_shacl_shapes_recommended.ttl](#g---dcat-ap_210_shacl_shapes_recommendedttl)
     - [H - dcat-ap-de-import-lists.ttl](#h---dcat-ap-de-import-liststtl)
     - [I - dcat-ap-de-shapes-impliedRules.ttl](#i---dcat-ap-de-shapes-impliedrulesttl)
+    - [J - dcat-ap-de-govdata-dashboard-shapes-db-shapes.ttl](#j---dcat-ap-de-govdata-dashboard-db-shapesttl)
   - [Bekannte Probleme / übergreifende ToDos](#bekannte-probleme--übergreifende-todos)
   - [Kontakt und Lizenz](#kontakt-und-lizenz)
   
@@ -362,6 +363,25 @@ Getestet werden die folgenden Konventionen:
 **Bekannte Probleme**
 - zum Teil unklar, wie eine Konvention exakt gemeint ist
 - manche Konventionen machen inhaltliche Vorgaben, die technisch nicht geprüft werden können
+
+* * *
+
+### J - dcat-ap-de-govdata-dashboard-db-shapes.ttl 
+
+Das Prüfschema GovData Dashboard Qualitätsmerkmale wird verwendet, um die Prüfergebnisse für die Qualitätsmerkmale im Dashboard zur Metadatenqualität zu ermitteln. <br>
+
+Im SPARQL-Assistent auf GovData.de können die Prüfergebnisse des Dashboards auch abgefragt werden. Hierzu muss der Endpunkt „Validierungsdaten“ ausgewählt werden. <br>
+
+In der folgenden Tabelle werden die Validierungsergebnisse (wie sie im SPARQL-Assistent abgefragt werden können) dem Qualitätsmerkmal zugeordnet. Ergänzend wird die geprüfte Regel aufgeführt: 
+
+Qualitätsmerkmal           | Validierungsergebnis          |	Regel
+---------------------------|-------------------------------|-------------------------------------------
+Keywords                   | mqa:no_literal_keyword        | Jedes Dataset muss über wenigstens ein Keyword verfügen. Dabei muss es sich um ein Literal handeln.
+Lizenzangaben              | mqa:no_license	               | Jede Distribution muss über eine Lizenz verfügen.
+Lizenzangaben              | mqa:multiple_licenses 	       | Eine Distribution darf NIEMALS über mehr als eine Lizenz verfügen.
+Lizenz-URIs	               | mqa:no_license_from_list	     | Die Lizenz der Distribution muss gemäß http://dcat-ap.de/def/licenses angegeben werden. Löst auch aus, wenn  Lizenz als Literal angegeben wird.
+Offene Lizenz-URIs         | mqa:no_open_license_from_list | Die Lizenz der Distribution sollte eine offene Lizenz sein. Löst auch aus, wenn Lizenz als Literal angegeben wird.
+Veröffentlichende Stelle 	 | mqa:no_correct_publisher      | Der dct:publisher muss über mindestens einen foaf:name verfügen, der ein Literal ist.
 
 * * *
 
