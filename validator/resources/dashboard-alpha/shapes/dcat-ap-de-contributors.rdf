@@ -15,8 +15,8 @@
          xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
          >
   <owl:Ontology rdf:about="http://dcat-ap.de/def/contributors">
-    <owl:versionInfo>20211108</owl:versionInfo>
-    <owl:versionIRI rdf:resource="http://dcat-ap.de/def/contributors/20211108/"/>
+    <owl:versionInfo>20220308</owl:versionInfo>
+    <owl:versionIRI rdf:resource="http://dcat-ap.de/def/contributors/20220308/"/>
     <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Folgend ist die Liste der unmittelbar an GovData anliefernden Systeme abgebildet. Diese Datenbereitsteller sind im engeren Sinne Metadatenbereitsteller, für den Bezug der eigentlichen Open Data Daten wird auf das „Originalportal“ verwiesen.</rdfs:comment>
   </owl:Ontology>
   <skos:ConceptScheme rdf:about="http://dcat-ap.de/def/contributors">
@@ -220,20 +220,20 @@
     <skos:exactMatch rdf:resource="http://dcat-ap.de/def/contributors/bundesministeriumDerVerteidigung"/>
     <skos:altLabel xml:lang="de">bundesministeriumDerVerteidigung</skos:altLabel>
   </skos:Concept>
-  <skos:Concept rdf:about="http://dcat-ap.de/def/contributors/bundesministeriumDesInnernFuerBauUndHeimat">
-    <dc:identifier>bundesministeriumDesInnernFuerBauUndHeimat</dc:identifier>
+  <skos:Concept rdf:about="http://dcat-ap.de/def/contributors/bundesministeriumDesInnernUndHeimat">
+    <dc:identifier>bundesministeriumDesInnernUndHeimat</dc:identifier>
     <skos:topConceptOf rdf:resource="http://dcat-ap.de/def/contributors"/>
     <skos:inScheme rdf:resource="http://dcat-ap.de/def/contributors"/>
-    <skos:prefLabel xml:lang="de">Bundesministerium des Innern, für Bau und Heimat</skos:prefLabel>
+    <skos:prefLabel xml:lang="de">Bundesministerium des Innern und Heimat</skos:prefLabel>
     <skos-xl:prefLabel>
       <skos-xl:Label>
         <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
-        <skos-xl:literalForm xml:lang="de">Bundesministerium des Innern, für Bau und Heimat</skos-xl:literalForm>
-        <rdfs:label xml:lang="de">Bundesministerium des Innern, für Bau und Heimat</rdfs:label>
+        <skos-xl:literalForm xml:lang="de">Bundesministerium des Innern und Heimat</skos-xl:literalForm>
+        <rdfs:label xml:lang="de">Bundesministerium des Innern und Heimat</rdfs:label>
       </skos-xl:Label>
     </skos-xl:prefLabel>
-    <skos:exactMatch rdf:resource="http://dcat-ap.de/def/contributors/bundesministeriumDesInnernFuerBauUndHeimat"/>
-    <skos:altLabel xml:lang="de">bundesministeriumDesInnernFuerBauUndHeimat</skos:altLabel>
+    <skos:exactMatch rdf:resource="http://dcat-ap.de/def/contributors/bundesministeriumDesInnernUndHeimat"/>
+    <skos:altLabel xml:lang="de">bundesministeriumDesInnernUndHeimat</skos:altLabel>
   </skos:Concept>
   <skos:Concept rdf:about="http://dcat-ap.de/def/contributors/bundesministeriumFuerArbeitUndSoziales">
     <dc:identifier>bundesministeriumFuerArbeitUndSoziales</dc:identifier>
@@ -280,20 +280,20 @@
     <skos:exactMatch rdf:resource="http://dcat-ap.de/def/contributors/bundesministeriumFuerFamilieSeniorenFrauenUndJugend"/>
     <skos:altLabel xml:lang="de">bundesministeriumFuerFamilieSeniorenFrauenUndJugend</skos:altLabel>
   </skos:Concept>
-  <skos:Concept rdf:about="http://dcat-ap.de/def/contributors/bundesministeriumFuerWirtschaftUndEnergie">
-    <dc:identifier>bundesministeriumFuerWirtschaftUndEnergie</dc:identifier>
+  <skos:Concept rdf:about="http://dcat-ap.de/def/contributors/bundesministeriumFuerWirtschaftUndKlimaschutz">
+    <dc:identifier>bundesministeriumFuerWirtschaftUndKlimaschutz</dc:identifier>
     <skos:topConceptOf rdf:resource="http://dcat-ap.de/def/contributors"/>
     <skos:inScheme rdf:resource="http://dcat-ap.de/def/contributors"/>
-    <skos:prefLabel xml:lang="de">Bundesministerium für Wirtschaft und Energie</skos:prefLabel>
+    <skos:prefLabel xml:lang="de">Bundesministerium für Wirtschaft und Klimaschutz</skos:prefLabel>
     <skos-xl:prefLabel>
       <skos-xl:Label>
         <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
-        <skos-xl:literalForm xml:lang="de">Bundesministerium für Wirtschaft und Energie</skos-xl:literalForm>
-        <rdfs:label xml:lang="de">Bundesministerium für Wirtschaft und Energie</rdfs:label>
+        <skos-xl:literalForm xml:lang="de">Bundesministerium für Wirtschaft und Klimaschutz</skos-xl:literalForm>
+        <rdfs:label xml:lang="de">Bundesministerium für Wirtschaft und Klimaschutz</rdfs:label>
       </skos-xl:Label>
     </skos-xl:prefLabel>
-    <skos:exactMatch rdf:resource="http://dcat-ap.de/def/contributors/bundesministeriumFuerWirtschaftUndEnergie"/>
-    <skos:altLabel xml:lang="de">bundesministeriumFuerWirtschaftUndEnergie</skos:altLabel>
+    <skos:exactMatch rdf:resource="http://dcat-ap.de/def/contributors/bundesministeriumFuerWirtschaftUndKlimaschutz"/>
+    <skos:altLabel xml:lang="de">bundesministeriumFuerWirtschaftUndKlimaschutz</skos:altLabel>
   </skos:Concept>
   <skos:Concept rdf:about="http://dcat-ap.de/def/contributors/bundesministeriumFuerWirtschaftlicheZusammenarbeitUndEntwicklung">
     <dc:identifier>bundesministeriumFuerWirtschaftlicheZusammenarbeitUndEntwicklung</dc:identifier>
@@ -430,20 +430,20 @@
     <skos:exactMatch rdf:resource="http://dcat-ap.de/def/contributors/dieBeauftragteDerBundesregierungFuerKulturUndMedien"/>
     <skos:altLabel xml:lang="de">dieBeauftragteDerBundesregierungFuerKulturUndMedien</skos:altLabel>
   </skos:Concept>
-  <skos:Concept rdf:about="http://dcat-ap.de/def/contributors/dieBundesbeauftragteFuerDenDatenschutzUndDieInformationsfreiheit">
-    <dc:identifier>dieBundesbeauftragteFuerDenDatenschutzUndDieInformationsfreiheit</dc:identifier>
+  <skos:Concept rdf:about="http://dcat-ap.de/def/contributors/derBundesbeauftragteFuerDenDatenschutzUndDieInformationsfreiheit">
+    <dc:identifier>derBundesbeauftragteFuerDenDatenschutzUndDieInformationsfreiheit</dc:identifier>
     <skos:topConceptOf rdf:resource="http://dcat-ap.de/def/contributors"/>
     <skos:inScheme rdf:resource="http://dcat-ap.de/def/contributors"/>
-    <skos:prefLabel xml:lang="de">Die Bundesbeauftragte für den Datenschutz und die Informationsfreiheit</skos:prefLabel>
+    <skos:prefLabel xml:lang="de">Der Bundesbeauftragte für den Datenschutz und die Informationsfreiheit</skos:prefLabel>
     <skos-xl:prefLabel>
       <skos-xl:Label>
         <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
-        <skos-xl:literalForm xml:lang="de">Die Bundesbeauftragte für den Datenschutz und die Informationsfreiheit</skos-xl:literalForm>
-        <rdfs:label xml:lang="de">Die Bundesbeauftragte für den Datenschutz und die Informationsfreiheit</rdfs:label>
+        <skos-xl:literalForm xml:lang="de">Der Bundesbeauftragte für den Datenschutz und die Informationsfreiheit</skos-xl:literalForm>
+        <rdfs:label xml:lang="de">Der Bundesbeauftragte für den Datenschutz und die Informationsfreiheit</rdfs:label>
       </skos-xl:Label>
     </skos-xl:prefLabel>
-    <skos:exactMatch rdf:resource="http://dcat-ap.de/def/contributors/dieBundesbeauftragteFuerDenDatenschutzUndDieInformationsfreiheit"/>
-    <skos:altLabel xml:lang="de">dieBundesbeauftragteFuerDenDatenschutzUndDieInformationsfreiheit</skos:altLabel>
+    <skos:exactMatch rdf:resource="http://dcat-ap.de/def/contributors/derBundesbeauftragteFuerDenDatenschutzUndDieInformationsfreiheit"/>
+    <skos:altLabel xml:lang="de">derBundesbeauftragteFuerDenDatenschutzUndDieInformationsfreiheit</skos:altLabel>
   </skos:Concept>
   <skos:Concept rdf:about="http://dcat-ap.de/def/contributors/freistaatSachsen">
     <dc:identifier>freistaatSachsen</dc:identifier>
@@ -609,6 +609,21 @@
     </skos-xl:prefLabel>
     <skos:exactMatch rdf:resource="http://dcat-ap.de/def/contributors/mecklenburgVorpommern"/>
     <skos:altLabel xml:lang="de">mecklenburgVorpommern</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://dcat-ap.de/def/contributors/openDataBayern">
+    <dc:identifier>openDataBayern</dc:identifier>
+    <skos:topConceptOf rdf:resource="http://dcat-ap.de/def/contributors"/>
+    <skos:inScheme rdf:resource="http://dcat-ap.de/def/contributors"/>
+    <skos:prefLabel xml:lang="de">Open Data Bayern</skos:prefLabel>
+    <skos-xl:prefLabel>
+      <skos-xl:Label>
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
+        <skos-xl:literalForm xml:lang="de">Open Data Bayern</skos-xl:literalForm>
+        <rdfs:label xml:lang="de">Open Data Bayern</rdfs:label>
+      </skos-xl:Label>
+    </skos-xl:prefLabel>
+    <skos:exactMatch rdf:resource="http://dcat-ap.de/def/contributors/openDataBayern"/>
+    <skos:altLabel xml:lang="de">openDataBayern</skos:altLabel>
   </skos:Concept>
   <skos:Concept rdf:about="http://dcat-ap.de/def/contributors/openDataHRO">
     <dc:identifier>openDataHRO</dc:identifier>
