@@ -1,0 +1,178 @@
+# (C) CC BY 4.0 ']init[ AG fuer GovData'
+#
+# 
+
+@prefix :       <http://dcat-ap.de/def/dcatde/2.0/#> .
+@prefix adms:   <http://www.w3.org/ns/adms#> .
+@prefix dc:     <http://purl.org/dc/elements/1.1/> .
+@prefix dcat:   <http://www.w3.org/ns/dcat#> .
+@prefix dcatap: <http://data.europa.eu/r5r#> .
+@prefix dcatde: <http://dcat-ap.de/def/dcatde/> .
+@prefix dct:    <http://purl.org/dc/terms/> .
+@prefix foaf:   <http://xmlns.com/foaf/0.1/> .
+@prefix locn:   <http://www.w3.org/ns/locn#> .
+@prefix org:    <http://www.w3.org/ns/org#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix sh:     <http://www.w3.org/ns/shacl#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
+@prefix spdx:   <http://spdx.org/rdf/terms#> .
+@prefix vcard:  <http://www.w3.org/2006/vcard/ns#> .
+@prefix xml:    <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+
+
+# Änderungen bzw. Nachrichten zu foaf:Agent
+dcatap:Agent_Property_dct_type  sh:message "Pflicht: Mehr als ein dct:type vorhanden! Sie müssen beachten, dass ein foaf:Agent nicht über mehrere dct:type verfügen darf."@de .
+dcatap:Agent_Property_foaf_name sh:message "Pflicht: foaf:name ist nicht vorhanden! Sie müssen beachten, dass ein foaf:Agent über einen foaf:name verfügen muss."@de .
+
+
+# Änderungen bzw. Nachrichten zu dcat:CatalogRecord
+dcatap:CatalogRecord_Property_adms_status       sh:message "Pflicht: Mehr als ein adms:status vorhanden! Sie müssen beachten, dass ein dcat:CatalogRecord nicht über mehrere adms:status verfügen darf."@de .
+dcatap:CatalogRecord_Property_dct_conformsTo    sh:message "Pflicht: Mehr als ein dct:conformsTo vorhanden! Sie müssen beachten, dass ein dcat:CatalogRecord nicht über mehrere dct:conformsTo verfügen darf."@de .
+dcatap:CatalogRecord_Property_dct_description   sh:message "Pflicht: dct:description ist kein Literal! Sie müssen die Beschreibung als Text angeben."@de .
+dcatap:CatalogRecord_Property_dct_issued        sh:message "Pflicht: Mehr als ein dct:issued vorhanden! Sie müssen beachten, dass ein dcat:CatalogRecord nicht über mehrere dct:issued verfügen darf."@de .
+# dcatap:CatalogRecord_Property_dct_language    sh:message "Unklar, wofür diese Regel da ist."@de .
+dcatap:CatalogRecord_Property_dct_modified      sh:message "Pflicht: Nicht genau ein dct:modified vorhanden! Sie müssen beachten, dass ein dcat:CatalogRecord über genau ein dct:modified verfügen muss."@de .
+dcatap:CatalogRecord_Property_dct_source        sh:message "Pflicht: Mehr als ein dct:source vorhanden! Sie müssen beachten, dass ein dcat:CatalogRecord nicht über mehrere dct:source verfügen darf."@de .
+dcatap:CatalogRecord_Property_dct_title         sh:message "Pflicht: dct:title ist kein Literal! Sie müssen den Titel als Text angeben."@de .
+dcatap:CatalogRecord_Property_foaf_primaryTopic sh:message "Pflicht: Nicht genau ein foaf:primaryTopic vorhanden! Sie müssen beachten, dass ein dcat:CatalogRecord über genau ein foaf:primaryTopic verfügen muss."@de .
+
+
+# Änderungen bzw. Nachrichten zu dcat:CatalogRecord
+# dcatap:Catalog_Property_dcat_catalog       sh:message "Unklar, wofür diese Regel da ist."@de .
+# dcatap:Catalog_Property_dcat_dataset       sh:message "Unklar, wofür diese Regel da ist."@de .
+# dcatap:Catalog_Property_dcat_record        sh:message "Unklar, wofür diese Regel da ist."@de .
+# dcatap:Catalog_Property_dcat_service       sh:message "Unklar, wofür diese Regel da ist."@de .
+# dcatap:Catalog_Property_dcat_themeTaxonomy sh:message "Unklar, wofür diese Regel da ist."@de .
+# dcatap:Catalog_Property_dct_creator        sh:message "Unklar, wofür diese Regel da ist."@de .
+dcatap:Catalog_Property_dct_description    sh:message "Pflicht: dct:description ist kein Literal oder nicht vorhanden! Ein dcat:Catalog muss über mindestens eine Beschreibung verfügen. Alle Beschreibungen müssen Text sein."@de .
+# dcatap:Catalog_Property_dct_hasPart        sh:message "Unklar, wofür diese Regel da ist."@de .
+dcatap:Catalog_Property_dct_isPartOf       sh:message "Pflicht: Mehr als ein dct:isPartOf vorhanden! Sie müssen beachten, dass ein dcat:Catalog nicht über mehrere dct:isPartOf verfügen darf."@de .
+dcatap:Catalog_Property_dct_issued         sh:message "Pflicht: Mehr als ein dct:issued vorhanden! Sie müssen beachten, dass ein dcat:Catalog nicht über mehrere dct:issued verfügen darf."@de .
+# dcatap:Catalog_Property_dct_language       sh:message "Unklar, wofür diese Regel da ist."@de .
+dcatap:Catalog_Property_dct_license        sh:message "Pflicht: Mehr als eine dct:license vorhanden! Sie müssen beachten, dass ein dcat:Catalog nicht über mehrere dct:license verfügen darf."@de .
+dcatap:Catalog_Property_dct_modified       sh:message "Pflicht: Mehr als ein dct:modified vorhanden! Sie müssen beachten, dass ein dcat:Catalog nicht über mehrere dct:modified verfügen darf."@de .
+dcatap:Catalog_Property_dct_publisher      sh:message "Pflicht: Nicht genau ein dct:publisher vorhanden! Sie müssen beachten, dass ein dcat:Catalog über genau einen dct:publisher verfügen muss."@de .
+dcatap:Catalog_Property_dct_rights         sh:message "Pflicht: Mehr als ein dct:rights vorhanden! Sie müssen beachten, dass ein dcat:Catalog nicht über mehrere dct:rights verfügen darf."@de .
+# dcatap:Catalog_Property_dct_spatial        sh:message "Unklar, wofür diese Regel da ist."@de .
+dcatap:Catalog_Property_dct_title          sh:message "Pflicht: dct:title ist kein Literal oder nicht vorhanden! Ein dcat:Catalog muss über mindestens einen Titel verfügen. Alle Titel müssen Text sein."@de .
+dcatap:Catalog_Property_foaf_homepage      sh:message "Pflicht: Mehr als eine foaf:homepage vorhanden! Sie müssen beachten, dass ein dcat:Catalog nicht über mehrere foaf:homepages verfügen darf."@de .
+
+
+# Änderungen bzw. Nachrichten zu skos:ConceptScheme
+dcatap:CategoryScheme_Property_dct_title sh:message "Pflicht: dct:title ist kein Literal oder nicht vorhanden! Ein skos:ConceptScheme muss über mindestens einen Titel verfügen. Alle Titel müssen Text sein."@de .
+
+
+# Änderungen bzw. Nachrichten zu skos:Concept
+dcatap:Category_Property_skos_prefLabel sh:message "Pflicht: skos:prefLabel ist kein Literal oder nicht vorhanden! Ein skos:Concept muss über mindestens ein Label verfügen. Alle Label müssen Text sein."@de .
+
+
+# Änderungen bzw. Nachrichten zu spdx:Checksum
+dcatap:Checksum_Property_spdx_algorithm     sh:deactivated true . # Da DCAT-AP.de ein anderes kontrolliertes Vokabular verwendet, muss diese Regel deaktiviert werden.
+dcatap:Checksum_Property_spdx_checksumValue sh:message "Pflicht: spdx:checksumValue ist kein Literal vom Typ xsd:hexBinary oder nicht vorhanden! Eine spdx:Checksum muss über genau mindestens eine spdx:checksumValue verfügen. Diese ein Text vom Typ xsd:hexBinary sein."@de .
+
+
+# Änderungen bzw. Nachrichten zu dcat:DataService
+dcatap:DataService_Property_dcat_endpointDescription sh:message "Pflicht: dcat:endpointDescription ist keine IRI oder BlankNode! Jede Beschreibung des Endpunktes muss eine IRI oder ein BlankNode sein."@de .
+dcatap:DataService_Property_dcat_endpointURL         sh:message "Pflicht: dcat:endpointURL ist keine IRI bzw. BlankNode oder nicht vorhanden! Ein dcat:DataService muss über mindestens eine dcat:endpointURL verfügen. Diese muss eine IRI oder ein BlankNode sein."@de .
+# dcatap:DataService_Property_dcat_servesDataset       sh:message "Unklar, wofür diese Regel da ist."@de .
+dcatap:DataService_Property_dct_accessRights         sh:message "Pflicht: Mehr als eine dct:accessRights vorhanden! Sie müssen beachten, dass ein dcat:DataService nicht über mehrere dct:accessRights verfügen darf."@de .
+dcatap:DataService_Property_dct_description          sh:message "Pflicht: dct:description ist kein Literal! Alle Beschreibungen müssen Text sein."@de .
+dcatap:DataService_Property_dct_license              sh:message "Pflicht: Mehr als eine dct:license vorhanden! Sie müssen beachten, dass ein dcat:DataService nicht über mehrere dct:license verfügen darf."@de .
+dcatap:DataService_Property_dct_title                sh:message "Pflicht: dct:title ist kein Literal oder nicht vorhanden! Ein dcat:DataService muss über mindestens einen Titel verfügen. Alle Titel müssen Text sein."@de .
+
+
+# Änderungen bzw. Nachrichten zu dcat:Dataset
+# dcatap:Dataset_Property_adms_identifier                sh:message "Unklar, wofür diese Regel da ist."@de .
+# dcatap:Dataset_Property_adms_sample                    sh:message "Unklar, wofür diese Regel da ist."@de .
+dcatap:Dataset_Property_adms_versionNotes              sh:message "Pflicht: adms:versionNotes ist kein Literal! Alle Versionserläuterungen müssen Text sein."@de .
+dcatap:Dataset_Property_dc_isReferencedBy              sh:message "Pflicht: dc:isReferencedBy ist keine IRI oder BlankNode! Solche Ressourcen müssen eine IRI oder ein BlankNode sein."@de .
+# dcatap:Dataset_Property_dcat_contactPoint              sh:message "Unklar, wofür diese Regel da ist."@de .
+# dcatap:Dataset_Property_dcat_distribution              sh:message "Unklar, wofür diese Regel da ist."@de .
+dcatap:Dataset_Property_dcat_keyword                   sh:message "Pflicht: dcat:keyword ist kein Literal! Alle Schlagworte müssen Text sein."@de .
+# dcatap:Dataset_Property_dcat_landingPage               sh:message "Unklar, wofür diese Regel da ist."@de .
+# dcatap:Dataset_Property_dcat_qualifiedRelation         sh:message "Unklar, wofür diese Regel da ist."@de .
+dcatap:Dataset_Property_dcat_spatialResolutionInMeters sh:message "Pflicht: dcat:spatialResolutionInMeters ist kein Literal vom Typ xsd:decimal oder mehrfach vorhanden! Ein dcat:Dataset darf höchstens über eine dcat:spatialResolutionInMeters verfügen. Diese muss ein Text vom Typ xsd:decimal sein."@de .
+dcatap:Dataset_Property_dcat_temporalResolution        sh:message "Pflicht: dcat:temporalResolution ist kein Literal vom Typ xsd:duration oder mehrfach vorhanden! Ein dcat:Dataset darf höchstens über eine dcat:temporalResolution verfügen. Diese muss ein Text vom Typ xsd:duration sein."@de .
+# dcatap:Dataset_Property_dcat_theme                     sh:message "Unklar, wofür diese Regel da ist."@de .
+dcatap:Dataset_Property_dct_accessRights               sh:message "Pflicht: Mehr als eine dct:accessRights vorhanden! Sie müssen beachten, dass ein dcat:Dataset nicht über mehrere dct:accessRights verfügen darf."@de .
+dcatap:Dataset_Property_dct_accrualPeriodicity         sh:message "Pflicht: Mehr als eine dct:accrualPeriodicity vorhanden! Sie müssen beachten, dass ein dcat:Dataset nicht über mehrere dct:accrualPeriodicity verfügen darf."@de .
+# dcatap:Dataset_Property_dct_conformsTo                 sh:message "Unklar, wofür diese Regel da ist."@de .
+# dcatap:Dataset_Property_dct_creator                    sh:message "Unklar, wofür diese Regel da ist."@de .
+dcatap:Dataset_Property_dct_description                sh:message "Pflicht: dct:description ist kein Literal oder nicht vorhanden! Ein dcat:Dataset muss über mindestens eine Beschreibung verfügen. Alle Beschreibungen müssen Text sein."@de .
+# dcatap:Dataset_Property_dct_hasVersion                 sh:message "Unklar, wofür diese Regel da ist."@de .
+dcatap:Dataset_Property_dct_identifier                 sh:message "Pflicht: dct:identifier ist kein Literal! Alle Identifier müssen Text sein."@de .
+# dcatap:Dataset_Property_dct_isVersionOf                sh:message "Unklar, wofür diese Regel da ist."@de .
+dcatap:Dataset_Property_dct_issued                     sh:message "Pflicht: Mehr als ein dct:issued vorhanden! Sie müssen beachten, dass ein dcat:Dataset nicht über mehrere dct:issued verfügen darf."@de .
+# dcatap:Dataset_Property_dct_language                   sh:message "Unklar, wofür diese Regel da ist."@de .
+dcatap:Dataset_Property_dct_modified                   sh:message "Pflicht: Mehr als ein dct:modified vorhanden! Sie müssen beachten, dass ein dcat:Dataset nicht über mehrere dct:modified verfügen darf."@de .
+# dcatap:Dataset_Property_dct_provenance                 sh:message "Unklar, wofür diese Regel da ist."@de .
+dcatap:Dataset_Property_dct_publisher                  sh:message "Pflicht: Mehr als ein dct:publisher vorhanden! Sie müssen beachten, dass ein dcat:Dataset nicht über mehrere dct:publisher verfügen darf."@de .
+dcatap:Dataset_Property_dct_relation                   sh:message "Pflicht: dct:relation ist keine IRI oder BlankNode! Jede verwandte Ressource muss eine IRI oder ein BlankNode sein."@de .
+# dcatap:Dataset_Property_dct_source                     sh:message "Unklar, wofür diese Regel da ist."@de .
+# dcatap:Dataset_Property_dct_spatial                    sh:message "Unklar, wofür diese Regel da ist."@de .
+# dcatap:Dataset_Property_dct_temporal                   sh:message "Unklar, wofür diese Regel da ist."@de .
+dcatap:Dataset_Property_dct_title                      sh:message "Pflicht: dct:title ist kein Literal oder nicht vorhanden! Ein dcat:Dataset muss über mindestens einen Titel verfügen. Alle Titel müssen Text sein."@de .
+# dcatap:Dataset_Property_dct_type                       sh:message "Unklar, wofür diese Regel da ist."@de .
+# dcatap:Dataset_Property_foaf_page                      sh:message "Unklar, wofür diese Regel da ist."@de .
+dcatap:Dataset_Property_owl_versionInfo                sh:message "Pflicht: owl:versionInfo ist kein Literal oder mehrfach vorhanden! Ein dcat:Dataset darf nur über eine Versionsbezeichnung verfügen, bei der es sich um Text handeln muss."@de .
+# dcatap:Dataset_Property_prov_qualifiedAttribution      sh:message "Unklar, wofür diese Regel da ist."@de .
+# dcatap:Dataset_Property_prov_wasGeneratedBy            sh:message "Unklar, wofür diese Regel da ist."@de .
+
+
+# Änderungen bzw. Nachrichten zu dcat:Distribution
+dcatap:Distribution_Property_adms_status                    sh:message "Pflicht: Mehr als ein adms:status vorhanden! Sie müssen beachten, dass eine dcat:Distribution nicht über mehrere adms:status verfügen darf."@de .
+# dcatap:Distribution_Property_dcat_accessService             sh:message "Unklar, wofür diese Regel da ist."@de .
+dcatap:Distribution_Property_dcat_accessURL                 sh:message "Pflicht: dcat:accessURL ist nicht vorhanden oder keine IRI oder BlankNode! Jede dcat:Distribution muss über eine Access-URL verfügen, die eine IRI oder ein BlankNode ist."@de .
+dcatap:Distribution_Property_dcat_byteSize                  "Pflicht: dcat:byteSize ist kein Literal vom Typ xsd:decimal oder mehrfach vorhanden! Eine dcat:Distribution darf höchstens über ein dcat:byteSize verfügen. Diese muss ein Text vom Typ xsd:decimal sein."@de .
+dcatap:Distribution_Property_dcat_compressFormat            sh:message "Pflicht: Mehr als ein dcat:compressFormat vorhanden! Sie müssen beachten, dass eine dcat:Distribution nicht über mehrere dcat:compressFormat verfügen darf."@de .
+dcatap:Distribution_Property_dcat_downloadURL               sh:message "Pflicht: dcat:downloadURL ist keine IRI oder BlankNode! Jede Download-URL muss eine IRI oder ein BlankNode sein."@de .
+dcatap:Distribution_Property_dcat_mediaType                 sh:message "Pflicht: Mehr als ein dcat:mediaType vorhanden! Sie müssen beachten, dass eine dcat:Distribution nicht über mehrere dcat:mediaType verfügen darf."@de .
+dcatap:Distribution_Property_dcat_packageFormat             sh:message "Pflicht: Mehr als ein dcat:packageFormat vorhanden! Sie müssen beachten, dass eine dcat:Distribution nicht über mehrere dcat:packageFormat verfügen darf."@de .
+dcatap:Distribution_Property_dcat_spatialResolutionInMeters sh:message "Pflicht: dcat:spatialResolutionInMeters ist kein Literal vom Typ xsd:decimal oder mehrfach vorhanden! Eine dcat:Distribution darf höchstens über eine dcat:spatialResolutionInMeters verfügen. Diese muss ein Text vom Typ xsd:decimal sein."@de .
+dcatap:Distribution_Property_dcat_temporalResolution        sh:message "Pflicht: dcat:temporalResolution ist kein Literal vom Typ xsd:duration oder mehrfach vorhanden! Eine dcat:Distribution darf höchstens über eine dcat:temporalResolution verfügen. Diese muss ein Text vom Typ xsd:duration sein."@de .
+dcatap:Distribution_Property_dcatap_availability            sh:message "Pflicht: Mehr als eine dcatap:availability vorhanden! Sie müssen beachten, dass eine dcat:Distribution nicht über mehrere dcatap:availability verfügen darf."@de .
+# dcatap:Distribution_Property_dct_conformsTo                 sh:message "Unklar, wofür diese Regel da ist."@de .
+dcatap:Distribution_Property_dct_description                sh:message "Pflicht: dct:description ist kein Literal! Verfügt eine dcat:Distribution über eine Beschreibung, muss sie ein Text sein."@de .
+dcatap:Distribution_Property_dct_format                     sh:message "Pflicht: Mehr als ein dct:format vorhanden! Sie müssen beachten, dass eine dcat:Distribution nicht über mehrere dct:format verfügen darf."@de .
+dcatap:Distribution_Property_dct_issued                     sh:message "Pflicht: Mehr als ein dct:issued vorhanden! Sie müssen beachten, dass eine dcat:Distribution nicht über mehrere dct:issued verfügen darf."@de .
+# dcatap:Distribution_Property_dct_language                   sh:message "Unklar, wofür diese Regel da ist."@de .
+dcatap:Distribution_Property_dct_license                    sh:message "Pflicht: Mehr als eine dct:license vorhanden! Sie müssen beachten, dass eine dcat:Distribution nicht über mehrere dct:license verfügen darf."@de .
+dcatap:Distribution_Property_dct_modified                   sh:message "Pflicht: Mehr als ein dct:modified vorhanden! Sie müssen beachten, dass eine dcat:Distribution nicht über mehrere dct:modified verfügen darf."@de .
+dcatap:Distribution_Property_dct_rights                     sh:message "Pflicht: Mehr als ein dct:rights vorhanden! Sie müssen beachten, dass eine dcat:Distribution nicht über mehrere dct:rights verfügen darf."@de .
+dcatap:Distribution_Property_dct_title                      sh:message "Pflicht: dct:title ist kein Literal! Verfügt eine dcat:Distribution über einen Titel, muss er Text sein."@de .
+# dcatap:Distribution_Property_foaf_page                      sh:message "Unklar, wofür diese Regel da ist."@de .
+dcatap:Distribution_Property_odrl_hasPolicy                 sh:message "Pflicht: Mehr als ein odrl:hasPolicy vorhanden! Sie müssen beachten, dass eine dcat:Distribution nicht über mehrere odrl:hasPolicy verfügen darf."@de .
+dcatap:Distribution_Property_spdx_checksum                  sh:message "Pflicht: Mehr als eine spdx:checksum vorhanden! Sie müssen beachten, dass eine dcat:Distribution nicht über mehrere spdx:checksum verfügen darf."@de .
+
+
+# Änderungen bzw. Nachrichten zu adms:Identifier
+dcatap:Identifier_Property_skos_notation sh:message "Pflicht: Mehr als eine skos:notation vorhanden! Sie müssen beachten, dass ein adms:Identifier nicht über mehrere skos:notation verfügen darf."@de .
+
+# Änderungen bzw. Nachrichten zu dct:LicenseDocument
+# dcatap:LicenceDocument_Property_dct_type sh:message "Unklar, wofür diese Regel da ist."@de .
+
+# Änderungen bzw. Nachrichten zu dct:Location
+dcatap:Location_Shape_Property_dcat_bbox     sh:message "Pflicht: dcat:bbox ist kein Literal oder mehrfach vorhanden! Eine dct:Location darf höchstens über ein dcat:bbox verfügen. Diese muss ein Literal sein."@de .
+dcatap:Location_Shape_Property_dcat_centroid sh:message "Pflicht: dcat:centroid ist kein Literal oder mehrfach vorhanden! Eine dct:Location darf höchstens über ein dcat:centroid verfügen. Diese muss ein Literal sein."@de .
+dcatap:Location_Shape_Property_locn_geometry sh:message "Pflicht: locn:geometry ist kein Literal oder mehrfach vorhanden! Eine dct:Location darf höchstens über ein locn:geometry verfügen. Diese muss ein Literal sein."@de .
+
+# Änderungen bzw. Nachrichten zu dct:PeriodOfTime
+dcatap:PeriodOfTime_Property_dcat_startDate    sh:message "Pflicht: dcat:startDate mehrfach vorhanden! Eine dct:PeriodOfTime darf höchstens über ein dcat:startDate verfügen."@de .
+dcatap:PeriodOfTime_Property_dcat_endDate      sh:message "Pflicht: dcat:endDate mehrfach vorhanden! Eine dct:PeriodOfTime darf höchstens über ein dcat:endDate verfügen."@de .
+dcatap:PeriodOfTime_Property_time_hasBeginning sh:message "Pflicht: time:hasBeginning mehrfach vorhanden! Eine dct:PeriodOfTime darf höchstens über ein time:hasBeginning verfügen."@de .
+dcatap:PeriodOfTime_Property_time_hasEnd       sh:message "Pflicht: time:hasEnd mehrfach vorhanden! Eine dct:PeriodOfTime darf höchstens über ein time:hasEnd verfügen."@de .
+
+# Änderungen bzw. Nachrichten zu dcat:Relationship
+dcatap:Relationship_Property_dcat_hadRole sh:message "Pflicht: dcat:hadRole ist nicht vorhanden! Sie müssen beachten, dass eine dcat:Relationshipt über einen dcat:hadRole verfügen muss."@de .
+dcatap:Relationship_Property_dct_relation sh:message "Pflicht: dct:relation ist nicht vorhanden! Sie müssen beachten, dass eine dcat:Relationshipt über einen dct:relation verfügen muss."@de .
+
+# Änderungen bzw. Nachrichten zu Sammel-Prüfungen
+:DateOrDateTimeDataType_Shape sh:message "Der Wert muss von einem der folgenden Datentypen sein: xsd:date, xsd:dateTime, xsd:gYear oder xsd:gYearMonth."@de .
+:DcatResource_Shape           sh:message "Das Element muss ein dcat:Catalog, dcat:Dataset oder dcat:DataService sein."@de .
