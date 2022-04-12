@@ -1,8 +1,23 @@
 # DCAT-AP.de SHACL-Validation (BETA)
-*SHACL-Shapes für DCAT-AP.de*
+
+|  :warning: Hinweis zur aktuellen Entwicklung :warning:  |
+|:--------------------------------------------------------|
+| Aktuell wird die DCAT-AP.de SHACL-Validation mit Blick auf die [DCAT-AP.de 2.0](https://www.dcat-ap.de/def/dcatde/2.0/spec/) neu erstellt. <br> In einem ersten Schritt wurden die DCAT-AP Validierungsmöglichkeiten entfernt. Die SEMIC stellt ihren eigenen [DCAT-AP-Validator](https://www.itb.ec.europa.eu/shacl/dcat-ap/upload) zur Verfügung, der zuverlässig funktioniertn. <br> <br> Zunächst werden Validierungsartefakte für die Spezifikation von DCAT-AP.de 2.0 entwickelt. Dabei wird versucht, möglichst existiere Artefakte der SEMIC nachzunutzen und diese nur bei Bedarf zu erweitern. <br> Daran anschließend werden SHACL-Shapes für sinnvoll überprüfbare Regeln des [Konventionenhandbuchs 2.0](https://www.dcat-ap.de/def/dcatde/2.0/implRules/) entwickelt.|
+
+## DCAT-AP.de 2.0 - Spezifikation (ALPHA)
+Die Alphaversion der neuen Shacl-Shapes beschränkt sich bisher darauf, die verpflichtenden Regeln der SEMIC mit deutschen Fehlernachrichten anzureichern. Dazu werden folgende Dateien verwendet:  
+- https://github.com/init-dcat-ap-de/DCAT-AP/blob/2.1.1-draft/releases/2.1.1/dcat-ap_2.1.1_shacl_shapes.ttl  
+- https://github.com/GovDataOfficial/DCAT-AP.de-SHACL-Validation/blob/master/validator/resources/v2.0/shapes/dcat-ap-german-additions_messages.ttl
+
+* * *
+* * *
+
+
+**(Die folgenden Informationen bleiben als Referenz erhalten und werden nach Abschluss der Arbeiten für die Version 2.0 grundlegend überarbeitet.)**
 
 ## Inhalt
 - [DCAT-AP.de SHACL-Validation (BETA)](#dcat-apde-shacl-validation-beta)
+  - [DCAT-AP.de 2.0 - Spezifikation (ALPHA)](#dcat-apde-20---spezifikation-alpha)
   - [Inhalt](#inhalt)
   - [Einleitung](#einleitung)
   - [Verfügbarkeit und Verwendung](#verfügbarkeit-und-verwendung)
@@ -29,7 +44,7 @@
     - [G - dcat-ap_2.1.0_shacl_shapes_recommended.ttl](#g---dcat-ap_210_shacl_shapes_recommendedttl)
     - [H - dcat-ap-de-import-lists.ttl](#h---dcat-ap-de-import-liststtl)
     - [I - dcat-ap-de-shapes-impliedRules.ttl](#i---dcat-ap-de-shapes-impliedrulesttl)
-    - [J - dcat-ap-de-govdata-dashboard-shapes-db-shapes.ttl](#j---dcat-ap-de-govdata-dashboard-db-shapesttl)
+    - [J - dcat-ap-de-govdata-dashboard-db-shapes.ttl](#j---dcat-ap-de-govdata-dashboard-db-shapesttl)
   - [Bekannte Probleme / übergreifende ToDos](#bekannte-probleme--übergreifende-todos)
   - [Kontakt und Lizenz](#kontakt-und-lizenz)
   
