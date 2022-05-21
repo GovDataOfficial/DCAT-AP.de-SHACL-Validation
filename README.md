@@ -9,6 +9,30 @@ Die Alphaversion der neuen Shacl-Shapes beschränkt sich bisher darauf, die verp
 - https://github.com/init-dcat-ap-de/DCAT-AP/blob/2.1.1-draft/releases/2.1.1/dcat-ap_2.1.1_shacl_shapes.ttl  
 - https://github.com/GovDataOfficial/DCAT-AP.de-SHACL-Validation/blob/master/validator/resources/v2.0/shapes/dcat-ap-german-additions_messages.ttl
 
+#### Was wird überprüft?
+ - Min- und Max-Kardinalitäten, damit auch Pflichteigenschaften
+ - Verwendung von Literals und ihren Typen
+ - Verwendung von URIs oder BlankNodes, wenn als Ziel eine Klasse erwartet wird
+ - Typen von Klassen, nur dann, wenn für sie SHACL-Shapes verwendet werden, die auf Grund der Verwendung von sh:targetClass sonst nicht zum Tragen kämen.
+
+
+#### Welche Klassen werden geprüft?
+ - 
+
+#### Aufbau der Fehlernachrichten:
+Es wurde versucht, klare Hinweise zu geben und zugleich nicht unnötig ausschweifende Fehlermeldungen zu erzeugen.  
+Die DCAT-AP-SHACL-Shapes bündeln mehrere Fehler in einem Shape, weswegen die Fehlernachricht nicht eindeutig sein kann.
+ - Betroffene Klasse
+ - Betroffene Eigenschaft
+ - Angabe, wie es richtig wäre (MUSS ein Literal sein)
+ - Schwere des Fehlers nicht im Text, sondern über die sh:severity-Angabe (Violation=Pflicht, Warning=Empfohlen, Info=Optional)
+
+## DCAT-AP.de 2.0 - GovData (ALPHA)
+ - Verwendung von URIs, wenn als Ziel eine URI verlangt wird und sinnvoll ist (z.B. foaf:page)
+ - Sinnvolle Erweiterung: Eigenschaften entweder ein Literal oder eine URL sein zu lassen, z.B.: dct:conformsTo, da nur diese im Portal angezeigt werden können
+ - Konventionen
+ - Besonders empfohlene Eigenschaften
+
 * * *
 * * *
 
@@ -18,6 +42,10 @@ Die Alphaversion der neuen Shacl-Shapes beschränkt sich bisher darauf, die verp
 ## Inhalt
 - [DCAT-AP.de SHACL-Validation (BETA)](#dcat-apde-shacl-validation-beta)
   - [DCAT-AP.de 2.0 - Spezifikation (ALPHA)](#dcat-apde-20---spezifikation-alpha)
+      - [Was wird überprüft?](#was-wird-überprüft)
+      - [Welche Klassen werden geprüft?](#welche-klassen-werden-geprüft)
+      - [Aufbau der Fehlernachrichten:](#aufbau-der-fehlernachrichten)
+  - [DCAT-AP.de 2.0 - GovData (ALPHA)](#dcat-apde-20---govdata-alpha)
   - [Inhalt](#inhalt)
   - [Einleitung](#einleitung)
   - [Verfügbarkeit und Verwendung](#verfügbarkeit-und-verwendung)

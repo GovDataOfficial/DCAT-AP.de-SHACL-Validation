@@ -1,0 +1,56 @@
+# (C) CC BY 4.0 ']init[ AG fuer GovData'
+#
+# Diese Datei fügt zu den DCAT-AP-SHACL-Shapes deutsche Regeln hinzu, so dass DCAT-AP.de 2.0 geprüft wird.
+# Das beinhaltet, dass widersprüchliche DCAT-AP-SHACL-Shapes deaktiviert werden.
+
+@prefix :       <http://dcat-ap.de/def/dcatde/2.0/#> .
+@prefix adms:   <http://www.w3.org/ns/adms#> .
+@prefix dc:     <http://purl.org/dc/elements/1.1/> .
+@prefix dcat:   <http://www.w3.org/ns/dcat#> .
+@prefix dcatap: <http://data.europa.eu/r5r#> .
+@prefix dcatde: <http://dcat-ap.de/def/dcatde/> .
+@prefix dct:    <http://purl.org/dc/terms/> .
+@prefix foaf:   <http://xmlns.com/foaf/0.1/> .
+@prefix locn:   <http://www.w3.org/ns/locn#> .
+@prefix org:    <http://www.w3.org/ns/org#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix sh:     <http://www.w3.org/ns/shacl#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
+@prefix spdx:   <http://spdx.org/rdf/terms#> .
+@prefix vcard:  <http://www.w3.org/2006/vcard/ns#> .
+@prefix xml:    <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+# Deutsche Änderungen und Ergänzungen zu dcat:Dataset
+
+:Dataset_dcatde_politicalGeocodingLevelURI_v_IRI
+    sh:path dcatde:politicalGeocodingLevelURI ;
+    sh:nodeKind sh:IRI ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:Dataset: dcatde:politicalGeocodingLevelURI MUSS eine IRI sein." @de ;
+.
+
+:Dataset_dcatde_politicalGeocodingLevelURI_w_List
+    sh:path dcatde:politicalGeocodingLevelURI ;
+    sh:node [
+        sh:path skos:inScheme ;
+        sh:hasValue <http://dcat-ap.de/def/politicalGeocoding/Level> ;
+    ] ;
+    sh:severity sh:Warning ;
+    sh:message "dcat:Dataset: dcatde:politicalGeocodingLevelURI SOLL folgendes Vokabular benutzten: http://dcat-ap.de/def/politicalGeocoding/Level/" @de ;
+.
+
+:Dataset_Shape 
+    a sh:NodeShape ;
+    sh:targetClass dcat:Dataset ;
+    sh:name "dcat:Dataset gemäß DCAT-AP.de Spezifikation 2.0"@de ;
+
+    # dcatde:politicalGeocodingLevelURI
+    sh:property :Dataset_dcatde_politicalGeocodingLevelURI_v_IRI ;
+    sh:property :Dataset_dcatde_politicalGeocodingLevelURI_w_List ;
+.

@@ -12,11 +12,14 @@
   owl:imports <http://www.w3.org/2006/vcard/ns.ttl> ;
   owl:imports <http://www.w3.org/ns/org.ttl> ;                               # added
 
+  owl:imports <http://publications.europa.eu/resource/authority/data-theme> ;    # MDR NAL
+  owl:imports <https://www.dcat-ap.de/def/licenses/20210721.rdf> ;               # DCAT-AP.de Lizenzen
+  owl:imports <https://www.dcat-ap.de/def/politicalGeocoding/Level/1_0.rdf> ;    # DCAT-AP.de politicalGeocoding/Level
+
  # owl:imports <https://spdx.org/rdf/terms/spdx-ontology.owl.xml> ;          # no use-case yet
  # owl:imports <http://dublincore.org/2020/01/20/dublin_core_terms.ttl> ;    # no use-case yet
  # owl:imports <https://www.w3.org/ns/locn.ttl> ;                            # no use-case yet
  # owl:imports <http://www.w3.org/ns/prov-o.ttl> ;                           # no use-case yet
  # owl:imports <http://www.w3.org/2006/time.ttl> ;                           # no use-case yet
  # owl:imports <http://www.w3.org/ns/adms.ttl> ;                             # no use-case yet
-
 .
