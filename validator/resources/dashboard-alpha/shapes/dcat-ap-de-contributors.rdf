@@ -15,8 +15,8 @@
          xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
          >
   <owl:Ontology rdf:about="http://dcat-ap.de/def/contributors">
-    <owl:versionInfo>20220502</owl:versionInfo>
-    <owl:versionIRI rdf:resource="http://dcat-ap.de/def/contributors/20220502/"/>
+    <owl:versionInfo>20220523</owl:versionInfo>
+    <owl:versionIRI rdf:resource="http://dcat-ap.de/def/contributors/20220523/"/>
     <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Folgend ist die Liste der unmittelbar an GovData anliefernden Systeme abgebildet. Diese Datenbereitsteller sind im engeren Sinne Metadatenbereitsteller, für den Bezug der eigentlichen Open Data Daten wird auf das „Originalportal“ verwiesen.</rdfs:comment>
   </owl:Ontology>
   <skos:ConceptScheme rdf:about="http://dcat-ap.de/def/contributors">
@@ -70,20 +70,20 @@
     <skos:exactMatch rdf:resource="http://dcat-ap.de/def/contributors/bundesamtFuerJustiz"/>
     <skos:altLabel xml:lang="de">bundesamtFuerJustiz</skos:altLabel>
   </skos:Concept>
-  <skos:Concept rdf:about="http://dcat-ap.de/def/contributors/bundesamtFuerMaterialforschungUndPruefung">
-    <dc:identifier>bundesamtFuerMaterialforschungUndPruefung</dc:identifier>
+  <skos:Concept rdf:about="http://dcat-ap.de/def/contributors/bundesanstaltFuerMaterialforschungUndPruefung">
+    <dc:identifier>bundesanstaltFuerMaterialforschungUndPruefung</dc:identifier>
     <skos:topConceptOf rdf:resource="http://dcat-ap.de/def/contributors"/>
     <skos:inScheme rdf:resource="http://dcat-ap.de/def/contributors"/>
-    <skos:prefLabel xml:lang="de">Bundesamt für Materialforschung und -prüfung</skos:prefLabel>
+    <skos:prefLabel xml:lang="de">Bundesanstalt für Materialforschung und -prüfung (BAM)</skos:prefLabel>
     <skos-xl:prefLabel>
       <skos-xl:Label>
         <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
-        <skos-xl:literalForm xml:lang="de">Bundesamt für Materialforschung und -prüfung</skos-xl:literalForm>
-        <rdfs:label xml:lang="de">Bundesamt für Materialforschung und -prüfung</rdfs:label>
+        <skos-xl:literalForm xml:lang="de">Bundesanstalt für Materialforschung und -prüfung (BAM)</skos-xl:literalForm>
+        <rdfs:label xml:lang="de">Bundesanstalt für Materialforschung und -prüfung (BAM)</rdfs:label>
       </skos-xl:Label>
     </skos-xl:prefLabel>
-    <skos:exactMatch rdf:resource="http://dcat-ap.de/def/contributors/bundesamtFuerMaterialforschungUndPruefung"/>
-    <skos:altLabel xml:lang="de">bundesamtFuerMaterialforschungUndPruefung</skos:altLabel>
+    <skos:exactMatch rdf:resource="http://dcat-ap.de/def/contributors/bundesanstaltFuerMaterialforschungUndPruefung"/>
+    <skos:altLabel xml:lang="de">bundesanstaltFuerMaterialforschungUndPruefung</skos:altLabel>
   </skos:Concept>
   <skos:Concept rdf:about="http://dcat-ap.de/def/contributors/bundesamtFuerVerbraucherschutzUndLebensmittelsicherheit">
     <dc:identifier>bundesamtFuerVerbraucherschutzUndLebensmittelsicherheit</dc:identifier>
@@ -565,6 +565,21 @@
     <skos:exactMatch rdf:resource="http://dcat-ap.de/def/contributors/landBrandenburg"/>
     <skos:altLabel xml:lang="de">landBrandenburg</skos:altLabel>
   </skos:Concept>
+  <skos:Concept rdf:about="http://dcat-ap.de/def/contributors/landNiedersachsen">
+    <dc:identifier>landNiedersachsen</dc:identifier>
+    <skos:topConceptOf rdf:resource="http://dcat-ap.de/def/contributors"/>
+    <skos:inScheme rdf:resource="http://dcat-ap.de/def/contributors"/>
+    <skos:prefLabel xml:lang="de">Land Niedersachsen</skos:prefLabel>
+    <skos-xl:prefLabel>
+      <skos-xl:Label>
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
+        <skos-xl:literalForm xml:lang="de">Land Niedersachsen</skos-xl:literalForm>
+        <rdfs:label xml:lang="de">Land Niedersachsen</rdfs:label>
+      </skos-xl:Label>
+    </skos-xl:prefLabel>
+    <skos:exactMatch rdf:resource="http://dcat-ap.de/def/contributors/landNiedersachsen"/>
+    <skos:altLabel xml:lang="de">landNiedersachsen</skos:altLabel>
+  </skos:Concept>
   <skos:Concept rdf:about="http://dcat-ap.de/def/contributors/maxRubnerInstitut">
     <dc:identifier>maxRubnerInstitut</dc:identifier>
     <skos:topConceptOf rdf:resource="http://dcat-ap.de/def/contributors"/>
@@ -685,6 +700,21 @@
     <skos:exactMatch rdf:resource="http://dcat-ap.de/def/contributors/openNRW"/>
     <skos:altLabel xml:lang="de">openNRW</skos:altLabel>
   </skos:Concept>
+  <skos:Concept rdf:about="http://dcat-ap.de/def/contributors/openAgrarRepositoriumDerForschungseinrichtungenDesBMEL">
+    <dc:identifier>openAgrarRepositoriumDerForschungseinrichtungenDesBMEL</dc:identifier>
+    <skos:topConceptOf rdf:resource="http://dcat-ap.de/def/contributors"/>
+    <skos:inScheme rdf:resource="http://dcat-ap.de/def/contributors"/>
+    <skos:prefLabel xml:lang="de">OpenAgrar Repositorium der Forschungseinrichtungen des BMEL</skos:prefLabel>
+    <skos-xl:prefLabel>
+      <skos-xl:Label>
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
+        <skos-xl:literalForm xml:lang="de">OpenAgrar Repositorium der Forschungseinrichtungen des BMEL</skos-xl:literalForm>
+        <rdfs:label xml:lang="de">OpenAgrar Repositorium der Forschungseinrichtungen des BMEL</rdfs:label>
+      </skos-xl:Label>
+    </skos-xl:prefLabel>
+    <skos:exactMatch rdf:resource="http://dcat-ap.de/def/contributors/openAgrarRepositoriumDerForschungseinrichtungenDesBMEL"/>
+    <skos:altLabel xml:lang="de">openAgrarRepositoriumDerForschungseinrichtungenDesBMEL</skos:altLabel>
+  </skos:Concept>
   <skos:Concept rdf:about="http://dcat-ap.de/def/contributors/regionalstatistik">
     <dc:identifier>regionalstatistik</dc:identifier>
     <skos:topConceptOf rdf:resource="http://dcat-ap.de/def/contributors"/>
@@ -730,6 +760,21 @@
     <skos:exactMatch rdf:resource="http://dcat-ap.de/def/contributors/schleswigHolstein"/>
     <skos:altLabel xml:lang="de">schleswigHolstein</skos:altLabel>
   </skos:Concept>
+  <skos:Concept rdf:about="http://dcat-ap.de/def/contributors/stadtAugsburg">
+    <dc:identifier>stadtAugsburg</dc:identifier>
+    <skos:topConceptOf rdf:resource="http://dcat-ap.de/def/contributors"/>
+    <skos:inScheme rdf:resource="http://dcat-ap.de/def/contributors"/>
+    <skos:prefLabel xml:lang="de">Stadt Augsburg</skos:prefLabel>
+    <skos-xl:prefLabel>
+      <skos-xl:Label>
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
+        <skos-xl:literalForm xml:lang="de">Stadt Augsburg</skos-xl:literalForm>
+        <rdfs:label xml:lang="de">Stadt Augsburg</rdfs:label>
+      </skos-xl:Label>
+    </skos-xl:prefLabel>
+    <skos:exactMatch rdf:resource="http://dcat-ap.de/def/contributors/stadtAugsburg"/>
+    <skos:altLabel xml:lang="de">stadtAugsburg</skos:altLabel>
+  </skos:Concept>
   <skos:Concept rdf:about="http://dcat-ap.de/def/contributors/stadtFrankfurtAmMain">
     <dc:identifier>stadtFrankfurtAmMain</dc:identifier>
     <skos:topConceptOf rdf:resource="http://dcat-ap.de/def/contributors"/>
@@ -744,6 +789,21 @@
     </skos-xl:prefLabel>
     <skos:exactMatch rdf:resource="http://dcat-ap.de/def/contributors/stadtFrankfurtAmMain"/>
     <skos:altLabel xml:lang="de">stadtFrankfurtAmMain</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://dcat-ap.de/def/contributors/stadtFreiburgImBreisgau">
+    <dc:identifier>stadtFreiburgImBreisgau</dc:identifier>
+    <skos:topConceptOf rdf:resource="http://dcat-ap.de/def/contributors"/>
+    <skos:inScheme rdf:resource="http://dcat-ap.de/def/contributors"/>
+    <skos:prefLabel xml:lang="de">Stadt Freiburg im Breisgau</skos:prefLabel>
+    <skos-xl:prefLabel>
+      <skos-xl:Label>
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
+        <skos-xl:literalForm xml:lang="de">Stadt Freiburg im Breisgau</skos-xl:literalForm>
+        <rdfs:label xml:lang="de">Stadt Freiburg im Breisgau</rdfs:label>
+      </skos-xl:Label>
+    </skos-xl:prefLabel>
+    <skos:exactMatch rdf:resource="http://dcat-ap.de/def/contributors/stadtFreiburgImBreisgau"/>
+    <skos:altLabel xml:lang="de">stadtFreiburgImBreisgau</skos:altLabel>
   </skos:Concept>
   <skos:Concept rdf:about="http://dcat-ap.de/def/contributors/transparenzportalBremen">
     <dc:identifier>transparenzportalBremen</dc:identifier>
