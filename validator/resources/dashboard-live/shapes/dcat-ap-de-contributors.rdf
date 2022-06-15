@@ -15,8 +15,8 @@
          xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
          >
   <owl:Ontology rdf:about="http://dcat-ap.de/def/contributors">
-    <owl:versionInfo>20220523</owl:versionInfo>
-    <owl:versionIRI rdf:resource="http://dcat-ap.de/def/contributors/20220523/"/>
+    <owl:versionInfo>20220614</owl:versionInfo>
+    <owl:versionIRI rdf:resource="http://dcat-ap.de/def/contributors/20220614/"/>
     <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Folgend ist die Liste der unmittelbar an GovData anliefernden Systeme abgebildet. Diese Datenbereitsteller sind im engeren Sinne Metadatenbereitsteller, für den Bezug der eigentlichen Open Data Daten wird auf das „Originalportal“ verwiesen.</rdfs:comment>
   </owl:Ontology>
   <skos:ConceptScheme rdf:about="http://dcat-ap.de/def/contributors">
@@ -625,6 +625,21 @@
     <skos:exactMatch rdf:resource="http://dcat-ap.de/def/contributors/mecklenburgVorpommern"/>
     <skos:altLabel xml:lang="de">mecklenburgVorpommern</skos:altLabel>
   </skos:Concept>
+  <skos:Concept rdf:about="http://dcat-ap.de/def/contributors/metropolregionRheinNeckar">
+    <dc:identifier>metropolregionRheinNeckar</dc:identifier>
+    <skos:topConceptOf rdf:resource="http://dcat-ap.de/def/contributors"/>
+    <skos:inScheme rdf:resource="http://dcat-ap.de/def/contributors"/>
+    <skos:prefLabel xml:lang="de">Metropolregion Rhein-Neckar</skos:prefLabel>
+    <skos-xl:prefLabel>
+      <skos-xl:Label>
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
+        <skos-xl:literalForm xml:lang="de">Metropolregion Rhein-Neckar</skos-xl:literalForm>
+        <rdfs:label xml:lang="de">Metropolregion Rhein-Neckar</rdfs:label>
+      </skos-xl:Label>
+    </skos-xl:prefLabel>
+    <skos:exactMatch rdf:resource="http://dcat-ap.de/def/contributors/metropolregionRheinNeckar"/>
+    <skos:altLabel xml:lang="de">metropolregionRheinNeckar</skos:altLabel>
+  </skos:Concept>
   <skos:Concept rdf:about="http://dcat-ap.de/def/contributors/openDataBayern">
     <dc:identifier>openDataBayern</dc:identifier>
     <skos:topConceptOf rdf:resource="http://dcat-ap.de/def/contributors"/>
@@ -804,6 +819,51 @@
     </skos-xl:prefLabel>
     <skos:exactMatch rdf:resource="http://dcat-ap.de/def/contributors/stadtFreiburgImBreisgau"/>
     <skos:altLabel xml:lang="de">stadtFreiburgImBreisgau</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://dcat-ap.de/def/contributors/stadtNuernberg">
+    <dc:identifier>stadtNuernberg</dc:identifier>
+    <skos:topConceptOf rdf:resource="http://dcat-ap.de/def/contributors"/>
+    <skos:inScheme rdf:resource="http://dcat-ap.de/def/contributors"/>
+    <skos:prefLabel xml:lang="de">Stadt Nürnberg</skos:prefLabel>
+    <skos-xl:prefLabel>
+      <skos-xl:Label>
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
+        <skos-xl:literalForm xml:lang="de">Stadt Nürnberg</skos-xl:literalForm>
+        <rdfs:label xml:lang="de">Stadt Nürnberg</rdfs:label>
+      </skos-xl:Label>
+    </skos-xl:prefLabel>
+    <skos:exactMatch rdf:resource="http://dcat-ap.de/def/contributors/stadtNuernberg"/>
+    <skos:altLabel xml:lang="de">stadtNuernberg</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://dcat-ap.de/def/contributors/stadtOldenburg">
+    <dc:identifier>stadtOldenburg</dc:identifier>
+    <skos:topConceptOf rdf:resource="http://dcat-ap.de/def/contributors"/>
+    <skos:inScheme rdf:resource="http://dcat-ap.de/def/contributors"/>
+    <skos:prefLabel xml:lang="de">Stadt Oldenburg</skos:prefLabel>
+    <skos-xl:prefLabel>
+      <skos-xl:Label>
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
+        <skos-xl:literalForm xml:lang="de">Stadt Oldenburg</skos-xl:literalForm>
+        <rdfs:label xml:lang="de">Stadt Oldenburg</rdfs:label>
+      </skos-xl:Label>
+    </skos-xl:prefLabel>
+    <skos:exactMatch rdf:resource="http://dcat-ap.de/def/contributors/stadtOldenburg"/>
+    <skos:altLabel xml:lang="de">stadtOldenburg</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://dcat-ap.de/def/contributors/SWONetzGmbH">
+    <dc:identifier>SWONetzGmbH</dc:identifier>
+    <skos:topConceptOf rdf:resource="http://dcat-ap.de/def/contributors"/>
+    <skos:inScheme rdf:resource="http://dcat-ap.de/def/contributors"/>
+    <skos:prefLabel xml:lang="de">Stadtwerke Osnabrück</skos:prefLabel>
+    <skos-xl:prefLabel>
+      <skos-xl:Label>
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
+        <skos-xl:literalForm xml:lang="de">Stadtwerke Osnabrück</skos-xl:literalForm>
+        <rdfs:label xml:lang="de">Stadtwerke Osnabrück</rdfs:label>
+      </skos-xl:Label>
+    </skos-xl:prefLabel>
+    <skos:exactMatch rdf:resource="http://dcat-ap.de/def/contributors/SWONetzGmbH"/>
+    <skos:altLabel xml:lang="de">SWONetzGmbH</skos:altLabel>
   </skos:Concept>
   <skos:Concept rdf:about="http://dcat-ap.de/def/contributors/transparenzportalBremen">
     <dc:identifier>transparenzportalBremen</dc:identifier>
