@@ -3,7 +3,7 @@
 # Diese Datei fügt zu den DCAT-AP-SHACL-Shapes deutsche Regeln hinzu, so dass DCAT-AP.de 2.0 geprüft wird.
 # Das beinhaltet, dass widersprüchliche DCAT-AP-SHACL-Shapes deaktiviert werden.
 
-@prefix :       <http://dcat-ap.de/def/dcatde/2.0/#> .
+@prefix :       <http://dcat-ap.de/def/dcatde/> .
 @prefix adms:   <http://www.w3.org/ns/adms#> .
 @prefix dc:     <http://purl.org/dc/elements/1.1/> .
 @prefix dcat:   <http://www.w3.org/ns/dcat#> .
@@ -26,13 +26,20 @@
 @prefix xml:    <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 
+
+# Allgemeine deutsche Änderungen
+# Deaktiviere alle Shapes zum "CategoryScheme", da diese bei jedem skos:ConceptScheme andocken.
+# Deaktiviere alle Shapes zum "Category", da diese bei jedem skos:Concept andocken.
+dcatap:CategoryScheme_Shape              sh:deactivated true .
+dcatap:Category_Property_skos_prefLabel  sh:deactivated true .
+
 # Deutsche Änderungen und Ergänzungen zu dcat:Dataset
 
 :Dataset_dcatde_politicalGeocodingLevelURI_v_IRI
     sh:path dcatde:politicalGeocodingLevelURI ;
     sh:nodeKind sh:IRI ;
     sh:severity sh:Violation ;
-    sh:message "dcat:Dataset: dcatde:politicalGeocodingLevelURI MUSS eine IRI sein." @de ;
+    sh:message "dcat:Dataset: dcatde:politicalGeocodingLevelURI MUSS eine IRI sein."@de ;
 .
 
 :Dataset_dcatde_politicalGeocodingLevelURI_w_List
@@ -42,7 +49,7 @@
         sh:hasValue <http://dcat-ap.de/def/politicalGeocoding/Level> ;
     ] ;
     sh:severity sh:Warning ;
-    sh:message "dcat:Dataset: dcatde:politicalGeocodingLevelURI SOLL folgendes Vokabular benutzten: http://dcat-ap.de/def/politicalGeocoding/Level/" @de ;
+    sh:message "dcat:Dataset: dcatde:politicalGeocodingLevelURI SOLL folgendes Vokabular benutzten: http://dcat-ap.de/def/politicalGeocoding/Level/"@de ;
 .
 
 :Dataset_Shape 
@@ -53,4 +60,184 @@
     # dcatde:politicalGeocodingLevelURI
     sh:property :Dataset_dcatde_politicalGeocodingLevelURI_v_IRI ;
     sh:property :Dataset_dcatde_politicalGeocodingLevelURI_w_List ;
+.
+
+:Catalog_dct_language_v_List
+    sh:path  dct:language ;
+    sh:node [
+        sh:path skos:inScheme ;
+        sh:hasValue <http://publications.europa.eu/resource/authority/language> ;
+    ] ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:Catalog: dct:language MUSS folgendes Vokabular benutzten: https://www.dcat-ap.de/def/dcatde/2.0/spec/#kv-languages"@de ;
+.
+
+:Catalog_foaf_homepage_v_IRI
+    sh:path foaf:homepage ;
+    sh:nodeKind sh:IRI ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:Catalog: foaf:homepage MUSS eine IRI sein."@de ;
+.
+
+:Catalog_dct_license_w_List
+    sh:path dct:license ;
+    sh:node [
+        sh:path skos:inScheme ;
+        sh:hasValue <http://dcat-ap.de/def/licenses> ;
+    ] ;
+    sh:severity sh:Warning ;
+    sh:message "dcat:Catalog: dct:license SOLL folgendes Vokabular benutzten: https://www.dcat-ap.de/def/licenses/"@de ;
+.
+
+:Catalog_dct_license_v_IRI
+    sh:path dct:license ;
+    sh:nodeKind sh:IRI ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:Catalog: dct:license MUSS eine IRI sein."@de ;
+.
+
+:Catalog_dcat_themeTaxonomy_v_IRI
+    sh:path dcat:themeTaxonomy;
+    sh:nodeKind sh:IRI ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:Catalog: dcat:themeTaxonomy MUSS eine IRI sein."@de ;
+.
+
+:Catalog_dcat_themeTaxonomy_v_Fixed
+    sh:severity sh:Violation ;
+    sh:or (
+        [
+            sh:path dcat:themeTaxonomy ;
+            sh:maxCount 0;
+        ]
+        [
+            sh:path dcat:themeTaxonomy ;
+            sh:minCount 1;
+            sh:qualifiedValueShape [
+                sh:hasValue <http://publications.europa.eu/resource/authority/data-theme> ;
+            ] ;
+            sh:qualifiedMinCount 1 ;
+        ]
+    ) ;
+    sh:message "dcat:Catalog: dcat:themeTaxonomy MUSS, wenn sie verwendet wird, einmal auf http://publications.europa.eu/resource/authority/data-theme zeigen."@de ;
+.
+
+:Catalog_dcatap_availability_v_Max
+    sh:maxCount 1 ;
+    sh:path dcatap:availability ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:Catalog: DARF maximal eine  dcatap:availability haben."@de ;
+.
+
+:Catalog_dcatap_availability_v_List
+    sh:path  dcatap:availability ;
+    sh:node [
+        sh:path skos:inScheme ;
+        sh:hasValue <http://publications.europa.eu/resource/dataset/planned-availability> ;
+    ] ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:Catalog: dcatap:availability MUSS folgendes Vokabular benutzten: https://www.dcat-ap.de/def/dcatde/2.0/spec/#kv-availability"@de ;
+.
+
+:Catalog_dct_rights_v_IRI
+    sh:path dct:rights ;
+    sh:nodeKind sh:IRI ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:Catalog: dct:rights MUSS eine IRI sein."@de ;
+.
+
+:Catalog_dcat_catalog_v_Class
+    sh:path dcat:catalog ;
+    sh:class dcat:Catalog ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:Catalog: dcat:catalog MUSS auf einen dcat:Catalog verweisen."@de ;
+.
+
+:Catalog_dcat_service_v_Class
+    sh:path dcat:service ;
+    sh:class dcat:DataService ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:Catalog: dcat:service MUSS auf einen dcat:DataService verweisen."@de ;
+.
+
+:Catalog_dct_spatial_v_IRIorClass
+    sh:path dct:spatial ;
+    sh:or (
+        [
+            sh:nodeKind sh:IRI ;
+        ]
+        [
+            sh:nodeKind sh:BlankNode ;
+            sh:class dct:Location ;
+        ]
+    ) ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:Catalog: dct:spatial MUSS auf eine IRI oder einen BlankNode (vom Typ dct:Location) verweisen."@de ;
+.
+
+:Catalog_dct_hasPart_v_Class
+    sh:path dct:hasPart ;
+    sh:class dcat:Catalog ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:Catalog: dct:hasPart MUSS auf einen dcat:Catalog verweisen."@de ;
+.
+
+:Catalog_dct_isPartOf_v_Class
+    sh:path dct:isPartOf ;
+    sh:class dcat:Catalog ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:Catalog: dct:isPartOf MUSS auf einen dcat:Catalog verweisen."@de ;
+.
+
+:Catalog_dcat_record_v_Class
+    sh:path dcat:record ;
+    sh:class dcat:CatalogRecord ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:Catalog: dcat:record MUSS auf einen dcat:CatalogRecord verweisen."@de ;
+.
+
+:Catalog_dcat_dataset_v_Class
+    sh:path dcat:dataset ;
+    sh:class dcat:Dataset ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:Catalog: dcat:dataset MUSS auf ein dcat:Dataset verweisen."@de ;
+.
+
+:Catalog_dct_publisher_v_Class
+    sh:path dct:publisher ;
+    sh:class foaf:Agent ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:Catalog: dct:publisher MUSS auf einen foaf:Agent verweisen."@de ;
+.
+
+:Catalog_dct_creator_v_Class
+    sh:path dct:creator ;
+    sh:class foaf:Agent ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:Catalog: dct:creator MUSS auf einen foaf:Agent verweisen."@de ;
+.
+
+:Catalog_Shape 
+    a sh:NodeShape ;
+    sh:targetClass dcat:Catalog ;
+    sh:name "dcat:Catalog gemäß DCAT-AP.de Spezifikation 2.0"@de ;
+
+    sh:property :Catalog_dct_language_v_List ;
+    sh:property :Catalog_foaf_homepage_v_IRI ;
+    sh:property :Catalog_dct_license_w_List ;
+    sh:property :Catalog_dct_license_v_IRI ;
+    sh:property :Catalog_dcat_themeTaxonomy_v_IRI ;
+    sh:property :Catalog_dcat_themeTaxonomy_v_Fixed ;
+    sh:property :Catalog_dcatap_availability_v_Max ;
+    sh:property :Catalog_dcatap_availability_v_List ;
+    sh:property :Catalog_dct_rights_v_IRI ;
+    sh:property :Catalog_dcat_catalog_v_Class ;
+    sh:property :Catalog_dcat_service_v_Class ;
+    sh:property :Catalog_dct_spatial_v_IRIorClass ;
+    sh:property :Catalog_dct_hasPart_v_Class ;
+    sh:property :Catalog_dct_isPartOf_v_Class ;
+    sh:property :Catalog_dcat_record_v_Class ;
+    sh:property :Catalog_dcat_dataset_v_Class ;
+    sh:property :Catalog_dct_publisher_v_Class ;
+    sh:property :Catalog_dct_creator_v_Class ;
 .

@@ -2,7 +2,6 @@
 #
 # Diese Datei fügt zu den DCAT-AP-SHACL-Shapes eine deutsche Übersetzung hinzu.
 
-@prefix :       <http://dcat-ap.de/def/dcatde/2.0/#> .
 @prefix adms:   <http://www.w3.org/ns/adms#> .
 @prefix dc:     <http://purl.org/dc/elements/1.1/> .
 @prefix dcat:   <http://www.w3.org/ns/dcat#> .
@@ -28,8 +27,8 @@
 
 
 # Deutsche Fehlermeldungen zu foaf:Agent
-dcatap:Agent_Property_dct_type  sh:message "foaf:Agent: darf maximal ein dct:type haben." @de .
-dcatap:Agent_Property_foaf_name sh:message "foaf:Agent: muss mindestens einen foaf:name haben." @de .
+dcatap:Agent_Property_dct_type  sh:message "foaf:Agent: DARF maximal ein dct:type haben." @de .
+dcatap:Agent_Property_foaf_name sh:message "foaf:Agent: MUSS mindestens einen foaf:name haben." @de .
 
 
 # Deutsche Fehlermeldungen zu dcat:CatalogRecord
@@ -44,25 +43,25 @@ dcatap:CatalogRecord_Property_dct_title         sh:message "Pflicht: dct:title i
 dcatap:CatalogRecord_Property_foaf_primaryTopic sh:message "Pflicht: Nicht genau ein foaf:primaryTopic vorhanden! Sie müssen beachten, dass ein dcat:CatalogRecord über genau ein foaf:primaryTopic verfügen muss."@de .
 
 
-# Deutsche Fehlermeldungen zu dcat:CatalogRecord
-dcatap:Catalog_Property_dct_description    sh:message "Pflicht: Ein dcat:Catalog MUSS über eine dct:description verfügen, die ein Literal ist!"@de .
-dcatap:Catalog_Property_dct_isPartOf       sh:message "Pflicht: Mehr als ein dct:isPartOf vorhanden! Sie müssen beachten, dass ein dcat:Catalog nicht über mehrere dct:isPartOf verfügen darf."@de .
-dcatap:Catalog_Property_dct_issued         sh:message "Pflicht: Mehr als ein dct:issued vorhanden! Sie müssen beachten, dass ein dcat:Catalog nicht über mehrere dct:issued verfügen darf."@de .
-dcatap:Catalog_Property_dct_license        sh:message "Pflicht: Mehr als eine dct:license vorhanden! Sie müssen beachten, dass ein dcat:Catalog nicht über mehrere dct:license verfügen darf."@de .
-dcatap:Catalog_Property_dct_modified       sh:message "Pflicht: Mehr als ein dct:modified vorhanden! Sie müssen beachten, dass ein dcat:Catalog nicht über mehrere dct:modified verfügen darf."@de .
-dcatap:Catalog_Property_dct_publisher      sh:message "Pflicht: Nicht genau ein dct:publisher vorhanden! Sie müssen beachten, dass ein dcat:Catalog über genau einen dct:publisher verfügen muss."@de .
-dcatap:Catalog_Property_dct_rights         sh:message "Pflicht: Mehr als ein dct:rights vorhanden! Sie müssen beachten, dass ein dcat:Catalog nicht über mehrere dct:rights verfügen darf."@de .
-dcatap:Catalog_Property_dct_title          sh:message "Pflicht: dct:title ist kein Literal oder nicht vorhanden! Ein dcat:Catalog muss über mindestens einen Titel verfügen. Alle Titel müssen Text sein."@de .
-dcatap:Catalog_Property_foaf_homepage      sh:message "Pflicht: Mehr als eine foaf:homepage vorhanden! Sie müssen beachten, dass ein dcat:Catalog nicht über mehrere foaf:homepages verfügen darf."@de .
-# dcatap:Catalog_Property_dcat_catalog       sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte." @de .
-# dcatap:Catalog_Property_dcat_dataset       sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte." @de .
-# dcatap:Catalog_Property_dcat_record        sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte." @de .
-# dcatap:Catalog_Property_dcat_service       sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte." @de .
-# dcatap:Catalog_Property_dcat_themeTaxonomy sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte." @de .
-# dcatap:Catalog_Property_dct_creator        sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte." @de .
-# dcatap:Catalog_Property_dct_hasPart        sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte." @de .
+# Deutsche Fehlermeldungen zu dcat:Catalog
+dcatap:Catalog_Property_dct_title            sh:message "dcat:Catalog: dct:title MUSS vorhanden und ein Literal sein."@de .
+dcatap:Catalog_Property_dct_description      sh:message "dcat:Catalog: dct:description MUSS vorhanden und ein Literal sein."@de .
+dcatap:Catalog_Property_dct_issued           sh:message "dcat:Catalog: DARF maximal ein dct:issued haben."@de .
+dcatap:Catalog_Property_dct_modified         sh:message "dcat:Catalog: DARF maximal ein dct:modified haben."@de .
 # dcatap:Catalog_Property_dct_language       sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte." @de .
+dcatap:Catalog_Property_foaf_homepage        sh:message "dcat:Catalog: DARF maximal eine foaf:homepage haben."@de .
+dcatap:Catalog_Property_dct_license          sh:message "dcat:Catalog: DARF maximal eine dct:license haben."@de .
+dcatap:Catalog_Property_dct_rights           sh:message "dcat:Catalog: DARF maximal ein dct:rights haben."@de .
+# dcatap:Catalog_Property_dcat_catalog       sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte." @de .
+# dcatap:Catalog_Property_dcat_themeTaxonomy sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte." @de .
+# dcatap:Catalog_Property_dcat_service       sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte." @de .
 # dcatap:Catalog_Property_dct_spatial        sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte." @de .
+# dcatap:Catalog_Property_dct_hasPart        sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte." @de .
+dcatap:Catalog_Property_dct_isPartOf         sh:message "dcat:Catalog: DARF maximal ein dct:isPartOf haben."@de .
+# dcatap:Catalog_Property_dcat_record        sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte." @de .
+# dcatap:Catalog_Property_dcat_dataset       sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte." @de .
+dcatap:Catalog_Property_dct_publisher        sh:message "dcat:Catalog: dct:publisher MUSS genau einmal vorhanden sein."@de .
+# dcatap:Catalog_Property_dct_creator        sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte." @de .
 
 
 # Deutsche Fehlermeldungen zu skos:ConceptScheme
@@ -81,7 +80,7 @@ dcatap:Checksum_Property_spdx_checksumValue sh:message "Pflicht: spdx:checksumVa
 # Deutsche Fehlermeldungen zu dcat:DataService
 dcatap:DataService_Property_dcat_endpointDescription sh:message "Pflicht: dcat:endpointDescription ist keine IRI oder BlankNode! Jede Beschreibung des Endpunktes muss eine IRI oder ein BlankNode sein."@de .
 dcatap:DataService_Property_dcat_endpointURL         sh:message "Pflicht: dcat:endpointURL ist keine IRI bzw. BlankNode oder nicht vorhanden! Ein dcat:DataService muss über mindestens eine dcat:endpointURL verfügen. Diese muss eine IRI oder ein BlankNode sein."@de .
-# dcatap:DataService_Property_dcat_servesDataset       sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte." @de .
+# dcatap:DataService_Property_dcat_servesDataset     sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte." @de .
 dcatap:DataService_Property_dct_accessRights         sh:message "Pflicht: Mehr als eine dct:accessRights vorhanden! Sie müssen beachten, dass ein dcat:DataService nicht über mehrere dct:accessRights verfügen darf."@de .
 dcatap:DataService_Property_dct_description          sh:message "Pflicht: dct:description ist kein Literal! Alle Beschreibungen müssen Text sein."@de .
 dcatap:DataService_Property_dct_license              sh:message "Pflicht: Mehr als eine dct:license vorhanden! Sie müssen beachten, dass ein dcat:DataService nicht über mehrere dct:license verfügen darf."@de .
@@ -104,30 +103,30 @@ dcatap:Dataset_Property_dct_publisher                  sh:message "dcat:Dataset:
 dcatap:Dataset_Property_dct_relation                   sh:message "dcat:Dataset: dct:relation MUSS eine IRI oder BlankNode sein." @de .
 dcatap:Dataset_Property_dct_title                      sh:message "dcat:Dataset: dct:title MUSS ein Literal sein. Es MUSS mindestens einmal vorhanden sein." @de .
 dcatap:Dataset_Property_owl_versionInfo                sh:message "dcat:Dataset: owl:versionInfo MUSS ein Literal sein. Es DARF maximal einmal vorhanden sein." @de .
-# dcatap:Dataset_Property_adms_identifier              sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte." @de .
-# dcatap:Dataset_Property_adms_sample                  sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte." @de .
-# dcatap:Dataset_Property_dcat_contactPoint            sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte." @de .
-# dcatap:Dataset_Property_dcat_distribution            sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte." @de .
-# dcatap:Dataset_Property_dcat_landingPage             sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte." @de .
-# dcatap:Dataset_Property_dcat_qualifiedRelation       sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte." @de .
-# dcatap:Dataset_Property_dcat_theme                   sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte." @de .
-# dcatap:Dataset_Property_dct_conformsTo               sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte." @de .
-# dcatap:Dataset_Property_dct_creator                  sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte." @de .
-# dcatap:Dataset_Property_dct_hasVersion               sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte." @de .
-# dcatap:Dataset_Property_dct_isVersionOf              sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte." @de .
-# dcatap:Dataset_Property_dct_language                 sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte." @de .
-# dcatap:Dataset_Property_dct_provenance               sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte." @de .
-# dcatap:Dataset_Property_dct_source                   sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte." @de .
-# dcatap:Dataset_Property_dct_spatial                  sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte." @de .
-# dcatap:Dataset_Property_dct_temporal                 sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte." @de .
-# dcatap:Dataset_Property_dct_type                     sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte." @de .
-# dcatap:Dataset_Property_foaf_page                    sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte." @de .
-# dcatap:Dataset_Property_prov_qualifiedAttribution    sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte." @de .
-# dcatap:Dataset_Property_prov_wasGeneratedBy          sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte." @de .
+# dcatap:Dataset_Property_adms_identifier            sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte." @de .
+# dcatap:Dataset_Property_adms_sample                sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte." @de .
+# dcatap:Dataset_Property_dcat_contactPoint          sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte." @de .
+# dcatap:Dataset_Property_dcat_distribution          sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte." @de .
+# dcatap:Dataset_Property_dcat_landingPage           sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte." @de .
+# dcatap:Dataset_Property_dcat_qualifiedRelation     sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte." @de .
+# dcatap:Dataset_Property_dcat_theme                 sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte." @de .
+# dcatap:Dataset_Property_dct_conformsTo             sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte." @de .
+# dcatap:Dataset_Property_dct_creator                sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte." @de .
+# dcatap:Dataset_Property_dct_hasVersion             sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte." @de .
+# dcatap:Dataset_Property_dct_isVersionOf            sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte." @de .
+# dcatap:Dataset_Property_dct_language               sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte." @de .
+# dcatap:Dataset_Property_dct_provenance             sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte." @de .
+# dcatap:Dataset_Property_dct_source                 sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte." @de .
+# dcatap:Dataset_Property_dct_spatial                sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte." @de .
+# dcatap:Dataset_Property_dct_temporal               sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte." @de .
+# dcatap:Dataset_Property_dct_type                   sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte." @de .
+# dcatap:Dataset_Property_foaf_page                  sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte." @de .
+# dcatap:Dataset_Property_prov_qualifiedAttribution  sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte." @de .
+# dcatap:Dataset_Property_prov_wasGeneratedBy        sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte." @de .
 
 # Deutsche Fehlermeldungen zu dcat:Distribution
 dcatap:Distribution_Property_adms_status                    sh:message "Pflicht: Mehr als ein adms:status vorhanden! Sie müssen beachten, dass eine dcat:Distribution nicht über mehrere adms:status verfügen darf."@de .
-# dcatap:Distribution_Property_dcat_accessService             sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte." @de .
+# dcatap:Distribution_Property_dcat_accessService           sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte." @de .
 dcatap:Distribution_Property_dcat_accessURL                 sh:message "Pflicht: dcat:accessURL ist nicht vorhanden oder keine IRI oder BlankNode! Jede dcat:Distribution muss über eine Access-URL verfügen, die eine IRI oder ein BlankNode ist."@de .
 dcatap:Distribution_Property_dcat_byteSize                  sh:message "Pflicht: dcat:byteSize ist kein Literal vom Typ xsd:decimal oder mehrfach vorhanden! Eine dcat:Distribution darf höchstens über ein dcat:byteSize verfügen. Diese muss ein Text vom Typ xsd:decimal sein."@de .
 dcatap:Distribution_Property_dcat_compressFormat            sh:message "Pflicht: Mehr als ein dcat:compressFormat vorhanden! Sie müssen beachten, dass eine dcat:Distribution nicht über mehrere dcat:compressFormat verfügen darf."@de .
@@ -137,16 +136,16 @@ dcatap:Distribution_Property_dcat_packageFormat             sh:message "Pflicht:
 dcatap:Distribution_Property_dcat_spatialResolutionInMeters sh:message "Pflicht: dcat:spatialResolutionInMeters ist kein Literal vom Typ xsd:decimal oder mehrfach vorhanden! Eine dcat:Distribution darf höchstens über eine dcat:spatialResolutionInMeters verfügen. Diese muss ein Text vom Typ xsd:decimal sein."@de .
 dcatap:Distribution_Property_dcat_temporalResolution        sh:message "Pflicht: dcat:temporalResolution ist kein Literal vom Typ xsd:duration oder mehrfach vorhanden! Eine dcat:Distribution darf höchstens über eine dcat:temporalResolution verfügen. Diese muss ein Text vom Typ xsd:duration sein."@de .
 dcatap:Distribution_Property_dcatap_availability            sh:message "Pflicht: Mehr als eine dcatap:availability vorhanden! Sie müssen beachten, dass eine dcat:Distribution nicht über mehrere dcatap:availability verfügen darf."@de .
-# dcatap:Distribution_Property_dct_conformsTo                 sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte." @de .
+# dcatap:Distribution_Property_dct_conformsTo               sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte." @de .
 dcatap:Distribution_Property_dct_description                sh:message "Pflicht: dct:description ist kein Literal! Verfügt eine dcat:Distribution über eine Beschreibung, muss sie ein Text sein."@de .
 dcatap:Distribution_Property_dct_format                     sh:message "Pflicht: Mehr als ein dct:format vorhanden! Sie müssen beachten, dass eine dcat:Distribution nicht über mehrere dct:format verfügen darf."@de .
 dcatap:Distribution_Property_dct_issued                     sh:message "Pflicht: Mehr als ein dct:issued vorhanden! Sie müssen beachten, dass eine dcat:Distribution nicht über mehrere dct:issued verfügen darf."@de .
-# dcatap:Distribution_Property_dct_language                   sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte." @de .
+# dcatap:Distribution_Property_dct_language                 sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte." @de .
 dcatap:Distribution_Property_dct_license                    sh:message "Pflicht: Mehr als eine dct:license vorhanden! Sie müssen beachten, dass eine dcat:Distribution nicht über mehrere dct:license verfügen darf."@de .
 dcatap:Distribution_Property_dct_modified                   sh:message "Pflicht: Mehr als ein dct:modified vorhanden! Sie müssen beachten, dass eine dcat:Distribution nicht über mehrere dct:modified verfügen darf."@de .
 dcatap:Distribution_Property_dct_rights                     sh:message "Pflicht: Mehr als ein dct:rights vorhanden! Sie müssen beachten, dass eine dcat:Distribution nicht über mehrere dct:rights verfügen darf."@de .
 dcatap:Distribution_Property_dct_title                      sh:message "Pflicht: dct:title ist kein Literal! Verfügt eine dcat:Distribution über einen Titel, muss er Text sein."@de .
-# dcatap:Distribution_Property_foaf_page                      sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte." @de .
+# dcatap:Distribution_Property_foaf_page                    sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte." @de .
 dcatap:Distribution_Property_odrl_hasPolicy                 sh:message "Pflicht: Mehr als ein odrl:hasPolicy vorhanden! Sie müssen beachten, dass eine dcat:Distribution nicht über mehrere odrl:hasPolicy verfügen darf."@de .
 dcatap:Distribution_Property_spdx_checksum                  sh:message "Pflicht: Mehr als eine spdx:checksum vorhanden! Sie müssen beachten, dass eine dcat:Distribution nicht über mehrere spdx:checksum verfügen darf."@de .
 
@@ -155,7 +154,7 @@ dcatap:Distribution_Property_spdx_checksum                  sh:message "Pflicht:
 dcatap:Identifier_Property_skos_notation sh:message "Pflicht: Mehr als eine skos:notation vorhanden! Sie müssen beachten, dass ein adms:Identifier nicht über mehrere skos:notation verfügen darf."@de .
 
 # Deutsche Fehlermeldungen zu dct:LicenseDocument
-# dcatap:LicenceDocument_Property_dct_type sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte." @de .
+# dcatap:LicenceDocument_Property_dct_typsh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte." @de .
 
 # Deutsche Fehlermeldungen zu dct:Location
 dcatap:Location_Shape_Property_dcat_bbox     sh:message "Pflicht: dcat:bbox ist kein Literal oder mehrfach vorhanden! Eine dct:Location darf höchstens über ein dcat:bbox verfügen. Diese muss ein Literal sein."@de .
@@ -173,5 +172,5 @@ dcatap:Relationship_Property_dcat_hadRole sh:message "Pflicht: dcat:hadRole ist 
 dcatap:Relationship_Property_dct_relation sh:message "Pflicht: dct:relation ist nicht vorhanden! Sie müssen beachten, dass eine dcat:Relationshipt über einen dct:relation verfügen muss."@de .
 
 # Deutsche Fehlermeldungen zu Sammel-Prüfungen
-:DateOrDateTimeDataType_Shape sh:message "Der Wert muss von einem der folgenden Datentypen sein: xsd:date, xsd:dateTime, xsd:gYear oder xsd:gYearMonth."@de .
-:DcatResource_Shape           sh:message "Das Element muss ein dcat:Catalog, dcat:Dataset oder dcat:DataService sein."@de .
+dcatap:DateOrDateTimeDataType_Shape sh:message "Das Objekt MUSS vom Typ xsd:date, xsd:dateTime, xsd:gYear oder xsd:gYearMonth sein."@de .
+dcatap:DcatResource_Shape           sh:message "Das Objekt MUSS vom Typ dcat:Catalog, dcat:Dataset oder dcat:DataService sein."@de .
