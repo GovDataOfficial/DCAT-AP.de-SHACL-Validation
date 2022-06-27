@@ -616,3 +616,72 @@ dcatap:Category_Property_skos_prefLabel  sh:deactivated true .
     sh:property :Catalog_dct_publisher_v_Class ;
     sh:property :Catalog_dct_creator_v_Class ;
 .
+
+:DataService_dcat_endpointURL_v_Min
+    sh:minCount 1 ;
+    sh:path dcat:endpointURL ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:DataService: MUSS mindestens eine dcat:endpointURL haben."@de ;
+.
+
+:DataService_dcatap_availability_v_Max
+    sh:maxCount 1 ;
+    sh:path dcatap:availability ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:DataService: DARF maximal eine dcatap:availability haben."@de ;
+.
+
+:DataService_dcatap_availability_v_List
+    sh:path  dcatap:availability ;
+    sh:node [
+        sh:path skos:inScheme ;
+        sh:hasValue <http://publications.europa.eu/resource/dataset/planned-availability> ;
+    ] ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:DataService: dcatap:availability MUSS eine IRI aus diesem Vokabular verwenden: https://www.dcat-ap.de/def/dcatde/2.0/spec/#kv-availability"@de ;
+.
+
+:DataService_dct_license_w_List
+    sh:path dct:license ;
+    sh:node [
+        sh:path skos:inScheme ;
+        sh:hasValue <http://dcat-ap.de/def/licenses> ;
+    ] ;
+    sh:severity sh:Warning ;
+    sh:message "dcat:DataService: dct:license SOLL folgendes Vokabular benutzten: https://www.dcat-ap.de/def/licenses/"@de ;
+.
+
+:DataService_dct_license_v_IRI
+    sh:path dct:license ;
+    sh:nodeKind sh:IRI ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:DataService: dct:license MUSS eine IRI sein."@de ;
+.
+
+:DataService_dct_accessRights_v_IRI
+    sh:path dct:accessRights ;
+    sh:nodeKind sh:IRI ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:DataService: dct:accessRights MUSS eine IRI sein."@de ;
+.
+
+:Dataset_dcat:servesDataset_v_Class
+    sh:path dcat:servesDataset ;
+    sh:class dcat:Dataset ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:DataService: dcat:servesDataset MUSS auf ein dcat:Dataset verweisen."@de ;
+.
+
+:DataService_Shape 
+    a sh:NodeShape ;
+    sh:targetClass dcat:DataService ;
+    sh:name "dcat:DataService gemäß DCAT-AP.de Spezifikation 2.0"@de ;
+
+    sh:property :DataService_dcat_endpointURL_v_Min ;
+    sh:property :DataService_dcatap_availability_v_Max ;
+    sh:property :DataService_dcatap_availability_v_List ;
+    sh:property :DataService_dct_license_w_List ;
+    sh:property :DataService_dct_license_v_IRI ;
+    sh:property :DataService_dct_accessRights_v_IRI ;
+    sh:property :Dataset_dcat:servesDataset_v_Class ;
+.

@@ -78,13 +78,13 @@ dcatap:Checksum_Property_spdx_checksumValue sh:message "Pflicht: spdx:checksumVa
 
 
 # Deutsche Fehlermeldungen zu dcat:DataService
-dcatap:DataService_Property_dcat_endpointDescription sh:message "Pflicht: dcat:endpointDescription ist keine IRI oder BlankNode! Jede Beschreibung des Endpunktes muss eine IRI oder ein BlankNode sein."@de .
-dcatap:DataService_Property_dcat_endpointURL         sh:message "Pflicht: dcat:endpointURL ist keine IRI bzw. BlankNode oder nicht vorhanden! Ein dcat:DataService muss über mindestens eine dcat:endpointURL verfügen. Diese muss eine IRI oder ein BlankNode sein."@de .
+dcatap:DataService_Property_dcat_endpointURL         sh:message "dcat:DataService: dcat:endpointURL MUSS eine IRI oder BlankNode sein."@de .
+dcatap:DataService_Property_dct_title                sh:message "dcat:DataService: dct:title MUSS vorhanden und ein Literal sein."@de .
+dcatap:DataService_Property_dcat_endpointDescription sh:message "dcat:DataService: dcat:endpointDescription MUSS eine IRI oder BlankNode sein."@de .
+dcatap:DataService_Property_dct_description          sh:message "dcat:DataService: dct:description MUSS ein Literal sein."@de .
+dcatap:DataService_Property_dct_license              sh:message "dcat:DataService: DARF maximal eine dct:license haben."@de .
+dcatap:DataService_Property_dct_accessRights         sh:message "dcat:DataService: DARF maximal ein dct:accessRights haben."@de .
 # dcatap:DataService_Property_dcat_servesDataset     sh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte."@de .
-dcatap:DataService_Property_dct_accessRights         sh:message "Pflicht: Mehr als eine dct:accessRights vorhanden! Sie müssen beachten, dass ein dcat:DataService nicht über mehrere dct:accessRights verfügen darf."@de .
-dcatap:DataService_Property_dct_description          sh:message "Pflicht: dct:description ist kein Literal! Alle Beschreibungen müssen Text sein."@de .
-dcatap:DataService_Property_dct_license              sh:message "Pflicht: Mehr als eine dct:license vorhanden! Sie müssen beachten, dass ein dcat:DataService nicht über mehrere dct:license verfügen darf."@de .
-dcatap:DataService_Property_dct_title                sh:message "Pflicht: dct:title ist kein Literal oder nicht vorhanden! Ein dcat:DataService muss über mindestens einen Titel verfügen. Alle Titel müssen Text sein."@de .
 
 
 # Deutsche Fehlermeldungen zu dcat:Dataset
