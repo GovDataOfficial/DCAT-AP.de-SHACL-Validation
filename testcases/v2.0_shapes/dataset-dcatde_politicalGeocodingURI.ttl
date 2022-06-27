@@ -1,0 +1,62 @@
+# (C) CC BY 4.0 ']init[ AG fuer GovData'
+#
+# Der folgende Befehl geht davon aus, dass man sich im Ordner 'tools' befindet und dort die Offline-Java-Version des Blanko-SHACL-Validators unter dem Dateinamen 'any.jar' abgelegt hat.
+# Der Blanko-SHACL-Validator kann unter https://www.itb.ec.europa.eu/shacl-offline/any/validator.jar bezogen werden.
+# java -Xss4m -jar any.jar -reportSyntax "text/turtle" -loadImports true -externalShapes ../validator/resources/v2.0/shapes/dcat-ap-de-imports.ttl -externalShapes ../validator/resources/v2.0/shapes/_dcat-ap_2.1.1_shacl_shapes.ttl -externalShapes ../validator/resources/v2.0/shapes/dcat-ap-spec-german-additions.ttl -externalShapes ../validator/resources/v2.0/shapes/dcat-ap-spec-german-messages.ttl -contentToValidate ../testcases/v2.0_shapes/quicktest.ttl
+
+@prefix dcat:     <http://www.w3.org/ns/dcat#> .
+@prefix dcatde:   <http://dcat-ap.de/def/dcatde/> .
+@prefix dct:      <http://purl.org/dc/terms/> .
+@prefix foaf:     <http://xmlns.com/foaf/0.1/> .
+@prefix skos:     <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard:    <http://www.w3.org/2006/vcard/ns#> .
+
+@base <quick#> .
+
+<ok-agent> 
+  a foaf:Agent ;
+  foaf:name "Ein Publishername" ;
+.
+
+<ok-1-dataset>
+  a dcat:Dataset ;
+  dct:title "Ein Titel" ;
+  dct:description "Eine Test-Beschreibung." ;
+.
+
+<ok-2-dataset>
+  a dcat:Dataset ;
+  dct:title "Ein Titel" ;
+  dct:description "Eine Test-Beschreibung." ;
+  
+  dcatde:politicalGeocodingURI <http://dcat-ap.de/def/politicalGeocoding/stateKey/01> ;
+.
+
+<ok-3-dataset>
+  a dcat:Dataset ;
+  dct:title "Ein Titel" ;
+  dct:description "Eine Test-Beschreibung." ;
+  
+  dcatde:politicalGeocodingURI <http://dcat-ap.de/def/politicalGeocoding/municipalityKey/01051003> ;
+  dcatde:politicalGeocodingURI <http://dcat-ap.de/def/politicalGeocoding/regionalKey/010020000000> ;
+  dcatde:politicalGeocodingURI <http://dcat-ap.de/def/politicalGeocoding/municipalAssociationKey/010515163> ;
+  dcatde:politicalGeocodingURI <http://dcat-ap.de/def/politicalGeocoding/districtKey/01001> ;
+  dcatde:politicalGeocodingURI <http://dcat-ap.de/def/politicalGeocoding/governmentDistrictKey/021> ;
+  dcatde:politicalGeocodingURI <http://dcat-ap.de/def/politicalGeocoding/stateKey/01> ;
+.
+
+<bad-1-dataset>
+  a dcat:Dataset ;
+  dct:title "Ein Titel" ;
+  dct:description "Eine Test-Beschreibung." ;
+
+  dcatde:politicalGeocodingURI "Berlin" ;
+.
+
+<bad-2-dataset>
+  a dcat:Dataset ;
+  dct:title "Ein Titel" ;
+  dct:description "Eine Test-Beschreibung." ;
+
+  dcatde:politicalGeocodingURI <https://sws.geonames.org/2950157/> ;
+.

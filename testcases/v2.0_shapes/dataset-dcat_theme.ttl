@@ -1,0 +1,69 @@
+# (C) CC BY 4.0 ']init[ AG fuer GovData'
+#
+# Der folgende Befehl geht davon aus, dass man sich im Ordner 'tools' befindet und dort die Offline-Java-Version des Blanko-SHACL-Validators unter dem Dateinamen 'any.jar' abgelegt hat.
+# Der Blanko-SHACL-Validator kann unter https://www.itb.ec.europa.eu/shacl-offline/any/validator.jar bezogen werden.
+# cd C:\Users\lrinsche\Documents\GitHub\DCAT-AP.de-SHACL-Validation\tools
+# java -Xss4m -jar any.jar -reportSyntax "text/turtle" -loadImports true -externalShapes ../validator/resources/v2.0/shapes/dcat-ap-de-imports.ttl -externalShapes ../validator/resources/v2.0/shapes/_dcat-ap_2.1.1_shacl_shapes.ttl -externalShapes ../validator/resources/v2.0/shapes/dcat-ap-spec-german-additions.ttl -externalShapes ../validator/resources/v2.0/shapes/dcat-ap-spec-german-messages.ttl -contentToValidate ../testcases/v2.0_shapes/quicktest.ttl
+
+@prefix :         <https://example.org/> .
+@prefix dcat:     <http://www.w3.org/ns/dcat#> .
+@prefix dcatde:   <http://dcat-ap.de/def/dcatde/> .
+@prefix dct:      <http://purl.org/dc/terms/> .
+@prefix foaf:     <http://xmlns.com/foaf/0.1/> .
+@prefix skos:     <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard:    <http://www.w3.org/2006/vcard/ns#> .
+
+:ok-agent
+  a foaf:Agent ;
+  foaf:name "Ein Publishername" ;
+.
+
+:ok-1-dataset
+  a dcat:Dataset ;
+  dct:title "Ein Titel" ;
+  dct:description "Eine Test-Beschreibung." ;
+.
+
+:ok-2-dataset
+  a dcat:Dataset ;
+  dct:title "Ein Titel" ;
+  dct:description "Eine Test-Beschreibung." ;
+  dcat:theme <http://publications.europa.eu/resource/authority/data-theme/ECON> ;
+.
+
+:ok-3-dataset
+  a dcat:Dataset ;
+  dct:title "Ein Titel" ;
+  dct:description "Eine Test-Beschreibung." ;
+  dcat:theme <http://publications.europa.eu/resource/authority/data-theme/ECON> ;
+  dcat:theme <http://publications.europa.eu/resource/authority/data-theme/AGRI> ;
+.
+
+:bad-0-soon-good-dataset
+  a dcat:Dataset ;
+  dct:title "Ein Titel" ;
+  dct:description "Eine Test-Beschreibung." ;
+  dcat:theme <http://publications.europa.eu/resource/authority/data-theme/AGRI> ;
+  dcat:theme <http://example.org/landwirtschaft> ;
+.
+
+:bad-1-dataset
+  a dcat:Dataset ;
+  dct:title "Ein Titel" ;
+  dct:description "Eine Test-Beschreibung." ;
+  dcat:theme <http://publications.europa.eu/resource/authority/data-theme/Landwirtschaft> ;
+.
+
+:bad-2-dataset
+  a dcat:Dataset ;
+  dct:title "Ein Titel" ;
+  dct:description "Eine Test-Beschreibung." ;
+  dcat:theme <http://example.org/landwirtschaft> ;
+.
+
+:bad-3-dataset
+  a dcat:Dataset ;
+  dct:title "Ein Titel" ;
+  dct:description "Eine Test-Beschreibung." ;
+  dcat:theme "Landwirtschaft" ;
+.

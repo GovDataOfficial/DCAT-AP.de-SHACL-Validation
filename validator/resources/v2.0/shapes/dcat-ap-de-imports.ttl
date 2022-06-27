@@ -15,9 +15,17 @@
   owl:imports <http://publications.europa.eu/resource/authority/language> ;
   owl:imports <http://publications.europa.eu/resource/authority/data-theme> ;
   owl:imports <http://publications.europa.eu/resource/dataset/planned-availability> ;
+  owl:imports <http://publications.europa.eu/resource/authority/frequency> ;
   
   owl:imports <https://www.dcat-ap.de/def/licenses/20210721.rdf> ;
   owl:imports <https://www.dcat-ap.de/def/politicalGeocoding/Level/1_0.rdf> ;
+
+  owl:imports <https://www.dcat-ap.de/def/politicalGeocoding/municipalityKey/20220331.rdf> ;
+  owl:imports <https://www.dcat-ap.de/def/politicalGeocoding/regionalKey/20220331.rdf> ;
+  owl:imports <https://www.dcat-ap.de/def/politicalGeocoding/municipalAssociationKey/20220131.rdf> ;
+  owl:imports <https://www.dcat-ap.de/def/politicalGeocoding/districtKey/20210731.rdf> ;
+  owl:imports <https://www.dcat-ap.de/def/politicalGeocoding/governmentDistrictKey/20190731.rdf> ;
+  owl:imports <https://www.dcat-ap.de/def/politicalGeocoding/stateKey/20100401.rdf> ;
 
  # owl:imports <https://spdx.org/rdf/terms/spdx-ontology.owl.xml> ;          # no use-case yet
  # owl:imports <http://dublincore.org/2020/01/20/dublin_core_terms.ttl> ;    # no use-case yet
