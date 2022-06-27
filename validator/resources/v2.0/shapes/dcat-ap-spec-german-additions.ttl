@@ -665,7 +665,7 @@ dcatap:Category_Property_skos_prefLabel  sh:deactivated true .
     sh:message "dcat:DataService: dct:accessRights MUSS eine IRI sein."@de ;
 .
 
-:Dataset_dcat:servesDataset_v_Class
+:DataService_dcat_servesDataset_v_Class
     sh:path dcat:servesDataset ;
     sh:class dcat:Dataset ;
     sh:severity sh:Violation ;
@@ -683,5 +683,7 @@ dcatap:Category_Property_skos_prefLabel  sh:deactivated true .
     sh:property :DataService_dct_license_w_List ;
     sh:property :DataService_dct_license_v_IRI ;
     sh:property :DataService_dct_accessRights_v_IRI ;
+    sh:property :DataService_dcat_servesDataset_v_Class ;
+.
     sh:property :Dataset_dcat:servesDataset_v_Class ;
 .
