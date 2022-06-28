@@ -12,6 +12,7 @@
 @prefix dct:    <http://purl.org/dc/terms/> .
 @prefix foaf:   <http://xmlns.com/foaf/0.1/> .
 @prefix locn:   <http://www.w3.org/ns/locn#> .
+@prefix odrl:   <http://www.w3.org/ns/odrl/2/> .
 @prefix org:    <http://www.w3.org/ns/org#> .
 @prefix owl:    <http://www.w3.org/2002/07/owl#> .
 @prefix prov:   <http://www.w3.org/ns/prov#> .
@@ -685,5 +686,177 @@ dcatap:Category_Property_skos_prefLabel  sh:deactivated true .
     sh:property :DataService_dct_accessRights_v_IRI ;
     sh:property :DataService_dcat_servesDataset_v_Class ;
 .
-    sh:property :Dataset_dcat:servesDataset_v_Class ;
+
+:Distribution_dct_license_w_List
+    sh:path dct:license ;
+    sh:node [
+        sh:path skos:inScheme ;
+        sh:hasValue <http://dcat-ap.de/def/licenses> ;
+    ] ;
+    sh:severity sh:Warning ;
+    sh:message "dcat:Distribution: dct:license SOLL folgendes Vokabular benutzten: https://www.dcat-ap.de/def/licenses/"@de ;
+.
+
+:Distribution_dct_license_v_IRI
+    sh:path dct:license ;
+    sh:nodeKind sh:IRI ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:Distribution: dct:license MUSS eine IRI sein."@de ;
+.
+
+:Distribution_dct_format_v_List
+    sh:path dct:format ;
+    sh:node [
+        sh:path skos:inScheme ;
+        sh:hasValue <http://publications.europa.eu/resource/authority/file-type> ;
+    ] ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:Distribution: dct:format MUSS eine IRI aus diesem Vokabular verwenden: https://www.dcat-ap.de/def/dcatde/2.0/spec/#kv-file-type"@de ;
+.
+
+:Distribution_dcatap_availability_v_Max
+    sh:maxCount 1 ;
+    sh:path dcatap:availability ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:Distribution: DARF maximal eine dcatap:availability haben."@de ;
+.
+
+:Distribution_dcatap_availability_v_List
+    sh:path  dcatap:availability ;
+    sh:node [
+        sh:path skos:inScheme ;
+        sh:hasValue <http://publications.europa.eu/resource/dataset/planned-availability> ;
+    ] ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:Distribution: dcatap:availability MUSS eine IRI aus diesem Vokabular verwenden: https://www.dcat-ap.de/def/dcatde/2.0/spec/#kv-availability"@de ;
+.
+
+:Distribution_dcatde_plannedAvailability_v_Max
+    sh:path dcatde:plannedAvailability ;
+    sh:maxCount 1 ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:Distribution: DARF maximal eine dcatde:plannedAvailability haben."@de ;
+.
+
+:Distribution_dcatde_plannedAvailability_v_IRI
+    sh:path dcatde:plannedAvailability ;
+    sh:nodeKind sh:IRI ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:Distribution: dcatde:plannedAvailability MUSS eine IRI sein."@de ;
+.
+
+:Distribution_dcatde_licenseAttributionByText_v_Literal
+    sh:path dcatde:licenseAttributionByText ;
+    sh:nodeKind sh:Literal ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:Distribution: dcatde:licenseAttributionByText MUSS ein Literal sein."@de ;
+.
+
+:Distribution_dct_language_v_List
+    sh:path  dct:language ;
+    sh:node [
+        sh:path skos:inScheme ;
+        sh:hasValue <http://publications.europa.eu/resource/authority/language> ;
+    ] ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:Distribution: dct:language MUSS eine IRI aus diesem Vokabular verwenden: https://www.dcat-ap.de/def/dcatde/2.0/spec/#kv-languages"@de ;
+.
+
+:Distribution_foaf_page_v_IRI
+    sh:path foaf:page ;
+    sh:nodeKind sh:IRI ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:Distribution: foaf:page MUSS eine IRI sein."@de ;
+.
+
+:Distribution_dct_rights_v_IRI
+    sh:path dct:rights ;
+    sh:nodeKind sh:IRI ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:Distribution: dct:rights MUSS eine IRI sein."@de ;
+.
+
+:Distribution_dct_conformsTo_v_IRI
+    sh:path dct:conformsTo ;
+    sh:nodeKind sh:IRI ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:Distribution: dct:conformsTo MUSS eine IRI sein."@de ;
+.
+
+:Distribution_dcat_mediaType_v_List
+    sh:path dcat:mediaType ;
+    sh:pattern "^https://www.iana.org/assignments/media-types/" ;
+    sh:flags "i" ; 
+    sh:message "dcat:Distribution: dcat:mediaType MUSS eine IRI aus diesem Vokabular verwenden: https://www.dcat-ap.de/def/dcatde/2.0/spec/#kv-iana-media-types (Getestet wird in diesem Fall lediglich, ob die verwendete IRI mit https://www.iana.org/assignments/media-types/ beginnt.)"@de ;
+.
+
+:Distribution_dcat_compressFormat_v_List
+    sh:path dcat:compressFormat ;
+    sh:pattern "^https://www.iana.org/assignments/media-types/" ;
+    sh:flags "i" ; 
+    sh:message "dcat:Distribution: dcat:compressFormat MUSS eine IRI aus diesem Vokabular verwenden: https://www.dcat-ap.de/def/dcatde/2.0/spec/#kv-iana-media-types (Getestet wird in diesem Fall lediglich, ob die verwendete IRI mit https://www.iana.org/assignments/media-types/ beginnt.)"@de ;
+.
+
+:Distribution_dcat_packageFormat_v_List
+    sh:path dcat:packageFormat ;
+    sh:pattern "^https://www.iana.org/assignments/media-types/" ;
+    sh:flags "i" ; 
+    sh:message "dcat:Distribution: dcat:packageFormat MUSS eine IRI aus diesem Vokabular verwenden: https://www.dcat-ap.de/def/dcatde/2.0/spec/#kv-iana-media-types (Getestet wird in diesem Fall lediglich, ob die verwendete IRI mit https://www.iana.org/assignments/media-types/ beginnt.)"@de ;
+.
+
+:Distribution_odrl_hasPolicy_v_IRI
+    sh:path odrl:hasPolicy ;
+    sh:nodeKind sh:IRI ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:Distribution: odrl:hasPolicy MUSS eine IRI sein."@de ;
+.
+
+:Distribution_adms_status_v_List
+    sh:path  adms:status ;
+    sh:node [
+        sh:path skos:inScheme ;
+        sh:hasValue <http://purl.org/adms/status/1.0> ;
+    ] ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:Distribution: adms:status MUSS eine IRI aus diesem Vokabular verwenden: https://www.dcat-ap.de/def/dcatde/2.0/spec/#kv-adms-status"@de ;
+.
+
+:Distribution_dcat_accessService_v_Class
+    sh:path dcat:accessService ;
+    sh:class dcat:DataService ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:Distribution: dcat:accessService MUSS auf einen dcat:DataService verweisen."@de ;
+.
+
+:Distribution_spdx_checksum_v_Class
+    sh:path spdx:checksum ;
+    sh:class spdx:Checksum ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:Distribution: spdx:checksum MUSS auf einen spdx:Checksum verweisen."@de ;
+.
+
+:Distribution_Shape 
+    a sh:NodeShape ;
+    sh:targetClass dcat:Distribution ;
+    sh:name "dcat:Distribution gemäß DCAT-AP.de Spezifikation 2.0"@de ;
+
+    sh:property :Distribution_dct_license_w_List ;
+    sh:property :Distribution_dct_license_v_IRI ;
+    sh:property :Distribution_dct_format_v_List ;
+    sh:property :Distribution_dcatap_availability_v_Max ;
+    sh:property :Distribution_dcatap_availability_v_List ;
+    sh:property :Distribution_dcatde_plannedAvailability_v_Max ;
+    sh:property :Distribution_dcatde_plannedAvailability_v_IRI ;
+    sh:property :Distribution_dcatde_licenseAttributionByText_v_Literal ;
+    sh:property :Distribution_dct_language_v_List ;
+    sh:property :Distribution_foaf_page_v_IRI ;
+    sh:property :Distribution_dct_rights_v_IRI ;
+    sh:property :Distribution_dct_conformsTo_v_IRI ;
+    sh:property :Distribution_dcat_mediaType_v_List ;
+    sh:property :Distribution_dcat_compressFormat_v_List ;
+    sh:property :Distribution_dcat_packageFormat_v_List ;
+    sh:property :Distribution_odrl_hasPolicy_v_IRI ;
+    sh:property :Distribution_adms_status_v_List ;
+    sh:property :Distribution_dcat_accessService_v_Class ;
+    sh:property :Distribution_spdx_checksum_v_Class ;
 .

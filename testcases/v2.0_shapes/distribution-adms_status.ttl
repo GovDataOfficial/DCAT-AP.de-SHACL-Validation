@@ -1,0 +1,75 @@
+# (C) CC BY 4.0 ']init[ AG fuer GovData'
+#
+# Der folgende Befehl geht davon aus, dass man sich im Ordner 'tools' befindet und dort die Offline-Java-Version des Blanko-SHACL-Validators unter dem Dateinamen 'any.jar' abgelegt hat.
+# Der Blanko-SHACL-Validator kann unter https://www.itb.ec.europa.eu/shacl-offline/any/validator.jar bezogen werden.
+# cd C:\Users\lrinsche\Documents\GitHub\DCAT-AP.de-SHACL-Validation\tools
+# java -Xss4m -jar any.jar -reportSyntax "text/turtle" -loadImports true -externalShapes ../validator/resources/v2.0/shapes/dcat-ap-de-imports.ttl -externalShapes ../validator/resources/v2.0/shapes/_dcat-ap_2.1.1_shacl_shapes.ttl -externalShapes ../validator/resources/v2.0/shapes/dcat-ap-spec-german-additions.ttl -externalShapes ../validator/resources/v2.0/shapes/dcat-ap-spec-german-messages.ttl -contentToValidate ../testcases/v2.0_shapes/quicktest.ttl
+
+@prefix :       <https://example.org/> .
+@prefix adms:   <http://www.w3.org/ns/adms#> .
+@prefix dc:     <http://purl.org/dc/elements/1.1/> .
+@prefix dcat:   <http://www.w3.org/ns/dcat#> .
+@prefix dcatap: <http://data.europa.eu/r5r#> .
+@prefix dcatde: <http://dcat-ap.de/def/dcatde/> .
+@prefix dct:    <http://purl.org/dc/terms/> .
+@prefix foaf:   <http://xmlns.com/foaf/0.1/> .
+@prefix locn:   <http://www.w3.org/ns/locn#> .
+@prefix odrl:   <http://www.w3.org/ns/odrl/2/> .
+@prefix org:    <http://www.w3.org/ns/org#> .
+@prefix owl:    <http://www.w3.org/2002/07/owl#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix sh:     <http://www.w3.org/ns/shacl#> .
+@prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
+@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
+@prefix spdx:   <http://spdx.org/rdf/terms#> .
+@prefix vcard:  <http://www.w3.org/2006/vcard/ns#> .
+@prefix xml:    <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+:ok-agent
+  a foaf:Agent ;
+  foaf:name "Ein Publishername" ;
+.
+
+:ok-contactPoint
+  a vcard:Kind ;
+.
+
+:ok-1-distribution
+  a dcat:Distribution ;
+  dcat:accessURL <https://example.org/> ;
+.
+
+:ok-2-distribution
+  a dcat:Distribution ;
+  dcat:accessURL <https://example.org/> ;
+  adms:status <http://purl.org/adms/status/Completed>;
+.
+
+:gray-0-dist-byGovDataUnallowedIRI
+  a dcat:Distribution ;
+  dcat:accessURL <https://example.org/> ;
+  adms:status <http://purl.org/adms/status/UnderDevelopment>;
+.
+
+:bad-1-dist-noIRI
+  a dcat:Distribution ;
+  dcat:accessURL <https://example.org/> ;
+  adms:status "completed";
+.
+
+:bad-2-dist-multipleStatus
+  a dcat:Distribution ;
+  dcat:accessURL <https://example.org/> ;
+  adms:status <http://purl.org/adms/status/Completed>;
+  adms:status <http://purl.org/adms/status/Deprecated>;
+.
+
+:bad-3-dist-notInList
+  a dcat:Distribution ;
+  dcat:accessURL <https://example.org/> ;
+  adms:status <https://example.org/completed>;
+.

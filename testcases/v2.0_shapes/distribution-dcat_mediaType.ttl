@@ -1,0 +1,59 @@
+# (C) CC BY 4.0 ']init[ AG fuer GovData'
+#
+# Der folgende Befehl geht davon aus, dass man sich im Ordner 'tools' befindet und dort die Offline-Java-Version des Blanko-SHACL-Validators unter dem Dateinamen 'any.jar' abgelegt hat.
+# Der Blanko-SHACL-Validator kann unter https://www.itb.ec.europa.eu/shacl-offline/any/validator.jar bezogen werden.
+# cd C:\Users\lrinsche\Documents\GitHub\DCAT-AP.de-SHACL-Validation\tools
+# java -Xss4m -jar any.jar -reportSyntax "text/turtle" -loadImports true -externalShapes ../validator/resources/v2.0/shapes/dcat-ap-de-imports.ttl -externalShapes ../validator/resources/v2.0/shapes/_dcat-ap_2.1.1_shacl_shapes.ttl -externalShapes ../validator/resources/v2.0/shapes/dcat-ap-spec-german-additions.ttl -externalShapes ../validator/resources/v2.0/shapes/dcat-ap-spec-german-messages.ttl -contentToValidate ../testcases/v2.0_shapes/quicktest.ttl
+
+@prefix :         <https://example.org/> .
+@prefix dcat:     <http://www.w3.org/ns/dcat#> .
+@prefix dcatde:   <http://dcat-ap.de/def/dcatde/> .
+@prefix dct:      <http://purl.org/dc/terms/> .
+@prefix foaf:     <http://xmlns.com/foaf/0.1/> .
+@prefix skos:     <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard:    <http://www.w3.org/2006/vcard/ns#> .
+
+:ok-agent
+  a foaf:Agent ;
+  foaf:name "Ein Publishername" ;
+.
+
+:ok-contactPoint
+  a vcard:Kind ;
+.
+
+:ok-1-distribution
+  a dcat:Distribution ;
+  dcat:accessURL <https://example.org/> ;
+.
+
+:ok-2-distribution
+  a dcat:Distribution ;
+  dcat:accessURL <https://example.org/> ;
+  dcat:mediaType <https://www.iana.org/assignments/media-types/application/pdf> ;
+.
+
+:gray-0-dist-notInListButNotFoundAsError
+  a dcat:Distribution ;
+  dcat:accessURL <https://example.org/> ;
+  dcat:mediaType <https://www.iana.org/assignments/media-types/unsinnigerMediaType> ;
+.
+
+:bad-1-dist-noIRI
+  a dcat:Distribution ;
+  dcat:accessURL <https://example.org/> ;
+  dcat:mediaType "CSV" ;
+.
+
+:bad-2-dist-multipleFormats
+  a dcat:Distribution ;
+  dcat:accessURL <https://example.org/> ;
+  dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle> ;
+  dcat:mediaType <https://www.iana.org/assignments/media-types/text/csv> ;
+.
+
+:bad-3-dist-notInList
+  a dcat:Distribution ;
+  dcat:accessURL <https://example.org/> ;
+  dcat:mediaType <https://example.org/file-type/RDF> ;
+.

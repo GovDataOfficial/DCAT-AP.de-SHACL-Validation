@@ -3,8 +3,6 @@
 
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://dcat-ap.de/def/dcatde/2.0/#>
   rdf:type owl:Ontology ;
@@ -16,10 +14,12 @@
   owl:imports <http://publications.europa.eu/resource/authority/data-theme> ;
   owl:imports <http://publications.europa.eu/resource/dataset/planned-availability> ;
   owl:imports <http://publications.europa.eu/resource/authority/frequency> ;
+  owl:imports <http://publications.europa.eu/resource/authority/file-type> ;
+
+  owl:imports <https://raw.githubusercontent.com/SEMICeu/ADMS-AP/master/purl.org/ADMS_SKOS_v1.00.rdf> ;
   
   owl:imports <https://www.dcat-ap.de/def/licenses/20210721.rdf> ;
   owl:imports <https://www.dcat-ap.de/def/politicalGeocoding/Level/1_0.rdf> ;
-
   owl:imports <https://www.dcat-ap.de/def/politicalGeocoding/municipalityKey/20220331.rdf> ;
   owl:imports <https://www.dcat-ap.de/def/politicalGeocoding/regionalKey/20220331.rdf> ;
   owl:imports <https://www.dcat-ap.de/def/politicalGeocoding/municipalAssociationKey/20220131.rdf> ;
@@ -27,10 +27,10 @@
   owl:imports <https://www.dcat-ap.de/def/politicalGeocoding/governmentDistrictKey/20190731.rdf> ;
   owl:imports <https://www.dcat-ap.de/def/politicalGeocoding/stateKey/20100401.rdf> ;
 
- # owl:imports <https://spdx.org/rdf/terms/spdx-ontology.owl.xml> ;          # no use-case yet
- # owl:imports <http://dublincore.org/2020/01/20/dublin_core_terms.ttl> ;    # no use-case yet
- # owl:imports <https://www.w3.org/ns/locn.ttl> ;                            # no use-case yet
- # owl:imports <http://www.w3.org/ns/prov-o.ttl> ;                           # no use-case yet
- # owl:imports <http://www.w3.org/2006/time.ttl> ;                           # no use-case yet
- # owl:imports <http://www.w3.org/ns/adms.ttl> ;                             # no use-case yet
+  # owl:imports <https://spdx.org/rdf/terms/spdx-ontology.owl.xml> ;          # no use-case yet
+  # owl:imports <http://dublincore.org/2020/01/20/dublin_core_terms.ttl> ;    # no use-case yet
+  # owl:imports <https://www.w3.org/ns/locn.ttl> ;                            # no use-case yet
+  # owl:imports <http://www.w3.org/ns/prov-o.ttl> ;                           # no use-case yet
+  # owl:imports <http://www.w3.org/2006/time.ttl> ;                           # no use-case yet
+  # owl:imports <http://www.w3.org/ns/adms.ttl> ;                             # no use-case yet
 .
