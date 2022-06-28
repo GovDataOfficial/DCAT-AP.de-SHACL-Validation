@@ -23,6 +23,7 @@
 @prefix skos:   <http://www.w3.org/2004/02/skos/core#> .
 @prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
 @prefix spdx:   <http://spdx.org/rdf/terms#> .
+@prefix time:   <http://www.w3.org/2006/time#> .
 @prefix vcard:  <http://www.w3.org/2006/vcard/ns#> .
 @prefix xml:    <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
@@ -31,8 +32,11 @@
 # Allgemeine deutsche Änderungen
 # Deaktiviere alle Shapes zum "CategoryScheme", da diese bei jedem skos:ConceptScheme andocken.
 # Deaktiviere alle Shapes zum "Category", da diese bei jedem skos:Concept andocken.
+# Deaktiviere die Tests zum spdx:algorithm, da DCAT-AP.de ein anderes Vokabular vorschreibt.
 dcatap:CategoryScheme_Shape              sh:deactivated true .
-dcatap:Category_Property_skos_prefLabel  sh:deactivated true .
+dcatap:Category_Shape                    sh:deactivated true .
+dcatap:Checksum_Property_spdx_algorithm  sh:deactivated true . 
+
 
 # Deutsche Änderungen und Ergänzungen zu dcat:Dataset
 
@@ -859,4 +863,193 @@ dcatap:Category_Property_skos_prefLabel  sh:deactivated true .
     sh:property :Distribution_adms_status_v_List ;
     sh:property :Distribution_dcat_accessService_v_Class ;
     sh:property :Distribution_spdx_checksum_v_Class ;
+.
+
+:PeriodOfTime_periodPoints_v_Min
+    sh:or (
+        [ 
+            sh:path dcat:startDate ;
+            sh:minCount 1 ;
+        ]
+        [ 
+            sh:path dcat:endDate ;
+            sh:minCount 1 ;
+        ]
+        [ 
+            sh:path time:hasBeginning ;
+            sh:minCount 1 ;
+        ]
+        [ 
+            sh:path time:hasEnd ;
+            sh:minCount 1 ;
+        ]
+        [ 
+            sh:path schema:startDate ;
+            sh:minCount 1 ;
+        ]
+        [ 
+            sh:path schema:endDate ;
+            sh:minCount 1 ;
+        ]
+    ) ;
+    sh:severity sh:Violation ;
+    sh:message "dct:PeriodOfTime: MUSS mindestens eine der folgenden Eigenschaften besitzen: Empfohlen: dcat:startDate, dcat:endDate. Andere Möglichkeiten: time:hasBeginning, time:hasEnd, schema:startDate, schema:endDate."@de ;
+.
+
+:PeriodOfTime_schema_startDate_v_Max
+    sh:maxCount 1 ;
+    sh:path schema:startDate ;
+    sh:severity sh:Violation ;
+    sh:message "dct:PeriodOfTime: schema:startDate DARF maximal einmal vorhanden sein."@de ;
+.
+
+:PeriodOfTime_schema_endDate_v_Max
+    sh:maxCount 1 ;
+    sh:path schema:endDate ;
+    sh:severity sh:Violation ;
+    sh:message "dct:PeriodOfTime: schema:endDate DARF maximal einmal vorhanden sein."@de ;
+.
+
+:PeriodOfTime_Shape 
+    a sh:NodeShape ;
+    sh:targetClass dct:PeriodOfTime ;
+    sh:name "dcat:PeriodOfTime gemäß DCAT-AP.de Spezifikation 2.0"@de ;
+
+    sh:property :PeriodOfTime_periodPoints_v_Min ;
+    sh:property :PeriodOfTime_schema_startDate_v_Max ;
+    sh:property :PeriodOfTime_schema_endDate_v_Max ;
+.
+
+:Location_locations_v_Min
+    sh:or (
+        [ 
+            sh:path dcat:bbox ;
+            sh:minCount 1 ;
+        ]
+        [ 
+            sh:path dcat:centroid ;
+            sh:minCount 1 ;
+        ]
+        [ 
+            sh:path locn:geometry ;
+            sh:minCount 1 ;
+        ]
+    ) ;
+    sh:severity sh:Violation ;
+    sh:message "dct:Location: MUSS mindestens eine der folgenden Eigenschaften besitzen: dcat:bbox, dcat:centroid, locn:geometry."@de ;
+.
+
+:Location_Shape 
+    a sh:NodeShape ;
+    sh:targetClass dct:Location ;
+    sh:name "dct:Location gemäß DCAT-AP.de Spezifikation 2.0"@de ;
+
+    sh:property :Location_locations_v_Min ;
+.
+
+:Identifier_skos_notation_v_Min
+    sh:minCount 1 ;
+    sh:path skos:notation ;
+    sh:severity sh:Violation ;
+    sh:message "adms:Identifier: MUSS genaue eine skos:notation haben."
+.
+
+:Identifier_Shape 
+    a sh:NodeShape ;
+    sh:targetClass adms:Identifier ;
+    sh:name "adms:Identifier gemäß DCAT-AP.de Spezifikation 2.0"@de ;
+
+    sh:property :Identifier_skos_notation_v_Min ;
+.
+
+:Checksum_spdx_algorithm_v_Min_Max
+    sh:path spdx:algorithm ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:severity sh:Violation ;
+    sh:message "spdx:Checksum: MUSS genaue einen spdx:algorithm haben."
+.
+
+:Checksum_spdx_algorithm_v_List
+    sh:path  spdx:algorithm ;
+    sh:node [
+        sh:path skos:inScheme ;
+        sh:hasValue <http://dcat-ap.de/def/hashAlgorithms> ;
+    ] ;
+    sh:severity sh:Violation ;
+    sh:message "spdx:Checksum: spdx:algorithm MUSS eine IRI aus diesem Vokabular verwenden: https://www.dcat-ap.de/def/dcatde/2.0/spec/#kv-hash-algorithms"@de ;
+.
+
+:Checksum_Shape 
+    a sh:NodeShape ;
+    sh:targetClass spdx:Checksum ;
+    sh:name "spdx:Checksum gemäß DCAT-AP.de Spezifikation 2.0"@de ;
+
+    sh:property :Checksum_spdx_algorithm_v_Min_Max ;
+    sh:property :Checksum_spdx_algorithm_v_List ;
+.
+
+:CatalogRecord_dct_conformsTo_v_IRI
+    sh:path dct:conformsTo ;
+    sh:nodeKind sh:IRI ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:CatalogRecord: dct:conformsTo MUSS eine IRI sein."@de ;
+.
+
+:CatalogRecord_adms_status_v_IRI
+    sh:path adms:status ;
+    sh:nodeKind sh:IRI ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:CatalogRecord: adms:status MUSS eine IRI sein."@de ;
+.
+
+:CatalogRecord_dct_language_v_List
+    sh:path  dct:language ;
+    sh:node [
+        sh:path skos:inScheme ;
+        sh:hasValue <http://publications.europa.eu/resource/authority/language> ;
+    ] ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:CatalogRecord: dct:language MUSS eine IRI aus diesem Vokabular verwenden: https://www.dcat-ap.de/def/dcatde/2.0/spec/#kv-languages"@de ;
+.
+
+:CatalogRecord_dct_source_v_Class
+    sh:path dct:source ;
+    sh:class dcat:CatalogRecord ;
+    sh:severity sh:Violation ;
+    sh:message "dcat:CatalogRecord: dct:source MUSS auf einen dcat:CatalogRecord verweisen."@de ;
+.
+
+:CatalogRecord_Shape 
+    a sh:NodeShape ;
+    sh:targetClass dcat:CatalogRecord ;
+    sh:name "dcat:CatalogRecord gemäß DCAT-AP.de Spezifikation 2.0"@de ;
+
+    sh:property :CatalogRecord_dct_conformsTo_v_IRI ;
+    sh:property :CatalogRecord_adms_status_v_IRI ;
+    sh:property :CatalogRecord_dct_language_v_List ;
+    sh:property :CatalogRecord_dct_source_v_Class ;
+.
+
+:Attribution_dcat_hadRole_v_Min
+    sh:minCount 1 ;
+    sh:path dcat:hadRole ;
+    sh:severity sh:Violation ;
+    sh:message "prov:Attribution: MUSS mindestens einmal dcat:hadRole haben."
+.
+
+:Attribution_prov_agent_v_Min
+    sh:minCount 1 ;
+    sh:path prov:agent ;
+    sh:severity sh:Violation ;
+    sh:message "prov:Attribution: MUSS mindestens einmal prov:agent haben."
+.
+
+:Attribution_Shape 
+    a sh:NodeShape ;
+    sh:targetClass prov:Attribution ;
+    sh:name "prov:Attribution gemäß DCAT-AP.de Spezifikation 2.0"@de ;
+
+    sh:property :Attribution_dcat_hadRole_v_Min ;
+    sh:property :Attribution_prov_agent_v_Min ;
 .

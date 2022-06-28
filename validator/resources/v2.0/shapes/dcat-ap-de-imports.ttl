@@ -26,6 +26,7 @@
   owl:imports <https://www.dcat-ap.de/def/politicalGeocoding/districtKey/20210731.rdf> ;
   owl:imports <https://www.dcat-ap.de/def/politicalGeocoding/governmentDistrictKey/20190731.rdf> ;
   owl:imports <https://www.dcat-ap.de/def/politicalGeocoding/stateKey/20100401.rdf> ;
+  owl:imports <https://www.dcat-ap.de/def/hashAlgorithms/20200729.rdf> ;
 
   # owl:imports <https://spdx.org/rdf/terms/spdx-ontology.owl.xml> ;          # no use-case yet
   # owl:imports <http://dublincore.org/2020/01/20/dublin_core_terms.ttl> ;    # no use-case yet
