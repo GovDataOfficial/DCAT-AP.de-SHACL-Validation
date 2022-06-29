@@ -16,8 +16,8 @@
   owl:imports <http://publications.europa.eu/resource/authority/frequency> ;
   owl:imports <http://publications.europa.eu/resource/authority/file-type> ;
 
-  owl:imports <https://raw.githubusercontent.com/SEMICeu/ADMS-AP/master/purl.org/ADMS_SKOS_v1.00.rdf> ;
-  
+  owl:imports <https://raw.githubusercontent.com/SEMICeu/ADMS-AP/master/purl.org/ADMS_SKOS_v1.00.rdf> ; # status, publishertype
+
   owl:imports <https://www.dcat-ap.de/def/licenses/20210721.rdf> ;
   owl:imports <https://www.dcat-ap.de/def/politicalGeocoding/Level/1_0.rdf> ;
   owl:imports <https://www.dcat-ap.de/def/politicalGeocoding/municipalityKey/20220331.rdf> ;

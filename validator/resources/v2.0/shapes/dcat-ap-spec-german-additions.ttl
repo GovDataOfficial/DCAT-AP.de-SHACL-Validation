@@ -1053,3 +1053,95 @@ dcatap:Checksum_Property_spdx_algorithm  sh:deactivated true .
     sh:property :Attribution_dcat_hadRole_v_Min ;
     sh:property :Attribution_prov_agent_v_Min ;
 .
+
+:Agent_dct_type_v_List
+    sh:path  dct:type ;
+    sh:node [
+        sh:path skos:inScheme ;
+        sh:hasValue <http://purl.org/adms/publishertype/1.0> ;
+    ] ;
+    sh:severity sh:Violation ;
+    sh:message "foaf:Agent: dct:type MUSS eine IRI aus diesem Vokabular verwenden: https://www.dcat-ap.de/def/dcatde/2.0/spec/#kv-adms-publisher"@de ;
+.
+
+:Agent_Shape 
+    a sh:NodeShape ;
+    sh:targetClass foaf:Agent ;
+    sh:name "foaf:Agent gemäß DCAT-AP.de Spezifikation 2.0"@de ;
+
+    sh:property :Agent_dct_type_v_List ;
+.
+
+##################################################################
+###################### DEPRECATED MELDUNGEN ######################
+##################################################################
+
+:Dataset_Deprecated_dct_type
+    sh:path dct:type ;
+    sh:severity sh:Warning ;
+    sh:message "dcat:Dataset: DEPRECATED: dct:type soll nicht mehr für Collections verwendet werden."@de ;
+.
+
+:Dataset_Deprecated_dcat_granularity
+    sh:path dcat:granularity ;
+    sh:severity sh:Warning ;
+    sh:message "dcat:Dataset: DEPRECATED: dcat:granularity soll nicht mehr verwendet werden. Zur Beschreibung von zeitlichen Parametern steht nun z.B. dcat:temporalResolution zur Verfügung."@de ;
+.
+
+:Dataset_Deprecated_Shape 
+    a sh:NodeShape ;
+    sh:targetClass dcat:Dataset ;
+    sh:name "Eigenschaften die im dcat:Dataset gemäß dem DCAT-AP.de 2.0 deprecated sind."@de ;
+
+    sh:property :Dataset_Deprecated_dct_type ;
+    sh:property :Dataset_Deprecated_dcat_granularity ;
+.
+
+:Distribution_Deprecated_dcatde_plannedAvailability
+    sh:path dcatde:plannedAvailability ;
+    sh:severity sh:Warning ;
+    sh:message "dcat:Distribution: DEPRECATED: dcatde:plannedAvailability soll nicht mehr verwendet werden. Verwenden Sie stattdessen dcatap:availability."@de ;
+.
+
+:Distribution_Deprecated_Shape 
+    a sh:NodeShape ;
+    sh:targetClass dcat:Distribution ;
+    sh:name "Eigenschaften die im dcat:Distribution gemäß dem DCAT-AP.de 2.0 deprecated sind."@de ;
+
+    sh:property :Distribution_Deprecated_dcatde_plannedAvailability ;
+.
+
+:PeriodOfTime_Deprecated_schema_startDate
+    sh:path schema:startDate ;
+    sh:severity sh:Warning ;
+    sh:message "dcat:PeriodOfTime: DEPRECATED: schema:startDate soll nicht mehr verwendet werden. Verwenden Sie stattdessen dcat:startDate."@de ;
+.
+
+:PeriodOfTime_Deprecated_schema_endDate
+    sh:path schema:endDate ;
+    sh:severity sh:Warning ;
+    sh:message "dcat:PeriodOfTime: DEPRECATED: schema:endDate soll nicht mehr verwendet werden. Verwenden Sie stattdessen dcat:endDate."@de ;
+.
+
+:PeriodOfTime_Deprecated_Shape 
+    a sh:NodeShape ;
+    sh:targetClass dcat:PeriodOfTime ;
+    sh:name "Eigenschaften die im dcat:PeriodOfTime gemäß dem DCAT-AP.de 2.0 deprecated sind."@de ;
+
+    sh:property :PeriodOfTime_Deprecated_schema_startDate ;
+    sh:property :PeriodOfTime_Deprecated_schema_endDate ;
+.
+
+:CatalogRecord_Deprecated_adms_status
+    sh:path adms:status ;
+    sh:severity sh:Warning ;
+    sh:message "dcat:CatalogRecord: adms:status wird von DCAT-AP.de nicht unterstützt, unter anderem weil das eigentlich vorgesehene Vokabular nicht vorhanden ist."@de ;
+.
+
+:CatalogRecord_Deprecated_Shape 
+    a sh:NodeShape ;
+    sh:targetClass dcat:CatalogRecord ;
+    sh:name "Eigenschaften die im dcat:CatalogRecord gemäß dem DCAT-AP.de 2.0 deprecated sind."@de ;
+
+    sh:property :CatalogRecord_Deprecated_schema_startDate ;
+.
