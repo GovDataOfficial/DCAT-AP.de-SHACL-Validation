@@ -789,21 +789,21 @@ dcatap:Checksum_Property_spdx_algorithm  sh:deactivated true .
 
 :Distribution_dcat_mediaType_v_List
     sh:path dcat:mediaType ;
-    sh:pattern "^https://www.iana.org/assignments/media-types/" ;
+    sh:pattern "^https?://www.iana.org/assignments/media-types/" ;
     sh:flags "i" ; 
     sh:message "dcat:Distribution: dcat:mediaType MUSS eine IRI aus diesem Vokabular verwenden: https://www.dcat-ap.de/def/dcatde/2.0/spec/#kv-iana-media-types (Getestet wird in diesem Fall lediglich, ob die verwendete IRI mit https://www.iana.org/assignments/media-types/ beginnt.)"@de ;
 .
 
 :Distribution_dcat_compressFormat_v_List
     sh:path dcat:compressFormat ;
-    sh:pattern "^https://www.iana.org/assignments/media-types/" ;
+    sh:pattern "^https?://www.iana.org/assignments/media-types/" ;
     sh:flags "i" ; 
     sh:message "dcat:Distribution: dcat:compressFormat MUSS eine IRI aus diesem Vokabular verwenden: https://www.dcat-ap.de/def/dcatde/2.0/spec/#kv-iana-media-types (Getestet wird in diesem Fall lediglich, ob die verwendete IRI mit https://www.iana.org/assignments/media-types/ beginnt.)"@de ;
 .
 
 :Distribution_dcat_packageFormat_v_List
     sh:path dcat:packageFormat ;
-    sh:pattern "^https://www.iana.org/assignments/media-types/" ;
+    sh:pattern "^https?://www.iana.org/assignments/media-types/" ;
     sh:flags "i" ; 
     sh:message "dcat:Distribution: dcat:packageFormat MUSS eine IRI aus diesem Vokabular verwenden: https://www.dcat-ap.de/def/dcatde/2.0/spec/#kv-iana-media-types (Getestet wird in diesem Fall lediglich, ob die verwendete IRI mit https://www.iana.org/assignments/media-types/ beginnt.)"@de ;
 .

@@ -27,10 +27,16 @@
   dcat:accessURL <https://example.org/> ;
 .
 
-:ok-2-distribution
+:ok-2-distribution-https
   a dcat:Distribution ;
   dcat:accessURL <https://example.org/> ;
   dcat:mediaType <https://www.iana.org/assignments/media-types/application/pdf> ;
+.
+
+:ok-2-distribution-http
+  a dcat:Distribution ;
+  dcat:accessURL <https://example.org/> ;
+  dcat:mediaType <http://www.iana.org/assignments/media-types/application/pdf> ;
 .
 
 :gray-0-dist-notInListButNotFoundAsError

@@ -27,11 +27,12 @@
   owl:imports <https://www.dcat-ap.de/def/politicalGeocoding/governmentDistrictKey/20190731.rdf> ;
   owl:imports <https://www.dcat-ap.de/def/politicalGeocoding/stateKey/20100401.rdf> ;
   owl:imports <https://www.dcat-ap.de/def/hashAlgorithms/20200729.rdf> ;
+  owl:imports <https://www.dcat-ap.de/def/contributors/20220623.rdf> ;                                  # wird nur für GovData-Anlieferung benötigt
 
-  # owl:imports <https://spdx.org/rdf/terms/spdx-ontology.owl.xml> ;          # no use-case yet
-  # owl:imports <http://dublincore.org/2020/01/20/dublin_core_terms.ttl> ;    # no use-case yet
-  # owl:imports <https://www.w3.org/ns/locn.ttl> ;                            # no use-case yet
-  # owl:imports <http://www.w3.org/ns/prov-o.ttl> ;                           # no use-case yet
-  # owl:imports <http://www.w3.org/2006/time.ttl> ;                           # no use-case yet
-  # owl:imports <http://www.w3.org/ns/adms.ttl> ;                             # no use-case yet
+  # owl:imports <https://spdx.org/rdf/terms/spdx-ontology.owl.xml> ;                                    # kein Anwendunsfall
+  # owl:imports <http://dublincore.org/2020/01/20/dublin_core_terms.ttl> ;                              # kein Anwendunsfall
+  # owl:imports <https://www.w3.org/ns/locn.ttl> ;                                                      # kein Anwendunsfall
+  # owl:imports <http://www.w3.org/ns/prov-o.ttl> ;                                                     # kein Anwendunsfall
+  # owl:imports <http://www.w3.org/2006/time.ttl> ;                                                     # kein Anwendunsfall
+  # owl:imports <http://www.w3.org/ns/adms.ttl> ;                                                       # kein Anwendunsfall
 .
