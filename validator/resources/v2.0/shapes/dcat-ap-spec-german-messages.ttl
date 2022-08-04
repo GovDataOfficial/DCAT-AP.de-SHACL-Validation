@@ -138,9 +138,9 @@
     # dcatap:LicenceDocument_Property_dct_typsh:message "Diese Regel existiert nur, damit man aus den SHACL-Shapes eine UI bauen könnte."@de .
 
 # Deutsche Fehlermeldungen zu dct:Location
-    dcatap:Location_Shape_Property_dcat_bbox                    sh:message "dct:Location: dcat:bbox MUSS ein Literal sein. Es DARF maximal einmal vorhanden sein."@de .
-    dcatap:Location_Shape_Property_dcat_centroid                sh:message "dct:Location: dcat:centroid MUSS ein Literal sein. Es DARF maximal einmal vorhanden sein."@de .
-    dcatap:Location_Shape_Property_locn_geometry                sh:message "dct:Location: locn:geometry MUSS ein Literal sein. Es DARF maximal einmal vorhanden sein."@de .
+    dcatap:Location_Property_dcat_bbox                          sh:message "dct:Location: dcat:bbox MUSS ein Literal sein. Es DARF maximal einmal vorhanden sein."@de .
+    dcatap:Location_Property_dcat_centroid                      sh:message "dct:Location: dcat:centroid MUSS ein Literal sein. Es DARF maximal einmal vorhanden sein."@de .
+    dcatap:Location_Property_locn_geometry                      sh:message "dct:Location: locn:geometry MUSS ein Literal sein. Es DARF maximal einmal vorhanden sein."@de .
 
 # Deutsche Fehlermeldungen zu dct:PeriodOfTime
     dcatap:PeriodOfTime_Property_dcat_startDate                 sh:message "dct:PeriodOfTime: dcat:startDate DARF maximal einmal vorhanden sein."@de .
