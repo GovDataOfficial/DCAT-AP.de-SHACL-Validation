@@ -1,0 +1,47 @@
+# (C) CC BY 4.0 ']init[ AG fuer GovData'
+#
+# Der folgende Befehl geht davon aus, dass man sich im Ordner 'tools' befindet und dort die Offline-Java-Version des Blanko-SHACL-Validators unter dem Dateinamen 'any.jar' abgelegt hat.
+# Der Blanko-SHACL-Validator kann unter https://www.itb.ec.europa.eu/shacl-offline/any/validator.jar bezogen werden.
+# java -Xss4m -jar any.jar -reportSyntax "text/turtle" -loadImports true -externalShapes ../validator/resources/v2.0/shapes/dcat-ap-de-imports.ttl -externalShapes ../validator/resources/v2.0/shapes/_dcat-ap_2.1.1_shacl_shapes.ttl -externalShapes ../validator/resources/v2.0/shapes/dcat-ap-spec-german-additions.ttl -externalShapes ../validator/resources/v2.0/shapes/dcat-ap-spec-german-messages.ttl -externalShapes ../validator/resources/v2.0/shapes/dcat-ap-konventionen.ttl -contentToValidate ../testcases/v2.0_shapes/konventionen/konv36.ttl
+
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dcatde: <http://dcat-ap.de/def/dcatde/> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@base <k36#> .
+<https://www.example.org/#publisher> a foaf:Agent ; foaf:name "example".
+<base_distribution> a dcat:Distribution ; dct:title "Test" ; dcat:accessURL <http://example.org/#accessURL> ; dct:license <http://dcat-ap.de/def/licenses/dl-by-de/2.0> ; dct:format <http://publications.europa.eu/resource/authority/file-type/CSV> .
+
+<P01-working>
+  a dcat:Dataset ;
+  dct:title "Test" ;
+  dct:description "Test" ;
+  dcatde:contributorID <http://dcat-ap.de/def/contributors/auswaertigesAmt> ;
+  dcat:theme <http://publications.europa.eu/resource/authority/data-theme/AGRI> ;
+  dcat:keyword "Test" ;
+  dcat:landingPage <https://example.com> ;
+  dct:issued "2022-08-05T00:00:00"^^xsd:dateTime ;
+  dct:identifier "http://example.com/#dataset" ;
+  dct:modified "2022-08-05T08:00:00"^^xsd:dateTime ;
+  dcat:distribution <base_distribution> ;
+
+  dct:publisher <https://www.example.org/#publisher> ;
+.
+
+<F01-no_publisher>
+  a dcat:Dataset ;
+  dct:title "Test" ;
+  dct:description "Test" ;
+  dcatde:contributorID <http://dcat-ap.de/def/contributors/auswaertigesAmt> ;
+  dcat:theme <http://publications.europa.eu/resource/authority/data-theme/AGRI> ;
+  dcat:keyword "Test" ;
+  dcat:landingPage <https://example.com> ;
+  dct:issued "2022-08-05T00:00:00"^^xsd:dateTime ;
+  dct:identifier "http://example.com/#dataset" ;
+  dct:modified "2022-08-05T08:00:00"^^xsd:dateTime ;
+  dcat:distribution <base_distribution> ;
+.
