@@ -6,9 +6,9 @@
 
 <http://dcat-ap.de/def/dcatde/2.0/#>
   rdf:type owl:Ontology ;
-  owl:imports <https://raw.githubusercontent.com/GovDataOfficial/DCAT-AP.de-SHACL-Validation/master/validator/resources/mirror/foaf_0_1.rdf> # mirror for <http://xmlns.com/foaf/spec/index.rdf> ;
-  owl:imports <https://raw.githubusercontent.com/GovDataOfficial/DCAT-AP.de-SHACL-Validation/master/validator/resources/mirror/vcard.ttl>    # mirror for <http://www.w3.org/2006/vcard/ns.ttl> ;
-  owl:imports <https://raw.githubusercontent.com/GovDataOfficial/DCAT-AP.de-SHACL-Validation/master/validator/resources/mirror/org.ttl>      # mirror for <http://www.w3.org/ns/org.ttl> ;
+  owl:imports <https://raw.githubusercontent.com/GovDataOfficial/DCAT-AP.de-SHACL-Validation/master/validator/resources/mirror/foaf_0_1.rdf> ; # mirror for <http://xmlns.com/foaf/spec/index.rdf> ;
+  owl:imports <https://raw.githubusercontent.com/GovDataOfficial/DCAT-AP.de-SHACL-Validation/master/validator/resources/mirror/vcard.ttl> ;    # mirror for <http://www.w3.org/2006/vcard/ns.ttl> ;
+  owl:imports <https://raw.githubusercontent.com/GovDataOfficial/DCAT-AP.de-SHACL-Validation/master/validator/resources/mirror/org.ttl> ;      # mirror for <http://www.w3.org/ns/org.ttl> ;
 
   owl:imports <http://publications.europa.eu/resource/authority/language> ;
   owl:imports <http://publications.europa.eu/resource/authority/data-theme> ;
