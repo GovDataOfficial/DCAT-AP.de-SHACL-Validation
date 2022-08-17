@@ -29,7 +29,7 @@
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 
 :Konv01_hasEmail_hasURL_v_Min
-    sh:message "Konvention 01: Kontaktinformationen (dcat:contactPoint) MÜSSEN mindestens Angaben zur Email (vcard:hasEmail) oder einen Link zum Kontaktformular oder Chatbot (vcard:hasURL) enthalten. "@de ;
+    sh:message "K01: Kontaktinformationen (dcat:contactPoint) MÜSSEN mindestens Angaben zur Email (vcard:hasEmail) oder einen Link zum Kontaktformular oder Chatbot (vcard:hasURL) enthalten. "@de ;
     sh:severity sh:Violation ;
     sh:or (
         [
@@ -37,7 +37,7 @@
             sh:minCount 1 ;
         ]
         [
-            sh:path vcard:hasTelephone ;
+            sh:path vcard:hasEmail ;
             sh:minCount 1 ;
         ] 
     ) ;
