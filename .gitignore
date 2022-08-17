@@ -1,3 +1,5 @@
 
 tools/*.jar
 tools/create-shacl-lists/
+tools/report.0.ttl
+tools/validator.log
