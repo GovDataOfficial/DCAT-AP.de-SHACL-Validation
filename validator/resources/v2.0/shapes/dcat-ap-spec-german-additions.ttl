@@ -910,6 +910,20 @@ dcatap:Checksum_Property_spdx_algorithm  sh:deactivated true .
     sh:message "dct:PeriodOfTime: schema:endDate DARF maximal einmal vorhanden sein."@de ;
 .
 
+:PeriodOfTime_schema_startDate_v_Type
+    sh:path schema:startDate ;
+    sh:node dcatap:DateOrDateTimeDataType_Shape ;
+    sh:severity sh:Violation ;
+    sh:message "dct:PeriodOfTime: schema:startDate MUSS ein als xsd:date, xsd:dateTime, xsd:gYear oder xsd:gYearMonth getyptes Literal sein."@de ;
+.
+
+:PeriodOfTime_schema_endDate_v_Type
+    sh:path schema:endDate ;
+    sh:node dcatap:DateOrDateTimeDataType_Shape ;
+    sh:severity sh:Violation ;
+    sh:message "dct:PeriodOfTime: schema:endDate MUSS ein als xsd:date, xsd:dateTime, xsd:gYear oder xsd:gYearMonth getyptes Literal sein."@de ;
+.
+
 :PeriodOfTime_Shape 
     a sh:NodeShape ;
     sh:targetClass dct:PeriodOfTime ;
@@ -918,6 +932,8 @@ dcatap:Checksum_Property_spdx_algorithm  sh:deactivated true .
     sh:property :PeriodOfTime_periodPoints_v_Min ;
     sh:property :PeriodOfTime_schema_startDate_v_Max ;
     sh:property :PeriodOfTime_schema_endDate_v_Max ;
+    sh:property :PeriodOfTime_schema_startDate_v_Type ;
+    sh:property :PeriodOfTime_schema_endDate_v_Type ;
 .
 
 :Location_locations_v_Min

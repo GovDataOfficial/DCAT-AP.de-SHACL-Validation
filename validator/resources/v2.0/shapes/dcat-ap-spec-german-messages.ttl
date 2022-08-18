@@ -143,8 +143,8 @@
     dcatap:Location_Property_locn_geometry                      sh:message "dct:Location: locn:geometry MUSS ein Literal sein. Es DARF maximal einmal vorhanden sein."@de .
 
 # Deutsche Fehlermeldungen zu dct:PeriodOfTime
-    dcatap:PeriodOfTime_Property_dcat_startDate                 sh:message "dct:PeriodOfTime: dcat:startDate DARF maximal einmal vorhanden sein."@de .
-    dcatap:PeriodOfTime_Property_dcat_endDate                   sh:message "dct:PeriodOfTime: dcat:endDate DARF maximal einmal vorhanden sein."@de .
+    dcatap:PeriodOfTime_Property_dcat_startDate                 sh:message "dct:PeriodOfTime: dcat:startDate MUSS ein als xsd:date, xsd:dateTime, xsd:gYear oder xsd:gYearMonth getyptes Literal sein. Es DARF maximal einmal vorhanden sein."@de .
+    dcatap:PeriodOfTime_Property_dcat_endDate                   sh:message "dct:PeriodOfTime: dcat:endDate MUSS ein als xsd:date, xsd:dateTime, xsd:gYear oder xsd:gYearMonth getyptes Literal sein. Es DARF maximal einmal vorhanden sein."@de .
     dcatap:PeriodOfTime_Property_time_hasBeginning              sh:message "dct:PeriodOfTime: time:hasBeginning DARF maximal einmal vorhanden sein."@de .
     dcatap:PeriodOfTime_Property_time_hasEnd                    sh:message "dct:PeriodOfTime: time:hasEnd DARF maximal einmal vorhanden sein."@de .
 
