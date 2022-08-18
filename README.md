@@ -17,35 +17,55 @@ Die folgende Datei fügt zu den DCAT-AP-SHACL-Shapes deutsche Regeln hinzu, so d
 Weitere externe Quellen, wie Ontologien, deren Kontext relevant sind oder kontrollierte Vokabulare, werden über hier importiert:
 - https://github.com/GovDataOfficial/DCAT-AP.de-SHACL-Validation/blob/master/validator/resources/v2.0/shapes/dcat-ap-de-imports.ttl
 
-### Was wird überprüft?
- - Min- und Max-Kardinalitäten, damit auch Pflichteigenschaften
- - Verwendung von Literals und ihren Typen
+### Prüfungen
+ - Verwendung aller Pflichteigenschaften
+ - Min- und Max-Kardinalitäten
+ - Verwendung (getypter) Literals, wenn zutreffend
  - Verwendung von URIs, wenn als Ziel eine Klasse erwartet wird
- - Typen von Klassen, wenn Regeln existieren, wie die Klassen aufgebaut sein müssen
+ - Verwendung von URIs, wenn als Ziel eine beliebige Webadresse erwartet wird
  - Verwendung der korrekten kontrollierten Vokabulare
+ - Typen von Klassen, wenn Regeln existieren, wie die Klassen aufgebaut sein müssen
  - Warnung bei der Verwendung von `deprecated`-Eigenschaften
 
-### Welche Klassen werden nicht geprüft?
+### Keine Prüfungen
  - Kategorie
  - Kategorienschema
  - Lizenzdokument (da kontrolliertes Vokabular genutzt werden muss)
-
-### Offene Punkte
- - ausführliches Testing
- - Typen-Prüfung (z.B. `xsd:date`) funktioniert nicht
- - Wechsel (für manche Eigenschaften) auf IRIorBlankNode?
- - wird eine IRI eines CV verlangt, kann man die Shapes "täuschen", in dem man eine BlankNode mit dem richtigen skos:inScheme-Attribut angibt.
 
 
 * * *
 
 
-## DCAT-AP.de 2.0 - GovData (TBD)
- - Verwendung von URIs, wenn als Ziel eine URI verlangt wird und sinnvoll ist (z.B. foaf:page)
- - Sinnvolle Erweiterung: Eigenschaften entweder ein Literal oder eine URL sein zu lassen, z.B.: dct:conformsTo, da nur diese im Portal angezeigt werden können
- - Konventionen
- - Besonders empfohlene Eigenschaften
+## DCAT-AP.de 2.0 - Spezifikation & Konventionen (BETA)
 
+Dieses Profil prüft alles, was DCAT-AP.de SHACL-Validation (BETA) prüft. Zusätzlich:
+
+### Prüfung von Konventionen
+ - `K01:   ` `dcat:contactPoint`: Kontaktinformationen MÜSSEN mindestens Angaben zur Email (vcard:hasEmail) oder einen Link zum Kontaktformular oder Chatbot (vcard:hasURL) enthalten.
+ - `K12&13:` `dcat:Dataset`: `dcatde:contributorID` MUSS verwendet werden und DARF nur genau einmal eine IRI aus http://dcat-ap.de/def/contributors/ verwenden.
+ - `K36:   ` `dcat:Dataset`: `dct:publisher` MUSS verwendet werden.
+ - `K30:   ` `dcat:Dataset`: `dcat:theme`: Zur Steigerung der Metadatenqualität wird die Angabe von Kategorien empfohlen.
+ - `K31:   ` `dcat:Distribution`: `dct:license` MUSS eine IRI aus http://dcat-ap.de/def/licenses/ verwenden.
+ - `K32:   ` `dcat:Distribution`: `dct:format` MUSS eine IRI aus dem  EU Vokabular 'File Type' verwenden.
+
+### Prüfung besonders empfohlener Eigenschaften
+ - `dcat:Dataset`: `dcat:distribution`: Es wird empfohlen, dass jedes Dataset über eine Distribution verfügt.
+ - `dcat:Dataset`: `dcat:keyword`: Zur Steigerung der Metadatenqualität wird die Angabe von Schlagworten empfohlen.
+ - `dcat:Dataset`: `dcat:landingPage`: Zur Steigerung der Metadatenqualität wird die Angabe der ursprünglichen Webseite empfohlen.
+ - `dcat:Dataset`: `dct:issued`: Zur Steigerung der Metadatenqualität wird die Angabe des Veröffentlichungsdatums empfohlen.
+ - `dcat:Distribution`: `dct:title`: Es wird empfohlen, dass jede Distribution über einen dct:title verfügt.
+
+
+### Prüfung im Rahmen der Dublettenprüfung
+ - `dcat:Dataset`: Ggf. MUSS `dct:identifier` zur Dublettenprüfung verwendet werden.
+ - `dcat:Dataset`: Ggf. MUSS `dct:modified` zur Dublettenprüfung verwendet werden.
+
+
+* * *
+
+## GovData MQA/Dashboard
+
+Diese Profile prüfen Eigenschaften, die auch im GovData-Dashboard zur Metadatenqualität angezeigt werden.
 
 * * *
 

@@ -163,7 +163,7 @@
 .
 
 :Konv32_dct_format_v_List
-    sh:message "K31: dcat:Distribution: dct:format MUSS eine IRI aus dem  EU Vokabular 'File Type' verwenden. Siehe: https://www.dcat-ap.de/def/dcatde/2.0/implRules/#konvention-32 "@de ;
+    sh:message "K32: dcat:Distribution: dct:format MUSS eine IRI aus dem  EU Vokabular 'File Type' verwenden. Siehe: https://www.dcat-ap.de/def/dcatde/2.0/implRules/#konvention-32 "@de ;
     sh:path dct:format ;
 
     sh:node [
