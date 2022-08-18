@@ -2,7 +2,6 @@
 #
 # Diese Datei fügt zu den DCAT-AP-SHACL-Shapes deutsche Regeln hinzu, so dass das Konventionenhandbuch
 # und Empfehlungen für die Anlieferung an GovData geprüft werden.
-# Desweiteren werden Warnmeldungen bei der Verwendung von deprecated-Eigenschaften ausgegeben.
 
 @prefix :       <http://dcat-ap.de/def/dcatde/> .
 @prefix adms:   <http://www.w3.org/ns/adms#> .
@@ -191,73 +190,4 @@
     sh:property :Konv31_dct_license_v_List ;
     sh:property :Konv32_dct_format_v_List ;
     sh:property :KonvXX_dct_title_w_Min ;
-.
-
-:Deprecated_dcat_Dataset_dct_type
-    sh:message "Deprecated: dcat:Dataset: dct:type soll nicht mehr für Collections verwendet werden. Siehe: https://www.dcat-ap.de/def/dcatde/2.0/implRules/#sammlungen-und-reihen-von-datensatzen "@de ;
-    sh:severity sh:Warning ;
-    sh:path     dct:type ;
-    sh:maxCount 0 ;
-.
-
-:Deprecated_dcat_Dataset_dcat_granularity
-    sh:message "Deprecated: dcat:Dataset: dcat:granularity soll nicht mehr verwendet werden. Stattdessen z.B. dcat:temporalResolution. Siehe: https://www.dcat-ap.de/def/dcatde/2.0/spec/#datensatz-zeitliche-auflosung "@de ;
-    sh:severity sh:Warning ;
-    sh:path     dcat:granularity ;
-    sh:maxCount 0 ;
-.
-
-:Deprecated_dcat_Dataset_dct_hasVersion
-    sh:message "Deprecated: dcat:Dataset: dct:hasVersion soll nicht mehr für Collections verwendet werden. Siehe: https://www.dcat-ap.de/def/dcatde/2.0/implRules/#sammlungen-und-reihen-von-datensatzen "@de ;
-    sh:severity sh:Warning ;
-    sh:path     dct:hasVersion ;
-    sh:maxCount 0 ;
-.
-
-:Deprecated_dcat_Dataset_Shape
-    a sh:NodeShape ;
-    sh:targetClass dcat:Dataset ;
-    sh:name "Deprecated Eigenschaften beim dcat:Dataset gemäß DCAT-AP.de 2.0"@de ;
-
-    sh:property :Deprecated_dcat_Dataset_dct_type ;
-    sh:property :Deprecated_dcat_Dataset_dcat_granularity ;
-    sh:property :Deprecated_dcat_Dataset_dct_hasVersion ;
-.
-
-:Deprecated_dcat_Distribution_dcat_plannedAvailability
-    sh:message "Deprecated: dcat:Distribution: dcat:plannedAvailability soll nicht mehr verwendet werden. Stattdessen dcatap:availability. Siehe: https://www.dcat-ap.de/def/dcatde/2.0/spec/#distribution-verfugbarkeit "@de ;
-    sh:severity sh:Warning ;
-    sh:path     dcat:plannedAvailability ;
-    sh:maxCount 0 ;
-.
-
-:Deprecated_dcat_Distribution_Shape
-    a sh:NodeShape ;
-    sh:targetClass dcat:Distribution ;
-    sh:name "Deprecated Eigenschaften bei dcat:Distribution gemäß DCAT-AP.de 2.0"@de ;
-
-    sh:property :Deprecated_dcat_Distribution_dcat_plannedAvailability ;
-.
-
-:Deprecated_dct_PeriodOfTime_schema_startDate
-    sh:message "Deprecated: dct:PeriodOfTime: schema:startDate soll nicht mehr verwendet werden. Stattdessen dcat:startDate. Siehe: https://www.dcat-ap.de/def/dcatde/2.0/spec/#zeitraum-startzeitpunkt "@de ;
-    sh:severity sh:Warning ;
-    sh:path     schema:startDate ;
-    sh:maxCount 0 ;
-.
-
-:Deprecated_dct_PeriodOfTime_schema_endDate
-    sh:message "Deprecated: dct:PeriodOfTime: schema:endDate soll nicht mehr verwendet werden. Stattdessen dcat:endDate. Siehe: https://www.dcat-ap.de/def/dcatde/2.0/spec/#zeitraum-endzeitpunkt "@de ;
-    sh:severity sh:Warning ;
-    sh:path     schema:endDate ;
-    sh:maxCount 0 ;
-.
-
-:Deprecated_dct_PeriodOfTime_Shape
-    a sh:NodeShape ;
-    sh:targetClass dct:PeriodOfTime ;
-    sh:name "Deprecated Eigenschaften bei dct:PeriodOfTime gemäß DCAT-AP.de 2.0"@de ;
-
-    sh:property :Deprecated_dct_PeriodOfTime_schema_startDate ;
-    sh:property :Deprecated_dct_PeriodOfTime_schema_endDate ;
 .
