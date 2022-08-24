@@ -2,7 +2,7 @@
 
 |  :warning: Hinweis zur aktuellen Entwicklung :warning:  |
 |:--------------------------------------------------------|
-| Die DCAT-AP.de SHACL-Validation wurde mit Blick auf die [DCAT-AP.de 2.0 Spezifikation](https://www.dcat-ap.de/def/dcatde/2.0/spec/) neu erstellt. <br> Die vorliegende Version muss noch ausgiebig gestestet werden. Wenn Sie Fehler entdecken, dann freuen wir uns über Ihr Feedback! |
+| Die DCAT-AP.de SHACL-Validation wurde mit Blick auf die [DCAT-AP.de 2.0 Spezifikation](https://www.dcat-ap.de/def/dcatde/2.0/spec/) neu erstellt. <br> Wenn Sie Fehler entdecken, dann freuen wir uns über Ihr Feedback! |
 
 ## DCAT-AP.de 2.0 - Spezifikation (BETA)
 Die SEMIC stellt ihren eigenen [DCAT-AP-Validator](https://www.itb.ec.europa.eu/shacl/dcat-ap/upload) zur Verfügung, der zuverlässig funktioniert.
@@ -14,7 +14,7 @@ Der deutsche Validator verwendet die verpflichtenden Regeln der SEMIC und reiche
 Die folgende Datei fügt zu den DCAT-AP-SHACL-Shapes deutsche Regeln hinzu, so dass DCAT-AP.de 2.0 geprüft wird. Dafür werden zum Teil auch widersprüchliche DCAT-AP-SHACL-Shapes deaktiviert:  
 - https://github.com/GovDataOfficial/DCAT-AP.de-SHACL-Validation/blob/master/validator/resources/v2.0/shapes/dcat-ap-spec-german-additions.ttl
 
-Weitere externe Quellen, wie Ontologien, deren Kontext relevant sind oder kontrollierte Vokabulare, werden über hier importiert:
+Weitere externe Quellen, wie Ontologien, deren Kontext relevant sind oder kontrollierte Vokabulare, werden durch diese Datei importiert:
 - https://github.com/GovDataOfficial/DCAT-AP.de-SHACL-Validation/blob/master/validator/resources/v2.0/shapes/dcat-ap-de-imports.ttl
 
 ### Prüfungen
@@ -24,12 +24,17 @@ Weitere externe Quellen, wie Ontologien, deren Kontext relevant sind oder kontro
  - Verwendung von URIs, wenn als Ziel eine Klasse erwartet wird
  - Verwendung von URIs, wenn als Ziel eine beliebige Webadresse erwartet wird
  - Verwendung der korrekten kontrollierten Vokabulare
- - Typen von Klassen, wenn Regeln existieren, wie die Klassen aufgebaut sein müssen
  - Warnung bei der Verwendung von `deprecated`-Eigenschaften
 
+Ob das Objekt einer Eigenschaft die von DCAT-AP(.de) vorgegebene Klasse hat, wird geprüft, wenn der Aufbau des Objekts für den Anwendungsfall "Anlieferung an ein Metadatenportal" entscheidend ist.
+Dies betrifft die DCAT-AP-Kernklassen und Eigenschaften `dcat:catalog`, `dcat:dataset`, `dcat:service`, `dcat:record` und `dcat:distribution` sowie die Eigenschaften, die auf z.B. `foaf:Agent`, `dct:PeriodOfTime` oder `dct:Location` verweisen.
+
+Für die Eigenschaften `adms:sample`, `dct:source`, `dct:hasVersion`, `dct:isVersionOf`, `dct:hasPart` und `dct:isPartOf` wird davon ausgegangen, dass deren Objekte nicht im Kern der Validierung stehen. Daher wird lediglich gewarnt, wenn sie nicht die korrekte Klasse haben.
+
+
 ### Keine Prüfungen
- - Kategorie
- - Kategorienschema
+ - Kategorie (da kontrolliertes Vokabular genutzt werden muss)
+ - Kategorienschema (da kontrolliertes Vokabular genutzt werden muss)
  - Lizenzdokument (da kontrolliertes Vokabular genutzt werden muss)
 
 
@@ -41,12 +46,12 @@ Weitere externe Quellen, wie Ontologien, deren Kontext relevant sind oder kontro
 Dieses Profil prüft alles, was DCAT-AP.de SHACL-Validation (BETA) prüft. Zusätzlich:
 
 ### Prüfung von Konventionen
- - `K01:   ` `dcat:contactPoint`: Kontaktinformationen MÜSSEN mindestens Angaben zur Email (vcard:hasEmail) oder einen Link zum Kontaktformular oder Chatbot (vcard:hasURL) enthalten.
- - `K12&13:` `dcat:Dataset`: `dcatde:contributorID` MUSS verwendet werden und DARF nur genau einmal eine IRI aus http://dcat-ap.de/def/contributors/ verwenden.
- - `K36:   ` `dcat:Dataset`: `dct:publisher` MUSS verwendet werden.
- - `K30:   ` `dcat:Dataset`: `dcat:theme`: Zur Steigerung der Metadatenqualität wird die Angabe von Kategorien empfohlen.
- - `K31:   ` `dcat:Distribution`: `dct:license` MUSS eine IRI aus http://dcat-ap.de/def/licenses/ verwenden.
- - `K32:   ` `dcat:Distribution`: `dct:format` MUSS eine IRI aus dem  EU Vokabular 'File Type' verwenden.
+ - `K01: dcat:contactPoint`: Kontaktinformationen MÜSSEN mindestens Angaben zur Email (vcard:hasEmail) oder einen Link zum Kontaktformular oder Chatbot (vcard:hasURL) enthalten.
+ - `K12&13: dcat:Dataset`: `dcatde:contributorID` MUSS verwendet werden und DARF nur genau einmal eine IRI aus http://dcat-ap.de/def/contributors/ verwenden.
+ - `K36: dcat:Dataset`: `dct:publisher` MUSS verwendet werden.
+ - `K30: dcat:Dataset`: `dcat:theme`: Zur Steigerung der Metadatenqualität wird die Angabe von Kategorien empfohlen.
+ - `K31: dcat:Distribution`: `dct:license` MUSS eine IRI aus http://dcat-ap.de/def/licenses/ verwenden.
+ - `K32: dcat:Distribution`: `dct:format` MUSS eine IRI aus dem  EU Vokabular 'File Type' verwenden.
 
 ### Prüfung besonders empfohlener Eigenschaften
  - `dcat:Dataset`: `dcat:distribution`: Es wird empfohlen, dass jedes Dataset über eine Distribution verfügt.
@@ -54,7 +59,6 @@ Dieses Profil prüft alles, was DCAT-AP.de SHACL-Validation (BETA) prüft. Zusä
  - `dcat:Dataset`: `dcat:landingPage`: Zur Steigerung der Metadatenqualität wird die Angabe der ursprünglichen Webseite empfohlen.
  - `dcat:Dataset`: `dct:issued`: Zur Steigerung der Metadatenqualität wird die Angabe des Veröffentlichungsdatums empfohlen.
  - `dcat:Distribution`: `dct:title`: Es wird empfohlen, dass jede Distribution über einen dct:title verfügt.
-
 
 ### Prüfung im Rahmen der Dublettenprüfung
  - `dcat:Dataset`: Ggf. MUSS `dct:identifier` zur Dublettenprüfung verwendet werden.

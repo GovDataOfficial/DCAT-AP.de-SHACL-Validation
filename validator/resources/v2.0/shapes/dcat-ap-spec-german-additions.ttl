@@ -98,13 +98,6 @@ dcatap:Checksum_Property_spdx_algorithm  sh:deactivated true .
     sh:message "dcat:Dataset: dcatde:politicalGeocodingURI SOLL eines der hier aufgelisteten Vokabulare benutzten: https://www.dcat-ap.de/def/dcatde/2.0/spec/#kv-political-geocoding-uri"@de ;
 .
 
-# :Dataset_dcat_theme_v_IRI
-#     sh:path dcat:theme ;
-#     sh:nodeKind sh:IRI ;
-#     sh:severity sh:Violation ;
-#     sh:message "dcat:Dataset: dcat:theme MUSS eine IRI sein."@de ;
-# .
-
 :Dataset_dcat_theme_v_List
     sh:description "Todo: Wenn zutreffend, so umbauen, dass lediglich wenigstens einmal das Vokabular genutzt wurde. Dann wird auch :Dataset_dcat_theme_v_IRI zusätzlich benötigt." ;
     sh:path dcat:theme ;
@@ -315,25 +308,25 @@ dcatap:Checksum_Property_spdx_algorithm  sh:deactivated true .
     sh:message "dcat:Dataset: dct:temporal MUSS auf eine dct:PeriodOfTime verweisen."@de ;
 .
 
-:Dataset_dct_source_v_Class
+:Dataset_dct_source_w_Class
     sh:path dct:source ;
     sh:class dcat:Dataset ;
-    sh:severity sh:Violation ;
-    sh:message "dcat:Dataset: dct:source MUSS auf ein dcat:Dataset verweisen."@de ;
+    sh:severity sh:Warning ;
+    sh:message "dcat:Dataset: dct:source MUSS auf ein dcat:Dataset verweisen. (Löst auch aus, wenn nur eine IRI angegeben wird, die verlinkte Ressource aber nicht mit validiert wird.)"@de ;
 .
 
-:Dataset_dct_hasVersion_v_Class
+:Dataset_dct_hasVersion_w_Class
     sh:path dct:hasVersion ;
     sh:class dcat:Dataset ;
-    sh:severity sh:Violation ;
-    sh:message "dcat:Dataset: dct:hasVersion MUSS auf ein dcat:Dataset verweisen."@de ;
+    sh:severity sh:Warning ;
+    sh:message "dcat:Dataset: dct:hasVersion MUSS auf ein dcat:Dataset verweisen. (Löst auch aus, wenn nur eine IRI angegeben wird, die verlinkte Ressource aber nicht mit validiert wird.)"@de ;
 .
 
-:Dataset_dct_isVersionOf_v_Class
+:Dataset_dct_isVersionOf_w_Class
     sh:path dct:isVersionOf ;
     sh:class dcat:Dataset ;
-    sh:severity sh:Violation ;
-    sh:message "dcat:Dataset: dct:isVersionOf MUSS auf ein dcat:Dataset verweisen."@de ;
+    sh:severity sh:Warning ;
+    sh:message "dcat:Dataset: dct:isVersionOf MUSS auf ein dcat:Dataset verweisen. (Löst auch aus, wenn nur eine IRI angegeben wird, die verlinkte Ressource aber nicht mit validiert wird.)"@de ;
 .
 
 :Dataset_dcat_distribution_v_Class
@@ -343,11 +336,11 @@ dcatap:Checksum_Property_spdx_algorithm  sh:deactivated true .
     sh:message "dcat:Dataset: dcat:distribution MUSS auf eine dcat:Distribution verweisen."@de ;
 .
 
-:Dataset_adms_sample_v_Class
+:Dataset_adms_sample_w_Class
     sh:path adms:sample ;
     sh:class dcat:Distribution ;
-    sh:severity sh:Violation ;
-    sh:message "dcat:Dataset: adms:sample MUSS auf eine dcat:Distribution verweisen."@de ;
+    sh:severity sh:Warning ;
+    sh:message "dcat:Dataset: adms:sample MUSS auf eine dcat:Distribution verweisen. (Löst auch aus, wenn nur eine IRI angegeben wird, die verlinkte Ressource aber nicht mit validiert wird.)"@de ;
 .
 
 :Dataset_dct_publisher_v_Class
@@ -429,11 +422,11 @@ dcatap:Checksum_Property_spdx_algorithm  sh:deactivated true .
     sh:property :Dataset_dct_references_v_IRI ;
     sh:property :Dataset_dct_spatial_v_IRIorClass ;
     sh:property :Dataset_dct_temporal_v_Class ;
-    sh:property :Dataset_dct_source_v_Class ;
-    sh:property :Dataset_dct_hasVersion_v_Class ;
-    sh:property :Dataset_dct_isVersionOf_v_Class ;
+    sh:property :Dataset_dct_source_w_Class ;
+    sh:property :Dataset_dct_hasVersion_w_Class ;
+    sh:property :Dataset_dct_isVersionOf_w_Class ;
     sh:property :Dataset_dcat_distribution_v_Class ;
-    sh:property :Dataset_adms_sample_v_Class ;
+    sh:property :Dataset_adms_sample_w_Class ;
     sh:property :Dataset_dct_publisher_v_Class ;
     sh:property :Dataset_dct_publisher_v_Max ;
     sh:property :Dataset_dct_creator_v_Class ;
@@ -555,18 +548,18 @@ dcatap:Checksum_Property_spdx_algorithm  sh:deactivated true .
     sh:message "dcat:Catalog: dct:spatial MUSS auf eine IRI oder einen BlankNode (vom Typ dct:Location) verweisen."@de ;
 .
 
-:Catalog_dct_hasPart_v_Class
+:Catalog_dct_hasPart_w_Class
     sh:path dct:hasPart ;
     sh:class dcat:Catalog ;
-    sh:severity sh:Violation ;
-    sh:message "dcat:Catalog: dct:hasPart MUSS auf einen dcat:Catalog verweisen."@de ;
+    sh:severity sh:Warning ;
+    sh:message "dcat:Catalog: dct:hasPart MUSS auf einen dcat:Catalog verweisen. (Löst auch aus, wenn nur eine IRI angegeben wird, die verlinkte Ressource aber nicht mit validiert wird.)"@de ;
 .
 
-:Catalog_dct_isPartOf_v_Class
+:Catalog_dct_isPartOf_w_Class
     sh:path dct:isPartOf ;
     sh:class dcat:Catalog ;
-    sh:severity sh:Violation ;
-    sh:message "dcat:Catalog: dct:isPartOf MUSS auf einen dcat:Catalog verweisen."@de ;
+    sh:severity sh:Warning ;
+    sh:message "dcat:Catalog: dct:isPartOf MUSS auf einen dcat:Catalog verweisen. (Löst auch aus, wenn nur eine IRI angegeben wird, die verlinkte Ressource aber nicht mit validiert wird.)"@de ;
 .
 
 :Catalog_dcat_record_v_Class
@@ -614,8 +607,8 @@ dcatap:Checksum_Property_spdx_algorithm  sh:deactivated true .
     sh:property :Catalog_dcat_catalog_v_Class ;
     sh:property :Catalog_dcat_service_v_Class ;
     sh:property :Catalog_dct_spatial_v_IRIorClass ;
-    sh:property :Catalog_dct_hasPart_v_Class ;
-    sh:property :Catalog_dct_isPartOf_v_Class ;
+    sh:property :Catalog_dct_hasPart_w_Class ;
+    sh:property :Catalog_dct_isPartOf_w_Class ;
     sh:property :Catalog_dcat_record_v_Class ;
     sh:property :Catalog_dcat_dataset_v_Class ;
     sh:property :Catalog_dct_publisher_v_Class ;
