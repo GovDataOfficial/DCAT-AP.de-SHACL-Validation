@@ -2,7 +2,7 @@
 
 |  :warning: Hinweis zur aktuellen Entwicklung :warning:  |
 |:--------------------------------------------------------|
-| Die DCAT-AP.de SHACL-Validation wurde mit Blick auf die [DCAT-AP.de 2.0 Spezifikation](https://www.dcat-ap.de/def/dcatde/2.0/spec/) neu erstellt. <br> Wenn Sie Fehler entdecken, dann freuen wir uns über Ihr Feedback! |
+| Die [DCAT-AP.de SHACL-Validation](https://www.itb.ec.europa.eu/shacl/dcat-ap.de/upload) wurde mit Blick auf die [DCAT-AP.de 2.0 Spezifikation](https://www.dcat-ap.de/def/dcatde/2.0/spec/) neu erstellt. <br> Wenn Sie Fehler entdecken, dann freuen wir uns über Ihr Feedback! |
 
 ## DCAT-AP.de 2.0 - Spezifikation (BETA)
 Die SEMIC stellt ihren eigenen [DCAT-AP-Validator](https://www.itb.ec.europa.eu/shacl/dcat-ap/upload) zur Verfügung, der zuverlässig funktioniert.
