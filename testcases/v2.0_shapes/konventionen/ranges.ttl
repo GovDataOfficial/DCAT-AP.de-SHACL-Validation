@@ -1,0 +1,137 @@
+# (C) CC BY 4.0 ']init[ AG fuer GovData'
+#
+# Der folgende Befehl geht davon aus, dass man sich im Ordner 'tools' befindet und dort die Offline-Java-Version des Blanko-SHACL-Validators unter dem Dateinamen 'any.jar' abgelegt hat.
+# Der Blanko-SHACL-Validator kann unter https://www.itb.ec.europa.eu/shacl-offline/any/validator.jar bezogen werden.
+# java -Xss4m -jar any.jar -reportSyntax "text/turtle" -loadImports true -externalShapes ../validator/resources/v2.0/shapes/dcat-ap-de-imports.ttl -externalShapes https://raw.githubusercontent.com/init-dcat-ap-de/DCAT-AP/2.1.1-draft/releases/2.1.1/dcat-ap_2.1.1_shacl_shapes.ttl -externalShapes ../validator/resources/v2.0/shapes/dcat-ap-spec-german-additions.ttl -externalShapes ../validator/resources/v2.0/shapes/dcat-ap-spec-german-messages.ttl -externalShapes ../validator/resources/v2.0/shapes/dcat-ap-konventionen.ttl -externalShapes ../validator/resources/v2.0/shapes/dcat-ap-de-deprecated.ttl -contentToValidate ../testcases/v2.0_shapes/konventionen/ranges.ttl
+
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dcatde: <http://dcat-ap.de/def/dcatde/> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix schema:  <http://schema.org/> .
+@prefix adms:    <http://www.w3.org/ns/adms#> .
+@prefix prov:   <http://www.w3.org/ns/prov#> .
+@prefix odrl:   <http://www.w3.org/ns/odrl/2/> .
+
+@base <http://example.org/ranges/> .
+
+<catalog>
+  a dcat:Catalog ;
+  dct:title "Test" ;
+  dct:description "Test" ;
+
+  dct:publisher <publisher> ;
+  dcat:dataset <dataset> ;
+  dcat:record <catalogrecord> ;
+
+  # Ranges: IRIorLiteral
+  dct:rights [
+    a dct:RightsStatement ;
+    dct:title "Ein BlankNode-RightsStatement" ;
+  ] ;
+
+  # Ranges: IRI
+  foaf:homepage "https://example.com"^^xsd:anyURI ;
+.
+
+<dataset> 
+  a dcat:Dataset ;
+  dct:title "Test" ;
+  dct:description "Test" ;
+  dcatde:contributorID <http://dcat-ap.de/def/contributors/auswaertigesAmt> ;
+  dcat:theme <http://publications.europa.eu/resource/authority/data-theme/AGRI> ;
+  dcat:keyword "Test" ;
+  dct:issued "2022-08-05T00:00:00"^^xsd:dateTime ;
+  dct:identifier "http://example.com/#dataset" ;
+  dct:modified "2022-08-05T08:00:00"^^xsd:dateTime ;
+
+  dct:publisher <publisher> ;
+  dcat:contactPoint <contactPoint> ;
+  dcat:distribution <distribution> ;
+  dct:temporal <timeperiod> ;
+
+  # Ranges: IRIorLiteral
+  dct:conformsTo [
+    a dct:Standard ;
+    dct:title "Ein BlankNode-Standard" ;
+  ] ;
+  dct:accessRights [
+    a dct:RightsStatement ;
+    dct:title "Ein BlankNode-RightsStatement" ;
+  ] ;
+  dct:provenance [
+    a dct:ProvenanceStatement ;
+    dct:title "Ein BlankNode-ProvenanceStatement" ;
+  ] ;
+
+  # Ranges: IRI
+  prov:wasGeneratedBy "https://govdata.de/#generator"^^xsd:anyURI ;
+  dcat:landingPage "https://example.com"^^xsd:anyURI ;
+  foaf:page "https://example.com"^^xsd:anyURI ;
+.
+
+<distribution>
+  a dcat:Distribution ; 
+  dct:title "Test" ; 
+  dcat:accessURL <http://example.org/#accessURL> ; 
+  dct:license <http://dcat-ap.de/def/licenses/dl-by-de/2.0> ;
+  dct:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
+
+  # Ranges: IRIorLiteral
+  dct:conformsTo [
+    a dct:Standard ;
+    dct:title "Ein BlankNode-Standard" ;
+  ] ;
+  dct:rights [
+    a dct:RightsStatement ;
+    dct:title "Ein BlankNode-RightsStatement" ;
+  ] ;
+
+  # Ranges: IRI
+  foaf:page "https://example.com"^^xsd:anyURI ;
+  odrl:hasPolicy "https://example.com/#policy"^^xsd:anyURI ;
+.
+
+<dataservice>
+  a dcat:DataService ;
+  dct:title "Ein Test-Dataservice" ;
+  dcat:endpointURL <https://example.org/api/> ;
+
+  # Ranges: IRIorLiteral
+  dct:accessRights [
+    a dct:RightsStatement ;
+    dct:title "Ein BlankNode-RightsStatement" ;
+  ] ;
+.
+
+<catalogrecord>
+  a dcat:CatalogRecord ;
+  dct:modified "2022-08-05T00:00:00"^^xsd:dateTime ;
+  foaf:primaryTopic <dataset> ;
+
+  # Ranges: IRIorLiteral
+  dct:conformsTo [
+    a dct:Standard ;
+    dct:title "Ein BlankNode-Standard" ;
+  ] ;
+.
+
+<publisher> 
+  a foaf:Agent ; 
+  foaf:name "example" ;
+.
+
+<contactPoint>
+  a vcard:Kind ;
+  vcard:hasURL       <http://google.com/> ;
+  vcard:hasTelephone "+49 40 123 45678" ;
+.
+
+<timeperiod>
+  a dct:PeriodOfTime ;
+  dcat:startDate "1987-05-08"^^xsd:date ;
+  dcat:endDate   "2090-05-08"^^xsd:date ;
+.

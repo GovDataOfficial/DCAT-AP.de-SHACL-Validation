@@ -64,6 +64,16 @@ Dieses Profil prüft alles, was DCAT-AP.de SHACL-Validation (BETA) prüft. Zusä
  - `dcat:Dataset`: Ggf. MUSS `dct:identifier` zur Dublettenprüfung verwendet werden.
  - `dcat:Dataset`: Ggf. MUSS `dct:modified` zur Dublettenprüfung verwendet werden.
 
+### Prüfung auf (ausgewählte) sinnvolle Ranges
+Die Auswahl erfolgte mit Blick auf die Verarbeitung im GovData-Frontend.
+ - `dcat:Dataset`: **IRIorLiteral**: `dct:conformsTo`, `dct:accessRights`, `dct:provenance`
+ - `dcat:Dataset`: **IRI**: `prov:wasGeneratedBy`, `dcat:landingPage`, `foaf:page`
+ - `dcat:Catalog`: **IRIorLiteral**: `dct:rights`
+ - `dcat:Catalog`: **IRI**: `foaf:homepage`
+ - `dcat:DataService`: **IRIorLiteral**: `dct:accessRights`
+ - `dcat:Distribution`: **IRIorLiteral**: `dct:conformsTo`, `dct:rights`
+ - `dcat:Distribution`: **IRI**: `foaf:page`, `odrl:hasPolicy`
+ - `dcat:CatalogRecord`: **IRIorLiteral**: `dct:conformsTo`
 
 * * *
 

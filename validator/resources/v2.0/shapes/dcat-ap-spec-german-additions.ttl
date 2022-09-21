@@ -161,20 +161,6 @@ dcatap:Checksum_Property_spdx_algorithm  sh:deactivated true .
     sh:message "dcat:Dataset: dcatde:legalBasis MUSS ein Literal sein."@de ;
 .
 
-:Dataset_dcat_landingPage_v_IRI
-    sh:path dcat:landingPage ;
-    sh:nodeKind sh:IRI ;
-    sh:severity sh:Violation ;
-    sh:message "dcat:Dataset: dcat:landingPage MUSS eine IRI sein."@de ;
-.
-
-:Dataset_foaf_page_v_IRI
-    sh:path foaf:page ;
-    sh:nodeKind sh:IRI ;
-    sh:severity sh:Violation ;
-    sh:message "dcat:Dataset: foaf:page MUSS eine IRI sein."@de ;
-.
-
 :Dataset_dct_language_v_List
     sh:path  dct:language ;
     sh:node [
@@ -183,27 +169,6 @@ dcatap:Checksum_Property_spdx_algorithm  sh:deactivated true .
     ] ;
     sh:severity sh:Violation ;
     sh:message "dcat:Dataset: dct:language MUSS eine IRI aus diesem Vokabular verwenden: https://www.dcat-ap.de/def/dcatde/2.0/spec/#kv-languages"@de ;
-.
-
-:Dataset_dct_conformsTo_v_IRI
-    sh:path dct:conformsTo ;
-    sh:nodeKind sh:IRI ;
-    sh:severity sh:Violation ;
-    sh:message "dcat:Dataset: dct:conformsTo MUSS eine IRI sein."@de ;
-.
-
-:Dataset_dct_accessRights_v_IRI
-    sh:path dct:accessRights ;
-    sh:nodeKind sh:IRI ;
-    sh:severity sh:Violation ;
-    sh:message "dcat:Dataset: dct:accessRights MUSS eine IRI sein."@de ;
-.
-
-:Dataset_dct_provenance_v_IRI
-    sh:path dct:provenance ;
-    sh:nodeKind sh:IRI ;
-    sh:severity sh:Violation ;
-    sh:message "dcat:Dataset: dct:provenance MUSS eine IRI sein."@de ;
 .
 
 :Dataset_dct_accrualPeriodicity_v_List
@@ -242,13 +207,6 @@ dcatap:Checksum_Property_spdx_algorithm  sh:deactivated true .
     sh:path dct:type ;
     sh:severity sh:Violation ;
     sh:message "dcat:Dataset: DARF maximal eine dct:type haben."@de ;
-.
-
-:Dataset_prov_wasGeneratedBy_v_IRI
-    sh:path prov:wasGeneratedBy ;
-    sh:nodeKind sh:IRI ;
-    sh:severity sh:Violation ;
-    sh:message "dcat:Dataset: prov:wasGeneratedBy MUSS eine IRI sein."@de ;
 .
 
 :Dataset_dcat_granularity_v_IRI
@@ -394,7 +352,6 @@ dcatap:Checksum_Property_spdx_algorithm  sh:deactivated true .
     sh:property :Dataset_dcatde_politicalGeocodingLevelURI_w_List ;
     sh:property :Dataset_dcatde_politicalGeocodingURI_v_IRI ;
     sh:property :Dataset_dcatde_politicalGeocodingURI_w_List ;
-    # sh:property :Dataset_dcat_theme_v_IRI ;                           # Wird nicht benötigt, da derzeit noch hart auf Liste geprüft wird.
     sh:property :Dataset_dcat_theme_v_List ;
     sh:property :Dataset_dcat_contactPoint_v_Class ;
     sh:property :Dataset_dcatap_availability_v_Max ;
@@ -403,18 +360,18 @@ dcatap:Checksum_Property_spdx_algorithm  sh:deactivated true .
     sh:property :Dataset_dcatde_geocodingDescription_v_Literal ;
     sh:property :Dataset_adms_identifier_v_Class ;
     sh:property :Dataset_dcatde_legalBasis_v_Literal ;
-    sh:property :Dataset_dcat_landingPage_v_IRI ;
-    sh:property :Dataset_foaf_page_v_IRI ;
+#    sh:property :Dataset_dcat_landingPage_v_IRI ;
+#    sh:property :Dataset_foaf_page_v_IRI ;
     sh:property :Dataset_dct_language_v_List ;
-    sh:property :Dataset_dct_conformsTo_v_IRI ;
-    sh:property :Dataset_dct_accessRights_v_IRI ;
-    sh:property :Dataset_dct_provenance_v_IRI ;
+#    sh:property :Dataset_dct_conformsTo_v_IRI ;
+#    sh:property :Dataset_dct_accessRights_v_IRI ;
+#    sh:property :Dataset_dct_provenance_v_IRI ;
     sh:property :Dataset_dct_accrualPeriodicity_v_List ;
     sh:property :Dataset_dcatde_qualityProcessURI_v_IRI ;
     sh:property :Dataset_dcatde_qualityProcessURI_v_Max ;
     sh:property :Dataset_dct_type_v_IRI ;
     sh:property :Dataset_dct_type_v_Max ;
-    sh:property :Dataset_prov_wasGeneratedBy_v_IRI ;
+#    sh:property :Dataset_prov_wasGeneratedBy_v_IRI ;
     sh:property :Dataset_dcat_granularity_v_IRI ;
     sh:property :Dataset_dcat_granularity_v_Max ;
     sh:property :Dataset_prov_qualifiedAttribution_v_Class ;
@@ -443,13 +400,6 @@ dcatap:Checksum_Property_spdx_algorithm  sh:deactivated true .
     ] ;
     sh:severity sh:Violation ;
     sh:message "dcat:Catalog: dct:language MUSS eine IRI aus diesem Vokabular verwenden: https://www.dcat-ap.de/def/dcatde/2.0/spec/#kv-languages"@de ;
-.
-
-:Catalog_foaf_homepage_v_IRI
-    sh:path foaf:homepage ;
-    sh:nodeKind sh:IRI ;
-    sh:severity sh:Violation ;
-    sh:message "dcat:Catalog: foaf:homepage MUSS eine IRI sein."@de ;
 .
 
 :Catalog_dct_license_w_List
@@ -510,13 +460,6 @@ dcatap:Checksum_Property_spdx_algorithm  sh:deactivated true .
     ] ;
     sh:severity sh:Violation ;
     sh:message "dcat:Catalog: dcatap:availability MUSS eine IRI aus diesem Vokabular verwenden: https://www.dcat-ap.de/def/dcatde/2.0/spec/#kv-availability"@de ;
-.
-
-:Catalog_dct_rights_v_IRI
-    sh:path dct:rights ;
-    sh:nodeKind sh:IRI ;
-    sh:severity sh:Violation ;
-    sh:message "dcat:Catalog: dct:rights MUSS eine IRI sein."@de ;
 .
 
 :Catalog_dcat_catalog_v_Class
@@ -596,14 +539,14 @@ dcatap:Checksum_Property_spdx_algorithm  sh:deactivated true .
     sh:name "dcat:Catalog gemäß DCAT-AP.de Spezifikation 2.0"@de ;
 
     sh:property :Catalog_dct_language_v_List ;
-    sh:property :Catalog_foaf_homepage_v_IRI ;
+#    sh:property :Catalog_foaf_homepage_v_IRI ;
     sh:property :Catalog_dct_license_w_List ;
     sh:property :Catalog_dct_license_v_IRI ;
     sh:property :Catalog_dcat_themeTaxonomy_v_IRI ;
     sh:property :Catalog_dcat_themeTaxonomy_v_Fixed ;
     sh:property :Catalog_dcatap_availability_v_Max ;
     sh:property :Catalog_dcatap_availability_v_List ;
-    sh:property :Catalog_dct_rights_v_IRI ;
+#    sh:property :Catalog_dct_rights_v_IRI ;
     sh:property :Catalog_dcat_catalog_v_Class ;
     sh:property :Catalog_dcat_service_v_Class ;
     sh:property :Catalog_dct_spatial_v_IRIorClass ;
@@ -656,13 +599,6 @@ dcatap:Checksum_Property_spdx_algorithm  sh:deactivated true .
     sh:message "dcat:DataService: dct:license MUSS eine IRI sein."@de ;
 .
 
-:DataService_dct_accessRights_v_IRI
-    sh:path dct:accessRights ;
-    sh:nodeKind sh:IRI ;
-    sh:severity sh:Violation ;
-    sh:message "dcat:DataService: dct:accessRights MUSS eine IRI sein."@de ;
-.
-
 :DataService_dcat_servesDataset_v_Class
     sh:path dcat:servesDataset ;
     sh:class dcat:Dataset ;
@@ -680,7 +616,7 @@ dcatap:Checksum_Property_spdx_algorithm  sh:deactivated true .
     sh:property :DataService_dcatap_availability_v_List ;
     sh:property :DataService_dct_license_w_List ;
     sh:property :DataService_dct_license_v_IRI ;
-    sh:property :DataService_dct_accessRights_v_IRI ;
+#    sh:property :DataService_dct_accessRights_v_IRI ;
     sh:property :DataService_dcat_servesDataset_v_Class ;
 .
 
@@ -759,27 +695,6 @@ dcatap:Checksum_Property_spdx_algorithm  sh:deactivated true .
     sh:message "dcat:Distribution: dct:language MUSS eine IRI aus diesem Vokabular verwenden: https://www.dcat-ap.de/def/dcatde/2.0/spec/#kv-languages"@de ;
 .
 
-:Distribution_foaf_page_v_IRI
-    sh:path foaf:page ;
-    sh:nodeKind sh:IRI ;
-    sh:severity sh:Violation ;
-    sh:message "dcat:Distribution: foaf:page MUSS eine IRI sein."@de ;
-.
-
-:Distribution_dct_rights_v_IRI
-    sh:path dct:rights ;
-    sh:nodeKind sh:IRI ;
-    sh:severity sh:Violation ;
-    sh:message "dcat:Distribution: dct:rights MUSS eine IRI sein."@de ;
-.
-
-:Distribution_dct_conformsTo_v_IRI
-    sh:path dct:conformsTo ;
-    sh:nodeKind sh:IRI ;
-    sh:severity sh:Violation ;
-    sh:message "dcat:Distribution: dct:conformsTo MUSS eine IRI sein."@de ;
-.
-
 :Distribution_dcat_mediaType_v_List
     sh:path dcat:mediaType ;
     sh:pattern "^https?://www.iana.org/assignments/media-types/" ;
@@ -799,13 +714,6 @@ dcatap:Checksum_Property_spdx_algorithm  sh:deactivated true .
     sh:pattern "^https?://www.iana.org/assignments/media-types/" ;
     sh:flags "i" ; 
     sh:message "dcat:Distribution: dcat:packageFormat MUSS eine IRI aus diesem Vokabular verwenden: https://www.dcat-ap.de/def/dcatde/2.0/spec/#kv-iana-media-types (Getestet wird in diesem Fall lediglich, ob die verwendete IRI mit https://www.iana.org/assignments/media-types/ beginnt.)"@de ;
-.
-
-:Distribution_odrl_hasPolicy_v_IRI
-    sh:path odrl:hasPolicy ;
-    sh:nodeKind sh:IRI ;
-    sh:severity sh:Violation ;
-    sh:message "dcat:Distribution: odrl:hasPolicy MUSS eine IRI sein."@de ;
 .
 
 :Distribution_adms_status_v_List
@@ -846,13 +754,13 @@ dcatap:Checksum_Property_spdx_algorithm  sh:deactivated true .
     sh:property :Distribution_dcatde_plannedAvailability_v_IRI ;
     sh:property :Distribution_dcatde_licenseAttributionByText_v_Literal ;
     sh:property :Distribution_dct_language_v_List ;
-    sh:property :Distribution_foaf_page_v_IRI ;
-    sh:property :Distribution_dct_rights_v_IRI ;
-    sh:property :Distribution_dct_conformsTo_v_IRI ;
+#    sh:property :Distribution_foaf_page_v_IRI ;
+#    sh:property :Distribution_dct_rights_v_IRI ;
+#    sh:property :Distribution_dct_conformsTo_v_IRI ;
     sh:property :Distribution_dcat_mediaType_v_List ;
     sh:property :Distribution_dcat_compressFormat_v_List ;
     sh:property :Distribution_dcat_packageFormat_v_List ;
-    sh:property :Distribution_odrl_hasPolicy_v_IRI ;
+#    sh:property :Distribution_odrl_hasPolicy_v_IRI ;
     sh:property :Distribution_adms_status_v_List ;
     sh:property :Distribution_dcat_accessService_v_Class ;
     sh:property :Distribution_spdx_checksum_v_Class ;
@@ -998,13 +906,6 @@ dcatap:Checksum_Property_spdx_algorithm  sh:deactivated true .
     sh:property :Checksum_spdx_algorithm_v_List ;
 .
 
-:CatalogRecord_dct_conformsTo_v_IRI
-    sh:path dct:conformsTo ;
-    sh:nodeKind sh:IRI ;
-    sh:severity sh:Violation ;
-    sh:message "dcat:CatalogRecord: dct:conformsTo MUSS eine IRI sein."@de ;
-.
-
 :CatalogRecord_adms_status_v_IRI
     sh:path adms:status ;
     sh:nodeKind sh:IRI ;
@@ -1034,7 +935,7 @@ dcatap:Checksum_Property_spdx_algorithm  sh:deactivated true .
     sh:targetClass dcat:CatalogRecord ;
     sh:name "dcat:CatalogRecord gemäß DCAT-AP.de Spezifikation 2.0"@de ;
 
-    sh:property :CatalogRecord_dct_conformsTo_v_IRI ;
+#    sh:property :CatalogRecord_dct_conformsTo_v_IRI ;
     sh:property :CatalogRecord_adms_status_v_IRI ;
     sh:property :CatalogRecord_dct_language_v_List ;
     sh:property :CatalogRecord_dct_source_v_Class ;
