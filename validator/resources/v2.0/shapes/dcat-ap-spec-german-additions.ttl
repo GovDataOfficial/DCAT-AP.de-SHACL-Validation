@@ -852,8 +852,8 @@ dcatap:Checksum_Property_spdx_algorithm  sh:deactivated true .
             sh:minCount 1 ;
         ]
     ) ;
-    sh:severity sh:Violation ;
-    sh:message "dct:Location: MUSS mindestens eine der folgenden Eigenschaften besitzen: dcat:bbox, dcat:centroid, locn:geometry."@de ;
+    sh:severity sh:Warning ;
+    sh:message "dct:Location: SOLL eine der folgenden Eigenschaften nutzen: dcat:bbox, dcat:centroid, locn:geometry. Wenn Sie eine davon abweichende Eigenschaften nutzen, können Sie den Fehler ignorieren."@de ;
 .
 
 :Location_Shape 

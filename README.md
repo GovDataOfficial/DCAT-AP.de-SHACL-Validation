@@ -1,10 +1,10 @@
-# DCAT-AP.de SHACL-Validation (BETA)
+# DCAT-AP.de SHACL-Validation
 
 |  :warning: Hinweis zur aktuellen Entwicklung :warning:  |
 |:--------------------------------------------------------|
 | Die [DCAT-AP.de SHACL-Validation](https://www.itb.ec.europa.eu/shacl/dcat-ap.de/upload) wurde mit Blick auf die [DCAT-AP.de 2.0 Spezifikation](https://www.dcat-ap.de/def/dcatde/2.0/spec/) neu erstellt. <br> Wenn Sie Fehler entdecken, dann freuen wir uns über Ihr Feedback! |
 
-## DCAT-AP.de 2.0 - Spezifikation (BETA)
+## DCAT-AP.de 2.0 - Spezifikation
 Die SEMIC stellt ihren eigenen [DCAT-AP-Validator](https://www.itb.ec.europa.eu/shacl/dcat-ap/upload) zur Verfügung, der zuverlässig funktioniert.
 
 Der deutsche Validator verwendet die verpflichtenden Regeln der SEMIC und reichert sie mit deutschen Fehlernachrichten an. Dazu werden folgende Dateien verwendet:  
@@ -41,9 +41,9 @@ Für die Eigenschaften `adms:sample`, `dct:source`, `dct:hasVersion`, `dct:isVer
 * * *
 
 
-## DCAT-AP.de 2.0 - Spezifikation & Konventionen (BETA)
+## DCAT-AP.de 2.0 - Spezifikation & Konventionen
 
-Dieses Profil prüft alles, was DCAT-AP.de SHACL-Validation (BETA) prüft. Zusätzlich:
+Dieses Profil prüft alles, was DCAT-AP.de SHACL-Validation prüft. Zusätzlich:
 
 ### Prüfung von Konventionen
  - `K01: dcat:contactPoint`: Kontaktinformationen MÜSSEN mindestens Angaben zur Email (vcard:hasEmail) oder einen Link zum Kontaktformular oder Chatbot (vcard:hasURL) enthalten.
