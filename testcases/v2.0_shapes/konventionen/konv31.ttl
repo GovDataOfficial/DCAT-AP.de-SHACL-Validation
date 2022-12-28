@@ -23,7 +23,14 @@
   dct:license <http://dcat-ap.de/def/licenses/dl-by-de/2.0> ;
 .
 
-<F01-no_dcatde_iri>
+<F01-no_license>
+  a dcat:Distribution ;
+  dct:title "Test" ;
+  dcat:accessURL <http://example.org/#accessURL> ;
+  dct:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
+.
+
+<F02-no_dcatde_iri>
   a dcat:Distribution ;
   dct:title "Test" ;
   dcat:accessURL <http://example.org/#accessURL> ;

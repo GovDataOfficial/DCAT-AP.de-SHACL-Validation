@@ -48,7 +48,7 @@
     sh:targetObjectsOf dcat:contactPoint ;
     sh:name "Konventionen zum dcat:contactPoint gemäß DCAT-AP.de 2.0"@de ;
 
-    sh:property :Konv01_hasEmail_hasURL_v_Min ;
+    sh:property :Konv01_hasEmail_hasURL_v_Min ; # Würde man hier auf sh:node wechseln, wäre es konform, die Fehlermeldung ginge aber verloren.
 .
 
 :Konv12_13_contributorID_v_List
@@ -56,10 +56,8 @@
     sh:path dcatde:contributorID ;
 
     sh:qualifiedValueShape [
-        sh:node [
-            sh:path skos:inScheme ;
-            sh:hasValue <http://dcat-ap.de/def/contributors> ;
-        ]
+        sh:path skos:inScheme ;
+        sh:hasValue <http://dcat-ap.de/def/contributors> ;
     ] ;
     sh:qualifiedMinCount 1 ;
     sh:qualifiedMaxCount 1 ;
@@ -152,10 +150,8 @@
     sh:path dct:license ;
 
     sh:qualifiedValueShape [
-        sh:node [
-            sh:path skos:inScheme ;
-            sh:hasValue <http://dcat-ap.de/def/licenses> ;
-        ]
+        sh:path skos:inScheme ;
+        sh:hasValue <http://dcat-ap.de/def/licenses> ;
     ] ;
     sh:qualifiedMinCount 1 ;
 
@@ -163,15 +159,15 @@
 .
 
 :Konv32_dct_format_v_List
-    sh:message "K32: dcat:Distribution: dct:format MUSS eine IRI aus dem  EU Vokabular 'File Type' verwenden. Siehe: https://www.dcat-ap.de/def/dcatde/2.0/implRules/#konvention-32 "@de ;
     sh:path dct:format ;
 
-    sh:node [
+    sh:property [
         sh:path skos:inScheme ;
         sh:hasValue <http://publications.europa.eu/resource/authority/file-type> ;
-    ] ;
 
-    sh:severity sh:Violation ;
+        sh:message "K32: dcat:Distribution: dct:format MUSS eine IRI aus dem  EU Vokabular 'File Type' verwenden. Siehe: https://www.dcat-ap.de/def/dcatde/2.0/implRules/#konvention-32 "@de ;
+        sh:severity sh:Violation ;
+    ] ;
 .
 
 :KonvXX_dct_title_w_Min

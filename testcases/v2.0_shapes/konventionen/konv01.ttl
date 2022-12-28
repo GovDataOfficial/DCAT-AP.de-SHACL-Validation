@@ -32,26 +32,32 @@
 
   dcat:contactPoint <P01-working_both> ;
   dcat:contactPoint <P02-working_hasURL> ;
-  dcat:contactPoint <P03-working_hasTelephone> ;
+  dcat:contactPoint <P03-working_hasEmail> ;
   dcat:contactPoint <F01-no_fields> ;
+  dcat:contactPoint <F02-other_fields> ;
 .
 
 <P01-working_both>
   a vcard:Kind ;
-  vcard:hasURL       <http://google.com/> ;
+  vcard:hasURL       <http://example.org/contact> ;
   vcard:hasTelephone "+49 40 123 45678" ;
 .
 
 <P02-working_hasURL>
   a vcard:Kind ;
-  vcard:hasURL       <http://google.com/> ;
+  vcard:hasURL       <http://example.org/contact> ;
 .
 
-<P03-working_hasTelephone>
+<P03-working_hasEmail>
   a vcard:Kind ;
-  vcard:hasTelephone "+49 40 123 45678" ;
+  vcard:hasEmail <mailto:test@example.org> ;
 .
 
 <F01-no_fields>
   a vcard:Kind ;
+.
+
+<F02-other_fields>
+  a vcard:Kind ;
+  vcard:hasTelephone "+49 40 123 45678" ;
 .
