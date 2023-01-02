@@ -12,7 +12,7 @@
 
   owl:imports <http://publications.europa.eu/resource/authority/language> ;
   owl:imports <http://publications.europa.eu/resource/authority/data-theme> ;
-  owl:imports <http://publications.europa.eu/resource/dataset/planned-availability> ;
+  owl:imports <http://publications.europa.eu/resource/authority/planned-availability> ;
   owl:imports <http://publications.europa.eu/resource/authority/frequency> ;
   owl:imports <http://publications.europa.eu/resource/authority/file-type> ;
 

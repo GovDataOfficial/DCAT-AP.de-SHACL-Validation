@@ -49,12 +49,13 @@ dcatap:Checksum_Property_spdx_algorithm  sh:deactivated true .
 
 :Dataset_dcatde_politicalGeocodingLevelURI_w_List
     sh:path dcatde:politicalGeocodingLevelURI ;
-    sh:node [
+    sh:property [
+        sh:severity sh:Warning ;
+        sh:message "dcat:Dataset: dcatde:politicalGeocodingLevelURI SOLL folgendes Vokabular benutzten: http://dcat-ap.de/def/politicalGeocoding/Level/"@de ;
+
         sh:path skos:inScheme ;
         sh:hasValue <http://dcat-ap.de/def/politicalGeocoding/Level> ;
     ] ;
-    sh:severity sh:Warning ;
-    sh:message "dcat:Dataset: dcatde:politicalGeocodingLevelURI SOLL folgendes Vokabular benutzten: http://dcat-ap.de/def/politicalGeocoding/Level/"@de ;
 .
 
 :Dataset_dcatde_politicalGeocodingURI_v_IRI
@@ -101,12 +102,13 @@ dcatap:Checksum_Property_spdx_algorithm  sh:deactivated true .
 :Dataset_dcat_theme_v_List
     sh:description "Todo: Wenn zutreffend, so umbauen, dass lediglich wenigstens einmal das Vokabular genutzt wurde. Dann wird auch :Dataset_dcat_theme_v_IRI zusätzlich benötigt." ;
     sh:path dcat:theme ;
-    sh:node [
+    sh:property [
         sh:path skos:inScheme ;
         sh:hasValue <http://publications.europa.eu/resource/authority/data-theme> ;
+
+        sh:severity sh:Violation ;
+        sh:message "dcat:Dataset: dcat:theme MUSS eine IRI aus diesem Vokabular verwenden: https://www.dcat-ap.de/def/dcatde/2.0/spec/#kv-data-theme"@de ;
     ] ;
-    sh:severity sh:Violation ;
-    sh:message "dcat:Dataset: dcat:theme MUSS eine IRI aus diesem Vokabular verwenden: https://www.dcat-ap.de/def/dcatde/2.0/spec/#kv-data-theme"@de ;
 .
 
 :Dataset_dcat_contactPoint_v_Class
@@ -125,12 +127,13 @@ dcatap:Checksum_Property_spdx_algorithm  sh:deactivated true .
 
 :Dataset_dcatap_availability_v_List
     sh:path  dcatap:availability ;
-    sh:node [
+    sh:property [
         sh:path skos:inScheme ;
-        sh:hasValue <http://publications.europa.eu/resource/dataset/planned-availability> ;
+        sh:hasValue <http://publications.europa.eu/resource/authority/planned-availability> ;
+
+        sh:severity sh:Violation ;
+        sh:message "dcat:Dataset: dcatap:availability MUSS eine IRI aus diesem Vokabular verwenden: https://www.dcat-ap.de/def/dcatde/2.0/spec/#kv-availability"@de ;
     ] ;
-    sh:severity sh:Violation ;
-    sh:message "dcat:Dataset: dcatap:availability MUSS eine IRI aus diesem Vokabular verwenden: https://www.dcat-ap.de/def/dcatde/2.0/spec/#kv-availability"@de ;
 .
 
 :Dataset_dcatde_contributorID_v_IRI
@@ -163,22 +166,24 @@ dcatap:Checksum_Property_spdx_algorithm  sh:deactivated true .
 
 :Dataset_dct_language_v_List
     sh:path  dct:language ;
-    sh:node [
+    sh:property [
+        sh:severity sh:Violation ;
+        sh:message "dcat:Dataset: dct:language MUSS eine IRI aus diesem Vokabular verwenden: https://www.dcat-ap.de/def/dcatde/2.0/spec/#kv-languages"@de ;
+
         sh:path skos:inScheme ;
         sh:hasValue <http://publications.europa.eu/resource/authority/language> ;
     ] ;
-    sh:severity sh:Violation ;
-    sh:message "dcat:Dataset: dct:language MUSS eine IRI aus diesem Vokabular verwenden: https://www.dcat-ap.de/def/dcatde/2.0/spec/#kv-languages"@de ;
 .
 
 :Dataset_dct_accrualPeriodicity_v_List
     sh:path dct:accrualPeriodicity ;
-    sh:node [
+    sh:property [
+        sh:severity sh:Violation ;
+        sh:message "dcat:Dataset: dct:accrualPeriodicity MUSS eine IRI aus diesem Vokabular verwenden: https://www.dcat-ap.de/def/dcatde/2.0/spec/#kv-frequency"@de ;
+
         sh:path skos:inScheme ;
         sh:hasValue <http://publications.europa.eu/resource/authority/frequency> ;
     ] ;
-    sh:severity sh:Violation ;
-    sh:message "dcat:Dataset: dct:accrualPeriodicity MUSS eine IRI aus diesem Vokabular verwenden: https://www.dcat-ap.de/def/dcatde/2.0/spec/#kv-frequency"@de ;
 .
 
 :Dataset_dcatde_qualityProcessURI_v_IRI
@@ -394,22 +399,24 @@ dcatap:Checksum_Property_spdx_algorithm  sh:deactivated true .
 
 :Catalog_dct_language_v_List
     sh:path  dct:language ;
-    sh:node [
+    sh:property [
+        sh:severity sh:Violation ;
+        sh:message "dcat:Catalog: dct:language MUSS eine IRI aus diesem Vokabular verwenden: https://www.dcat-ap.de/def/dcatde/2.0/spec/#kv-languages"@de ;
+
         sh:path skos:inScheme ;
         sh:hasValue <http://publications.europa.eu/resource/authority/language> ;
     ] ;
-    sh:severity sh:Violation ;
-    sh:message "dcat:Catalog: dct:language MUSS eine IRI aus diesem Vokabular verwenden: https://www.dcat-ap.de/def/dcatde/2.0/spec/#kv-languages"@de ;
 .
 
 :Catalog_dct_license_w_List
     sh:path dct:license ;
-    sh:node [
+    sh:property [
+        sh:severity sh:Warning ;
+        sh:message "dcat:Catalog: dct:license SOLL folgendes Vokabular benutzten: https://www.dcat-ap.de/def/licenses/"@de ;
+
         sh:path skos:inScheme ;
         sh:hasValue <http://dcat-ap.de/def/licenses> ;
     ] ;
-    sh:severity sh:Warning ;
-    sh:message "dcat:Catalog: dct:license SOLL folgendes Vokabular benutzten: https://www.dcat-ap.de/def/licenses/"@de ;
 .
 
 :Catalog_dct_license_v_IRI
@@ -453,13 +460,14 @@ dcatap:Checksum_Property_spdx_algorithm  sh:deactivated true .
 .
 
 :Catalog_dcatap_availability_v_List
-    sh:path  dcatap:availability ;
-    sh:node [
+    sh:path dcatap:availability ;
+    sh:property [
+        sh:severity sh:Violation ;
+        sh:message "dcat:Catalog: dcatap:availability MUSS eine IRI aus diesem Vokabular verwenden: https://www.dcat-ap.de/def/dcatde/2.0/spec/#kv-availability"@de ;
+
         sh:path skos:inScheme ;
-        sh:hasValue <http://publications.europa.eu/resource/dataset/planned-availability> ;
+        sh:hasValue <http://publications.europa.eu/resource/authority/planned-availability> ;
     ] ;
-    sh:severity sh:Violation ;
-    sh:message "dcat:Catalog: dcatap:availability MUSS eine IRI aus diesem Vokabular verwenden: https://www.dcat-ap.de/def/dcatde/2.0/spec/#kv-availability"@de ;
 .
 
 :Catalog_dcat_catalog_v_Class
@@ -574,22 +582,24 @@ dcatap:Checksum_Property_spdx_algorithm  sh:deactivated true .
 
 :DataService_dcatap_availability_v_List
     sh:path  dcatap:availability ;
-    sh:node [
+    sh:property [
+        sh:severity sh:Violation ;
+        sh:message "dcat:DataService: dcatap:availability MUSS eine IRI aus diesem Vokabular verwenden: https://www.dcat-ap.de/def/dcatde/2.0/spec/#kv-availability"@de ;
+
         sh:path skos:inScheme ;
-        sh:hasValue <http://publications.europa.eu/resource/dataset/planned-availability> ;
+        sh:hasValue <http://publications.europa.eu/resource/authority/planned-availability> ;
     ] ;
-    sh:severity sh:Violation ;
-    sh:message "dcat:DataService: dcatap:availability MUSS eine IRI aus diesem Vokabular verwenden: https://www.dcat-ap.de/def/dcatde/2.0/spec/#kv-availability"@de ;
 .
 
 :DataService_dct_license_w_List
     sh:path dct:license ;
-    sh:node [
+    sh:property [
+        sh:severity sh:Warning ;
+        sh:message "dcat:DataService: dct:license SOLL folgendes Vokabular benutzten: https://www.dcat-ap.de/def/licenses/"@de ;
+
         sh:path skos:inScheme ;
         sh:hasValue <http://dcat-ap.de/def/licenses> ;
     ] ;
-    sh:severity sh:Warning ;
-    sh:message "dcat:DataService: dct:license SOLL folgendes Vokabular benutzten: https://www.dcat-ap.de/def/licenses/"@de ;
 .
 
 :DataService_dct_license_v_IRI
@@ -622,12 +632,13 @@ dcatap:Checksum_Property_spdx_algorithm  sh:deactivated true .
 
 :Distribution_dct_license_w_List
     sh:path dct:license ;
-    sh:node [
+    sh:property [
+        sh:severity sh:Warning ;
+        sh:message "dcat:Distribution: dct:license SOLL folgendes Vokabular benutzten: https://www.dcat-ap.de/def/licenses/"@de ;
+
         sh:path skos:inScheme ;
         sh:hasValue <http://dcat-ap.de/def/licenses> ;
     ] ;
-    sh:severity sh:Warning ;
-    sh:message "dcat:Distribution: dct:license SOLL folgendes Vokabular benutzten: https://www.dcat-ap.de/def/licenses/"@de ;
 .
 
 :Distribution_dct_license_v_IRI
@@ -639,12 +650,13 @@ dcatap:Checksum_Property_spdx_algorithm  sh:deactivated true .
 
 :Distribution_dct_format_v_List
     sh:path dct:format ;
-    sh:node [
+    sh:property [
+        sh:severity sh:Violation ;
+        sh:message "dcat:Distribution: dct:format MUSS eine IRI aus diesem Vokabular verwenden: https://www.dcat-ap.de/def/dcatde/2.0/spec/#kv-file-type"@de ;
+
         sh:path skos:inScheme ;
         sh:hasValue <http://publications.europa.eu/resource/authority/file-type> ;
     ] ;
-    sh:severity sh:Violation ;
-    sh:message "dcat:Distribution: dct:format MUSS eine IRI aus diesem Vokabular verwenden: https://www.dcat-ap.de/def/dcatde/2.0/spec/#kv-file-type"@de ;
 .
 
 :Distribution_dcatap_availability_v_Max
@@ -656,12 +668,13 @@ dcatap:Checksum_Property_spdx_algorithm  sh:deactivated true .
 
 :Distribution_dcatap_availability_v_List
     sh:path  dcatap:availability ;
-    sh:node [
+    sh:property [
+        sh:severity sh:Violation ;
+        sh:message "dcat:Distribution: dcatap:availability MUSS eine IRI aus diesem Vokabular verwenden: https://www.dcat-ap.de/def/dcatde/2.0/spec/#kv-availability"@de ;
+
         sh:path skos:inScheme ;
-        sh:hasValue <http://publications.europa.eu/resource/dataset/planned-availability> ;
+        sh:hasValue <http://publications.europa.eu/resource/authority/planned-availability> ;
     ] ;
-    sh:severity sh:Violation ;
-    sh:message "dcat:Distribution: dcatap:availability MUSS eine IRI aus diesem Vokabular verwenden: https://www.dcat-ap.de/def/dcatde/2.0/spec/#kv-availability"@de ;
 .
 
 :Distribution_dcatde_plannedAvailability_v_Max
@@ -687,12 +700,13 @@ dcatap:Checksum_Property_spdx_algorithm  sh:deactivated true .
 
 :Distribution_dct_language_v_List
     sh:path  dct:language ;
-    sh:node [
+    sh:property [
+        sh:severity sh:Violation ;
+        sh:message "dcat:Distribution: dct:language MUSS eine IRI aus diesem Vokabular verwenden: https://www.dcat-ap.de/def/dcatde/2.0/spec/#kv-languages"@de ;
+
         sh:path skos:inScheme ;
         sh:hasValue <http://publications.europa.eu/resource/authority/language> ;
     ] ;
-    sh:severity sh:Violation ;
-    sh:message "dcat:Distribution: dct:language MUSS eine IRI aus diesem Vokabular verwenden: https://www.dcat-ap.de/def/dcatde/2.0/spec/#kv-languages"@de ;
 .
 
 :Distribution_dcat_mediaType_v_List
@@ -718,12 +732,13 @@ dcatap:Checksum_Property_spdx_algorithm  sh:deactivated true .
 
 :Distribution_adms_status_v_List
     sh:path  adms:status ;
-    sh:node [
+    sh:property [
+        sh:severity sh:Violation ;
+        sh:message "dcat:Distribution: adms:status MUSS eine IRI aus diesem Vokabular verwenden: https://www.dcat-ap.de/def/dcatde/2.0/spec/#kv-adms-status"@de ;
+
         sh:path skos:inScheme ;
         sh:hasValue <http://purl.org/adms/status/1.0> ;
     ] ;
-    sh:severity sh:Violation ;
-    sh:message "dcat:Distribution: adms:status MUSS eine IRI aus diesem Vokabular verwenden: https://www.dcat-ap.de/def/dcatde/2.0/spec/#kv-adms-status"@de ;
 .
 
 :Distribution_dcat_accessService_v_Class
@@ -889,12 +904,13 @@ dcatap:Checksum_Property_spdx_algorithm  sh:deactivated true .
 
 :Checksum_spdx_algorithm_v_List
     sh:path  spdx:algorithm ;
-    sh:node [
+    sh:property [
+        sh:severity sh:Violation ;
+        sh:message "spdx:Checksum: spdx:algorithm MUSS eine IRI aus diesem Vokabular verwenden: https://www.dcat-ap.de/def/dcatde/2.0/spec/#kv-hash-algorithms"@de ;
+
         sh:path skos:inScheme ;
         sh:hasValue <http://dcat-ap.de/def/hashAlgorithms> ;
     ] ;
-    sh:severity sh:Violation ;
-    sh:message "spdx:Checksum: spdx:algorithm MUSS eine IRI aus diesem Vokabular verwenden: https://www.dcat-ap.de/def/dcatde/2.0/spec/#kv-hash-algorithms"@de ;
 .
 
 :Checksum_Shape 
@@ -915,12 +931,13 @@ dcatap:Checksum_Property_spdx_algorithm  sh:deactivated true .
 
 :CatalogRecord_dct_language_v_List
     sh:path  dct:language ;
-    sh:node [
+    sh:property [
+        sh:severity sh:Violation ;
+        sh:message "dcat:CatalogRecord: dct:language MUSS eine IRI aus diesem Vokabular verwenden: https://www.dcat-ap.de/def/dcatde/2.0/spec/#kv-languages"@de ;
+
         sh:path skos:inScheme ;
         sh:hasValue <http://publications.europa.eu/resource/authority/language> ;
     ] ;
-    sh:severity sh:Violation ;
-    sh:message "dcat:CatalogRecord: dct:language MUSS eine IRI aus diesem Vokabular verwenden: https://www.dcat-ap.de/def/dcatde/2.0/spec/#kv-languages"@de ;
 .
 
 :CatalogRecord_dct_source_v_Class
@@ -966,12 +983,13 @@ dcatap:Checksum_Property_spdx_algorithm  sh:deactivated true .
 
 :Agent_dct_type_v_List
     sh:path  dct:type ;
-    sh:node [
+    sh:property [
+        sh:severity sh:Violation ;
+        sh:message "foaf:Agent: dct:type MUSS eine IRI aus diesem Vokabular verwenden: https://www.dcat-ap.de/def/dcatde/2.0/spec/#kv-adms-publisher"@de ;
+
         sh:path skos:inScheme ;
         sh:hasValue <http://purl.org/adms/publishertype/1.0> ;
     ] ;
-    sh:severity sh:Violation ;
-    sh:message "foaf:Agent: dct:type MUSS eine IRI aus diesem Vokabular verwenden: https://www.dcat-ap.de/def/dcatde/2.0/spec/#kv-adms-publisher"@de ;
 .
 
 :Agent_Shape 
