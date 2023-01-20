@@ -90,7 +90,7 @@
     sh:path dcatde:originator ;
     sh:minCount 1 ;
     sh:severity sh:Info ;
-    sh:message "Optional: dcatde:qualityProcessURI ist nicht vorhanden! Sie können mittels dcatde:originator auf die Personen als foaf:Agent verweisen, die Urheberrechte am Dataset haben."@de .
+    sh:message "Optional: dcatde:originator ist nicht vorhanden! Sie können mittels dcatde:originator auf die Personen als foaf:Agent verweisen, die Urheberrechte am Dataset haben."@de .
 
 :Dataset_originator_foafAgent
     sh:name "Shape originator - foaf:Agent"@de ;
