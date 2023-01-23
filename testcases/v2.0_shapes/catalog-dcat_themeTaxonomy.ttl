@@ -2,7 +2,7 @@
 #
 # Der folgende Befehl geht davon aus, dass man sich im Ordner 'tools' befindet und dort die Offline-Java-Version des Blanko-SHACL-Validators unter dem Dateinamen 'any.jar' abgelegt hat.
 # Der Blanko-SHACL-Validator kann unter https://www.itb.ec.europa.eu/shacl-offline/any/validator.jar bezogen werden.
-# java -Xss4m -jar any.jar -reportSyntax "text/turtle" -loadImports true -externalShapes ../validator/resources/v2.0/shapes/dcat-ap-de-imports.ttl -externalShapes https://raw.githubusercontent.com/init-dcat-ap-de/DCAT-AP/2.1.1-draft/releases/2.1.1/dcat-ap_2.1.1_shacl_shapes.ttl -externalShapes ../validator/resources/v2.0/shapes/dcat-ap-spec-german-additions.ttl -externalShapes ../validator/resources/v2.0/shapes/dcat-ap-spec-german-messages.ttl -contentToValidate ../testcases/v2.0_shapes/quicktest.ttl
+# java -Xss4m -jar any.jar -reportSyntax "text/turtle" -loadImports true -externalShapes ../validator/resources/v2.0/shapes/dcat-ap-de-imports.ttl -externalShapes https://raw.githubusercontent.com/init-dcat-ap-de/DCAT-AP/2.1.1-draft/releases/2.1.1/dcat-ap_2.1.1_shacl_shapes.ttl -externalShapes ../validator/resources/v2.0/shapes/dcat-ap-spec-german-additions.ttl -externalShapes ../validator/resources/v2.0/shapes/dcat-ap-spec-german-messages.ttl -contentToValidate ../testcases/v2.0_shapes/catalog-dcat_themeTaxonomy.ttl
 
 @prefix dcat:     <http://www.w3.org/ns/dcat#> .
 @prefix dcatde:   <http://dcat-ap.de/def/dcatde/> .
@@ -18,7 +18,7 @@
   foaf:name "Ein Pusblishername" ;
 .
 
-<ok1-catalog>
+<ok-1-catalog-no-ttax>
   a dcat:Catalog ;
   dct:title "Ein Titel" ;
   dct:description "Eine Test-Beschreibung." ;
@@ -26,17 +26,7 @@
   dct:publisher <ok-agent> ;
 .
 
-<ok2-catalog>
-  a dcat:Catalog ;
-  dct:title "Ein Titel" ;
-  dct:description "Eine Test-Beschreibung." ;
-  dct:license <http://dcat-ap.de/def/licenses/dl-zero-de/2.0> ; 
-  dct:publisher <ok-agent> ;
-  
-  dcat:themeTaxonomy <http://publications.europa.eu/resource/authority/data-theme> ;
-.
-
-<ok3-catalog>
+<ok2-catalog-one-correct-ttax>
   a dcat:Catalog ;
   dct:title "Ein Titel" ;
   dct:description "Eine Test-Beschreibung." ;
@@ -44,10 +34,9 @@
   dct:publisher <ok-agent> ;
   
   dcat:themeTaxonomy <http://publications.europa.eu/resource/authority/data-theme> ;
-  dcat:themeTaxonomy <http://example.com/#1> ;
 .
 
-<ok4-catalog>
+<ok3-catalog-one-correct-and-one-other-ttax>
   a dcat:Catalog ;
   dct:title "Ein Titel" ;
   dct:description "Eine Test-Beschreibung." ;
@@ -55,12 +44,23 @@
   dct:publisher <ok-agent> ;
   
   dcat:themeTaxonomy <http://publications.europa.eu/resource/authority/data-theme> ;
-  dcat:themeTaxonomy <http://example.com/#1> ;
-  dcat:themeTaxonomy <http://example.com/#2> ;
-  dcat:themeTaxonomy <http://example.com/#3> ;
+  dcat:themeTaxonomy <http://example.com/#themeTaxonomy> ;
 .
 
-<ttax-e1-catalog>
+<ok4-catalog-one-correct-and-multiple-other-ttax>
+  a dcat:Catalog ;
+  dct:title "Ein Titel" ;
+  dct:description "Eine Test-Beschreibung." ;
+  dct:license <http://dcat-ap.de/def/licenses/dl-zero-de/2.0> ; 
+  dct:publisher <ok-agent> ;
+  
+  dcat:themeTaxonomy <http://publications.europa.eu/resource/authority/data-theme> ;
+  dcat:themeTaxonomy <http://example.com/#themeTaxonomy-1> ;
+  dcat:themeTaxonomy <http://example.com/#themeTaxonomy-2> ;
+  dcat:themeTaxonomy <http://example.com/#themeTaxonomy-3> ;
+.
+
+<ttax-e1-only-other-ttax>
   a dcat:Catalog ;
   dct:title "Ein Titel" ;
   dct:description "Eine Test-Beschreibung." ;
@@ -70,9 +70,10 @@
   dcat:themeTaxonomy <http://example.com/> ;
 .
 
-<ttax-e2-catalog>
+<ttax-e2-no-uri>
   a dcat:Catalog ;
   dct:title "Ein Titel" ;
+  dct:description "Eine Test-Beschreibung." ;
   dct:license <http://dcat-ap.de/def/licenses/dl-zero-de/2.0> ; 
   dct:publisher <ok-agent> ;
   

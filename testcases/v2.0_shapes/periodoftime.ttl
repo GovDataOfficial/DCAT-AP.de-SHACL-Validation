@@ -1,0 +1,117 @@
+# (C) CC BY 4.0 ']init[ AG fuer GovData'
+#
+# Der folgende Befehl geht davon aus, dass man sich im Ordner 'tools' befindet und dort die Offline-Java-Version des Blanko-SHACL-Validators unter dem Dateinamen 'any.jar' abgelegt hat.
+# Der Blanko-SHACL-Validator kann unter https://www.itb.ec.europa.eu/shacl-offline/any/validator.jar bezogen werden.
+# java -Xss4m -jar any.jar -reportSyntax "text/turtle" -loadImports true -externalShapes ../validator/resources/v2.0/shapes/dcat-ap-de-imports.ttl -externalShapes https://raw.githubusercontent.com/init-dcat-ap-de/DCAT-AP/2.1.1-draft/releases/2.1.1/dcat-ap_2.1.1_shacl_shapes.ttl -externalShapes ../validator/resources/v2.0/shapes/dcat-ap-spec-german-additions.ttl -externalShapes ../validator/resources/v2.0/shapes/dcat-ap-spec-german-messages.ttl -externalShapes ../validator/resources/v2.0/shapes/dcat-ap-konventionen.ttl -externalShapes ../validator/resources/v2.0/shapes/dcat-ap-de-deprecated.ttl -contentToValidate ../testcases/v2.0_shapes/periodoftime.ttl
+
+@prefix adms:    <http://www.w3.org/ns/adms#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcatap: <http://data.europa.eu/r5r#> .
+@prefix dcatde: <http://dcat-ap.de/def/dcatde/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema:  <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix spdx: <http://spdx.org/rdf/terms#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix : <https://example.org/> .
+
+:aTimeInstant
+  a time:Instant ;
+.
+
+:anotherTimeInstant
+  a time:Instant ;
+.
+
+:ok-1-both-dcat
+  a dct:PeriodOfTime ;
+  dcat:startDate "1987-05-08"^^xsd:date ;
+  dcat:endDate   "2090-05-08"^^xsd:date ;
+.
+
+:ok-2-start-dcat
+  a dct:PeriodOfTime ;
+  dcat:startDate "1987-05-08"^^xsd:date ;
+.
+
+:ok-3-end-dcat
+  a dct:PeriodOfTime ;
+  dcat:endDate   "2090-05-08"^^xsd:date ;
+.
+
+:ok-4-both-time
+  a dct:PeriodOfTime ;
+  time:hasBeginning :aTimeInstant ;
+  time:hasEnd       :anotherTimeInstant ;
+.
+
+:ok-5-start-time
+  a dct:PeriodOfTime ;
+  time:hasBeginning :aTimeInstant ;
+.
+
+:ok-6-end-time
+  a dct:PeriodOfTime ;
+  time:hasEnd       :aTimeInstant ;
+.
+
+:gray-1-both-schema
+  a dct:PeriodOfTime ;
+  schema:startDate "1987-05-08"^^xsd:date ;
+  schema:endDate   "2090-05-08"^^xsd:date ;
+.
+
+:gray-2-start-schema
+  a dct:PeriodOfTime ;
+  schema:startDate "1987-05-08"^^xsd:date ;
+.
+
+:gray-3-end-schema
+  a dct:PeriodOfTime ;
+  schema:endDate   "2090-05-08"^^xsd:date ;
+.
+
+:bad-empty
+  a dct:PeriodOfTime ;
+.
+
+:bad-double-dcat-start
+  a dct:PeriodOfTime ;
+  dcat:startDate "1987-05-08"^^xsd:date ;
+  dcat:startDate "2090-05-08"^^xsd:date ;
+.
+
+:bad-double-dcat-end
+  a dct:PeriodOfTime ;
+  dcat:endDate   "1987-05-08"^^xsd:date ;
+  dcat:endDate   "2090-05-08"^^xsd:date ;
+.
+
+:bad-double-schema-start
+  a dct:PeriodOfTime ;
+  schema:startDate "1987-05-08"^^xsd:date ;
+  schema:startDate "2090-05-08"^^xsd:date ;
+.
+
+:bad-double-schema-end
+  a dct:PeriodOfTime ;
+  schema:endDate   "1987-05-08"^^xsd:date ;
+  schema:endDate   "2090-05-08"^^xsd:date ;
+.
+
+:bad-double-time-start
+  a dct:PeriodOfTime ;
+  time:hasBeginning :aTimeInstant ;
+  time:hasBeginning :anotherTimeInstant ;
+.
+
+:bad-double-time-end
+  a dct:PeriodOfTime ;
+  time:hasEnd       :aTimeInstant ;
+  time:hasEnd       :anotherTimeInstant ;
+.

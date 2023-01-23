@@ -31,16 +31,12 @@
 :Konv01_hasEmail_hasURL_v_Min
     sh:message "K01: Kontaktinformationen (dcat:contactPoint) MÜSSEN mindestens Angaben zur Email (vcard:hasEmail) oder einen Link zum Kontaktformular oder Chatbot (vcard:hasURL) enthalten. "@de ;
     sh:severity sh:Violation ;
-    sh:or (
-        [
-            sh:path vcard:hasURL ;
-            sh:minCount 1 ;
-        ]
-        [
-            sh:path vcard:hasEmail ;
-            sh:minCount 1 ;
-        ] 
-    ) ;
+
+    sh:minCount 1 ;
+    sh:path [ sh:alternativePath ( 
+        vcard:hasURL 
+        vcard:hasEmail 
+    ) ] ;
 .
 
 :Konv_contactPoint_Shape
@@ -53,6 +49,8 @@
 
 :Konv12_13_contributorID_v_List
     sh:message "K12&13: dcat:Dataset: dcatde:contributorID MUSS verwendet werden und DARF nur genau einmal eine IRI aus http://dcat-ap.de/def/contributors/ verwenden. Siehe: https://www.dcat-ap.de/def/dcatde/2.0/implRules/#konvention-12 "@de ;
+    sh:severity sh:Violation ;
+
     sh:path dcatde:contributorID ;
 
     sh:qualifiedValueShape [
@@ -61,8 +59,6 @@
     ] ;
     sh:qualifiedMinCount 1 ;
     sh:qualifiedMaxCount 1 ;
-
-    sh:severity sh:Violation ;
 .
 
 :Konv36_dct_publisher_v_Min

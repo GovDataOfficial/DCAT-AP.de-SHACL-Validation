@@ -433,24 +433,26 @@ dcatap:Checksum_Property_spdx_algorithm  sh:deactivated true .
     sh:message "dcat:Catalog: dcat:themeTaxonomy MUSS eine IRI sein."@de ;
 .
 
-:Catalog_dcat_themeTaxonomy_v_Fixed
-    sh:severity sh:Violation ;
-    sh:or (
-        [
-            sh:path dcat:themeTaxonomy ;
-            sh:maxCount 0;
-        ]
-        [
-            sh:path dcat:themeTaxonomy ;
-            sh:minCount 1;
-            sh:qualifiedValueShape [
-                sh:hasValue <http://publications.europa.eu/resource/authority/data-theme> ;
-            ] ;
-            sh:qualifiedMinCount 1 ;
-        ]
-    ) ;
-    sh:message "dcat:Catalog: dcat:themeTaxonomy MUSS, wenn sie verwendet wird, einmal auf http://publications.europa.eu/resource/authority/data-theme zeigen."@de ;
-.
+#   Deaktiviert, Konformitätsproblem behoben wurde oder die Regel nicht mehr relevant ist.
+#
+# :Catalog_dcat_themeTaxonomy_v_Fixed
+#     sh:message "dcat:Catalog: dcat:themeTaxonomy MUSS, wenn sie verwendet wird, einmal auf http://publications.europa.eu/resource/authority/data-theme zeigen."@de ;
+#     sh:severity sh:Violation ;
+#     sh:or (
+#         [
+#             sh:path dcat:themeTaxonomy ;
+#             sh:maxCount 0;
+#         ]
+#         [
+#             sh:path dcat:themeTaxonomy ;
+#             sh:minCount 1;
+#             sh:qualifiedValueShape [
+#                 sh:hasValue <http://publications.europa.eu/resource/authority/data-theme> ;
+#             ] ;
+#             sh:qualifiedMinCount 1 ;
+#         ]
+#     ) ;
+# .
 
 :Catalog_dcatap_availability_v_Max
     sh:maxCount 1 ;
@@ -551,7 +553,7 @@ dcatap:Checksum_Property_spdx_algorithm  sh:deactivated true .
     sh:property :Catalog_dct_license_w_List ;
     sh:property :Catalog_dct_license_v_IRI ;
     sh:property :Catalog_dcat_themeTaxonomy_v_IRI ;
-    sh:property :Catalog_dcat_themeTaxonomy_v_Fixed ;
+#    sh:node     :Catalog_dcat_themeTaxonomy_v_Fixed ;
     sh:property :Catalog_dcatap_availability_v_Max ;
     sh:property :Catalog_dcatap_availability_v_List ;
 #    sh:property :Catalog_dct_rights_v_IRI ;
@@ -782,34 +784,18 @@ dcatap:Checksum_Property_spdx_algorithm  sh:deactivated true .
 .
 
 :PeriodOfTime_periodPoints_v_Min
-    sh:or (
-        [ 
-            sh:path dcat:startDate ;
-            sh:minCount 1 ;
-        ]
-        [ 
-            sh:path dcat:endDate ;
-            sh:minCount 1 ;
-        ]
-        [ 
-            sh:path time:hasBeginning ;
-            sh:minCount 1 ;
-        ]
-        [ 
-            sh:path time:hasEnd ;
-            sh:minCount 1 ;
-        ]
-        [ 
-            sh:path schema:startDate ;
-            sh:minCount 1 ;
-        ]
-        [ 
-            sh:path schema:endDate ;
-            sh:minCount 1 ;
-        ]
-    ) ;
-    sh:severity sh:Violation ;
     sh:message "dct:PeriodOfTime: MUSS mindestens eine der folgenden Eigenschaften besitzen: Empfohlen: dcat:startDate, dcat:endDate. Andere Möglichkeiten: time:hasBeginning, time:hasEnd, schema:startDate, schema:endDate."@de ;
+    sh:severity sh:Violation ;
+
+    sh:minCount 1 ;
+    sh:path [ sh:alternativePath ( 
+        dcat:startDate 
+        dcat:endDate 
+        time:hasBeginning 
+        time:hasEnd 
+        schema:startDate 
+        schema:endDate 
+    ) ] ;
 .
 
 :PeriodOfTime_schema_startDate_v_Max
@@ -853,22 +839,16 @@ dcatap:Checksum_Property_spdx_algorithm  sh:deactivated true .
 .
 
 :Location_locations_v_Min
-    sh:or (
-        [ 
-            sh:path dcat:bbox ;
-            sh:minCount 1 ;
-        ]
-        [ 
-            sh:path dcat:centroid ;
-            sh:minCount 1 ;
-        ]
-        [ 
-            sh:path locn:geometry ;
-            sh:minCount 1 ;
-        ]
-    ) ;
-    sh:severity sh:Warning ;
     sh:message "dct:Location: SOLL eine der folgenden Eigenschaften nutzen: dcat:bbox, dcat:centroid, locn:geometry. Wenn Sie eine davon abweichende Eigenschaften nutzen, können Sie den Fehler ignorieren."@de ;
+    sh:severity sh:Warning ;
+
+    sh:minCount 1 ;
+    # sh:maxCount 1 ;
+    sh:path [ sh:alternativePath ( 
+        dcat:bbox 
+        dcat:centroid 
+        locn:geometry 
+    ) ] ;
 .
 
 :Location_Shape 
