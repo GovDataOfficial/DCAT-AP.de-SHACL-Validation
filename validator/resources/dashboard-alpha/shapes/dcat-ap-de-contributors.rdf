@@ -15,8 +15,8 @@
          xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
          >
   <owl:Ontology rdf:about="http://dcat-ap.de/def/contributors">
-    <owl:versionInfo>20221124</owl:versionInfo>
-    <owl:versionIRI rdf:resource="http://dcat-ap.de/def/contributors/20221124/"/>
+    <owl:versionInfo>20230424</owl:versionInfo>
+    <owl:versionIRI rdf:resource="http://dcat-ap.de/def/contributors/20230424/"/>
     <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Folgend ist die Liste der unmittelbar an GovData anliefernden Systeme abgebildet. Diese Datenbereitsteller sind im engeren Sinne Metadatenbereitsteller, für den Bezug der eigentlichen Open Data Daten wird auf das „Originalportal“ verwiesen.</rdfs:comment>
   </owl:Ontology>
   <skos:ConceptScheme rdf:about="http://dcat-ap.de/def/contributors">
@@ -430,6 +430,21 @@
     <skos:exactMatch rdf:resource="http://dcat-ap.de/def/contributors/deutschesPatentUndMarkenamt"/>
     <skos:altLabel xml:lang="de">deutschesPatentUndMarkenamt</skos:altLabel>
   </skos:Concept>
+  <skos:Concept rdf:about="http://dcat-ap.de/def/contributors/deutscheRentenversicherungBund">
+    <dc:identifier>deutscheRentenversicherungBund</dc:identifier>
+    <skos:topConceptOf rdf:resource="http://dcat-ap.de/def/contributors"/>
+    <skos:inScheme rdf:resource="http://dcat-ap.de/def/contributors"/>
+    <skos:prefLabel xml:lang="de">Deutsche Rentenversicherung Bund</skos:prefLabel>
+    <skos-xl:prefLabel>
+      <skos-xl:Label>
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
+        <skos-xl:literalForm xml:lang="de">Deutsche Rentenversicherung Bund</skos-xl:literalForm>
+        <rdfs:label xml:lang="de">Deutsche Rentenversicherung Bund</rdfs:label>
+      </skos-xl:Label>
+    </skos-xl:prefLabel>
+    <skos:exactMatch rdf:resource="http://dcat-ap.de/def/contributors/deutscheRentenversicherungBund"/>
+    <skos:altLabel xml:lang="de">deutscheRentenversicherungBund</skos:altLabel>
+  </skos:Concept>
   <skos:Concept rdf:about="http://dcat-ap.de/def/contributors/dieBeauftragteDerBundesregierungFuerKulturUndMedien">
     <dc:identifier>dieBeauftragteDerBundesregierungFuerKulturUndMedien</dc:identifier>
     <skos:topConceptOf rdf:resource="http://dcat-ap.de/def/contributors"/>
@@ -459,6 +474,21 @@
     </skos-xl:prefLabel>
     <skos:exactMatch rdf:resource="http://dcat-ap.de/def/contributors/derBundesbeauftragteFuerDenDatenschutzUndDieInformationsfreiheit"/>
     <skos:altLabel xml:lang="de">derBundesbeauftragteFuerDenDatenschutzUndDieInformationsfreiheit</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://dcat-ap.de/def/contributors/fitko">
+    <dc:identifier>fitko</dc:identifier>
+    <skos:topConceptOf rdf:resource="http://dcat-ap.de/def/contributors"/>
+    <skos:inScheme rdf:resource="http://dcat-ap.de/def/contributors"/>
+    <skos:prefLabel xml:lang="de">FITKO (Föderale IT-Kooperation)</skos:prefLabel>
+    <skos-xl:prefLabel>
+      <skos-xl:Label>
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
+        <skos-xl:literalForm xml:lang="de">FITKO (Föderale IT-Kooperation)</skos-xl:literalForm>
+        <rdfs:label xml:lang="de">FITKO (Föderale IT-Kooperation)</rdfs:label>
+      </skos-xl:Label>
+    </skos-xl:prefLabel>
+    <skos:exactMatch rdf:resource="http://dcat-ap.de/def/contributors/fitko"/>
+    <skos:altLabel xml:lang="de">fitko</skos:altLabel>
   </skos:Concept>
   <skos:Concept rdf:about="http://dcat-ap.de/def/contributors/freistaatSachsen">
     <dc:identifier>freistaatSachsen</dc:identifier>
@@ -685,6 +715,21 @@
     <skos:exactMatch rdf:resource="http://dcat-ap.de/def/contributors/openDataBayern"/>
     <skos:altLabel xml:lang="de">openDataBayern</skos:altLabel>
   </skos:Concept>
+  <skos:Concept rdf:about="http://dcat-ap.de/def/contributors/openDataBund">
+    <dc:identifier>openDataBund</dc:identifier>
+    <skos:topConceptOf rdf:resource="http://dcat-ap.de/def/contributors"/>
+    <skos:inScheme rdf:resource="http://dcat-ap.de/def/contributors"/>
+    <skos:prefLabel xml:lang="de">Open Data Bund</skos:prefLabel>
+    <skos-xl:prefLabel>
+      <skos-xl:Label>
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
+        <skos-xl:literalForm xml:lang="de">Open Data Bund</skos-xl:literalForm>
+        <rdfs:label xml:lang="de">Open Data Bund</rdfs:label>
+      </skos-xl:Label>
+    </skos-xl:prefLabel>
+    <skos:exactMatch rdf:resource="http://dcat-ap.de/def/contributors/openDataBund"/>
+    <skos:altLabel xml:lang="de">openDataBund</skos:altLabel>
+  </skos:Concept>
   <skos:Concept rdf:about="http://dcat-ap.de/def/contributors/openDataHRO">
     <dc:identifier>openDataHRO</dc:identifier>
     <skos:topConceptOf rdf:resource="http://dcat-ap.de/def/contributors"/>
@@ -789,6 +834,21 @@
     </skos-xl:prefLabel>
     <skos:exactMatch rdf:resource="http://dcat-ap.de/def/contributors/robertKochInstitut"/>
     <skos:altLabel xml:lang="de">robertKochInstitut</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://dcat-ap.de/def/contributors/landSachsenAnhalt">
+    <dc:identifier>landSachsenAnhalt</dc:identifier>
+    <skos:topConceptOf rdf:resource="http://dcat-ap.de/def/contributors"/>
+    <skos:inScheme rdf:resource="http://dcat-ap.de/def/contributors"/>
+    <skos:prefLabel xml:lang="de">Land Sachsen-Anhalt</skos:prefLabel>
+    <skos-xl:prefLabel>
+      <skos-xl:Label>
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
+        <skos-xl:literalForm xml:lang="de">Land Sachsen-Anhalt</skos-xl:literalForm>
+        <rdfs:label xml:lang="de">Land Sachsen-Anhalt</rdfs:label>
+      </skos-xl:Label>
+    </skos-xl:prefLabel>
+    <skos:exactMatch rdf:resource="http://dcat-ap.de/def/contributors/landSachsenAnhalt"/>
+    <skos:altLabel xml:lang="de">landSachsenAnhalt</skos:altLabel>
   </skos:Concept>
   <skos:Concept rdf:about="http://dcat-ap.de/def/contributors/schleswigHolstein">
     <dc:identifier>schleswigHolstein</dc:identifier>
