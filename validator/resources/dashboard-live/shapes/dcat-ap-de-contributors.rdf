@@ -15,8 +15,8 @@
          xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
          >
   <owl:Ontology rdf:about="http://dcat-ap.de/def/contributors">
-    <owl:versionInfo>20230424</owl:versionInfo>
-    <owl:versionIRI rdf:resource="http://dcat-ap.de/def/contributors/20230424/"/>
+    <owl:versionInfo>20230630</owl:versionInfo>
+    <owl:versionIRI rdf:resource="http://dcat-ap.de/def/contributors/20230630/"/>
     <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Folgend ist die Liste der unmittelbar an GovData anliefernden Systeme abgebildet. Diese Datenbereitsteller sind im engeren Sinne Metadatenbereitsteller, für den Bezug der eigentlichen Open Data Daten wird auf das „Originalportal“ verwiesen.</rdfs:comment>
   </owl:Ontology>
   <skos:ConceptScheme rdf:about="http://dcat-ap.de/def/contributors">
@@ -385,6 +385,21 @@
     <skos:exactMatch rdf:resource="http://dcat-ap.de/def/contributors/bundeszentralamtFuerSteuern"/>
     <skos:altLabel xml:lang="de">bundeszentralamtFuerSteuern</skos:altLabel>
   </skos:Concept>
+  <skos:Concept rdf:about="http://dcat-ap.de/def/contributors/datenBW">
+    <dc:identifier>datenBW</dc:identifier>
+    <skos:topConceptOf rdf:resource="http://dcat-ap.de/def/contributors"/>
+    <skos:inScheme rdf:resource="http://dcat-ap.de/def/contributors"/>
+    <skos:prefLabel xml:lang="de">Daten.BW</skos:prefLabel>
+    <skos-xl:prefLabel>
+      <skos-xl:Label>
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
+        <skos-xl:literalForm xml:lang="de">Daten.BW</skos-xl:literalForm>
+        <rdfs:label xml:lang="de">Daten.BW</rdfs:label>
+      </skos-xl:Label>
+    </skos-xl:prefLabel>
+    <skos:exactMatch rdf:resource="http://dcat-ap.de/def/contributors/datenBW"/>
+    <skos:altLabel xml:lang="de">datenBW</skos:altLabel>
+  </skos:Concept>
   <skos:Concept rdf:about="http://dcat-ap.de/def/contributors/destatis">
     <dc:identifier>destatis</dc:identifier>
     <skos:topConceptOf rdf:resource="http://dcat-ap.de/def/contributors"/>
@@ -700,6 +715,21 @@
     <skos:exactMatch rdf:resource="http://dcat-ap.de/def/contributors/metropolregionRheinNeckar"/>
     <skos:altLabel xml:lang="de">metropolregionRheinNeckar</skos:altLabel>
   </skos:Concept>
+  <skos:Concept rdf:about="http://dcat-ap.de/def/contributors/mobilithek">
+    <dc:identifier>mobilithek</dc:identifier>
+    <skos:topConceptOf rdf:resource="http://dcat-ap.de/def/contributors"/>
+    <skos:inScheme rdf:resource="http://dcat-ap.de/def/contributors"/>
+    <skos:prefLabel xml:lang="de">Mobilithek des Bundesministeriums für Digitales und Verkehr</skos:prefLabel>
+    <skos-xl:prefLabel>
+      <skos-xl:Label>
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
+        <skos-xl:literalForm xml:lang="de">Mobilithek des Bundesministeriums für Digitales und Verkehr</skos-xl:literalForm>
+        <rdfs:label xml:lang="de">Mobilithek des Bundesministeriums für Digitales und Verkehr</rdfs:label>
+      </skos-xl:Label>
+    </skos-xl:prefLabel>
+    <skos:exactMatch rdf:resource="http://dcat-ap.de/def/contributors/mobilithek"/>
+    <skos:altLabel xml:lang="de">mobilithek</skos:altLabel>
+  </skos:Concept>
   <skos:Concept rdf:about="http://dcat-ap.de/def/contributors/openDataBayern">
     <dc:identifier>openDataBayern</dc:identifier>
     <skos:topConceptOf rdf:resource="http://dcat-ap.de/def/contributors"/>
@@ -759,21 +789,6 @@
     </skos-xl:prefLabel>
     <skos:exactMatch rdf:resource="http://dcat-ap.de/def/contributors/openGovernmentDataPortalRheinlandPfalz"/>
     <skos:altLabel xml:lang="de">openGovernmentDataPortalRheinlandPfalz</skos:altLabel>
-  </skos:Concept>
-  <skos:Concept rdf:about="http://dcat-ap.de/def/contributors/openBW">
-    <dc:identifier>openBW</dc:identifier>
-    <skos:topConceptOf rdf:resource="http://dcat-ap.de/def/contributors"/>
-    <skos:inScheme rdf:resource="http://dcat-ap.de/def/contributors"/>
-    <skos:prefLabel xml:lang="de">open-bw</skos:prefLabel>
-    <skos-xl:prefLabel>
-      <skos-xl:Label>
-        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
-        <skos-xl:literalForm xml:lang="de">open-bw</skos-xl:literalForm>
-        <rdfs:label xml:lang="de">open-bw</rdfs:label>
-      </skos-xl:Label>
-    </skos-xl:prefLabel>
-    <skos:exactMatch rdf:resource="http://dcat-ap.de/def/contributors/openBW"/>
-    <skos:altLabel xml:lang="de">openBW</skos:altLabel>
   </skos:Concept>
   <skos:Concept rdf:about="http://dcat-ap.de/def/contributors/openNRW">
     <dc:identifier>openNRW</dc:identifier>
