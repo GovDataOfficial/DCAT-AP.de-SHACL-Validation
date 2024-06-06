@@ -15,8 +15,8 @@
          xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
          >
   <owl:Ontology rdf:about="http://dcat-ap.de/def/contributors">
-    <owl:versionInfo>20231031</owl:versionInfo>
-    <owl:versionIRI rdf:resource="http://dcat-ap.de/def/contributors/20231031/"/>
+    <owl:versionInfo>20240606</owl:versionInfo>
+    <owl:versionIRI rdf:resource="http://dcat-ap.de/def/contributors/20240606/"/>
     <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Folgend ist die Liste der unmittelbar an GovData anliefernden Systeme abgebildet. Diese Datenbereitsteller sind im engeren Sinne Metadatenbereitsteller, für den Bezug der eigentlichen Open Data Daten wird auf das „Originalportal“ verwiesen.</rdfs:comment>
   </owl:Ontology>
   <skos:ConceptScheme rdf:about="http://dcat-ap.de/def/contributors">
@@ -745,6 +745,21 @@
     <skos:exactMatch rdf:resource="http://dcat-ap.de/def/contributors/openDataBayern"/>
     <skos:altLabel xml:lang="de">openDataBayern</skos:altLabel>
   </skos:Concept>
+  <skos:Concept rdf:about="http://dcat-ap.de/def/contributors/openDataBrandenburg">
+    <dc:identifier>openDataBrandenburg</dc:identifier>
+    <skos:topConceptOf rdf:resource="http://dcat-ap.de/def/contributors"/>
+    <skos:inScheme rdf:resource="http://dcat-ap.de/def/contributors"/>
+    <skos:prefLabel xml:lang="de">Open Data Brandenburg</skos:prefLabel>
+    <skos-xl:prefLabel>
+      <skos-xl:Label>
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
+        <skos-xl:literalForm xml:lang="de">Open Data Brandenburg</skos-xl:literalForm>
+        <rdfs:label xml:lang="de">Open Data Brandenburg</rdfs:label>
+      </skos-xl:Label>
+    </skos-xl:prefLabel>
+    <skos:exactMatch rdf:resource="http://dcat-ap.de/def/contributors/openDataBrandenburg"/>
+    <skos:altLabel xml:lang="de">openDataBrandenburg</skos:altLabel>
+  </skos:Concept>
   <skos:Concept rdf:about="http://dcat-ap.de/def/contributors/openDataBund">
     <dc:identifier>openDataBund</dc:identifier>
     <skos:topConceptOf rdf:resource="http://dcat-ap.de/def/contributors"/>
@@ -999,5 +1014,20 @@
     </skos-xl:prefLabel>
     <skos:exactMatch rdf:resource="http://dcat-ap.de/def/contributors/transparenzportalHamburg"/>
     <skos:altLabel xml:lang="de">transparenzportalHamburg</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://dcat-ap.de/def/contributors/umweltbundesamt">
+    <dc:identifier>umweltbundesamt</dc:identifier>
+    <skos:topConceptOf rdf:resource="http://dcat-ap.de/def/contributors"/>
+    <skos:inScheme rdf:resource="http://dcat-ap.de/def/contributors"/>
+    <skos:prefLabel xml:lang="de">Umweltbundesamt</skos:prefLabel>
+    <skos-xl:prefLabel>
+      <skos-xl:Label>
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
+        <skos-xl:literalForm xml:lang="de">Umweltbundesamt</skos-xl:literalForm>
+        <rdfs:label xml:lang="de">Umweltbundesamt</rdfs:label>
+      </skos-xl:Label>
+    </skos-xl:prefLabel>
+    <skos:exactMatch rdf:resource="http://dcat-ap.de/def/contributors/umweltbundesamt"/>
+    <skos:altLabel xml:lang="de">umweltbundesamt</skos:altLabel>
   </skos:Concept>
 </rdf:RDF>
