@@ -2,7 +2,19 @@
 
 |  :warning: Hinweis zur aktuellen Entwicklung :warning:  |
 |:--------------------------------------------------------|
-| Die [DCAT-AP.de SHACL-Validation](https://www.itb.ec.europa.eu/shacl/dcat-ap.de/upload) wurde mit Blick auf die [DCAT-AP.de 2.0 Spezifikation](https://www.dcat-ap.de/def/dcatde/2.0/spec/) neu erstellt. <br> Wenn Sie Fehler entdecken, dann freuen wir uns über Ihr Feedback! |
+| Die [DCAT-AP.de SHACL-Validation](https://www.itb.ec.europa.eu/shacl/dcat-ap.de/upload) wird aktuell mit Blick auf die [DCAT-AP.de 3.0 Spezifikation](https://www.dcat-ap.de/def/dcatde/3.0/spec/) weiterentwickelt. <br> Wenn Sie Fehler entdecken, dann freuen wir uns über Ihr Feedback! |
+
+## DCAT-AP 3.0
+
+Die SEMIC stellt ihren eigenen [DCAT-AP-Validator](https://www.itb.ec.europa.eu/shacl/dcat-ap/upload) zur Verfügung, der zuverlässig funktioniert.
+
+Dieses Validierungsprofil basiert auf de SEMIC Datei (`https://github.com/SEMICeu/DCAT-AP/blob/master/releases/3.0.0/shacl/dcat-ap-SHACL.ttl`) erweitert um die Datei `https://github.com/GovDataOfficial/DCAT-AP.de-SHACL-Validation/blob/master/validator/resources/v3.0/shapes/dcat-ap-SHACL-DE.ttl`. Die deutschen Erweiterungen verändern die Validierung wie folgt:
+
+- Hinzufügen deutschsprachiger Fehlermeldungen
+- Deaktivierung von Shapes, die eine nicht sinnvolle Range prüfen
+
+Betroffen sind die Klassen `dcterms:Frequency`, `dcterms:LicenseDocument`, `dcterms:LinguisticSystem`, `dcterms:MediaType`, `dcterms:MediaTypeOrExtent`, `dcterms:ProvenanceStatement`, `dcterms:RightsStatement`, `dcterms:Standard`, `eli:LegalResource`, `foaf:Document`, `locn:Geometry`, `odrl:Policy`, `prov:Activity`, `prov:Attribution`, `rdfs:Resource`, `skos:Concept`, `skos:ConceptScheme` und `spdx:ChecksumAlgorithm`.
+
 
 ## DCAT-AP.de 2.0 - Spezifikation
 Die SEMIC stellt ihren eigenen [DCAT-AP-Validator](https://www.itb.ec.europa.eu/shacl/dcat-ap/upload) zur Verfügung, der zuverlässig funktioniert.

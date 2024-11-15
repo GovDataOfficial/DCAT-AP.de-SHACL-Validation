@@ -1,0 +1,120 @@
+# CC0 GovData
+#
+# Der folgende Befehl geht davon aus, dass man sich im Ordner 'tools' befindet und dort die Offline-Java-Version des Blanko-SHACL-Validators unter dem Dateinamen 'validator.jar' abgelegt hat.
+# Der Blanko-SHACL-Validator kann unter https://www.itb.ec.europa.eu/shacl/any/upload bezogen werden.
+# java -Xss4m -jar validator.jar -reportSyntax "text/turtle" -loadImports true -externalShapes ../validator/resources/v3.0/shapes/dcat-ap-SHACL.ttl -externalShapes ../validator/resources/v3.0/shapes/dcat-ap-SHACL-DE.ttl -contentToValidate ../testcases/v3.0_shapes/quicktest.ttl
+
+@prefix adms:    <http://www.w3.org/ns/adms#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcatap: <http://data.europa.eu/r5r#> .
+@prefix dcatde: <http://dcat-ap.de/def/dcatde/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema:  <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix spdx: <http://spdx.org/rdf/terms#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@base <http://example.org/quicktest/> .
+
+<catalog>
+  a dcat:Catalog ;
+  dct:title "Test" ;
+  dct:description "Test" ;
+
+  dct:publisher <publisher> ;
+  dcat:dataset <dataset> ;
+  dcat:record <catalogrecord> ;
+  dcat:dataservice <dataservice> ;
+
+  dct:language <http://publications.europa.eu/resource/authority/language/DEU> ;
+  
+  dct:license <http://dcat-ap.de/def/licenses/dl-by-de/2.0> ;
+  dcatap:availability <http://publications.europa.eu/resource/authority/planned-availability/AVAILABLE> ;
+.
+
+<dataservice>
+  a dcat:DataService ;
+  dct:title "Test" ;
+  dcat:endpointURL <http://example.org/endpointURL> ;
+
+  dcatap:availability <http://publications.europa.eu/resource/authority/planned-availability/AVAILABLE> ;
+  dct:license <http://dcat-ap.de/def/licenses/dl-by-de/2.0> ;
+.
+
+<dataset> 
+  a dcat:Dataset ;
+  dct:title "Test" ;
+  dct:description "Test" ;
+  dcatde:contributorID <http://dcat-ap.de/def/contributors/auswaertigesAmt> ;
+  dcat:theme <http://publications.europa.eu/resource/authority/data-theme/AGRI> ;
+  dcat:keyword "Test" ;
+  dcat:landingPage <http://example.org/> ;
+  foaf:page <http://example.org/> ;
+  dct:issued "2022-08-05T00:00:00"^^xsd:dateTime ;
+  dct:identifier "http://example.com/#dataset" ;
+  dct:modified "2022-08-05T08:00:00"^^xsd:dateTime ;
+
+  dct:publisher <publisher> ;
+  dcat:contactPoint <contactPoint> ;
+  dcat:distribution <distribution> ;
+  dct:temporal <timeperiod> ;
+
+  dcatap:availability <http://publications.europa.eu/resource/authority/planned-availability/AVAILABLE> ;
+  dcatde:politicalGeocodingLevelURI <http://dcat-ap.de/def/politicalGeocoding/Level/international> ;
+  dct:language <http://publications.europa.eu/resource/authority/language/DEU> ;
+  dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/MONTHLY> ;
+
+  adms:identifier [
+    a adms:Identifier ;
+    skos:notation <#error> ;
+  ] ;
+.
+
+<distribution>
+  a dcat:Distribution ; 
+  dct:title "Test" ; 
+  dcat:accessURL <http://example.org/#accessURL> ; 
+  dct:license <http://dcat-ap.de/def/licenses/dl-by-de/2.0> ;
+  dct:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
+  
+  spdx:checksum [ 
+    a spdx:Checksum ;
+    spdx:algorithm <http://dcat-ap.de/def/hashAlgorithms/md/5> ;
+    spdx:checksumValue "a58d35bebefa4972898110b9f5da62bc"^^xsd:hexBinary
+  ] ;
+
+  dcatap:availability <http://publications.europa.eu/resource/authority/planned-availability/AVAILABLE> ;
+  dct:language <http://publications.europa.eu/resource/authority/language/DEU> ;
+  adms:status <http://purl.org/adms/status/Completed> ;
+.
+
+<catalogrecord>
+  a dcat:CatalogRecord ;
+  dct:modified "2022-08-05T00:00:00"^^xsd:dateTime ;
+  foaf:primaryTopic <dataset> ;
+
+  dct:language <http://publications.europa.eu/resource/authority/language/DEU> ;
+.
+
+<publisher> 
+  a foaf:Agent ;
+  dct:title "Hi123!" ;
+  foaf:name "example" ;
+
+  dct:type <http://purl.org/adms/publishertype/NationalAuthority> ;
+.
+
+<contactPoint>
+  a vcard:Kind ;
+  vcard:hasURL       <http://google.com/> ;
+  vcard:hasTelephone "+49 40 123 45678" ;
+.
+
+<timeperiod>
+  a dct:PeriodOfTime ;
+  dcat:startDate "1987-05-08"^^xsd:date ;
+  dcat:endDate   "2090-05-08"^^xsd:date ;
+.
