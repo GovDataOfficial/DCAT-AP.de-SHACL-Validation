@@ -4,7 +4,16 @@
 |:--------------------------------------------------------|
 | Die [DCAT-AP.de SHACL-Validation](https://www.itb.ec.europa.eu/shacl/dcat-ap.de/upload) wird aktuell mit Blick auf die [DCAT-AP.de 3.0 Spezifikation](https://www.dcat-ap.de/def/dcatde/3.0/spec/) weiterentwickelt. <br> Wenn Sie Fehler entdecken, dann freuen wir uns über Ihr Feedback! |
 
-## DCAT-AP 3.0
+## DCAT-AP.de 3.0 - Spezifikation
+
+Basiert auf dem Profil `DCAT-AP 3.0 - Übersetzungen und Einschränkungen` und ergänzt es um folgende Aspekte:
+
+- Deprecated-Meldungen für Eigenschaften und Codelisten (`dcat-ap-de-deprecated.ttl`)
+- <<TBD>> Deutsche Eigenschaften
+- <<TBD>> Deutsche Änderungen an Eigenschaften
+- <<TBD>> Verwendung der verlangten kontrollierten Vokabulare
+
+## DCAT-AP 3.0 - Übersetzungen und Einschränkungen
 
 Die SEMIC stellt ihren eigenen [DCAT-AP-Validator](https://www.itb.ec.europa.eu/shacl/dcat-ap/upload) zur Verfügung, der zuverlässig funktioniert.
 
