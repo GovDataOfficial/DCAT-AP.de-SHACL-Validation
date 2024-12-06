@@ -1,4 +1,7 @@
 # CC0
+# Der folgende Befehl geht davon aus, dass man sich im Ordner 'tools' befindet und dort die Offline-Java-Version des Blanko-SHACL-Validators unter dem Dateinamen 'validator.jar' abgelegt hat.
+# Der Blanko-SHACL-Validator kann unter https://www.itb.ec.europa.eu/shacl/any/upload bezogen werden.
+#
 # java -Xss4m -jar validator.jar -reportSyntax "text/turtle" -loadImports true -externalShapes ../validator/resources/v3.0/shapes/dcat-ap-de-imports.ttl -externalShapes ../validator/resources/v3.0/shapes/dcat-ap-SHACL-DE.ttl -externalShapes ../validator/resources/v3.0/shapes/dcat-ap-de-deprecated.ttl -externalShapes ../validator/resources/v3.0/shapes/dcat-ap-spec-german-additions.ttl -externalShapes ../validator/resources/v3.0/shapes/dcat-ap-de-controlledvocabularies.ttl -contentToValidate ../testcases/v3.0_shapes/quicktest.ttl
 
 @prefix : <http://example.org/quicktest/> .

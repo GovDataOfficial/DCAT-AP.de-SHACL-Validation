@@ -49,7 +49,7 @@
 
 :Deprecated_owl_versionInfo
   a sh:NodeShape ;
-  sh:targetSubjectsOf owl:versionInfo ;
+  sh:targetClass dcat:Dataset ;
   sh:property [
     sh:message  "Deprecated: owl:versionInfo soll nicht mehr verwendet werden." ;
     sh:severity sh:Warning ;

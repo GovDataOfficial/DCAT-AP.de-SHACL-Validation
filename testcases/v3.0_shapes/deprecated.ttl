@@ -1,22 +1,17 @@
-# CC0 GovData
-#
-# Der folgende Befehl geht davon aus, dass man sich im Ordner 'tools' befindet und dort die Offline-Java-Version des Blanko-SHACL-Validators unter dem Dateinamen 'validator.jar' abgelegt hat.
-# Der Blanko-SHACL-Validator kann unter https://www.itb.ec.europa.eu/shacl/any/upload bezogen werden.
-# java -Xss4m -jar validator.jar -reportSyntax "text/turtle" -loadImports true -externalShapes ../validator/resources/v3.0/shapes/dcat-ap-SHACL.ttl -externalShapes ../validator/resources/v3.0/shapes/dcat-ap-SHACL-DE.ttl -externalShapes ../validator/resources/v3.0/shapes/dcat-ap-de-deprecated.ttl -contentToValidate ../testcases/v3.0_shapes/deprecated.ttl
-
-@prefix adms:    <http://www.w3.org/ns/adms#> .
-@prefix dcat:    <http://www.w3.org/ns/dcat#> .
-@prefix dcatap:  <http://data.europa.eu/r5r#> .
-@prefix dcatde:  <http://dcat-ap.de/def/dcatde/> .
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcatap: <http://data.europa.eu/r5r#> .
+@prefix dcatde: <http://dcat-ap.de/def/dcatde/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
-@prefix vcard:   <http://www.w3.org/2006/vcard/ns#> .
-@prefix owl:     <http://www.w3.org/2002/07/owl#> .
-@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix schema:  <http://schema.org/> .
-@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
-@prefix spdx:    <http://spdx.org/rdf/terms#> .
-@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <http://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix spdx: <http://spdx.org/rdf/terms#> .
+@prefix tel: <> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 @base <http://example.org/deprecated/> .
 
@@ -39,6 +34,7 @@
   a dcat:DataService ;
   dcterms:title "Test" ;
   dcat:endpointURL <http://example.org/endpointURL> ;
+  dcterms:publisher <publisher> ;
 
   dcatap:availability <http://publications.europa.eu/resource/authority/planned-availability/AVAILABLE> ;
   dcterms:license <http://dcat-ap.de/def/licenses/dl-by-de/2.0> ;
@@ -104,7 +100,7 @@
   dcterms:language <http://publications.europa.eu/resource/authority/language/DEU> ;
   
   # Deprecated Codeliste
-  adms:status <http://purl.org/adms/status/Completed> ;
+  adms:status <http://publications.europa.eu/resource/authority/distribution-status/COMPLETED> ;
 .
 
 <publisher> 
@@ -118,7 +114,7 @@
 <contactPoint>
   a vcard:Kind ;
   vcard:hasURL       <http://google.com/> ;
-  vcard:hasTelephone "+49 40 123 45678" ;
+  vcard:hasTelephone <tel:+494012345678> ;
 .
 
 <timeperiod>
