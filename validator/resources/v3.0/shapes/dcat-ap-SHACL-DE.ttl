@@ -1,4 +1,9 @@
 # CC0 GovData
+#
+# Diese Datei  
+#  - beinhaltet deutschsprachige Fehlermeldungen,
+#  - deaktiviert Shapes und
+#  - ergänzt Shapes, die sonst ungeprüft blieben.
 
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix dcat:    <http://www.w3.org/ns/dcat#> .
@@ -12,6 +17,7 @@
 @prefix vcard:   <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 
+# Deutsche Fehlermeldungen
 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#adms:IdentifierShape/053d0ae3c4b213ae2f708e5e492b97e2cce08686>
   shacl:severity shacl:Violation ;
   shacl:message "adms:Identifier: skos:notation MUSS auf ein Literal verweisen."@de .
@@ -32,14 +38,6 @@
   shacl:severity shacl:Violation ;
   shacl:message "dcat:CatalogRecord: adms:status DARF MAXIMAL einmal vorkommen."@de .
 
-<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogRecordShape/29ba27566ab1f32c8bb73f3492436d4bd868d3d2>
-  shacl:severity shacl:Violation ;
-  shacl:deactivated true ;
-  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
-<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogRecordShape/31d5e2e3aa43e34f78e4557b9a8c4e7507c4948b>
-  shacl:severity shacl:Violation ;
-  shacl:deactivated true ;
-  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogRecordShape/387c76a64757677cc2b899f0c4a20803263a0449>
   shacl:severity shacl:Violation ;
   shacl:message "dcat:CatalogRecord: foaf:primaryTopic MUSS auf eine Blank Node oder eine IRI verweisen."@de .
@@ -48,10 +46,6 @@
   shacl:severity shacl:Violation ;
   shacl:message "dcat:CatalogRecord: dcterms:source DARF MAXIMAL einmal vorkommen."@de .
 
-<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogRecordShape/4b28ec6b7000fa7ccd38127f115952dd990d7d9c>
-  shacl:severity shacl:Violation ;
-  shacl:deactivated true ;
-  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogRecordShape/4ffca05d8646c0f94e4b5dc1e15e7757e7dd2843>
   shacl:severity shacl:Violation ;
   shacl:message "dcat:CatalogRecord: dcterms:issued DARF MAXIMAL einmal vorkommen."@de .
@@ -109,8 +103,8 @@
   shacl:message "dcat:CatalogRecord: foaf:primaryTopic DARF MAXIMAL einmal vorkommen."@de .
 
 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogShape/00a99d55cbc03165373a8348d5a88402ea4f239a>
-  shacl:severity shacl:Violation ;
-  shacl:message "dcat:Catalog: dcterms:spatial MUSS auf eine Klasse vom Typ dcterms:Location verweisen."@de .
+  shacl:severity shacl:Warning ;
+  shacl:message "dcat:Catalog: dcterms:spatial MUSS auf eine Klasse vom Typ dcterms:Location verweisen. Diese Meldung kann ignoriert werden, wenn ein kontrolliertes Vokabular verwendet wird."@de .
 
 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogShape/00ac10319099fe2cccabf6b6e38a4876211b79f7>
   shacl:severity shacl:Violation ;
@@ -128,10 +122,6 @@
   shacl:severity shacl:Violation ;
   shacl:message "dcat:Catalog: dcatap:applicableLegislation MUSS auf eine Blank Node oder eine IRI verweisen."@de .
 
-<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogShape/29ba27566ab1f32c8bb73f3492436d4bd868d3d2>
-  shacl:severity shacl:Violation ;
-  shacl:deactivated true ;
-  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogShape/337cf55721093cc585693a5397601643d59a4c46>
   shacl:severity shacl:Violation ;
   shacl:message "dcat:Catalog: dcat:record MUSS auf eine Klasse vom Typ dcat:CatalogRecord verweisen."@de .
@@ -152,10 +142,6 @@
   shacl:severity shacl:Violation ;
   shacl:message "dcat:Catalog: dcterms:issued MUSS auf ein Literal verweisen."@de .
 
-<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogShape/6051cd8d6a1acfcf4d6721f241fff56a0b42ebf9>
-  shacl:severity shacl:Violation ;
-  shacl:deactivated true ;
-  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogShape/67dcdb36167ca7969c0532898e11a98e9c2a80f5>
   shacl:severity shacl:Violation ;
   shacl:message "dcat:Catalog: dcterms:publisher DARF MAXIMAL einmal vorkommen."@de .
@@ -168,10 +154,6 @@
   shacl:severity shacl:Violation ;
   shacl:message "dcat:Catalog: dcterms:description MUSS auf ein Literal verweisen."@de .
 
-<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogShape/73465b7fbd7f991a08ddd1b766c2e46fa9dfc14e>
-  shacl:severity shacl:Violation ;
-  shacl:deactivated true ;
-  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogShape/7b94c69361e00163d16d78016cd994668c7fccda>
   shacl:severity shacl:Violation ;
   shacl:message "dcat:Catalog: dcat:dataset MUSS auf eine Klasse vom Typ dcat:Dataset verweisen."@de .
@@ -208,10 +190,6 @@
   shacl:severity shacl:Violation ;
   shacl:message "dcat:Catalog: dcterms:spatial MUSS auf eine Blank Node oder eine IRI verweisen."@de .
 
-<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogShape/99435c17158fbaa12d1d955b8886d5bf935ab016>
-  shacl:severity shacl:Violation ;
-  shacl:deactivated true ;
-  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogShape/9e9d878c1c354206edc1d411f33c82d4d01e5a8f>
   shacl:severity shacl:Violation ;
   shacl:message "dcat:Catalog: dcterms:modified DARF MAXIMAL einmal vorkommen."@de .
@@ -264,10 +242,6 @@
   shacl:severity shacl:Violation ;
   shacl:message "dcat:Catalog: dcterms:language MUSS auf eine Blank Node oder eine IRI verweisen."@de .
 
-<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogShape/dbcf2adef675735c48b532392359af27af5e8b71>
-  shacl:severity shacl:Violation ;
-  shacl:deactivated true ;
-  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogShape/e9a8f5414305eafd449b87a38bfe0c974341c9ac>
   shacl:severity shacl:Violation ;
   shacl:message "dcat:Catalog: dcat:service MUSS auf eine Blank Node oder eine IRI verweisen."@de .
@@ -280,10 +254,6 @@
   shacl:severity shacl:Violation ;
   shacl:message "dcat:Catalog: dcterms:title MUSS MINDESTEN einmal vorkommen."@de .
 
-<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogShape/fb8568b313de736f9184db23272b6317700e9e7e>
-  shacl:severity shacl:Violation ;
-  shacl:deactivated true ;
-  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/08118c51bfc41b71d11f3a58e9410da74e6480e6>
   shacl:severity shacl:Violation ;
   shacl:message "dcat:DataService: dcterms:conformsTo MUSS auf eine Blank Node oder eine IRI verweisen."@de .
@@ -320,22 +290,10 @@
   shacl:severity shacl:Violation ;
   shacl:message "dcat:DataService: dcterms:publisher DARF MAXIMAL einmal vorkommen."@de .
 
-<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/68388ec47b77212d80036e8a02e9956f5ba0e0f5>
-  shacl:severity shacl:Violation ;
-  shacl:deactivated true ;
-  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/6cae9880e515253132af1452a38a8a5827165149>
   shacl:severity shacl:Violation ;
   shacl:message "dcat:DataService: dcterms:description MUSS auf ein Literal verweisen."@de .
 
-<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/73465b7fbd7f991a08ddd1b766c2e46fa9dfc14e>
-  shacl:severity shacl:Violation ;
-  shacl:deactivated true ;
-  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
-<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/737cd5f1c9f0e13c35eb82b7f0d2b2f76a9a82c7>
-  shacl:severity shacl:Violation ;
-  shacl:deactivated true ;
-  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/7a20e2eb5f5549088fd53fa93fab0958019f267e>
   shacl:severity shacl:Violation ;
   shacl:message "dcat:DataService: dcterms:accessRights DARF MAXIMAL einmal vorkommen."@de .
@@ -376,10 +334,6 @@
   shacl:severity shacl:Violation ;
   shacl:message "dcat:DataService: dcterms:format MUSS auf eine Blank Node oder eine IRI verweisen."@de .
 
-<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/c84f7330b9538a899ebb875c44dc23c9882e74ac>
-  shacl:severity shacl:Violation ;
-  shacl:deactivated true ;
-  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/ca2bd10c893237fa342edb75240b08731acda92f>
   shacl:severity shacl:Violation ;
   shacl:message "dcat:DataService: dcat:servesDataset MUSS auf eine Blank Node oder eine IRI verweisen."@de .
@@ -388,26 +342,6 @@
   shacl:severity shacl:Violation ;
   shacl:message "dcat:DataService: dcterms:title MUSS auf ein Literal verweisen."@de .
 
-<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/dbcf2adef675735c48b532392359af27af5e8b71>
-  shacl:severity shacl:Violation ;
-  shacl:deactivated true ;
-  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
-<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/dc08f4dca4377fade57f89454e3fa06a8389d314>
-  shacl:severity shacl:Violation ;
-  shacl:deactivated true ;
-  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
-<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/dede6a68a95ac0f43ca88def472d8fc001f86ebe>
-  shacl:severity shacl:Violation ;
-  shacl:deactivated true ;
-  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
-<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/eb3ac4e4fdde2e2588a9502c5956060a18c5c99f>
-  shacl:severity shacl:Violation ;
-  shacl:deactivated true ;
-  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
-<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/ee60fdd4b8581460f5fc4077813b8bb3e3d77441>
-  shacl:severity shacl:Violation ;
-  shacl:deactivated true ;
-  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/f30149ffb6ec9d00dd5866b052105729fa27d02a>
   shacl:severity shacl:Violation ;
   shacl:message "dcat:DataService: dcterms:license MUSS auf eine Blank Node oder eine IRI verweisen."@de .
@@ -416,18 +350,10 @@
   shacl:severity shacl:Violation ;
   shacl:message "dcat:DataService: dcterms:title MUSS MINDESTEN einmal vorkommen."@de .
 
-<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/ffbbcd28b1fd92213d8350e1b6418d3d998c7197>
-  shacl:severity shacl:Violation ;
-  shacl:deactivated true ;
-  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetSeriesShape/00a99d55cbc03165373a8348d5a88402ea4f239a>
-  shacl:severity shacl:Violation ;
-  shacl:message "dcat:DatasetSeries: dcterms:spatial MUSS auf eine Klasse vom Typ dcterms:Location verweisen."@de .
+  shacl:severity shacl:Warning ;
+  shacl:message "dcat:DatasetSeries: dcterms:spatial MUSS auf eine Klasse vom Typ dcterms:Location verweisen. Diese Meldung kann ignoriert werden, wenn ein kontrolliertes Vokabular verwendet wird."@de .
 
-<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetSeriesShape/04d197dc40f01e87093bdd0446a9fdb1a9d44319>
-  shacl:severity shacl:Violation ;
-  shacl:deactivated true ;
-  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetSeriesShape/0a6f3bb11ed4ea12f852c78996b89c9a54ffc0fb>
   shacl:severity shacl:Violation ;
   shacl:message "dcat:DatasetSeries: dcatap:applicableLegislation MUSS auf eine Blank Node oder eine IRI verweisen."@de .
@@ -452,10 +378,6 @@
   shacl:severity shacl:Violation ;
   shacl:message "dcat:DatasetSeries: dcterms:description MUSS auf ein Literal verweisen."@de .
 
-<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetSeriesShape/73465b7fbd7f991a08ddd1b766c2e46fa9dfc14e>
-  shacl:severity shacl:Violation ;
-  shacl:deactivated true ;
-  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetSeriesShape/7b6713c1f4a52e964f5db57eabef294b6d04e90e>
   shacl:severity shacl:Violation ;
   shacl:message "dcat:DatasetSeries: dcat:contactPoint MUSS auf eine Klasse vom Typ vcard:Kind verweisen."@de .
@@ -509,17 +431,13 @@
   shacl:message "dcat:DatasetSeries: dcterms:title MUSS MINDESTEN einmal vorkommen."@de .
 
 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/00a99d55cbc03165373a8348d5a88402ea4f239a>
-  shacl:severity shacl:Violation ;
-  shacl:message "dcat:Dataset: dcterms:spatial MUSS auf eine Klasse vom Typ dcterms:Location verweisen."@de .
+  shacl:severity shacl:Warning ;
+  shacl:message "dcat:Dataset: dcterms:spatial MUSS auf eine Klasse vom Typ dcterms:Location verweisen. Diese Meldung kann ignoriert werden, wenn ein kontrolliertes Vokabular verwendet wird."@de .
 
 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/016e621848f36eb558335ecb98b4b24cb2447d37>
   shacl:severity shacl:Violation ;
   shacl:message "dcat:Dataset: adms:identifier MUSS auf eine Blank Node oder eine IRI verweisen."@de .
 
-<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/04d197dc40f01e87093bdd0446a9fdb1a9d44319>
-  shacl:severity shacl:Violation ;
-  shacl:deactivated true ;
-  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/08118c51bfc41b71d11f3a58e9410da74e6480e6>
   shacl:severity shacl:Violation ;
   shacl:message "dcat:Dataset: dcterms:conformsTo MUSS auf eine Blank Node oder eine IRI verweisen."@de .
@@ -532,10 +450,6 @@
   shacl:severity shacl:Violation ;
   shacl:message "dcat:Dataset: dcterms:relation MUSS auf eine Blank Node oder eine IRI verweisen."@de .
 
-<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/0bcb30d1f00a2e13ee04c77dbcb8018f2ef83d5b>
-  shacl:severity shacl:Violation ;
-  shacl:deactivated true ;
-  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/10c0ca4deadefb51c529f56ee01caf9bd2639ef4>
   shacl:severity shacl:Violation ;
   shacl:message "dcat:Dataset: dcterms:accessRights MUSS auf eine Blank Node oder eine IRI verweisen."@de .
@@ -556,10 +470,6 @@
   shacl:severity shacl:Violation ;
   shacl:message "dcat:Dataset: dcat:temporalResolution MUSS auf ein Literal verweisen."@de .
 
-<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/29ba27566ab1f32c8bb73f3492436d4bd868d3d2>
-  shacl:severity shacl:Violation ;
-  shacl:deactivated true ;
-  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/2ab9813b47309d4af98fdfe34189ea24baecc8cd>
   shacl:severity shacl:Violation ;
   shacl:message "dcat:Dataset: dcat:distribution MUSS auf eine Klasse vom Typ dcat:Distribution verweisen."@de .
@@ -572,18 +482,10 @@
   shacl:severity shacl:Violation ;
   shacl:message "dcat:Dataset: dcat:landingPage MUSS auf eine Blank Node oder eine IRI verweisen."@de .
 
-<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/322371a77364a50f049d46180f6192532eea26dc>
-  shacl:severity shacl:Violation ;
-  shacl:deactivated true ;
-  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/34ba47520d520f97bbcdea3c6fd3dc176d312689>
   shacl:severity shacl:Violation ;
   shacl:message "dcat:Dataset: adms:sample MUSS auf eine Blank Node oder eine IRI verweisen."@de .
 
-<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/397755646b3e9ed0cfae7a2a581d26251329edb7>
-  shacl:severity shacl:Violation ;
-  shacl:deactivated true ;
-  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/3f1fe87dc7be37001827234cfe37b5314b16efcc>
   shacl:severity shacl:Violation ;
   shacl:message "dcat:Dataset: dcterms:isReferencedBy MUSS auf eine Blank Node oder eine IRI verweisen."@de .
@@ -600,10 +502,6 @@
   shacl:severity shacl:Violation ;
   shacl:message "dcat:Dataset: dcat:spatialResolutionInMeters MUSS auf ein Literal verweisen."@de .
 
-<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/4918ff7a6c1c4b0eea6403dca4b992b87ee1f4ab>
-  shacl:severity shacl:Violation ;
-  shacl:deactivated true ;
-  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/495a2bdea22c8a156f1a7926737cdf33529871fd>
   shacl:severity shacl:Violation ;
   shacl:message "dcat:Dataset: dcat:hasVersion MUSS auf eine Klasse vom Typ dcat:Dataset verweisen."@de .
@@ -644,10 +542,6 @@
   shacl:severity shacl:Violation ;
   shacl:message "dcat:Dataset: dcterms:publisher DARF MAXIMAL einmal vorkommen."@de .
 
-<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/68388ec47b77212d80036e8a02e9956f5ba0e0f5>
-  shacl:severity shacl:Violation ;
-  shacl:deactivated true ;
-  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/6b7242b6b89977700c05e4875131fbb975c4235e>
   shacl:severity shacl:Violation ;
   shacl:message "dcat:Dataset: dcterms:modified MUSS auf ein Literal verweisen."@de .
@@ -656,10 +550,6 @@
   shacl:severity shacl:Violation ;
   shacl:message "dcat:Dataset: dcterms:description MUSS auf ein Literal verweisen."@de .
 
-<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/73465b7fbd7f991a08ddd1b766c2e46fa9dfc14e>
-  shacl:severity shacl:Violation ;
-  shacl:deactivated true ;
-  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/7a20e2eb5f5549088fd53fa93fab0958019f267e>
   shacl:severity shacl:Violation ;
   shacl:message "dcat:Dataset: dcterms:accessRights DARF MAXIMAL einmal vorkommen."@de .
@@ -684,10 +574,6 @@
   shacl:severity shacl:Violation ;
   shacl:message "dcat:Dataset: dcat:inSeries MUSS auf eine Blank Node oder eine IRI verweisen."@de .
 
-<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/837b9dc79bed1a4d15f6f9094b596dd177944ab6>
-  shacl:severity shacl:Violation ;
-  shacl:deactivated true ;
-  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/84229f2224810ba9c70b4b27f756414cc0353324>
   shacl:severity shacl:Violation ;
   shacl:message "dcat:Dataset: dcterms:accrualPeriodicity DARF MAXIMAL einmal vorkommen."@de .
@@ -708,10 +594,6 @@
   shacl:severity shacl:Violation ;
   shacl:message "dcat:Dataset: dcterms:spatial MUSS auf eine Blank Node oder eine IRI verweisen."@de .
 
-<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/95c69c99a1e3ade043911b51b942f206dea0e68d>
-  shacl:severity shacl:Violation ;
-  shacl:deactivated true ;
-  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/9678e29dc284ba14312bf01cd0a581b960b77a08>
   shacl:severity shacl:Violation ;
   shacl:message "dcat:Dataset: dcat:theme MUSS auf eine Blank Node oder eine IRI verweisen."@de .
@@ -756,10 +638,6 @@
   shacl:severity shacl:Violation ;
   shacl:message "dcat:Dataset: dcterms:creator MUSS auf eine Klasse vom Typ foaf:Agent verweisen."@de .
 
-<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/c84f7330b9538a899ebb875c44dc23c9882e74ac>
-  shacl:severity shacl:Violation ;
-  shacl:deactivated true ;
-  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/cee351ca7e459eb55734fce188a2216ea0cc2b6a>
   shacl:severity shacl:Violation ;
   shacl:message "dcat:Dataset: dcat:hasVersion MUSS auf eine Blank Node oder eine IRI verweisen."@de .
@@ -772,18 +650,10 @@
   shacl:severity shacl:Violation ;
   shacl:message "dcat:Dataset: dcterms:language MUSS auf eine Blank Node oder eine IRI verweisen."@de .
 
-<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/dede6a68a95ac0f43ca88def472d8fc001f86ebe>
-  shacl:severity shacl:Violation ;
-  shacl:deactivated true ;
-  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/e6d76f7de5d5b08e584d9cd40619631987a64a7c>
   shacl:severity shacl:Violation ;
   shacl:message "dcat:Dataset: dcat:temporalResolution MUSS ein als xsd:duration getyptes Literal sein."@de .
 
-<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/ee60fdd4b8581460f5fc4077813b8bb3e3d77441>
-  shacl:severity shacl:Violation ;
-  shacl:deactivated true ;
-  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/f6f077451f13ccf5d721838425fcc37f6cebfe48>
   shacl:severity shacl:Violation ;
   shacl:message "dcat:Dataset: dcat:distribution MUSS auf eine Blank Node oder eine IRI verweisen."@de .
@@ -800,14 +670,6 @@
   shacl:severity shacl:Violation ;
   shacl:message "dcat:Dataset: dcat:spatialResolutionInMeters DARF MAXIMAL einmal vorkommen."@de .
 
-<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/ffbbcd28b1fd92213d8350e1b6418d3d998c7197>
-  shacl:severity shacl:Violation ;
-  shacl:deactivated true ;
-  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
-<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/06ed12d1071a78728d10628eb2d072781559eb75>
-  shacl:severity shacl:Violation ;
-  shacl:deactivated true ;
-  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/0796df7f5520ac6500217e81e434f9a755f64afe>
   shacl:severity shacl:Violation ;
   shacl:message "dcat:Distribution: dcatap:availability MUSS auf eine Blank Node oder eine IRI verweisen."@de .
@@ -816,10 +678,6 @@
   shacl:severity shacl:Violation ;
   shacl:message "dcat:Distribution: dcatap:applicableLegislation MUSS auf eine Blank Node oder eine IRI verweisen."@de .
 
-<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/0f6cb927d0d26f3819cba3fb903a075cd426180d>
-  shacl:severity shacl:Violation ;
-  shacl:deactivated true ;
-  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/1522e6818f6f9d132e873991b42dd4567fccc6cf>
   shacl:severity shacl:Violation ;
   shacl:message "dcat:Distribution: dcat:temporalResolution DARF MAXIMAL einmal vorkommen."@de .
@@ -828,10 +686,6 @@
   shacl:severity shacl:Violation ;
   shacl:message "dcat:Distribution: dcat:compressFormat DARF MAXIMAL einmal vorkommen."@de .
 
-<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/226b9cb0511ec6b8da045829e10d2676ddbb8375>
-  shacl:severity shacl:Violation ;
-  shacl:deactivated true ;
-  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/23d4c038584493decec780192681ef61694bff7c>
   shacl:severity shacl:Violation ;
   shacl:message "dcat:Distribution: dcat:accessService MUSS auf eine Blank Node oder eine IRI verweisen."@de .
@@ -848,10 +702,6 @@
   shacl:severity shacl:Violation ;
   shacl:message "dcat:Distribution: dcat:temporalResolution MUSS auf ein Literal verweisen."@de .
 
-<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/29ba27566ab1f32c8bb73f3492436d4bd868d3d2>
-  shacl:severity shacl:Violation ;
-  shacl:deactivated true ;
-  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/2bc917d85a4ffccfa9de4268bf84b517c322ce2c>
   shacl:severity shacl:Violation ;
   shacl:message "dcat:Distribution: adms:status DARF MAXIMAL einmal vorkommen."@de .
@@ -864,10 +714,6 @@
   shacl:severity shacl:Violation ;
   shacl:message "dcat:Distribution: dcterms:rights DARF MAXIMAL einmal vorkommen."@de .
 
-<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/39da16eecfc16996eed6a010f4203cdcec7c388d>
-  shacl:severity shacl:Violation ;
-  shacl:deactivated true ;
-  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/3c1ab2e1170c5050c8b7742e97810027ddc104b1>
   shacl:severity shacl:Violation ;
   shacl:message "dcat:Distribution: adms:status MUSS auf eine Blank Node oder eine IRI verweisen."@de .
@@ -896,14 +742,6 @@
   shacl:severity shacl:Violation ;
   shacl:message "dcat:Distribution: spdx:checksum MUSS auf eine Klasse vom Typ spdx:Checksum verweisen."@de .
 
-<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/653804840386e33525b3d39d205c174780be414b>
-  shacl:severity shacl:Violation ;
-  shacl:deactivated true ;
-  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
-<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/68388ec47b77212d80036e8a02e9956f5ba0e0f5>
-  shacl:severity shacl:Violation ;
-  shacl:deactivated true ;
-  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/69c8fdb6db25c5ad1f8a47366c19adb834924ae0>
   shacl:severity shacl:Violation ;
   shacl:message "dcat:Distribution: dcat:mediaType DARF MAXIMAL einmal vorkommen."@de .
@@ -916,18 +754,10 @@
   shacl:severity shacl:Violation ;
   shacl:message "dcat:Distribution: dcterms:description MUSS auf ein Literal verweisen."@de .
 
-<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/73465b7fbd7f991a08ddd1b766c2e46fa9dfc14e>
-  shacl:severity shacl:Violation ;
-  shacl:deactivated true ;
-  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/73765ca7a6e23ef17cf4e67a576e90a0c391f1c1>
   shacl:severity shacl:Violation ;
   shacl:message "dcat:Distribution: spdx:checksum DARF MAXIMAL einmal vorkommen."@de .
 
-<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/737cd5f1c9f0e13c35eb82b7f0d2b2f76a9a82c7>
-  shacl:severity shacl:Violation ;
-  shacl:deactivated true ;
-  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/7434c99492683a2fb06dcdcf1f238671caf3d462>
   shacl:severity shacl:Violation ;
   shacl:message "dcat:Distribution: dcat:accessService MUSS auf eine Klasse vom Typ dcat:DataService verweisen."@de .
@@ -936,26 +766,14 @@
   shacl:severity shacl:Violation ;
   shacl:message "dcat:Distribution: dcat:compressFormat MUSS auf eine Blank Node oder eine IRI verweisen."@de .
 
-<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/8c1e0d1ac55cc7da56ed33785c09a2980899a997>
-  shacl:severity shacl:Violation ;
-  shacl:deactivated true ;
-  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/9484b608420ccb732e39ca34b588c57868c81181>
   shacl:severity shacl:Violation ;
   shacl:message "dcat:Distribution: dcterms:format DARF MAXIMAL einmal vorkommen."@de .
 
-<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/99435c17158fbaa12d1d955b8886d5bf935ab016>
-  shacl:severity shacl:Violation ;
-  shacl:deactivated true ;
-  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/998ce689a5bcc3e2764ff84a05255e34d91e8102>
   shacl:severity shacl:Violation ;
   shacl:message "dcat:Distribution: foaf:page MUSS auf eine Blank Node oder eine IRI verweisen."@de .
 
-<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/9a496b0d6c38eb05e46fa6c5ad11981f19fbbce4>
-  shacl:severity shacl:Violation ;
-  shacl:deactivated true ;
-  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/9e9d878c1c354206edc1d411f33c82d4d01e5a8f>
   shacl:severity shacl:Violation ;
   shacl:message "dcat:Distribution: dcterms:modified DARF MAXIMAL einmal vorkommen."@de .
@@ -964,10 +782,6 @@
   shacl:severity shacl:Violation ;
   shacl:message "dcat:Distribution: dcterms:license DARF MAXIMAL einmal vorkommen."@de .
 
-<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/a07d6e7a0a1790b89a1ce7ff602cbbd9ea835282>
-  shacl:severity shacl:Violation ;
-  shacl:deactivated true ;
-  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/a490981ff58636ec8601ca500e67bd9c575eaed9>
   shacl:severity shacl:Violation ;
   shacl:message "dcat:Distribution: dcat:accessURL MUSS auf eine Blank Node oder eine IRI verweisen."@de .
@@ -1004,10 +818,6 @@
   shacl:severity shacl:Violation ;
   shacl:message "dcat:Distribution: dcterms:language MUSS auf eine Blank Node oder eine IRI verweisen."@de .
 
-<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/dbcf2adef675735c48b532392359af27af5e8b71>
-  shacl:severity shacl:Violation ;
-  shacl:deactivated true ;
-  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/dc17e7a798aea475507009807c87717284c17830>
   shacl:severity shacl:Violation ;
   shacl:message "dcat:Distribution: spdx:checksum MUSS auf eine Blank Node oder eine IRI verweisen."@de .
@@ -1016,10 +826,6 @@
   shacl:severity shacl:Violation ;
   shacl:message "dcat:Distribution: dcat:accessURL MUSS MINDESTEN einmal vorkommen."@de .
 
-<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/e093e156f972fa1af3526cd6d68f11bbdc8fa7c5>
-  shacl:severity shacl:Violation ;
-  shacl:deactivated true ;
-  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/e6d76f7de5d5b08e584d9cd40619631987a64a7c>
   shacl:severity shacl:Violation ;
   shacl:message "dcat:Distribution: dcat:temporalResolution MUSS ein als xsd:duration getyptes Literal sein."@de .
@@ -1060,18 +866,10 @@
   shacl:severity shacl:Violation ;
   shacl:message "dcat:Relationship: dcat:hadRole MUSS auf eine Klasse vom Typ dcat:Role verweisen."@de .
 
-<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:RelationshipShape/b7aa98e1befa5130659568aa62e7f38575dc17c1>
-  shacl:severity shacl:Violation ;
-  shacl:deactivated true ;
-  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:RelationshipShape/d171b3a7f68dcad152dc11b8200997a366513e00>
   shacl:severity shacl:Violation ;
   shacl:message "dcat:Relationship: dcat:hadRole MUSS MINDESTEN einmal vorkommen."@de .
 
-<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:LicenseDocumentShape/322371a77364a50f049d46180f6192532eea26dc>
-  shacl:severity shacl:Violation ;
-  shacl:deactivated true ;
-  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:LicenseDocumentShape/4f381639bb6e021939f65b4f41409d1edaeade9b>
   shacl:severity shacl:Violation ;
   shacl:message "dct:LicenseDocument: dcterms:type MUSS auf eine Blank Node oder eine IRI verweisen."@de .
@@ -1080,10 +878,6 @@
   shacl:severity shacl:Violation ;
   shacl:message "dct:Location: dcat:bbox MUSS auf ein Literal verweisen."@de .
 
-<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:LocationShape/53c8e9f0fc79ab4ed706e31129a2b3e02f7edd22>
-  shacl:severity shacl:Violation ;
-  shacl:deactivated true ;
-  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:LocationShape/ac645171f7bc10bfce0730166a193316727dcdf3>
   shacl:severity shacl:Violation ;
   shacl:message "dct:Location: dcat:centroid MUSS auf ein Literal verweisen."@de .
@@ -1148,10 +942,6 @@
   shacl:severity shacl:Violation ;
   shacl:message "foaf:Agent: dcterms:type DARF MAXIMAL einmal vorkommen."@de .
 
-<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#foaf:AgentShape/322371a77364a50f049d46180f6192532eea26dc>
-  shacl:severity shacl:Violation ;
-  shacl:deactivated true ;
-  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#foaf:AgentShape/4f381639bb6e021939f65b4f41409d1edaeade9b>
   shacl:severity shacl:Violation ;
   shacl:message "foaf:Agent: dcterms:type MUSS auf eine Blank Node oder eine IRI verweisen."@de .
@@ -1207,6 +997,278 @@
 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#spdx:ChecksumShape/c0f60a484249a358c0632ef47551529f01cd5833>
   shacl:severity shacl:Violation ;
   shacl:message "spdx:Checksum: spdx:checksumValue MUSS MINDESTEN einmal vorkommen."@de .
+
+# Deaktivierungen
+
+<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogRecordShape/29ba27566ab1f32c8bb73f3492436d4bd868d3d2>
+  shacl:severity shacl:Violation ;
+  shacl:deactivated true ;
+  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
+
+<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogRecordShape/31d5e2e3aa43e34f78e4557b9a8c4e7507c4948b>
+  shacl:severity shacl:Violation ;
+  shacl:deactivated true ;
+  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
+
+<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogRecordShape/4b28ec6b7000fa7ccd38127f115952dd990d7d9c>
+  shacl:severity shacl:Violation ;
+  shacl:deactivated true ;
+  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
+
+<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogShape/29ba27566ab1f32c8bb73f3492436d4bd868d3d2>
+  shacl:severity shacl:Violation ;
+  shacl:deactivated true ;
+  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
+
+<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogShape/6051cd8d6a1acfcf4d6721f241fff56a0b42ebf9>
+  shacl:severity shacl:Violation ;
+  shacl:deactivated true ;
+  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
+
+<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogShape/73465b7fbd7f991a08ddd1b766c2e46fa9dfc14e>
+  shacl:severity shacl:Violation ;
+  shacl:deactivated true ;
+  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
+
+<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogShape/99435c17158fbaa12d1d955b8886d5bf935ab016>
+  shacl:severity shacl:Violation ;
+  shacl:deactivated true ;
+  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
+
+<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogShape/dbcf2adef675735c48b532392359af27af5e8b71>
+  shacl:severity shacl:Violation ;
+  shacl:deactivated true ;
+  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
+
+<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:CatalogShape/fb8568b313de736f9184db23272b6317700e9e7e>
+  shacl:severity shacl:Violation ;
+  shacl:deactivated true ;
+  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
+
+<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/68388ec47b77212d80036e8a02e9956f5ba0e0f5>
+  shacl:severity shacl:Violation ;
+  shacl:deactivated true ;
+  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
+
+<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/73465b7fbd7f991a08ddd1b766c2e46fa9dfc14e>
+  shacl:severity shacl:Violation ;
+  shacl:deactivated true ;
+  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
+
+<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/737cd5f1c9f0e13c35eb82b7f0d2b2f76a9a82c7>
+  shacl:severity shacl:Violation ;
+  shacl:deactivated true ;
+  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
+
+<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/c84f7330b9538a899ebb875c44dc23c9882e74ac>
+  shacl:severity shacl:Violation ;
+  shacl:deactivated true ;
+  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
+
+<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/dbcf2adef675735c48b532392359af27af5e8b71>
+  shacl:severity shacl:Violation ;
+  shacl:deactivated true ;
+  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
+
+<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/dc08f4dca4377fade57f89454e3fa06a8389d314>
+  shacl:severity shacl:Violation ;
+  shacl:deactivated true ;
+  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
+
+<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/dede6a68a95ac0f43ca88def472d8fc001f86ebe>
+  shacl:severity shacl:Violation ;
+  shacl:deactivated true ;
+  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
+
+<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/eb3ac4e4fdde2e2588a9502c5956060a18c5c99f>
+  shacl:severity shacl:Violation ;
+  shacl:deactivated true ;
+  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
+
+<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/ee60fdd4b8581460f5fc4077813b8bb3e3d77441>
+  shacl:severity shacl:Violation ;
+  shacl:deactivated true ;
+  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
+
+<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DataServiceShape/ffbbcd28b1fd92213d8350e1b6418d3d998c7197>
+  shacl:severity shacl:Violation ;
+  shacl:deactivated true ;
+  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
+
+<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetSeriesShape/04d197dc40f01e87093bdd0446a9fdb1a9d44319>
+  shacl:severity shacl:Violation ;
+  shacl:deactivated true ;
+  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
+
+<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetSeriesShape/73465b7fbd7f991a08ddd1b766c2e46fa9dfc14e>
+  shacl:severity shacl:Violation ;
+  shacl:deactivated true ;
+  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
+
+<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/04d197dc40f01e87093bdd0446a9fdb1a9d44319>
+  shacl:severity shacl:Violation ;
+  shacl:deactivated true ;
+  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
+
+<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/0bcb30d1f00a2e13ee04c77dbcb8018f2ef83d5b>
+  shacl:severity shacl:Violation ;
+  shacl:deactivated true ;
+  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
+
+<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/29ba27566ab1f32c8bb73f3492436d4bd868d3d2>
+  shacl:severity shacl:Violation ;
+  shacl:deactivated true ;
+  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
+
+<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/322371a77364a50f049d46180f6192532eea26dc>
+  shacl:severity shacl:Violation ;
+  shacl:deactivated true ;
+  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
+
+<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/397755646b3e9ed0cfae7a2a581d26251329edb7>
+  shacl:severity shacl:Violation ;
+  shacl:deactivated true ;
+  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
+
+<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/4918ff7a6c1c4b0eea6403dca4b992b87ee1f4ab>
+  shacl:severity shacl:Violation ;
+  shacl:deactivated true ;
+  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
+
+<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/68388ec47b77212d80036e8a02e9956f5ba0e0f5>
+  shacl:severity shacl:Violation ;
+  shacl:deactivated true ;
+  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
+
+<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/73465b7fbd7f991a08ddd1b766c2e46fa9dfc14e>
+  shacl:severity shacl:Violation ;
+  shacl:deactivated true ;
+  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
+
+<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/837b9dc79bed1a4d15f6f9094b596dd177944ab6>
+  shacl:severity shacl:Violation ;
+  shacl:deactivated true ;
+  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
+
+<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/95c69c99a1e3ade043911b51b942f206dea0e68d>
+  shacl:severity shacl:Violation ;
+  shacl:deactivated true ;
+  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
+
+<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/c84f7330b9538a899ebb875c44dc23c9882e74ac>
+  shacl:severity shacl:Violation ;
+  shacl:deactivated true ;
+  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
+
+<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/dede6a68a95ac0f43ca88def472d8fc001f86ebe>
+  shacl:severity shacl:Violation ;
+  shacl:deactivated true ;
+  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
+
+<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/ee60fdd4b8581460f5fc4077813b8bb3e3d77441>
+  shacl:severity shacl:Violation ;
+  shacl:deactivated true ;
+  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
+
+<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DatasetShape/ffbbcd28b1fd92213d8350e1b6418d3d998c7197>
+  shacl:severity shacl:Violation ;
+  shacl:deactivated true ;
+  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
+
+<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/06ed12d1071a78728d10628eb2d072781559eb75>
+  shacl:severity shacl:Violation ;
+  shacl:deactivated true ;
+  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
+
+<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/0f6cb927d0d26f3819cba3fb903a075cd426180d>
+  shacl:severity shacl:Violation ;
+  shacl:deactivated true ;
+  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
+
+<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/226b9cb0511ec6b8da045829e10d2676ddbb8375>
+  shacl:severity shacl:Violation ;
+  shacl:deactivated true ;
+  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
+
+<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/29ba27566ab1f32c8bb73f3492436d4bd868d3d2>
+  shacl:severity shacl:Violation ;
+  shacl:deactivated true ;
+  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
+
+<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/39da16eecfc16996eed6a010f4203cdcec7c388d>
+  shacl:severity shacl:Violation ;
+  shacl:deactivated true ;
+  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
+
+<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/653804840386e33525b3d39d205c174780be414b>
+  shacl:severity shacl:Violation ;
+  shacl:deactivated true ;
+  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
+
+<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/68388ec47b77212d80036e8a02e9956f5ba0e0f5>
+  shacl:severity shacl:Violation ;
+  shacl:deactivated true ;
+  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
+
+<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/73465b7fbd7f991a08ddd1b766c2e46fa9dfc14e>
+  shacl:severity shacl:Violation ;
+  shacl:deactivated true ;
+  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
+
+<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/737cd5f1c9f0e13c35eb82b7f0d2b2f76a9a82c7>
+  shacl:severity shacl:Violation ;
+  shacl:deactivated true ;
+  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
+
+<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/8c1e0d1ac55cc7da56ed33785c09a2980899a997>
+  shacl:severity shacl:Violation ;
+  shacl:deactivated true ;
+  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
+
+<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/99435c17158fbaa12d1d955b8886d5bf935ab016>
+  shacl:severity shacl:Violation ;
+  shacl:deactivated true ;
+  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
+
+<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/9a496b0d6c38eb05e46fa6c5ad11981f19fbbce4>
+  shacl:severity shacl:Violation ;
+  shacl:deactivated true ;
+  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
+
+<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/a07d6e7a0a1790b89a1ce7ff602cbbd9ea835282>
+  shacl:severity shacl:Violation ;
+  shacl:deactivated true ;
+  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
+
+<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/dbcf2adef675735c48b532392359af27af5e8b71>
+  shacl:severity shacl:Violation ;
+  shacl:deactivated true ;
+  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
+
+<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:DistributionShape/e093e156f972fa1af3526cd6d68f11bbdc8fa7c5>
+  shacl:severity shacl:Violation ;
+  shacl:deactivated true ;
+  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
+
+<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dcat:RelationshipShape/b7aa98e1befa5130659568aa62e7f38575dc17c1>
+  shacl:severity shacl:Violation ;
+  shacl:deactivated true ;
+  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
+
+<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:LicenseDocumentShape/322371a77364a50f049d46180f6192532eea26dc>
+  shacl:severity shacl:Violation ;
+  shacl:deactivated true ;
+  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
+
+<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#dct:LocationShape/53c8e9f0fc79ab4ed706e31129a2b3e02f7edd22>
+  shacl:severity shacl:Violation ;
+  shacl:deactivated true ;
+  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
+
+<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#foaf:AgentShape/322371a77364a50f049d46180f6192532eea26dc>
+  shacl:severity shacl:Violation ;
+  shacl:deactivated true ;
+  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
 
 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#spdx:ChecksumShape/d9bbeace53175a03bb5a338cafcf57eb351166d2>
   shacl:severity shacl:Violation ;

@@ -8,16 +8,15 @@
 
 Basiert auf dem Profil `DCAT-AP 3.0 - Übersetzungen und Einschränkungen` und ergänzt es um folgende Aspekte:
 
-- Deprecated-Meldungen für Eigenschaften und Codelisten (`dcat-ap-de-deprecated.ttl`)
-- <<TBD>> Deutsche Eigenschaften
-- <<TBD>> Deutsche Änderungen an Eigenschaften
-- <<TBD>> Verwendung der verlangten kontrollierten Vokabulare
+- Deprecated-Meldungen für Eigenschaften und Codelisten ([`dcat-ap-de-deprecated.ttl`](https://github.com/GovDataOfficial/DCAT-AP.de-SHACL-Validation/blob/master/validator/resources/v3.0/shapes/dcat-ap-de-deprecated.ttl))
+- Deutsche Eigenschaften und Änderungn ([`dcat-ap-spec-german-additions.ttl`](https://github.com/GovDataOfficial/DCAT-AP.de-SHACL-Validation/blob/master/validator/resources/v3.0/dcat-ap-spec-german-additions.ttl))
+- Verwendung der verlangten kontrollierten Vokabulare ([`dcat-ap-de-imports.ttl`](https://github.com/GovDataOfficial/DCAT-AP.de-SHACL-Validation/blob/master/validator/resources/v3.0/shapesdcat-ap-de-imports.ttl) und [`dcat-ap-de-controlledvocabularies.ttl`](https://github.com/GovDataOfficial/DCAT-AP.de-SHACL-Validation/blob/master/validator/resources/v3.0/dcat-ap-de-controlledvocabularies.ttl)).
 
 ## DCAT-AP 3.0 - Übersetzungen und Einschränkungen
 
 Die SEMIC stellt ihren eigenen [DCAT-AP-Validator](https://www.itb.ec.europa.eu/shacl/dcat-ap/upload) zur Verfügung, der zuverlässig funktioniert.
 
-Dieses Validierungsprofil basiert auf de SEMIC Datei (`https://github.com/SEMICeu/DCAT-AP/blob/master/releases/3.0.0/shacl/dcat-ap-SHACL.ttl`) erweitert um die Datei `https://github.com/GovDataOfficial/DCAT-AP.de-SHACL-Validation/blob/master/validator/resources/v3.0/shapes/dcat-ap-SHACL-DE.ttl`. Die deutschen Erweiterungen verändern die Validierung wie folgt:
+Dieses Validierungsprofil basiert auf de SEMIC Datei (`https://github.com/SEMICeu/DCAT-AP/blob/master/releases/3.0.0/shacl/dcat-ap-SHACL.ttl`) erweitert um die Datei [`dcat-ap-SHACL-DE.ttl`](https://github.com/GovDataOfficial/DCAT-AP.de-SHACL-Validation/blob/master/validator/resources/v3.0/shapes/dcat-ap-SHACL-DE.ttl). Die deutschen Erweiterungen verändern die Validierung wie folgt:
 
 - Hinzufügen deutschsprachiger Fehlermeldungen
 - Deaktivierung von Shapes, die eine nicht sinnvolle Range prüfen
