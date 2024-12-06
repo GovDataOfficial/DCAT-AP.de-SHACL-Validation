@@ -9,8 +9,8 @@
 Basiert auf dem Profil `DCAT-AP 3.0 - Übersetzungen und Einschränkungen` und ergänzt es um folgende Aspekte:
 
 - Deprecated-Meldungen für Eigenschaften und Codelisten ([`dcat-ap-de-deprecated.ttl`](https://github.com/GovDataOfficial/DCAT-AP.de-SHACL-Validation/blob/master/validator/resources/v3.0/shapes/dcat-ap-de-deprecated.ttl))
-- Deutsche Eigenschaften und Änderungn ([`dcat-ap-spec-german-additions.ttl`](https://github.com/GovDataOfficial/DCAT-AP.de-SHACL-Validation/blob/master/validator/resources/v3.0/dcat-ap-spec-german-additions.ttl))
-- Verwendung der verlangten kontrollierten Vokabulare ([`dcat-ap-de-imports.ttl`](https://github.com/GovDataOfficial/DCAT-AP.de-SHACL-Validation/blob/master/validator/resources/v3.0/shapesdcat-ap-de-imports.ttl) und [`dcat-ap-de-controlledvocabularies.ttl`](https://github.com/GovDataOfficial/DCAT-AP.de-SHACL-Validation/blob/master/validator/resources/v3.0/dcat-ap-de-controlledvocabularies.ttl)).
+- Deutsche Eigenschaften und Änderungn ([`dcat-ap-spec-german-additions.ttl`](https://github.com/GovDataOfficial/DCAT-AP.de-SHACL-Validation/blob/master/validator/resources/v3.0/shapes/dcat-ap-spec-german-additions.ttl))
+- Verwendung der verlangten kontrollierten Vokabulare ([`dcat-ap-de-imports.ttl`](https://github.com/GovDataOfficial/DCAT-AP.de-SHACL-Validation/blob/master/validator/resources/v3.0/shapes/dcat-ap-de-imports.ttl) und [`dcat-ap-de-controlledvocabularies.ttl`](https://github.com/GovDataOfficial/DCAT-AP.de-SHACL-Validation/blob/master/validator/resources/v3.0/shapes/dcat-ap-de-controlledvocabularies.ttl)).
 
 ## DCAT-AP 3.0 - Übersetzungen und Einschränkungen
 
