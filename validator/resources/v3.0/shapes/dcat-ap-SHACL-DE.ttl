@@ -954,22 +954,6 @@
   shacl:severity shacl:Violation ;
   shacl:message "foaf:Agent: foaf:name MUSS auf ein Literal verweisen."@de .
 
-<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#skos:ConceptSchemeShape/d5d74574f70f9a979535f3624608f88180dd0c97>
-  shacl:severity shacl:Violation ;
-  shacl:message "skos:ConceptScheme: dcterms:title MUSS auf ein Literal verweisen."@de .
-
-<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#skos:ConceptSchemeShape/f8b02efd063b8089b72ce9677a1e4a3488eeb9a9>
-  shacl:severity shacl:Violation ;
-  shacl:message "skos:ConceptScheme: dcterms:title MUSS MINDESTEN einmal vorkommen."@de .
-
-<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#skos:ConceptShape/6cd0f0f5e19a1c8dce362ecbe8a196575b9cd85f>
-  shacl:severity shacl:Violation ;
-  shacl:message "skos:Concept: skos:prefLabel MUSS auf ein Literal verweisen."@de .
-
-<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#skos:ConceptShape/e4d44fb0d3c41df2a4042ee73fec8d83fc141a60>
-  shacl:severity shacl:Violation ;
-  shacl:message "skos:Concept: skos:prefLabel MUSS MINDESTEN einmal vorkommen."@de .
-
 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#spdx:ChecksumShape/18334d9daf21fe247c499aab3d04ddd1d4f391b7>
   shacl:severity shacl:Violation ;
   shacl:message "spdx:Checksum: spdx:checksumValue MUSS auf ein Literal verweisen."@de .
@@ -1271,6 +1255,26 @@
   shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
 
 <https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#spdx:ChecksumShape/d9bbeace53175a03bb5a338cafcf57eb351166d2>
+  shacl:severity shacl:Violation ;
+  shacl:deactivated true ;
+  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
+
+<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#skos:ConceptSchemeShape/d5d74574f70f9a979535f3624608f88180dd0c97>
+  shacl:severity shacl:Violation ;
+  shacl:deactivated true ;
+  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
+
+<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#skos:ConceptSchemeShape/f8b02efd063b8089b72ce9677a1e4a3488eeb9a9>
+  shacl:severity shacl:Violation ;
+  shacl:deactivated true ;
+  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
+
+<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#skos:ConceptShape/6cd0f0f5e19a1c8dce362ecbe8a196575b9cd85f>
+  shacl:severity shacl:Violation ;
+  shacl:deactivated true ;
+  shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .
+
+<https://semiceu.github.io/DCAT-AP/releases/3.0.0/shacl/dcat-ap-SHACL.ttl#skos:ConceptShape/e4d44fb0d3c41df2a4042ee73fec8d83fc141a60>
   shacl:severity shacl:Violation ;
   shacl:deactivated true ;
   shacl:description "Deaktiviert, da DCAT-AP.de hier eine Codeliste vorschreibt oder weil der Test auf einen Klassentyp unangebracht ist. (Z.B.: MUSS foaf:Document sein.)"@de .

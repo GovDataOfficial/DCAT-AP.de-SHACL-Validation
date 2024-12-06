@@ -1,22 +1,22 @@
-# java -Xss4m -jar validator.jar -reportSyntax "text/turtle" -externalShapes ../validator/resources/v3.0/shapes/dcat-ap-de-imports.ttl -loadImports true -externalShapes ../validator/resources/v3.0/shapes/dcat-ap-de-controlledvocabularies.ttl -contentToValidate ../testcases/v3.0_shapes/quicktest.ttl
+# CC0
+# java -Xss4m -jar validator.jar -reportSyntax "text/turtle" -loadImports true -externalShapes ../validator/resources/v3.0/shapes/dcat-ap-de-imports.ttl -externalShapes ../validator/resources/v3.0/shapes/dcat-ap-SHACL-DE.ttl -externalShapes ../validator/resources/v3.0/shapes/dcat-ap-de-deprecated.ttl -externalShapes ../validator/resources/v3.0/shapes/dcat-ap-spec-german-additions.ttl -externalShapes ../validator/resources/v3.0/shapes/dcat-ap-de-controlledvocabularies.ttl -contentToValidate ../testcases/v3.0_shapes/quicktest.ttl
 
-@prefix adms: <http://www.w3.org/ns/adms#> .
-@prefix dcat: <http://www.w3.org/ns/dcat#> .
-@prefix dcatap: <http://data.europa.eu/r5r#> .
-@prefix dcatde: <http://dcat-ap.de/def/dcatde/> .
+@prefix : <http://example.org/quicktest/> .
+@prefix adms:    <http://www.w3.org/ns/adms#> .
+@prefix dcat:    <http://www.w3.org/ns/dcat#> .
+@prefix dcatap:  <http://data.europa.eu/r5r#> .
+@prefix dcatde:  <http://dcat-ap.de/def/dcatde/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix prov: <http://www.w3.org/ns/prov#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix schema: <http://schema.org/> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix spdx: <http://spdx.org/rdf/terms#> .
-@prefix tek: <> .
-@prefix tekl: <> .
-@prefix time: <http://www.w3.org/2006/time#> .
-@prefix tl: <http://purl.org/NET/c4dm/timeline.owl#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix prov:    <http://www.w3.org/ns/prov#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema:  <http://schema.org/> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix spdx:    <http://spdx.org/rdf/terms#> .
+@prefix time:    <http://www.w3.org/2006/time#> .
+@prefix tl:      <http://purl.org/NET/c4dm/timeline.owl#> .
+@prefix vcard:   <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
 
 @base <http://example.org/quicktest/> .
 
@@ -52,11 +52,12 @@
 <series>
   a dcat:DatasetSeries ;
   dcterms:title "Test" ;
+  dcterms:description "Description." ;
   dcterms:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/MONTHLY> ;
 .
 
 <dataset> 
-  a dcat:Dataset ;
+  a dcat:Dataset, dcat:Resource ;
   dcterms:title "Test" ;
   dcterms:description "Test" ;
   dcatde:contributorID <http://dcat-ap.de/def/contributors/auswaertigesAmt> ;
@@ -84,7 +85,7 @@
 
   adms:identifier [
     a adms:Identifier ;
-    skos:notation <#error> ;
+    skos:notation "anIdentifier" ;
   ] ;
 .
 
@@ -136,6 +137,7 @@
 .
 
 <timeperiod>
+ a dcterms:PeriodOfTime ;
   dcat:startDate "1987-05-08"^^xsd:date ;
   dcat:endDate   "2090-05-08"^^xsd:date ;
 .
