@@ -15,8 +15,8 @@
          xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
          >
   <owl:Ontology rdf:about="http://dcat-ap.de/def/contributors">
-    <owl:versionInfo>20250121</owl:versionInfo>
-    <owl:versionIRI rdf:resource="http://dcat-ap.de/def/contributors/20250121/"/>
+    <owl:versionInfo>20250825</owl:versionInfo>
+    <owl:versionIRI rdf:resource="http://dcat-ap.de/def/contributors/20250825/"/>
     <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Folgend ist die Liste der unmittelbar an GovData anliefernden Systeme abgebildet. Diese Datenbereitsteller sind im engeren Sinne Metadatenbereitsteller, für den Bezug der eigentlichen Open Data Daten wird auf das „Originalportal“ verwiesen.</rdfs:comment>
   </owl:Ontology>
   <skos:ConceptScheme rdf:about="http://dcat-ap.de/def/contributors">
@@ -295,20 +295,20 @@
     <skos:exactMatch rdf:resource="http://dcat-ap.de/def/contributors/bundesministeriumFuerFamilieSeniorenFrauenUndJugend"/>
     <skos:altLabel xml:lang="de">bundesministeriumFuerFamilieSeniorenFrauenUndJugend</skos:altLabel>
   </skos:Concept>
-  <skos:Concept rdf:about="http://dcat-ap.de/def/contributors/bundesministeriumFuerWirtschaftUndKlimaschutz">
-    <dc:identifier>bundesministeriumFuerWirtschaftUndKlimaschutz</dc:identifier>
+  <skos:Concept rdf:about="http://dcat-ap.de/def/contributors/bundesministeriumFuerWirtschaftUndEnergie">
+    <dc:identifier>bundesministeriumFuerWirtschaftUndEnergie</dc:identifier>
     <skos:topConceptOf rdf:resource="http://dcat-ap.de/def/contributors"/>
     <skos:inScheme rdf:resource="http://dcat-ap.de/def/contributors"/>
-    <skos:prefLabel xml:lang="de">Bundesministerium für Wirtschaft und Klimaschutz</skos:prefLabel>
+    <skos:prefLabel xml:lang="de">Bundesministerium für Wirtschaft und Energie</skos:prefLabel>
     <skos-xl:prefLabel>
       <skos-xl:Label>
         <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
-        <skos-xl:literalForm xml:lang="de">Bundesministerium für Wirtschaft und Klimaschutz</skos-xl:literalForm>
-        <rdfs:label xml:lang="de">Bundesministerium für Wirtschaft und Klimaschutz</rdfs:label>
+        <skos-xl:literalForm xml:lang="de">Bundesministerium für Wirtschaft und Energie</skos-xl:literalForm>
+        <rdfs:label xml:lang="de">Bundesministerium für Wirtschaft und Energie</rdfs:label>
       </skos-xl:Label>
     </skos-xl:prefLabel>
-    <skos:exactMatch rdf:resource="http://dcat-ap.de/def/contributors/bundesministeriumFuerWirtschaftUndKlimaschutz"/>
-    <skos:altLabel xml:lang="de">bundesministeriumFuerWirtschaftUndKlimaschutz</skos:altLabel>
+    <skos:exactMatch rdf:resource="http://dcat-ap.de/def/contributors/bundesministeriumFuerWirtschaftUndEnergie"/>
+    <skos:altLabel xml:lang="de">bundesministeriumFuerWirtschaftUndEnergie</skos:altLabel>
   </skos:Concept>
   <skos:Concept rdf:about="http://dcat-ap.de/def/contributors/bundesministeriumFuerWirtschaftlicheZusammenarbeitUndEntwicklung">
     <dc:identifier>bundesministeriumFuerWirtschaftlicheZusammenarbeitUndEntwicklung</dc:identifier>
