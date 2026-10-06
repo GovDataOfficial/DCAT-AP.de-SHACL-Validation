@@ -15,8 +15,8 @@
          xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
          >
   <owl:Ontology rdf:about="http://dcat-ap.de/def/contributors">
-    <owl:versionInfo>20260813</owl:versionInfo>
-    <owl:versionIRI rdf:resource="http://dcat-ap.de/def/contributors/20260813/"/>
+    <owl:versionInfo>20261005</owl:versionInfo>
+    <owl:versionIRI rdf:resource="http://dcat-ap.de/def/contributors/20261005/"/>
     <rdfs:comment rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">Folgend ist die Liste der unmittelbar an GovData anliefernden Systeme abgebildet. Diese Datenbereitsteller sind im engeren Sinne Metadatenbereitsteller, für den Bezug der eigentlichen Open Data Daten wird auf das „Originalportal“ verwiesen.</rdfs:comment>
   </owl:Ontology>
   <skos:ConceptScheme rdf:about="http://dcat-ap.de/def/contributors">
@@ -144,6 +144,21 @@
     </skos-xl:prefLabel>
     <skos:exactMatch rdf:resource="http://dcat-ap.de/def/contributors/bundesanstaltFuerArbeitsschutzUndArbeitsmedizin"/>
     <skos:altLabel xml:lang="de">bundesanstaltFuerArbeitsschutzUndArbeitsmedizin</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://dcat-ap.de/def/contributors/bundesanstaltFuerDenDigitalfunkDerBehoerdenUndOrganisationenMitSicherheitsaufgaben">
+    <dc:identifier>bundesanstaltFuerDenDigitalfunkDerBehoerdenUndOrganisationenMitSicherheitsaufgaben</dc:identifier>
+    <skos:topConceptOf rdf:resource="http://dcat-ap.de/def/contributors"/>
+    <skos:inScheme rdf:resource="http://dcat-ap.de/def/contributors"/>
+    <skos:prefLabel xml:lang="de">Bundesanstalt für den Digitalfunk der Behörden und Organisationen mit Sicherheitsaufgaben</skos:prefLabel>
+    <skos-xl:prefLabel>
+      <skos-xl:Label>
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
+        <skos-xl:literalForm xml:lang="de">Bundesanstalt für den Digitalfunk der Behörden und Organisationen mit Sicherheitsaufgaben</skos-xl:literalForm>
+        <rdfs:label xml:lang="de">Bundesanstalt für den Digitalfunk der Behörden und Organisationen mit Sicherheitsaufgaben</rdfs:label>
+      </skos-xl:Label>
+    </skos-xl:prefLabel>
+    <skos:exactMatch rdf:resource="http://dcat-ap.de/def/contributors/bundesanstaltFuerDenDigitalfunkDerBehoerdenUndOrganisationenMitSicherheitsaufgaben"/>
+    <skos:altLabel xml:lang="de">bundesanstaltFuerDenDigitalfunkDerBehoerdenUndOrganisationenMitSicherheitsaufgaben</skos:altLabel>
   </skos:Concept>
   <skos:Concept rdf:about="http://dcat-ap.de/def/contributors/bundesanstaltFuerLandwirtschaftUndErnaehrung">
     <dc:identifier>bundesanstaltFuerLandwirtschaftUndErnaehrung</dc:identifier>
@@ -969,6 +984,21 @@
     </skos-xl:prefLabel>
     <skos:exactMatch rdf:resource="http://dcat-ap.de/def/contributors/robertKochInstitut"/>
     <skos:altLabel xml:lang="de">robertKochInstitut</skos:altLabel>
+  </skos:Concept>
+  <skos:Concept rdf:about="http://dcat-ap.de/def/contributors/saarland">
+    <dc:identifier>saarland</dc:identifier>
+    <skos:topConceptOf rdf:resource="http://dcat-ap.de/def/contributors"/>
+    <skos:inScheme rdf:resource="http://dcat-ap.de/def/contributors"/>
+    <skos:prefLabel xml:lang="de">Saarland</skos:prefLabel>
+    <skos-xl:prefLabel>
+      <skos-xl:Label>
+        <rdf:type rdf:resource="http://www.w3.org/2008/05/skos-xl#Label"/>
+        <skos-xl:literalForm xml:lang="de">Saarland</skos-xl:literalForm>
+        <rdfs:label xml:lang="de">Saarland</rdfs:label>
+      </skos-xl:Label>
+    </skos-xl:prefLabel>
+    <skos:exactMatch rdf:resource="http://dcat-ap.de/def/contributors/saarland"/>
+    <skos:altLabel xml:lang="de">saarland</skos:altLabel>
   </skos:Concept>
   <skos:Concept rdf:about="http://dcat-ap.de/def/contributors/schleswigHolstein">
     <dc:identifier>schleswigHolstein</dc:identifier>
